@@ -1,0 +1,52 @@
+/*base css*/
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body{
+  font-size: 24px;
+}
+ul,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+input,textarea{
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+/*common css*/
+.f_left{
+  float: left;
+}
+.f_right{
+  float: right;
+}
+.clearFix:before,
+.clearFix::after{
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+//版心
+.bg-container{
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+  background: @bg-color;
+  height: 1000px;
+}
