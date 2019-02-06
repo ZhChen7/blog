@@ -1,62 +1,62 @@
 @charset "utf-8";
 @media (min-width: 320px) {
   html {
-    font-size: 42.66666667px;
+    font-size: 60.49149338px;
   }
 }
 @media (min-width: 360px) {
   html {
-    font-size: 48px;
+    font-size: 68.05293006px;
   }
 }
 @media (min-width: 375px) {
   html {
-    font-size: 50px;
+    font-size: 70.88846881px;
   }
 }
 @media (min-width: 384px) {
   html {
-    font-size: 51.2px;
+    font-size: 72.58979206px;
   }
 }
 @media (min-width: 400px) {
   html {
-    font-size: 53.33333333px;
+    font-size: 75.61436673px;
   }
 }
 @media (min-width: 414px) {
   html {
-    font-size: 55.2px;
+    font-size: 78.26086957px;
   }
 }
 @media (min-width: 434px) {
   html {
-    font-size: 57.86666667px;
+    font-size: 82.0415879px;
   }
 }
 @media (min-width: 480px) {
   html {
-    font-size: 64px;
+    font-size: 90.73724008px;
   }
 }
 @media (min-width: 540px) {
   html {
-    font-size: 72px;
+    font-size: 102.07939509px;
   }
 }
 @media (min-width: 640px) {
   html {
-    font-size: 85.33333333px;
+    font-size: 120.98298677px;
   }
 }
 @media (min-width: 720px) {
   html {
-    font-size: 96px;
+    font-size: 136.10586011px;
   }
 }
 @media (min-width: 750px) {
   html {
-    font-size: 100px;
+    font-size: 141.77693762px;
   }
 }
 /*base css*/
@@ -103,15 +103,75 @@ textarea {
   clear: both;
 }
 .bg-container {
-  position: relative;
   width: 100%;
   max-width: 750px;
   min-width: 320px;
   margin: 0 auto;
-  background: #b531ff;
-  height: 1000px;
+  background: #000;
+  height: 2000px;
+}
+.iconfont {
+  color: #fff;
+  font-size: 0.27rem !important;
 }
 .topBar {
-  font-size: 0.5rem;
+  width: 100%;
+  height: 1.33rem;
+  background: blueviolet;
+  padding-top: 0.36rem;
+}
+.topBar .topBar-top {
+  width: 100%;
+  height: 0.41rem;
+  position: relative;
+}
+.topBar .topBar-top .icon-left {
+  display: block;
+  width: 0.9rem;
+  height: 100%;
+  text-align: center;
+  line-height: 0.41rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.topBar .topBar-top .icon-right {
+  display: block;
+  width: 0.9rem;
+  height: 100%;
+  text-align: center;
+  line-height: 0.41rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topBar .topBar-top .icon-middle {
+  width: 100%;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  text-align: center;
+  line-height: 0.41rem;
+}
+.topBar .topBar-top .icon-middle a {
+  display: inline-block;
+  margin-left: 0.33rem;
+}
+.topBar .topBar-top .icon-middle a:nth-of-type(1) {
+  margin-left: 0;
+}
+.topBar .topBar-bottom {
+  width: 100%;
+  height: 0.56rem;
+  text-align: center;
+}
+.topBar .topBar-bottom a {
+  margin-left: 1.27rem;
+  line-height: 0.56rem;
+  color: #fff;
+  font-size: 0.16rem;
+  font-weight: bold;
+}
+.topBar .topBar-bottom a:nth-of-type(1) {
+  margin-left: 0rem;
 }
 /*# sourceMappingURL=index.css.map */
