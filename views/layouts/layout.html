@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/less" href="/less/index.less">
+    <link href="/css/iconfont/iconfont.css" rel="stylesheet">
+    <script src="/lib/less/less.min.js"></script>
+    {{block 'style'}}{{/block}}
+    <title>{{block 'title'}}{{/block}}</title>
+</head>
+<body>
+<div class="bg-container">
+    {{include '../parties/index_header.html'}}
+    {{block 'body'}}{{/block}}
+    {{include '../parties/index_footer.html'}}
+
+</div>
+<script src="/jquery/dist/jquery.js"></script>
+{{block 'script'}}{{/block}}
+</body>
+</html>

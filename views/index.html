@@ -1,36 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="stylesheet" type="text/less" href="/less/index.less">
-    <link href="/css/iconfont/iconfont.css" rel="stylesheet">
-    <script src="/lib/less/less.min.js"></script>
-    <title>change world</title>
-</head>
+{{extend './layouts/layout.html'}}
+{{block 'title'}}Change World{{/block}}
+{{block 'body'}}
+  {{include './parties/banner.html'}}
+  {{include './parties/nav.html'}}
+  {{include './parties/index_list.html'}}
+{{/block}}
 
-<body>
- <div class="bg-container">
-     <header class="topBar">
-         <div class="topBar-top">
-             <a class="icon-left" href="/">
-                 <span class="iconfont icon-icon"></span>
-             </a>
-             <nav class="icon-middle">
-                 <a href=""><span class="iconfont icon-wode"></span></a>
-                 <a href=""><span class="iconfont icon-wode"></span></a>
-                 <a href=""><span class="iconfont icon-wode"></span></a>
-             </nav>
-             <a class="icon-right" href="/">
-                 <span class="iconfont icon-sousuo"></span>
-             </a>
-         </div>
-         <div class="topBar-bottom">
-             <a href="">推荐</a>
-             <a href="">朋友</a>
-             <a href="">电台</a>
-         </div>
-     </header>
- </div>
-</body>
-</html>
+{{block 'script'}}
+<script src="js/banner.js"></script>
+{{/block}}

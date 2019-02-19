@@ -1,0 +1,77 @@
+.bg-banner {
+  width: 100%;
+  background: -webkit-linear-gradient(#9C27B0 50%, #fff 50%);
+  overflow: hidden;
+  margin-top: @topBar-height;
+  padding: 0rem/@baseFontSize 7rem/@baseFontSize;
+
+  .banner-main {
+    width: 100%;
+    height: 100%;
+    background: red;
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+
+    ul {
+      &:first-child {
+        width: 1000%;
+        height: 100%;
+
+        li {
+          width: 10%;
+          float: left;
+
+          a {
+            width: 100%;
+            display: block;
+
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        height: 6rem/@baseFontSize;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 17rem/@baseFontSize;
+
+        li {
+          height: 6rem/@baseFontSize;
+          width: 9rem/@baseFontSize;
+          min-width: 7rem/@baseFontSize;
+          border-radius: 40%;
+          margin-left: 15rem/@baseFontSize;
+          float: left;
+          border: 1px solid #fff;
+          background: rgba(255, 255, 255, 0.5);
+          transition: width 0.6s;
+
+          &.now {
+            background: #fff;
+            width: 15rem/@baseFontSize;
+          }
+        }
+      }
+    }
+
+    .introduction {
+      position: absolute;
+      top: 45%;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      border: 1px solid black;
+      text-align: center;
+      background: #ccc;
+      opacity: 0.4;
+    }
+  }
+}
+
+
