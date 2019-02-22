@@ -1,64 +1,87 @@
 .index_list {
   width: 100%;
   overflow: hidden;
-  h3{
-    font-size:14px;
-    padding-left: 15px;
-    padding-top: 20px;
+
+  h3 {
+    font-size: 14rem/@baseFontSize;
+    padding-left: 15rem/@baseFontSize;
+    padding-top: 20rem/@baseFontSize;
     font-weight: 400;
-    span{
+
+    span {
       color: black;
     }
   }
+
   ul {
-     width: 100%;
-    li{
+    width: 100%;
+    padding:0 15rem/@baseFontSize;
+    li {
       width: 100%;
-      height: 200px;
+      height: 200rem/@baseFontSize;
       background: red;
       position: relative;
       overflow: hidden;
-      margin-top: 15px;
-      .li_img{
-        width: 240px;
+      margin-top: 15rem/@baseFontSize;
+
+      .li_img {
+        width: 240rem/@baseFontSize;
         height: 100%;
-        background: gold;
-        transform: translateX(-54px) skew(29deg);
+        transform: translateX(-54rem/@baseFontSize) skew(29deg);
         position: absolute;
         left: 0;
         top: 0;
-      }
-      .list_time{
-        width: 297px;
-        height: 107px;
-        background: greenyellow;
-        position: absolute;
-        bottom: -45px;
-        right: -22px;
-        transform: translate(37px,7px) rotate(-20deg);
-        span{
-          position: absolute;
-          top: 7px;
-          right: 68px;
-          font-size: 18px;
+        img{
+          display: block;
+          width: 240rem/@baseFontSize;
         }
       }
-      .list_main{
+
+      .list_time {
+        width: 297rem/@baseFontSize;
+        height: 107rem/@baseFontSize;
+        background: linear-gradient(red,greenyellow,salmon);
+        position: absolute;
+        bottom: -45rem/@baseFontSize;
+        right: -53rem/@baseFontSize;
+        transform: translate(37rem/@baseFontSize, 7rem/@baseFontSize) rotate(-20deg);
+
+        span {
+          position: absolute;
+          top: 7rem/@baseFontSize;
+          right: 106rem/@baseFontSize;
+          font-size: 18rem/@baseFontSize;
+        }
+        .icon-shijianriqi{
+          right: 202rem/@baseFontSize;
+          font-size: 19rem/@baseFontSize !important;
+          color: pink !important;
+        }
+        .list_time_submit{
+          text-decoration: underline @topBarColor;
+        }
+      }
+
+      .list_main {
         width: 100%;
         height: 100%;
-        a{
+        a {
           display: block;
           width: 100%;
           height: 100%;
           background: #fff;
-          padding-left: 307px;
-          padding-top: 16px;
-          header{
-              color: black;
+          padding-left: 307rem/@baseFontSize;
+          padding-top: 16rem/@baseFontSize;
+
+          header {
+            color: black;
+            font-size: 24rem/@baseFontSize;
           }
-          .intro_article{
-            margin-left: -27px;
-            margin-top: 20px;
+
+          .intro_article {
+            margin-left: -27rem/@baseFontSize;
+            margin-top: 20rem/@baseFontSize;
+            font-size: 24rem/@baseFontSize;
           }
         }
       }

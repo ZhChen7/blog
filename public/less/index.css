@@ -39,6 +39,11 @@
     font-size: 90.73724008px;
   }
 }
+@media (min-width: 529px) {
+  html {
+    font-size: 100px;
+  }
+}
 @media (min-width: 540px) {
   html {
     font-size: 102.07939509px;
@@ -108,7 +113,6 @@ textarea {
   min-width: 320px;
   margin: 0 auto;
   background: #fff;
-  height: 2000px;
 }
 .iconfont {
   color: #fff !important;
@@ -293,9 +297,9 @@ textarea {
   overflow: hidden;
 }
 .index_list h3 {
-  font-size: 14px;
-  padding-left: 15px;
-  padding-top: 20px;
+  font-size: 0.14rem;
+  padding-left: 0.15rem;
+  padding-top: 0.2rem;
   font-weight: 400;
 }
 .index_list h3 span {
@@ -303,38 +307,50 @@ textarea {
 }
 .index_list ul {
   width: 100%;
+  padding: 0 0.15rem;
 }
 .index_list ul li {
   width: 100%;
-  height: 200px;
+  height: 2rem;
   background: red;
   position: relative;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 0.15rem;
 }
 .index_list ul li .li_img {
-  width: 240px;
+  width: 2.4rem;
   height: 100%;
-  background: gold;
-  transform: translateX(-54px) skew(29deg);
+  transform: translateX(-0.54rem) skew(29deg);
   position: absolute;
   left: 0;
   top: 0;
 }
+.index_list ul li .li_img img {
+  display: block;
+  width: 2.4rem;
+}
 .index_list ul li .list_time {
-  width: 297px;
-  height: 107px;
-  background: greenyellow;
+  width: 2.97rem;
+  height: 1.07rem;
+  background: linear-gradient(red, greenyellow, salmon);
   position: absolute;
-  bottom: -45px;
-  right: -22px;
-  transform: translate(37px, 7px) rotate(-20deg);
+  bottom: -0.45rem;
+  right: -0.53rem;
+  transform: translate(0.37rem, 0.07rem) rotate(-20deg);
 }
 .index_list ul li .list_time span {
   position: absolute;
-  top: 7px;
-  right: 68px;
-  font-size: 18px;
+  top: 0.07rem;
+  right: 1.06rem;
+  font-size: 0.18rem;
+}
+.index_list ul li .list_time .icon-shijianriqi {
+  right: 2.02rem;
+  font-size: 0.19rem !important;
+  color: pink !important;
+}
+.index_list ul li .list_time .list_time_submit {
+  text-decoration: underline #9C27B0;
 }
 .index_list ul li .list_main {
   width: 100%;
@@ -345,14 +361,100 @@ textarea {
   width: 100%;
   height: 100%;
   background: #fff;
-  padding-left: 307px;
-  padding-top: 16px;
+  padding-left: 3.07rem;
+  padding-top: 0.16rem;
 }
 .index_list ul li .list_main a header {
   color: black;
+  font-size: 0.24rem;
 }
 .index_list ul li .list_main a .intro_article {
-  margin-left: -27px;
-  margin-top: 20px;
+  margin-left: -0.27rem;
+  margin-top: 0.2rem;
+  font-size: 0.24rem;
+}
+.sidebar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 2s,left 2s;
+  z-index: 9999;
+  display: none;
+}
+.sidebar .sidebar-main {
+  width: 4rem;
+  height: 7rem;
+  background: red;
+}
+.sidebar .sidebar-main .sidebar-header {
+  width: 100%;
+  height: 1.78rem;
+  background: url("/images/sideBar_header.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+.sidebar .sidebar-main .sidebar-header .touxiang {
+  width: 2rem;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.sidebar .sidebar-main .sidebar-header .touxiang a {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-top: 0.44rem;
+  margin-left: 0.15rem;
+  animation: author 4s 500ms ease backwards;
+}
+.sidebar .sidebar-main .sidebar-header .touxiang a img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+.sidebar .sidebar-main .sidebar-header .touxiang p {
+  margin: 0.14rem 0.17rem;
+  font-size: 0.16rem;
+  color: #fff;
+  font-weight: bold;
+}
+.sidebar .sidebar-main .Click-heart {
+  position: absolute;
+  bottom: 0.08rem;
+  right: 0.2rem;
+  display: flex;
+}
+.sidebar .sidebar-main .Click-heart .Click-num {
+  width: 0.19rem;
+  height: 0.24rem;
+  font-size: 0.14rem;
+  border-radius: 70%;
+  text-align: center;
+  line-height: 0.24rem;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  margin: 0.05rem 0.09rem;
+}
+.sidebar .sideBar-right {
+  width: 1.29rem;
+  height: 100%;
+  opacity: 0;
+  background: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@keyframes author {
+  from {
+    transform: translate(0, 0) rotateY(0deg);
+  }
+  25% {
+    transform: translate(0.4rem, 0) rotateY(90deg);
+  }
+  to {
+    transform: translate(1.4rem, 0) rotateY(360deg) scale(1.5, 1.5);
+  }
 }
 /*# sourceMappingURL=index.css.map */
