@@ -1,0 +1,20 @@
+.main_Navigation {
+  margin-top: @topBar-height;
+  width: 100%;
+  overflow: hidden;
+  .main_Navigation_nav {
+    width: 100%*3;
+    display: flex;
+    .Recommend, .Dynamic, .School {
+      flex: 1;
+      width: 100%/3;
+    }
+    .Dynamic{
+         height: 100%;
+      h1{
+        font-size: 33px;
+        color: black !important;
+      }
+    }
+  }
+}

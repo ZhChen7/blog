@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dbcfc3d-4204-41af-814d-6464a10cc2d1" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/views/parties/Recommend/banner.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/banner.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/banner.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/less/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/less/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/index.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/less/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/index_list.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/index_list.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/reset.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/reset.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/variable.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/variable.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skew.html" beforeDir="false" afterPath="$PROJECT_DIR$/skew.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/less/topBar.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/less/topBar.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skew.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parties/banner.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/parties/index_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/parties/index_header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/parties/index_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/parties/index_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parties/index_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/parties/Recommend/index_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parties/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/parties/Recommend/nav.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,26 +28,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.18387553">
+    <splitter split-orientation="horizontal" split-proportion="0.28681573">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/views/parties/The_sidebar.html">
+            <entry file="file://$PROJECT_DIR$/views/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="22">
-                  <caret line="1" column="19" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="19" />
-                  <folding>
-                    <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#header#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="242">
+                  <caret line="11" selection-start-line="4" selection-start-column="16" selection-end-line="11" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/less/The_sidebar.less">
+            <entry file="file://$PROJECT_DIR$/views/parties/index_header.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="18">
-                  <caret line="5" column="33" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="33" />
+                <state relative-caret-position="330">
+                  <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -53,28 +54,37 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/less/variable.less">
+            <entry file="file://$PROJECT_DIR$/public/js/main_Navigation.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="88">
-                  <caret line="4" column="9" selection-start-line="4" selection-end-line="4" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/js/sideBar.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="33">
-                  <caret line="72" column="49" lean-forward="true" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+                <state relative-caret-position="438">
+                  <caret line="64" column="117" selection-start-line="64" selection-start-column="117" selection-end-line="64" selection-end-column="117" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/less/topBar.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="438">
+                  <caret line="77" selection-start-line="77" selection-end-line="77" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/less/main_Navigation.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="154">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/js/banner.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="117" column="33" lean-forward="true" selection-start-line="117" selection-start-column="33" selection-end-line="117" selection-end-column="33" />
+                <state relative-caret-position="358">
+                  <caret line="100" column="27" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -95,6 +105,7 @@
     <findStrings>
       <find>41px</find>
       <find>px</find>
+      <find>index</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,33 +121,35 @@
         <option value="$PROJECT_DIR$/views/parties/index_head.html" />
         <option value="$PROJECT_DIR$/views/layouts/latout.html" />
         <option value="$PROJECT_DIR$/views/parties/index_footer.html" />
-        <option value="$PROJECT_DIR$/public/less/topBar.less" />
         <option value="$PROJECT_DIR$/views/parties/nav.html" />
         <option value="$PROJECT_DIR$/public/less/icon.less" />
-        <option value="$PROJECT_DIR$/views/parties/banner.html" />
-        <option value="$PROJECT_DIR$/views/layouts/layout.html" />
         <option value="$PROJECT_DIR$/public/less/nav.less" />
-        <option value="$PROJECT_DIR$/public/less/banner.less" />
         <option value="$PROJECT_DIR$/views/parties/index_list.html" />
-        <option value="$PROJECT_DIR$/public/less/index.less" />
         <option value="$PROJECT_DIR$/skew.html" />
         <option value="$PROJECT_DIR$/public/less/variable.less" />
         <option value="$PROJECT_DIR$/public/less/index_list.less" />
         <option value="$PROJECT_DIR$/public/less/reset.less" />
-        <option value="$PROJECT_DIR$/views/index.html" />
-        <option value="$PROJECT_DIR$/views/parties/index_header.html" />
         <option value="$PROJECT_DIR$/views/parties/The_sidebar.html" />
-        <option value="$PROJECT_DIR$/public/js/banner.js" />
         <option value="$PROJECT_DIR$/public/less/The_sidebar.less" />
         <option value="$PROJECT_DIR$/public/js/sideBar.js" />
+        <option value="$PROJECT_DIR$/views/parties/banner.html" />
+        <option value="$PROJECT_DIR$/views/layouts/layout.html" />
+        <option value="$PROJECT_DIR$/public/less/index.less" />
+        <option value="$PROJECT_DIR$/public/less/banner.less" />
+        <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/public/less/main_Navigation.less" />
+        <option value="$PROJECT_DIR$/views/parties/index_header.html" />
+        <option value="$PROJECT_DIR$/public/js/main_Navigation.js" />
+        <option value="$PROJECT_DIR$/public/less/topBar.less" />
+        <option value="$PROJECT_DIR$/public/js/banner.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-218" />
-    <option name="y" value="212" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-193" />
+    <option name="y" value="192" />
     <option name="width" value="1943" />
-    <option name="height" value="405" />
+    <option name="height" value="1062" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="添加" />
@@ -146,6 +159,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,12 +171,6 @@
               <item name="blogM" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogM" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogM" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blogM" type="b2602c69:ProjectViewProjectNode" />
@@ -185,19 +193,12 @@
               <item name="blogM" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogM" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogM" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="parties" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,6 +211,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ZC\Desktop\blogM\views\parties\Recommend" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ZC\Desktop\blogM\public\images" />
       <recent name="C:\Users\ZC\Desktop\blogM\public\css\iconfont" />
@@ -274,23 +278,26 @@
       <workItem from="1550811361783" duration="2658000" />
       <workItem from="1550814076807" duration="11545000" />
       <workItem from="1550825704188" duration="1641000" />
-      <workItem from="1550845670345" duration="3579000" />
+      <workItem from="1550845670345" duration="3777000" />
+      <workItem from="1550850096024" duration="1112000" />
+      <workItem from="1550900754757" duration="50000" />
+      <workItem from="1550900826588" duration="13340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78770000" />
+    <option name="totallyTimeSpent" value="93470000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-174" y="170" width="1554" height="324" extended-state="1" />
+    <frame x="-154" y="154" width="1554" height="849" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08181818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15779221" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32854864" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49935064" visible="true" weight="0.15706806" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4974026" weight="0.08938547" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -298,7 +305,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3018018" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.50064933" side_tool="true" visible="true" weight="0.15706806" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5025974" side_tool="true" weight="0.25931233" />
       <window_info anchor="bottom" id="调试" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -381,24 +388,10 @@
     <entry file="file://$PROJECT_DIR$/public/images/bannera.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parties/banner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/iconfont/iconfont.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/less/banner.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -416,7 +409,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parties/nav.html">
+    <entry file="file://$PROJECT_DIR$/views/parties/Recommend/nav.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
@@ -429,13 +422,6 @@
     <entry file="file://$PROJECT_DIR$/public/css/iconfont/iconfont.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/less/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skew.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -443,7 +429,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parties/index_list.html">
+    <entry file="file://$PROJECT_DIR$/views/parties/Recommend/index_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1034">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
@@ -481,41 +467,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/less/topBar.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layouts/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/images/sideBar_header.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/parties/index_header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="628" column="4" selection-start-line="628" selection-start-column="4" selection-end-line="628" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/banner1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/less/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/less/banner.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parties/Recommend/banner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/less/variable.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="9" selection-start-line="4" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/less/The_sidebar.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -529,31 +525,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/less/variable.less">
+    <entry file="file://$PROJECT_DIR$/views/layouts/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="9" selection-start-line="4" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/banner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="117" column="33" lean-forward="true" selection-start-line="117" selection-start-column="33" selection-end-line="117" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/less/The_sidebar.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="33" />
+        <state relative-caret-position="153">
+          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/sideBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="72" column="49" lean-forward="true" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+        <state relative-caret-position="333">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="45" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="4" selection-start-column="16" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/less/main_Navigation.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main_Navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="64" column="117" selection-start-line="64" selection-start-column="117" selection-end-line="64" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parties/index_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/less/topBar.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/banner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="100" column="27" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
         </state>
       </provider>
     </entry>

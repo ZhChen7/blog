@@ -2,7 +2,6 @@
   width: 100%;
   background: -webkit-linear-gradient(#9C27B0 50%, #fff 50%);
   overflow: hidden;
-  margin-top: @topBar-height;
   padding: 0rem/@baseFontSize 7rem/@baseFontSize;
 
   .banner-main {
@@ -15,11 +14,12 @@
 
     ul {
       &:first-child {
-        width: 1000%;
+        width: 100%*10;
         height: 100%;
-
+        transform: translateX(-10%);
+        -webkit-transform: translateX(-10%);
         li {
-          width: 10%;
+          width: 100%/10;
           float: left;
 
           a {

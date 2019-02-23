@@ -184,16 +184,17 @@ textarea {
   line-height: 0.56rem;
   color: #fff;
   font-size: 0.16rem;
-  font-weight: bold;
 }
 .topBar .topBar-main .topBar-bottom a:nth-of-type(1) {
   margin-left: 0rem;
+}
+.topBar-bottom > .Recommend_common {
+  font-weight: bold;
 }
 .bg-banner {
   width: 100%;
   background: -webkit-linear-gradient(#9C27B0 50%, #fff 50%);
   overflow: hidden;
-  margin-top: 1.33rem;
   padding: 0rem 0.07rem;
 }
 .bg-banner .banner-main {
@@ -207,6 +208,8 @@ textarea {
 .bg-banner .banner-main ul:first-child {
   width: 1000%;
   height: 100%;
+  transform: translateX(-10%);
+  -webkit-transform: translateX(-10%);
 }
 .bg-banner .banner-main ul:first-child li {
   width: 10%;
@@ -456,5 +459,27 @@ textarea {
   to {
     transform: translate(1.4rem, 0) rotateY(360deg) scale(1.5, 1.5);
   }
+}
+.main_Navigation {
+  margin-top: 1.33rem;
+  width: 100%;
+  overflow: hidden;
+}
+.main_Navigation .main_Navigation_nav {
+  width: 300%;
+  display: flex;
+}
+.main_Navigation .main_Navigation_nav .Recommend,
+.main_Navigation .main_Navigation_nav .Dynamic,
+.main_Navigation .main_Navigation_nav .School {
+  flex: 1;
+  width: 33.33333333%;
+}
+.main_Navigation .main_Navigation_nav .Dynamic {
+  height: 100%;
+}
+.main_Navigation .main_Navigation_nav .Dynamic h1 {
+  font-size: 33px;
+  color: black !important;
 }
 /*# sourceMappingURL=index.css.map */
