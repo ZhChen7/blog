@@ -114,6 +114,13 @@ textarea {
   margin: 0 auto;
   background: #fff;
 }
+.blog-container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+  background: #ccc;
+}
 .iconfont {
   color: #fff !important;
   font-size: 0.27rem !important;
@@ -473,7 +480,7 @@ textarea {
 .main_Navigation .main_Navigation_nav .Dynamic,
 .main_Navigation .main_Navigation_nav .School {
   flex: 1;
-  width: 33.33333333%;
+  width: 5.29rem;
 }
 .main_Navigation .main_Navigation_nav .Dynamic {
   height: 100%;
@@ -481,5 +488,51 @@ textarea {
 .main_Navigation .main_Navigation_nav .Dynamic h1 {
   font-size: 33px;
   color: black !important;
+}
+.Rotation {
+  width: 100%;
+}
+.Rotation .School-iframe {
+  width: 100%;
+}
+.Rotation .School-iframe iframe {
+  width: 100%;
+  height: 3rem;
+}
+.Rotation .School_Intro {
+  width: 100%;
+  padding: 15px 10px;
+}
+.Rotation .School_Intro a {
+  width: 100%;
+  display: block;
+  margin: 20px 10px;
+}
+.Rotation .School_Intro a img {
+  width: 120px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 10px 10px 34px 1px #eee;
+}
+.Rotation .School_Intro article {
+  font-size: 14px;
+}
+.Rotation .School_Intro article a {
+  font-size: 18px;
+  color: #136ec2;
+}
+.Rotation .School_Intro article b {
+  color: #136ec2;
+  font-size: 15px;
+}
+.Rotation .School_Intro article span {
+  color: red;
+  font-size: 9px;
+  position: relative;
+  top: -2px;
+  left: -11px;
 }
 /*# sourceMappingURL=index.css.map */

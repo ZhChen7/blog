@@ -67,5 +67,12 @@ let main_Navigation=function () {
         }
     })
 
+    $('.topBar-bottom>a').click(function () {
+        index= $(this).index()
+        addTranslation()
+        settanslateX(-width* index)
+        $('.topBar-bottom>a').eq(index).addClass('Recommend_common').siblings().removeClass('Recommend_common')
+
+    })
 
 }
