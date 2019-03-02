@@ -16,6 +16,7 @@
         white-space: nowrap;    //不换行
         text-overflow:clip;     //文字超出部分用省略号表示
         animation: contextMove 5s ease-in-out forwards;
+        animation-play-state: paused;
       }
     }
   }
@@ -23,15 +24,17 @@
     width: 100%;
     ul{
       width: 100%;
-      padding-top: 9px;
+      padding-top: 9rem/@baseFontSize;
+      padding-left: 39rem/@baseFontSize;
       li{
         float: left;
-        margin-left: 51rem/@baseFontSize;
+        margin-left: 57rem/@baseFontSize;
         margin-top: 41rem/@baseFontSize;
         transform: skew(163deg,-14deg);
         box-shadow: 5px 5px 5px #666;
-        overflow: hidden;
+
         animation: liMove 3s linear 1;
+        animation-play-state: paused;
         a{
           width: 195rem/@baseFontSize;
           height: 195rem/@baseFontSize;
@@ -58,6 +61,9 @@
             }
           }
         }
+      }
+      li:nth-of-type(odd){
+        margin-left: 0;
       }
     }
   }

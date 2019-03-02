@@ -24,6 +24,7 @@ let main_Navigation=function () {
      let isMove=false
      let width=0
      let index=0
+
     setTimeout(function () {
         width=document.querySelector('.bg-container').offsetWidth
     },100)
@@ -40,9 +41,14 @@ let main_Navigation=function () {
         distanceX=moveX-startX
 
         let translateX = -width * index + distanceX;
+       console.log(translateX)
+        if(translateX>0){
+            settanslateX(0)
+        }else{
+            settanslateX(translateX)
+            isMove=true
+        }
 
-        settanslateX(translateX)
-        isMove=true
     })
 
     $('.main_Navigation_nav').on('touchend',function (e) {
@@ -63,6 +69,10 @@ let main_Navigation=function () {
                 settanslateX(translateX);
                 console.log(index)
                 $('.topBar-bottom>a').eq(index).addClass('Recommend_common').siblings().removeClass('Recommend_common')
+                if(index === 1){
+                    animation_play_start($('.Recond'))
+                    animation_play_start($('.dynamic-body>ul>li'))
+                }
             }
         }
     })
@@ -72,7 +82,23 @@ let main_Navigation=function () {
         addTranslation()
         settanslateX(-width* index)
         $('.topBar-bottom>a').eq(index).addClass('Recommend_common').siblings().removeClass('Recommend_common')
+        if(index === 1){
+            animation_play_start($('.Recond'))
+            animation_play_start($('.dynamic-body>ul>li'))
+        }
 
     })
+
+    let animation_play_start=function (el) {
+        el.css({
+            'animation-play-state':'running'
+        })
+    }
+
+    let animation_play_pause=function (el) {
+        el.css({
+            'animation-play-state':'paused'
+        })
+    }
 
 }

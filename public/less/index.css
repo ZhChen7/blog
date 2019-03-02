@@ -620,22 +620,24 @@ textarea {
   white-space: nowrap;
   text-overflow: clip;
   animation: contextMove 5s ease-in-out forwards;
+  animation-play-state: paused;
 }
 .dynamic .dynamic-body {
   width: 100%;
 }
 .dynamic .dynamic-body ul {
   width: 100%;
-  padding-top: 9px;
+  padding-top: 0.09rem;
+  padding-left: 0.39rem;
 }
 .dynamic .dynamic-body ul li {
   float: left;
-  margin-left: 0.51rem;
+  margin-left: 0.57rem;
   margin-top: 0.41rem;
   transform: skew(163deg, -14deg);
   box-shadow: 5px 5px 5px #666;
-  overflow: hidden;
   animation: liMove 3s linear 1;
+  animation-play-state: paused;
 }
 .dynamic .dynamic-body ul li a {
   width: 1.95rem;
@@ -662,6 +664,9 @@ textarea {
 .dynamic .dynamic-body ul li a .dynamic-body-footer img {
   display: block;
   width: 100%;
+}
+.dynamic .dynamic-body ul li:nth-of-type(odd) {
+  margin-left: 0;
 }
 @keyframes contextMove {
   from {
