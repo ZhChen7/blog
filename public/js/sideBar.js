@@ -4,6 +4,8 @@ $(function (e) {
 
     //侧边栏动画效果
     sideBar_showAndhide()
+
+
 })
 
 let sideBar_Position=function () {
@@ -22,12 +24,17 @@ let sideBar_Position=function () {
 }
 
 let sideBar_showAndhide=function () {
-    $('.icon-icon').click(function () {
 
+
+    $('.icon-icon').click(function () {
         $('.sidebar').show(1500)
+            //侧边栏图片显示与否
+            SideBar_Show();
     })
 
-    $('.sideBar-right').click(function () {
+
+    $('.sideBar-right').click(function (e) {
+        e.stopPropagation()
         $('.sidebar').hide(1000)
     })
 
@@ -79,5 +86,35 @@ let sideBar_showAndhide=function () {
            }
 
         }
+    })
+
+
+}
+
+let SideBar_Show = function () {
+
+   let cleartime=setTimeout(function () {
+        $('.Sidebar_Show_imgLogo').eq(0).show(3000).siblings().hide()
+    },500)
+
+
+    $('.Sidebar_Show_img').click(function (e) {
+        e.stopPropagation()
+        let index = $(this).index()
+        if(index === 6){
+            index=5
+        }
+        if(index === 7){
+            index=6
+        }
+        $('.Sidebar_Show_imgLogo').eq(index - 3).show(1000).siblings().hide()
+
+        $('.Show-img').click(function (e) {
+            e.stopPropagation()
+        })
+        $('.sidebar-bottom').click(function (e) {
+
+            $('.Sidebar_Show_imgLogo').hide(1000)
+        })
     })
 }

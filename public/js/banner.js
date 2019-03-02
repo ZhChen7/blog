@@ -4,6 +4,8 @@ window.onload = function () {
 
     // 轮播图
     banner();
+
+
 }
 let searchshow = function () {
     let nav = document.querySelector('.topBar');
@@ -41,7 +43,7 @@ let banner = function () {
 
     let index = 1;
     let timer = setInterval(function () {
-        let width =  bannerBox.offsetWidth ;
+        let width = bannerBox.offsetWidth;
         index++;
         addTranslation();
         // console.log('index:'+index);
@@ -130,3 +132,4 @@ let banner = function () {
         }
     })
 };
+

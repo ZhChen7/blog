@@ -114,13 +114,6 @@ textarea {
   margin: 0 auto;
   background: #fff;
 }
-.blog-container {
-  width: 100%;
-  max-width: 750px;
-  min-width: 320px;
-  margin: 0 auto;
-  background: #ccc;
-}
 .iconfont {
   color: #fff !important;
   font-size: 0.27rem !important;
@@ -394,7 +387,7 @@ textarea {
 }
 .sidebar .sidebar-main {
   width: 4rem;
-  height: 7rem;
+  height: 100%;
   background: red;
 }
 .sidebar .sidebar-main .sidebar-header {
@@ -429,13 +422,13 @@ textarea {
   color: #fff;
   font-weight: bold;
 }
-.sidebar .sidebar-main .Click-heart {
+.sidebar .sidebar-main .sidebar-header .Click-heart {
   position: absolute;
   bottom: 0.08rem;
   right: 0.2rem;
   display: flex;
 }
-.sidebar .sidebar-main .Click-heart .Click-num {
+.sidebar .sidebar-main .sidebar-header .Click-heart .Click-num {
   width: 0.19rem;
   height: 0.24rem;
   font-size: 0.14rem;
@@ -446,6 +439,76 @@ textarea {
   color: #fff;
   font-weight: 700;
   margin: 0.05rem 0.09rem;
+}
+.sidebar .sidebar-main .sidebar-header .Click-heart .dianzan {
+  color: #FE6D33 !important;
+}
+.sidebar .sidebar-main .sidebar-bottom {
+  width: 100%;
+  background: url("/images/sideBar_footer.jpg") no-repeat center;
+  height: 6.89rem;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.sidebar .sidebar-main .sidebar-bottom .iconAll {
+  width: 100%;
+}
+.sidebar .sidebar-main .sidebar-bottom .iconAll a {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  float: left;
+  margin-left: 0.15rem;
+  text-align: center;
+  padding-top: 0.05rem;
+  border-radius: 50%;
+  margin-top: 0.16rem;
+}
+.sidebar .sidebar-main .sidebar-bottom .iconAll a span:nth-of-type(1) {
+  display: block;
+  font-size: 0.23rem !important;
+}
+.sidebar .sidebar-main .sidebar-bottom .iconAll a span:nth-of-type(2) {
+  display: block;
+  font-size: 0.14rem;
+  margin-top: 0.04rem;
+  letter-spacing: 0.02rem;
+  color: #fff;
+}
+.sidebar .sidebar-main .sidebar-bottom .iconAll .mayun {
+  color: #D81E06 !important;
+}
+.sidebar .sidebar-main .sidebar-bottom .iconAll .qq {
+  display: block;
+  margin-top: -0.03rem !important;
+}
+.sidebar .sidebar-main .sidebar-bottom .Show-img {
+  width: 100%;
+}
+.sidebar .sidebar-main .sidebar-bottom .Show-img .weixin,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .Alipay,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .cell_phone,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin {
+  width: 100%;
+  display: none;
+}
+.sidebar .sidebar-main .sidebar-bottom .Show-img .weixin img,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .Alipay img,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .cell_phone img,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin img {
+  display: block;
+  width: 100%;
+}
+.sidebar .sidebar-main .sidebar-bottom .Show-img .cell_phone {
+  width: 100%;
+  text-align: center;
+}
+.sidebar .sidebar-main .sidebar-bottom .Show-img .cell_phone .callnum {
+  display: block;
+  width: 100%;
+  font-size: 22px;
+  letter-spacing: 5px;
+  margin-top: 148px;
 }
 .sidebar .sideBar-right {
   width: 1.29rem;
@@ -481,6 +544,7 @@ textarea {
 .main_Navigation .main_Navigation_nav .School {
   flex: 1;
   width: 5.29rem;
+  overflow: hidden;
 }
 .main_Navigation .main_Navigation_nav .Dynamic {
   height: 100%;
@@ -534,5 +598,96 @@ textarea {
   position: relative;
   top: -2px;
   left: -11px;
+}
+.dynamic {
+  width: 100%;
+}
+.dynamic .dynamic-header {
+  width: 100%;
+}
+.dynamic .dynamic-header .titile {
+  width: 100%;
+  height: 100%;
+  color: #111;
+  font-size: 0.18rem;
+  letter-spacing: 0.11rem;
+  padding-top: 0.52rem;
+}
+.dynamic .dynamic-header .titile span {
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  animation: contextMove 5s ease-in-out forwards;
+}
+.dynamic .dynamic-body {
+  width: 100%;
+}
+.dynamic .dynamic-body ul {
+  width: 100%;
+  padding-top: 9px;
+}
+.dynamic .dynamic-body ul li {
+  float: left;
+  margin-left: 0.51rem;
+  margin-top: 0.41rem;
+  transform: skew(163deg, -14deg);
+  box-shadow: 5px 5px 5px #666;
+  overflow: hidden;
+  animation: liMove 3s linear 1;
+}
+.dynamic .dynamic-body ul li a {
+  width: 1.95rem;
+  height: 1.95rem;
+  display: block;
+}
+.dynamic .dynamic-body ul li a .dynamic-body-header {
+  width: 100%;
+}
+.dynamic .dynamic-body ul li a .dynamic-body-header .dynamic-body-header-time {
+  margin-left: -0.2rem;
+  font-size: 0.18rem;
+  text-align: center;
+  letter-spacing: 0.01rem;
+  padding-top: 0.12rem;
+}
+.dynamic .dynamic-body ul li a .dynamic-body-header .dynamic-body-header-time span {
+  font-size: 0.15rem !important;
+  color: #9C27B0 !important;
+}
+.dynamic .dynamic-body ul li a .dynamic-body-footer {
+  width: 100%;
+}
+.dynamic .dynamic-body ul li a .dynamic-body-footer img {
+  display: block;
+  width: 100%;
+}
+@keyframes contextMove {
+  from {
+    width: 0;
+    opacity: 0.6;
+  }
+  30% {
+    transform: scale(2, 2) skew(-30deg);
+  }
+  60% {
+    transform: scale(3, 3) skew(30deg);
+  }
+  to {
+    width: 2.78rem;
+    opacity: 0.9;
+  }
+}
+@keyframes liMove {
+  from {
+    transform: rotate(30deg) scale(0.1, 0.1);
+  }
+  20% {
+    transform: scale(1.2, 1.2);
+  }
+  to {
+    transform: rotate(90deg);
+  }
 }
 /*# sourceMappingURL=index.css.map */

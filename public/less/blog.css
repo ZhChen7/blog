@@ -114,13 +114,6 @@ textarea {
   margin: 0 auto;
   background: #fff;
 }
-.blog-container {
-  width: 100%;
-  max-width: 750px;
-  min-width: 320px;
-  margin: 0 auto;
-  background: #ccc;
-}
 .iconfont {
   color: #fff !important;
   font-size: 0.27rem !important;
