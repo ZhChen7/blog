@@ -41,14 +41,12 @@ let main_Navigation=function () {
         distanceX=moveX-startX
 
         let translateX = -width * index + distanceX;
-       console.log(translateX)
         if(translateX>0){
             settanslateX(0)
         }else{
             settanslateX(translateX)
             isMove=true
         }
-
     })
 
     $('.main_Navigation_nav').on('touchend',function (e) {
@@ -74,6 +72,7 @@ let main_Navigation=function () {
                     animation_play_start($('.dynamic-body>ul>li'))
                 }
             }
+            isMove =false
         }
     })
 

@@ -11,8 +11,8 @@ router.get('/',function (req,res) {
    res.render('index.html')
 })
 
-router.get('/blog',function (req,res) {
-   res.render('blog.html')
+router.get('/category',function (req,res) {
+   res.render('category.html')
 })
 
 //导出router
