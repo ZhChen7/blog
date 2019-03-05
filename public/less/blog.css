@@ -418,4 +418,56 @@ textarea {
     transform: translate(1.4rem, 0) rotateY(360deg) scale(1.5, 1.5);
   }
 }
+.search-header {
+  width: 100%;
+  height: 100px;
+  background: #9C27B0;
+  position: relative;
+}
+.search-header .Back {
+  width: 71px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  text-align: center;
+  line-height: 60px;
+  padding-left: 12px;
+  padding-top: 5px;
+}
+.search-header .Back span {
+  color: #75C82B !important;
+  font-size: 30px !important;
+}
+.search-header form {
+  position: absolute ;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: 60px;
+  padding-left: 71px;
+  padding-right: 26px;
+  color: #fff;
+}
+.search-header form input {
+  width: 100%;
+  height: 36px;
+  margin-top: 13px;
+  font-size: 17px;
+  color: pink;
+  background: #9C27B0;
+  border-bottom: 1px solid #fff;
+  padding-left: 6px;
+}
+.search-header form input::-webkit-input-placeholder {
+  color: #ddd;
+}
+.search-header .search-intro {
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 4px;
+  position: absolute;
+  top: 23px;
+  left: 222px;
+}
 /*# sourceMappingURL=blog.css.map */

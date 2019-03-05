@@ -87,6 +87,7 @@ let sideBar_showAndhide=function () {
                settanslateX(0)
            }else {
              settanslateX(-$('.sidebar').width())
+               addTranslation()
                $('.sidebar').css({
                    display:'none',
                    transition: 'width 2s,left 2s',
