@@ -1,29 +1,91 @@
 .public_footer{
-    width: 100%;
-    background: @topBarColor;
-    padding-left: 33rem/@baseFontSize;
-    height: 77rem/@baseFontSize;
-   position: relative;
-   padding-top: 30rem/@baseFontSize;
-  .public_footer_intro{
-    text-align: center;
-    font-size: 14rem/@baseFontSize;
-    letter-spacing: 16rem/@baseFontSize;
-  }
-  .public_footer_num{
-    position: absolute;
-    bottom: 10rem/@baseFontSize;
-    right: 25rem/@baseFontSize;
-    img{
-      display: inline-block;
-      width: 10rem/@baseFontSize;
-      position: relative;
-      top: 1rem/@baseFontSize;
-      left:0;
+  width: 100%;
+  background: @public-footerColor;
+  .public_footer_main{
+    padding-top: 5rem/@baseFontSize;
+    height: 117rem/@baseFontSize;
+    width: 350rem/@baseFontSize;
+    margin: 0 auto;
+    .footer-intro{
+      width: 100%;
+      ul{
+        width: 100%;
+        li{
+          width: 50%;
+          float: left;
+          font-size: 13rem/@baseFontSize;
+          color: #fff;
+           border-left: 1rem/@baseFontSize solid #ccc;
+           border-bottom: 1rem/@baseFontSize solid #ccc;
+            text-align: center;
+            padding: 11rem/@baseFontSize 0rem/@baseFontSize ;
+            height: 40rem/@baseFontSize;
+          span{
+            font-size: 17rem/@baseFontSize !important;
+          }
+        }
+        li:nth-of-type(odd){
+          border-left: none;
+        }
+        .address{
+          i{
+            display: inline-block;
+            background: url("/images/icon-police.png") no-repeat;
+            width: 14rem/@baseFontSize;
+            height: 16rem/@baseFontSize;
+            background-size: 80%;
+            position: relative;
+            top: 3rem/@baseFontSize;
+            left: -1rem/@baseFontSize;
+          }
+        }
+        .total_number{
+          span{
+            font-size: 17rem/@baseFontSize !important;
+            color: pink !important;
+            position: relative;
+            top: 1rem/@baseFontSize;
+            left: -3rem/@baseFontSize;
+          }
+        }
+        .totalview{
+          span{
+            font-size: 20rem/@baseFontSize !important;
+          }
+        }
+        .unique_visitors{
+          padding: 1rem/@baseFontSize 0rem/@baseFontSize;
+          span{
+            font-size: 29rem/@baseFontSize !important;
+            position: relative;
+            top: 5rem/@baseFontSize;
+            left: 4rem/@baseFontSize;
+          }
+        }
+      }
     }
-    span{
-      font-size: 11rem/@baseFontSize;
-      color: #999;
+    .public_footer_bottom{
+      width: 100%;
+      ul{
+        width: 100%;
+        text-align: center;
+        a{
+           padding-left: 17rem/@baseFontSize;
+           span{
+             font-size: 24rem/@baseFontSize !important;
+           }
+          .qq{
+            position: relative;
+            top: 3rem/@baseFontSize;
+            left: -5rem/@baseFontSize;
+            margin-left: 5rem/@baseFontSize;
+            img{
+              width: 22rem/@baseFontSize;
+            }
+          }
+
+        }
+      }
     }
   }
 }

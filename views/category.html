@@ -1,5 +1,11 @@
 {{extend './layouts/layout-blog.html'}}
+
 {{block 'title'}}category 分类{{/block}}
+
+{{block 'body'}}
+    {{include './parties/category/Category-part.html'}}
+    {{include './parties/Recommend/index_list.html'}}
+{{/block}}
 
 {{block 'script'}}
 <script src="/js/sideBar.js"></script>

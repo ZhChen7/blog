@@ -11,16 +11,16 @@ let searchshow = function () {
     let nav = document.querySelector('.topBar');
     window.onscroll = function () {
         let scrollTop = window.pageYOffset;
-
+        let opacity=0 ;
         if (scrollTop < 170) {
-            console.log('170')
+            opacity = scrollTop / 170 * 0.85;
         } else {
-            console.log('270')
+            opacity =0.85
 
         }
 
     }
-
+    nav.style.background = 'rgba(201,21,35,' + opacity + ')';
 };
 let banner = function () {
     let bannerBox = document.querySelector('.bg-banner>.banner-main');

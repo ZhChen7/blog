@@ -200,7 +200,6 @@ textarea {
 .bg-banner .banner-main {
   width: 100%;
   height: 100%;
-  background: red;
   overflow: hidden;
   position: relative;
   border-radius: 6px;
@@ -315,10 +314,11 @@ textarea {
 .index_list ul li {
   width: 100%;
   height: 2rem;
-  background: red;
   position: relative;
   overflow: hidden;
-  margin-top: 0.15rem;
+  margin-top: 0.32rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 2px #eee;
 }
 .index_list ul li .li_img {
   width: 2.4rem;
@@ -375,6 +375,9 @@ textarea {
   margin-left: -0.27rem;
   margin-top: 0.2rem;
   font-size: 0.24rem;
+}
+.index_list ul li:nth-of-type(1) {
+  margin-top: 0.2rem;
 }
 .sidebar {
   width: 100%;
@@ -696,83 +699,86 @@ textarea {
 }
 .public_footer {
   width: 100%;
-  background: #9C27B0;
-  padding-left: 0.33rem;
-  height: 0.77rem;
-  position: relative;
-  padding-top: 0.3rem;
+  background: rgba(254, 67, 101, 0.8);
 }
-.public_footer .public_footer_intro {
+.public_footer .public_footer_main {
+  padding-top: 0.05rem;
+  height: 1.17rem;
+  width: 3.5rem;
+  margin: 0 auto;
+}
+.public_footer .public_footer_main .footer-intro {
+  width: 100%;
+}
+.public_footer .public_footer_main .footer-intro ul {
+  width: 100%;
+}
+.public_footer .public_footer_main .footer-intro ul li {
+  width: 50%;
+  float: left;
+  font-size: 0.13rem;
+  color: #fff;
+  border-left: 0.01rem solid #ccc;
+  border-bottom: 0.01rem solid #ccc;
   text-align: center;
-  font-size: 0.14rem;
-  letter-spacing: 0.16rem;
+  padding: 0.11rem 0rem;
+  height: 0.4rem;
 }
-.public_footer .public_footer_num {
-  position: absolute;
-  bottom: 0.1rem;
-  right: 0.25rem;
+.public_footer .public_footer_main .footer-intro ul li span {
+  font-size: 0.17rem !important;
 }
-.public_footer .public_footer_num img {
+.public_footer .public_footer_main .footer-intro ul li:nth-of-type(odd) {
+  border-left: none;
+}
+.public_footer .public_footer_main .footer-intro ul .address i {
   display: inline-block;
-  width: 0.1rem;
+  background: url("/images/icon-police.png") no-repeat;
+  width: 0.14rem;
+  height: 0.16rem;
+  background-size: 80%;
+  position: relative;
+  top: 0.03rem;
+  left: -0.01rem;
+}
+.public_footer .public_footer_main .footer-intro ul .total_number span {
+  font-size: 0.17rem !important;
+  color: pink !important;
   position: relative;
   top: 0.01rem;
-  left: 0;
+  left: -0.03rem;
 }
-.public_footer .public_footer_num span {
-  font-size: 0.11rem;
-  color: #999;
+.public_footer .public_footer_main .footer-intro ul .totalview span {
+  font-size: 0.2rem !important;
 }
-.search-header {
-  width: 100%;
-  height: 100px;
-  background: #9C27B0;
+.public_footer .public_footer_main .footer-intro ul .unique_visitors {
+  padding: 0.01rem 0rem;
+}
+.public_footer .public_footer_main .footer-intro ul .unique_visitors span {
+  font-size: 0.29rem !important;
   position: relative;
+  top: 0.05rem;
+  left: 0.04rem;
 }
-.search-header .Back {
-  width: 71px;
-  height: 60px;
-  position: absolute;
-  top: 20px;
-  left: 0;
+.public_footer .public_footer_main .public_footer_bottom {
+  width: 100%;
+}
+.public_footer .public_footer_main .public_footer_bottom ul {
+  width: 100%;
   text-align: center;
-  line-height: 60px;
-  padding-left: 12px;
-  padding-top: 5px;
 }
-.search-header .Back span {
-  color: #75C82B !important;
-  font-size: 30px !important;
+.public_footer .public_footer_main .public_footer_bottom ul a {
+  padding-left: 0.17rem;
 }
-.search-header form {
-  position: absolute ;
-  left: 0;
-  top: 20px;
-  width: 100%;
-  height: 60px;
-  padding-left: 71px;
-  padding-right: 26px;
-  color: #fff;
+.public_footer .public_footer_main .public_footer_bottom ul a span {
+  font-size: 0.24rem !important;
 }
-.search-header form input {
-  width: 100%;
-  height: 36px;
-  margin-top: 13px;
-  font-size: 17px;
-  color: pink;
-  background: #9C27B0;
-  border-bottom: 1px solid #fff;
-  padding-left: 6px;
+.public_footer .public_footer_main .public_footer_bottom ul a .qq {
+  position: relative;
+  top: 0.03rem;
+  left: -0.05rem;
+  margin-left: 0.05rem;
 }
-.search-header form input::-webkit-input-placeholder {
-  color: #ddd;
-}
-.search-header .search-intro {
-  font-size: 16px;
-  color: #fff;
-  letter-spacing: 4px;
-  position: absolute;
-  top: 23px;
-  left: 222px;
+.public_footer .public_footer_main .public_footer_bottom ul a .qq img {
+  width: 0.22rem;
 }
 /*# sourceMappingURL=index.css.map */

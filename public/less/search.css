@@ -1,0 +1,63 @@
+@charset "utf-8";
+.search-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.search-header .search-header-main {
+  height: 1rem;
+  background: #9C27B0;
+  position: relative;
+}
+.search-header .search-header-main .Back {
+  width: 0.71rem;
+  height: 0.6rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  text-align: center;
+  line-height: 0.6rem;
+  padding-left: 0.12rem;
+  padding-top: 0.05rem;
+}
+.search-header .search-header-main .Back span {
+  color: #75C82B !important;
+  font-size: 0.3rem !important;
+}
+.search-header .search-header-main form {
+  position: absolute ;
+  left: 0;
+  top: 0.2rem;
+  width: 100%;
+  height: 0.6rem;
+  padding-left: 0.71rem;
+  padding-right: 0.26rem;
+  color: #fff;
+}
+.search-header .search-header-main form input {
+  width: 100%;
+  height: 0.36rem;
+  margin-top: 0.13rem;
+  font-size: 0.17rem;
+  color: pink;
+  background: #9C27B0;
+  border-bottom: 0.01rem solid #fff;
+  padding-left: 0.06rem;
+}
+.search-header .search-header-main form input::-webkit-input-placeholder {
+  color: #ddd;
+}
+.search-header .search-header-main .search-intro {
+  font-size: 0.16rem;
+  color: #fff;
+  letter-spacing: 0.04rem;
+  position: absolute;
+  top: 0.23rem;
+  left: 2.22rem;
+}
+.index_list {
+  margin-top: 1.08rem;
+}
+/*# sourceMappingURL=search.css.map */

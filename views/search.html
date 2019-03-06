@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" type="text/less" href="/less/index.less">
+    <link rel="stylesheet" type="text/less" href="/less/search.less">
     <link href="/css/iconfont/iconfont.css" rel="stylesheet">
     <script src="/lib/less/less.min.js"></script>
     <title>search</title>
@@ -11,19 +12,21 @@
 <body>
 <div class="bg-container">
  <header class="search-header">
-     <form>
-         <input type="search" name="search" placeholder="sou..." autofocus autocomplete>
-     </form>
-     <a href="/" class="Back">
-         <span class="iconfont">&#xe6f4;</span>
-     </a>
-     <div class="search-intro">搜索页</div>
+     <div class="search-header-main">
+         <form>
+             <input type="search" name="search" placeholder="sou..." autofocus autocomplete>
+         </form>
+         <a href="/" class="Back">
+             <span class="iconfont">&#xe6f4;</span>
+         </a>
+         <div class="search-intro">搜索页</div>
+     </div>
  </header>
-
 
     {{include './parties/Recommend/index_list.html'}}
     {{include './parties/public_footer.html'}}
 
 </div>
 </body>
+<script src="/jquery/dist/jquery.js"></script>
 </html>

@@ -1,53 +1,66 @@
+@import "variable";
 .search-header{
   width: 100%;
-  height: 100px;
-  background: @topBarColor;
-  position: relative;
-  .Back{
-    width: 71px;
-    height: 60px;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    text-align: center;
-    line-height: 60px;
-    //border: 1px solid black;
-    padding-left: 12px;
-    padding-top: 5px;
-    span{
-      color: #75C82B !important;
-      font-size: 30px !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  .search-header-main{
+    height: 100rem/@baseFontSize;
+    background: @topBarColor;
+    position: relative;
+    .Back{
+      width: 71rem/@baseFontSize;
+      height: 60rem/@baseFontSize;
+      position: absolute;
+      top: 20rem/@baseFontSize;
+      left: 0;
+      text-align: center;
+      line-height: 60rem/@baseFontSize;
+      //border: 1rem/@baseFontSize solid black;
+      padding-left: 12rem/@baseFontSize;
+      padding-top: 5rem/@baseFontSize;
+      span{
+        color: #75C82B !important;
+        font-size: 30rem/@baseFontSize !important;
+      }
     }
-  }
-  form{
-    position: absolute ;
-    left: 0;
-    top: 20px;
-    width: 100%;
-    height: 60px;
-    padding-left: 71px;
-    padding-right: 26px;
-    color: #fff;
-    input{
+    form{
+      position: absolute ;
+      left: 0;
+      top: 20rem/@baseFontSize;
       width: 100%;
-      height: 36px;
-      margin-top: 13px;
-      font-size: 17px;
-      color: pink;
-      background: @topBarColor;
-      border-bottom: 1px solid #fff;
-      padding-left: 6px;
+      height: 60rem/@baseFontSize;
+      padding-left: 71rem/@baseFontSize;
+      padding-right: 26rem/@baseFontSize;
+      color: #fff;
+      input{
+        width: 100%;
+        height: 36rem/@baseFontSize;
+        margin-top: 13rem/@baseFontSize;
+        font-size: 17rem/@baseFontSize;
+        color: pink;
+        background: @topBarColor;
+        border-bottom: 1rem/@baseFontSize solid #fff;
+        padding-left: 6rem/@baseFontSize;
+      }
+      input::-webkit-input-placeholder{
+        color: #ddd;
+      }
     }
-    input::-webkit-input-placeholder{
-      color: #ddd;
+    .search-intro{
+      font-size: 16rem/@baseFontSize;
+      color: #fff;
+      letter-spacing: 4rem/@baseFontSize;
+      position: absolute;
+      top: 23rem/@baseFontSize;
+      left: 222rem/@baseFontSize;
     }
   }
-  .search-intro{
-    font-size: 16px;
-    color: #fff;
-    letter-spacing: 4px;
-    position: absolute;
-    top: 23px;
-    left: 222px;
-  }
+
 }
+
+.index_list{
+  margin-top: 108rem/@baseFontSize;
+}
+
