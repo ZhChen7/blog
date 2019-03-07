@@ -1,0 +1,21 @@
+{{extend './layouts/layout.html'}}
+{{block 'title'}}Login{{/block}}
+{{block 'style'}}
+  <link rel="stylesheet" type="text/less" href="/less/Login.less">
+{{/block}}
+{{block 'body'}}
+<div class="login-form">
+    <form>
+        <fieldset>
+            <div class="register">
+               <a href="">注册</a>
+            </div>
+            <legend>登录框:</legend>
+            <label for="account">账号：</label>
+            <input type="search" name="account" id="account" placeholder="请输入账号..." autofocus autocomplete>
+            <label for="password">密码：</label>
+            <input type="password" name="password" id="password" placeholder="请输入密码..." >
+        </fieldset>
+    </form>
+</div>
+{{/block}}

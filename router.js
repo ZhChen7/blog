@@ -22,5 +22,10 @@ router.get('/timeline',function (req,res) {
    res.render('timeline.html')
 })
 
+router.get('/login',function (req,res) {
+   res.render('login.html')
+})
+
+
 //导出router
 module.exports=router

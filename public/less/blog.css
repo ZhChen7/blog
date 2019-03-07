@@ -208,13 +208,15 @@ textarea {
 }
 .public_footer {
   width: 100%;
-  background: rgba(254, 67, 101, 0.8);
+  opacity: 0.8;
+  background: rgba(28, 14, 35, 0.8);
 }
 .public_footer .public_footer_main {
   padding-top: 0.05rem;
-  height: 1.17rem;
+  height: 1.25rem;
   width: 3.5rem;
   margin: 0 auto;
+  overflow: hidden;
 }
 .public_footer .public_footer_main .footer-intro {
   width: 100%;
@@ -257,7 +259,7 @@ textarea {
   left: -0.03rem;
 }
 .public_footer .public_footer_main .footer-intro ul .totalview span {
-  font-size: 0.2rem !important;
+  font-size: 0.15rem !important;
 }
 .public_footer .public_footer_main .footer-intro ul .unique_visitors {
   padding: 0.01rem 0rem;
@@ -274,6 +276,8 @@ textarea {
 .public_footer .public_footer_main .public_footer_bottom ul {
   width: 100%;
   text-align: center;
+  height: 0.32rem;
+  line-height: 0.28rem;
 }
 .public_footer .public_footer_main .public_footer_bottom ul a {
   padding-left: 0.17rem;
