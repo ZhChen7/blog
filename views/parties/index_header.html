@@ -11,9 +11,14 @@
             <a class="icon-right" href="/search">
                 <span class="iconfont icon-sousuo"></span>
             </a>
+            {{if user}}
+            <a href="" class="username"> <span>{{user.nickname}}</span><span class="iconfont bixin">&#xe61d;</span> </a>
+            {{else}}
             <a href="/login" class="login">
                 <span class="iconfont">&#xe61a;</span>
             </a>
+            {{/if}}
+
         </div>
         <div class="topBar-bottom">
             <a href="javascript:;" class="Recommend_common">推荐</a>

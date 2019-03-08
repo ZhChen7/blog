@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" type="text/less" href="/less/index.less">
+    {{block 'style'}}{{/block}}
     <link href="/css/iconfont/iconfont.css" rel="stylesheet">
     <script src="/lib/less/less.min.js"></script>
-    {{block 'style'}}{{/block}}
     <title>{{block 'title'}}{{/block}}</title>
 </head>
 <body>
@@ -20,3 +21,6 @@
 {{block 'script'}}{{/block}}
 </body>
 </html>
+
+
+

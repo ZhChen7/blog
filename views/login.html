@@ -1,21 +1,49 @@
 {{extend './layouts/layout.html'}}
-{{block 'title'}}Login{{/block}}
 {{block 'style'}}
-  <link rel="stylesheet" type="text/less" href="/less/Login.less">
+<link rel="stylesheet" type="text/less" href="/less/login.less">
 {{/block}}
+{{block 'title'}}Login{{/block}}
 {{block 'body'}}
 <div class="login-form">
-    <form>
+    <form id="login_form">
         <fieldset>
-            <div class="register">
-               <a href="">注册</a>
+            <div class="landing">
+                <button type="submit">登陆</button>
             </div>
-            <legend>登录框:</legend>
-            <label for="account">账号：</label>
-            <input type="search" name="account" id="account" placeholder="请输入账号..." autofocus autocomplete>
+            <div class="register">
+               <a href="/register">注册</a>
+            </div>
+            <legend>登录:</legend>
+            <label for="email">邮箱：</label>
+            <input type="search" name="email" id="email" placeholder="请输入邮箱..." autofocus autocomplete required>
             <label for="password">密码：</label>
-            <input type="password" name="password" id="password" placeholder="请输入密码..." >
+            <input type="password" name="password" id="password" placeholder="请输入密码..." required>
         </fieldset>
     </form>
 </div>
+{{/block}}
+
+{{block 'script'}}
+<script>
+    $('#login_form').on('submit',function (e) {
+        e.preventDefault()
+        let formDate=$(this).serialize()
+        $.ajax({
+            url:'/login',
+            type:'post',
+            data:formDate,
+            dataType:'json',
+            success:function (data) {
+                let err_code= data.err_code
+                if(err_code===0){
+                    window.location.href='/'
+                }else if(err_code===1){
+                    window.alert('邮箱或密码错误！')
+                }else if (err_code===500){
+                    window.alert('服务器繁忙，请稍后再试！')
+                }
+            }
+        })
+    })
+</script>
 {{/block}}

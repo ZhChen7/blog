@@ -1,0 +1,51 @@
+{{extend './layouts/layout.html'}}
+{{block 'style'}}
+<link rel="stylesheet" type="text/less" href="/less/register.less">
+{{/block}}
+{{block 'title'}}Register{{/block}}
+{{block 'body'}}
+<div class="register">
+    <form id="register-form">
+        <fieldset>
+            <legend>注册:</legend>
+            <label for="email">邮箱：</label>
+            <input type="email" name="email" id="email" placeholder="请输入邮箱..." autofocus autocomplete required>
+            <label for="nickname">昵称：</label>
+            <input type="search" name="nickname" id="nickname" placeholder="输入昵称..." maxlength="5" minlength="2" autocomplete required>
+            <label for="password">密码：</label>
+            <input type="password" name="password" id="password" placeholder="请输入密码..." autocomplete required>
+
+            <div class="register_btn">
+                <button  type="submit">注册</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{{/block}}
+
+{{block 'script'}}
+   <script>
+       $('#register-form').on('submit',function (e) {
+           e.preventDefault()
+           let formDate=$(this).serialize()
+           console.log(formDate)
+           $.ajax({
+               url:'/register',
+               type:'post',
+               data:formDate,
+               dataType:'json',
+               success:function (data) {
+                   let err_code=data.err_code
+                   if(err_code===0){
+                       window.alert('注册成功！')
+                       window.location.href='/'
+                   }else if(err_code===1){
+                       window.alert('邮箱或者昵称已存在！')
+                   }else if(err_code===500){
+                       window.alert('服务器忙，请稍后重试！')
+                   }
+               }
+           })
+       })
+   </script>
+{{/block}}

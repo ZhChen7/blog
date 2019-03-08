@@ -182,6 +182,19 @@ textarea {
 .topBar .topBar-main .topBar-top .login span {
   font-size: 0.24rem !important;
 }
+.topBar .topBar-main .topBar-top .username {
+  position: absolute;
+  top: 4px;
+  right: 81px;
+  font-size: 14px;
+  color: #fe3348;
+}
+.topBar .topBar-main .topBar-top .username span {
+  font-size: 16px;
+}
+.topBar .topBar-main .topBar-top .username .bixin {
+  color: #ff3b3b !important;
+}
 .topBar .topBar-main .topBar-bottom {
   width: 100%;
   height: 0.56rem;
@@ -792,62 +805,5 @@ textarea {
 }
 .public_footer .public_footer_main .public_footer_bottom ul a .qq img {
   width: 0.22rem;
-}
-.login-form {
-  width: 100%;
-  margin-top: 1.33rem;
-  height: 3.93rem;
-  background: url("/images/login_bg.jpg") no-repeat;
-  padding-top: 35px;
-}
-.login-form form {
-  width: 100%;
-}
-.login-form form fieldset {
-  width: 100%;
-  height: 3rem;
-  border: 0.01rem solid #ddd;
-  padding: 0.32rem 0.5rem;
-  position: relative;
-}
-.login-form form fieldset legend {
-  font-size: 0.16rem;
-  color: #ccc;
-  opacity: 0.6;
-}
-.login-form form fieldset label {
-  display: inline-block;
-  font-size: 0.14rem;
-  color: #7945aa;
-}
-.login-form form fieldset input {
-  width: 100%;
-  border-bottom: 0.01rem solid #ccc;
-  height: 0.3rem;
-  font-size: 0.13rem;
-  padding-left: 0.5rem;
-  opacity: 0.3;
-  margin: 27px 0;
-  color: red;
-}
-.login-form form fieldset input::-webkit-input-placeholder {
-  color: #333;
-}
-.login-form form fieldset .register {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 1px solid black;
-  font-size: 14px;
-  color: #222;
-}
-.login-form form fieldset .register a {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: black;
-  color: #fff;
-  text-align: center;
-  line-height: 30px;
 }
 /*# sourceMappingURL=index.css.map */

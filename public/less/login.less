@@ -1,20 +1,26 @@
+@import 'variable';
 .login-form{
     width: 100%;
     margin-top:@topBar-height ;
-    height: 393rem/@baseFontSize ;
-    background: url("/images/login_bg.jpg") no-repeat;
-    padding-top: 35px;
+    height: 410rem/@baseFontSize;
+    //background: url("/images/login_bg.jpg") no-repeat;
+    //background-size: cover;
+    //-webkit-background-size: cover;
+    padding-top: 35rem/@baseFontSize;
+    background: linear-gradient(153deg,#798D84 -5%,pink , #edeeef 59%);
     form{
         width: 100%;
+        height: 100%;
         fieldset{
             width: 100%;
-            height: 300rem/@baseFontSize ;
+            //height: 300rem/@baseFontSize;
+            height: 100%;
             border: 1rem/@baseFontSize  solid #ddd;
             padding: 32rem/@baseFontSize  50rem/@baseFontSize ;
             position: relative;
             legend{
                 font-size: 16rem/@baseFontSize ;
-                color: #ccc;
+                color: #fff;
                 opacity: 0.6;
             }
             label{
@@ -29,27 +35,42 @@
                 font-size: 13rem/@baseFontSize ;
                 padding-left: 50rem/@baseFontSize ;
                 opacity: 0.3;
-                margin: 27px 0;
+                margin: 20rem/@baseFontSize 0;
                 color: red;
             }
             input::-webkit-input-placeholder{
                 color: #333;
             }
-            .register{
-                position: absolute;
-                top: 0;
-                right: 0;
-                border: 1px solid black;
-                font-size: 14px;
-                color: #222;
-                a{
-                    display: inline-block;
-                    width: 30px;
-                    height: 30px;
-                    background: black;
+            .register,.landing{
+                 position: absolute;
+                 bottom: 32rem/@baseFontSize;
+                 right: 151rem/@baseFontSize;
+                 border-radius: 16rem/@baseFontSize;
+                 font-size: 16rem/@baseFontSize;
+                 background: #5d0000;
+                 box-shadow: 2rem/@baseFontSize 1rem/@baseFontSize 9rem/@baseFontSize 10rem/@baseFontSize #5d0000;
+                 a{
+                     display: inline-block;
+                     width: 80rem/@baseFontSize;
+                     height: 30rem/@baseFontSize;
+                     color: #fff;
+                     text-align: center;
+                     line-height: 30rem/@baseFontSize;
+                     color: #fff;
+                     font-weight: bold;
+                 }
+             }
+            .landing{
+                right: 319rem/@baseFontSize;
+                background: #fe648f;
+                box-shadow: 2rem/@baseFontSize 1rem/@baseFontSize 9rem/@baseFontSize 10rem/@baseFontSize #fe648f;
+                text-align: center;
+                button{
+                    width: 80rem/@baseFontSize;
+                    height: 30rem/@baseFontSize;
+                    border: none;
+                    background: #fe648f;
                     color: #fff;
-                    text-align: center;
-                    line-height: 30px;
                 }
             }
         }
@@ -57,5 +78,11 @@
 }
 
 .public_footer{
-    //margin-top: 93rem/@baseFontSize ;
+  position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+body{
+    background: linear-gradient(153deg,#fff -7%,pink , #edeeef 50%);
 }
