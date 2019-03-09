@@ -73,6 +73,19 @@
   background: #fe648f;
   color: #fff;
 }
+.login-form form fieldset .email-icon,
+.login-form form fieldset .key {
+  position: absolute;
+  top: 1.2rem;
+  left: 0.66rem;
+  font-size: 0.22rem !important;
+  color: #fe648f !important;
+}
+.login-form form fieldset .key {
+  top: 2.11rem;
+  left: 0.73rem;
+  font-size: 0.17rem !important;
+}
 .public_footer {
   position: absolute;
   bottom: 0;

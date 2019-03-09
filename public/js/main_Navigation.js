@@ -1,7 +1,5 @@
 $(function () {
     main_Navigation()
-
-
 })
 
 let main_Navigation=function () {
@@ -33,10 +31,12 @@ let main_Navigation=function () {
     })
 
      $('.main_Navigation_nav').on('touchstart',function (e) {
+
          startX = e.touches[0].clientX;
 
      })
     $('.main_Navigation_nav').on('touchmove',function (e) {
+        e.preventDefault()
         moveX = e.touches[0].clientX;
         distanceX=moveX-startX
 
@@ -51,6 +51,8 @@ let main_Navigation=function () {
 
     $('.main_Navigation_nav').on('touchend',function (e) {
         if(isMove){
+            e.stopPropagation()
+            e.preventDefault()
             if(Math.abs(distanceX)<width/3){
                 addTranslation();
                 let translateX = -width * index;

@@ -85,7 +85,8 @@ let sideBar_showAndhide=function () {
            if( distanceX<$('.sidebar>.sidebar-main').width()*2/3){
                addTranslation()
                settanslateX(0)
-           }else {
+           }
+           else {
              settanslateX(-$('.sidebar').width())
                addTranslation()
                $('.sidebar').css({

@@ -87,11 +87,13 @@ let banner = function () {
     let isMove = false;
     imgBox.addEventListener('touchstart', function (e) {
         e.stopPropagation()
+        e.preventDefault()
         clearInterval(timer);
         startX = e.touches[0].clientX;
     })
     imgBox.addEventListener('touchmove', function (e) {
         e.stopPropagation()
+        e.preventDefault()
         let moveX = e.touches[0].clientX;
         distanceX = moveX - startX;
         let width = bannerBox.offsetWidth;
@@ -101,7 +103,7 @@ let banner = function () {
     })
     imgBox.addEventListener('touchend', function (e) {
         e.stopPropagation()
-
+        e.preventDefault()
         if (isMove) {
             let width = bannerBox.offsetWidth;
             if (Math.abs(distanceX) < width / 3) {

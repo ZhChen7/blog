@@ -175,25 +175,38 @@ textarea {
   margin-left: 0;
 }
 .topBar .topBar-main .topBar-top .login {
+  width: 0.9rem;
+  height: 100%;
   position: absolute;
-  top: 0.03rem;
-  right: 1.02rem;
+  top: -0.02rem;
+  right: 0.9rem;
+  text-align: center;
+  line-height: 0.41rem;
+  animation: loginMove 10s 1s linear backwards;
 }
 .topBar .topBar-main .topBar-top .login span {
-  font-size: 0.24rem !important;
+  font-size: 0.2rem !important;
 }
 .topBar .topBar-main .topBar-top .username {
   position: absolute;
-  top: 4px;
-  right: 81px;
-  font-size: 14px;
+  top: 0.04rem;
+  right: 0.81rem;
+  font-size: 0.14rem;
   color: #fe3348;
 }
 .topBar .topBar-main .topBar-top .username span {
-  font-size: 16px;
+  font-size: 0.16rem;
 }
 .topBar .topBar-main .topBar-top .username .bixin {
   color: #ff3b3b !important;
+}
+.topBar .topBar-main .topBar-top .publish {
+  position: absolute;
+  top: 7px;
+  left: 71px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
 }
 .topBar .topBar-main .topBar-bottom {
   width: 100%;
@@ -211,6 +224,14 @@ textarea {
 }
 .topBar-bottom > .Recommend_common {
   font-weight: bold;
+}
+@keyframes loginMove {
+  form {
+    transform: translate(-50px, 100px);
+  }
+  20% {
+    transform: translate(-50px, 30px) scale(3, 3);
+  }
 }
 .bg-banner {
   width: 100%;

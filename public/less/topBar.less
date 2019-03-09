@@ -57,26 +57,40 @@
         }
       }
       .login{
+        width: 90rem/@baseFontSize;
+        height: 100%;
         position: absolute;
-        top: 3rem/@baseFontSize;
-        right: 102rem/@baseFontSize;
+        top: -2rem/@baseFontSize;
+        right: 90rem/@baseFontSize;
+        text-align: center;
+        line-height:  @icon-middle-height;
+        animation: loginMove 10s 1s linear backwards;
         span{
-          font-size: 24rem/@baseFontSize !important;
+          font-size: 20rem/@baseFontSize !important;
         }
       }
       .username{
         position: absolute;
-        top: 4px;
-        right: 81px;
-        font-size: 14px;
+        top: 4rem/@baseFontSize;
+        right: 81rem/@baseFontSize;
+        font-size: 14rem/@baseFontSize;
         color: #fe3348;
         span{
-          font-size: 16px;
+          font-size: 16rem/@baseFontSize;
         }
         .bixin{
           color: #ff3b3b !important;
         }
       }
+      .publish{
+        position: absolute;
+        top: 7px;
+        left: 71px;
+        font-size: 16px;
+        color: #fff;
+        font-weight: bold;
+      }
+
     }
     .topBar-bottom{
       width: 100%;
@@ -97,4 +111,14 @@
 }
 .topBar-bottom>.Recommend_common{
    font-weight: bold;
+}
+
+@keyframes loginMove {
+  form{
+        transform: translate(-50px,100px);
+  }
+  20%{
+     transform:translate(-50px,30px) scale(3,3);
+  }
+
 }

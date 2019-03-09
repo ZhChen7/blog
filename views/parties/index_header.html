@@ -12,12 +12,16 @@
                 <span class="iconfont icon-sousuo"></span>
             </a>
             {{if user}}
-            <a href="" class="username"> <span>{{user.nickname}}</span><span class="iconfont bixin">&#xe61d;</span> </a>
+            <a href="javascript:;" class="username"> <span>{{user.nickname}}</span><span class="iconfont bixin">&#xe61d;</span> </a>
             {{else}}
             <a href="/login" class="login">
                 <span class="iconfont">&#xe61a;</span>
             </a>
             {{/if}}
+
+            <a href="/publish" class="publish">
+                <span>发表</span>
+            </a>
 
         </div>
         <div class="topBar-bottom">

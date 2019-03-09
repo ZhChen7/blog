@@ -18,12 +18,15 @@
             <input type="search" name="email" id="email" placeholder="请输入邮箱..." autofocus autocomplete required>
             <label for="password">密码：</label>
             <input type="password" name="password" id="password" placeholder="请输入密码..." required>
+            <!--<span class="iconfont email-icon">&#xe68b;</span>-->
+            <!--<span class="iconfont key">&#xe624;</span>-->
         </fieldset>
     </form>
 </div>
 {{/block}}
 
 {{block 'script'}}
+<script src="/js/sideBar.js"></script>
 <script>
     $('#login_form').on('submit',function (e) {
         e.preventDefault()

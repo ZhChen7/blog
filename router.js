@@ -57,7 +57,7 @@ router.post('/login',function (req,res,next) {
     })
 })
 
-router.get('/register', function (req, res) {
+router.get('/register', function (req,res) {
     res.render('register.html')
 })
 
@@ -101,6 +101,11 @@ router.post('/register', function (req, res,next) {
             })
         }
     )
+})
+
+router.get('/publish',function (req,res) {
+
+     res.render('publish.html')
 })
 
 

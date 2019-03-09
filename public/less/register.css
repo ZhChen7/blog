@@ -60,6 +60,24 @@
   border: none;
   background: #fe648f;
 }
+.register form fieldset .email-icon,
+.register form fieldset .nickname-icon,
+.register form fieldset .key {
+  position: absolute;
+  top: 1rem;
+  left: 0.7rem;
+  font-size: 0.16rem !important;
+  color: #fe648f !important;
+}
+.register form fieldset .nickname-icon {
+  top: 1.8rem;
+}
+.register form fieldset .key {
+  top: 2.63rem;
+}
+.register form fieldset .email-input {
+  border: 1px solid red;
+}
 .public_footer {
   position: absolute;
   left: 0;
