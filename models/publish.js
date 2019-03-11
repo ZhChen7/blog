@@ -18,10 +18,20 @@ let publishSchema =new Schema({
        required:true
    },
    publishDate:{
-
+       type: Date,
+       default: Date.now
+   },
+   publishIdentifying:{
+       type:String,
+       required:true
+   },
+   publishMainBodyUrl:{
+       type:String,
+       required:true
    }
-
-
 })
 
 module.exports = mongoose.model('Publish', publishSchema)
+
+
+

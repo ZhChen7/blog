@@ -1,2 +1,61 @@
 {{extend './layouts/layout.html'}}
 {{block 'title'}} 发表文章 {{/block}}
+{{block 'style'}}
+<link rel="stylesheet" type="text/less" href="/less/publish.less">
+{{/block}}
+{{block 'body'}}
+
+<div class="publish-form">
+    <form action="" id="publish_form">
+        <label for="publishTitle">文章标题：</label>
+        <input type="search" name="publishTitle" id="publishTitle" placeholder="文章标题" autocomplete>
+
+        <label for="publishIntro">文章简单介绍：</label>
+        <input type="search" name="publishIntro" id="publishIntro" placeholder="文章简单介绍" autocomplete>
+
+        <label for="publishIdentifying">文章分类：</label>
+        <input type="search" name="publishIdentifying" list="url_list" id="publishIdentifying" placeholder="文章分类"
+               autocomplete>
+        <datalist id="url_list">
+            <option value="css"/>
+            <option value="javascript"/>
+            <option value="vue"/>
+            <option value="react"/>
+            <option value="微信小程序"/>
+            <option value="特效"/>
+            <option value="好玩"/>
+        </datalist>
+
+        <label for="publishImgUrl">图片路径：</label>
+        <input type="search" name="publishImgUrl" id="publishImgUrl" placeholder="图片路径" autocomplete>
+        <label for="publishMainBodyUrl">主体内容路径：</label>
+        <input type="search" name="publishMainBodyUrl" id="publishMainBodyUrl" placeholder="主体内容路径" autocomplete>
+        <button type="submit">上传</button>
+    </form>
+</div>
+{{/block}}
+
+{{block 'script'}}
+<script>
+    $('#publish_form').on('submit',function (e) {
+        e.preventDefault()
+        let formDate=$(this).serialize()
+        console.log(formDate)
+        $.ajax({
+            url:'/publish',
+            type:'post',
+            data:formDate,
+            dataType:'json',
+            success:function (data) {
+                let err_code= data.err_code
+                if(err_code===0){
+                    window.alert('上传成功！')
+                    window.location.href='/'
+                }else{
+                    window.alert('上传失败！')
+                }
+            }
+        })
+    })
+</script>
+{{/block}}

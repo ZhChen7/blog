@@ -12,20 +12,24 @@ let express= require('express')
 let router=require('./router')
 let bodyParser = require('body-parser')
 let session=require('express-session')
+const path = require('path')
 let app=express()
+
 
 //公开资源
 app.use(express.static('public'))
 app.use(express.static('node_modules'))
+app.use(express.static('readmefs'))
 
 //模板引擎
 app.engine('html',require('express-art-template'))
 
 app.use(session({
-    secret: 'itcast',//配置加密字符串
+    secret: 'itcastzxinc',//配置加密字符串
     resave: false,
     saveUninitialized: true
 }))
+
 
 
 
@@ -36,6 +40,8 @@ app.use(bodyParser.json())
 
 //把路由容器挂载到app服务中
 app.use(router)
+
+
 
 app.use(function (req,res,next) {
     res.send('404')

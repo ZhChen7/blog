@@ -2,103 +2,122 @@ $(function () {
     main_Navigation()
 })
 
-let main_Navigation=function () {
+let main_Navigation = function () {
     let addTranslation = function () {
         $('.main_Navigation_nav').css({
-            transition:'transform 0.2s',
-            webkitTransition:'transform 0.2s'
+            transition: 'transform 0.2s',
+            webkitTransition: 'transform 0.2s'
         })
     }
     let settanslateX = function (translateX) {
         $('.main_Navigation_nav').css({
-            transform:'translateX(' + translateX + 'px)',
-            webkitTransform:'translateX(' + translateX + 'px)'
+            transform: 'translateX(' + translateX + 'px)',
+            webkitTransform: 'translateX(' + translateX + 'px)'
         })
 
     }
-     let startX=0
-     let moveX=0
-     let distanceX=0
-     let isMove=false
-     let width=0
-     let index=0
+    let startX = 0
+    let startY = 0
+    let moveX = 0
+    let moveY = 0
+    let distanceX = 0
+    let distanceY = 0
+    let isMove = false
+    let width = 0
+    let index_Navigation = 0
 
     setTimeout(function () {
-        width=document.querySelector('.bg-container').offsetWidth
-    },100)
-    window.addEventListener('resize',function () {
-        width=$('.main_Navigation').width()
+        width = document.querySelector('.bg-container').offsetWidth
+    }, 100)
+    window.addEventListener('resize', function () {
+        width = $('.main_Navigation').width()
     })
 
-     $('.main_Navigation_nav').on('touchstart',function (e) {
+    $('.main_Navigation_nav').on('touchstart', function (e) {
+        startX = e.touches[0].clientX
+        startY = e.touches[0].clientY
+    })
+    $('.main_Navigation_nav').on('touchmove', function (e) {
+        moveX = e.touches[0].clientX
+        moveY = e.touches[0].clientY
+        distanceX = moveX - startX
+        distanceY = moveY - startY
+        let translateX = -width * index_Navigation + distanceX;
+        // console.log("distanceX :"+ distanceX)
+        // console.log("distanceY :"+ distanceY)
 
-         startX = e.touches[0].clientX;
+         if(distanceX >= 30){
 
-     })
-    $('.main_Navigation_nav').on('touchmove',function (e) {
-        e.preventDefault()
-        moveX = e.touches[0].clientX;
-        distanceX=moveX-startX
 
-        let translateX = -width * index + distanceX;
-        if(translateX>0){
-            settanslateX(0)
-        }else{
-            settanslateX(translateX)
-            isMove=true
+         }
+
+
+        if (Math.abs(distanceY)<= 10) {
+            if (distanceX != 0) {
+                e.preventDefault()
+                if (translateX > 0) {
+                    settanslateX(0)
+                } else {
+                    settanslateX(translateX)
+                    isMove = true
+                }
+            }
         }
+
+
     })
 
-    $('.main_Navigation_nav').on('touchend',function (e) {
-        if(isMove){
+    $('.main_Navigation_nav').on('touchend', function (e) {
+        if (isMove) {
             e.stopPropagation()
             e.preventDefault()
-            if(Math.abs(distanceX)<width/3){
+            console.log(width)
+            if (Math.abs(distanceX) < width / 3) {
                 addTranslation();
-                let translateX = -width * index;
+                let translateX = -width * index_Navigation;
                 settanslateX(translateX);
-               }else {
+            } else {
                 if (distanceX > 0) {
-                    index--;
+                    index_Navigation--;
 
                 } else {
-                    index++;
+                    index_Navigation++;
                 }
                 addTranslation();
-                let translateX = -width * index;
+                let translateX = -width * index_Navigation;
                 settanslateX(translateX);
-                console.log(index)
-                $('.topBar-bottom>a').eq(index).addClass('Recommend_common').siblings().removeClass('Recommend_common')
-                if(index === 1){
+                console.log(index_Navigation)
+                $('.topBar-bottom>a').eq(index_Navigation).addClass('Recommend_common').siblings().removeClass('Recommend_common')
+                if (index_Navigation === 1) {
                     animation_play_start($('.Recond'))
                     animation_play_start($('.dynamic-body>ul>li'))
                 }
             }
-            isMove =false
+            isMove = false
         }
     })
 
     $('.topBar-bottom>a').click(function () {
-        index= $(this).index()
+        index_Navigation = $(this).index()
         addTranslation()
-        settanslateX(-width* index)
-        $('.topBar-bottom>a').eq(index).addClass('Recommend_common').siblings().removeClass('Recommend_common')
-        if(index === 1){
+        settanslateX(-width * index_Navigation)
+        $('.topBar-bottom>a').eq(index_Navigation).addClass('Recommend_common').siblings().removeClass('Recommend_common')
+        if (index_Navigation === 1) {
             animation_play_start($('.Recond'))
             animation_play_start($('.dynamic-body>ul>li'))
         }
 
     })
 
-    let animation_play_start=function (el) {
+    let animation_play_start = function (el) {
         el.css({
-            'animation-play-state':'running'
+            'animation-play-state': 'running'
         })
     }
 
-    let animation_play_pause=function (el) {
+    let animation_play_pause = function (el) {
         el.css({
-            'animation-play-state':'paused'
+            'animation-play-state': 'paused'
         })
     }
 

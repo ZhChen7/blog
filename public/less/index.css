@@ -202,9 +202,9 @@ textarea {
 }
 .topBar .topBar-main .topBar-top .publish {
   position: absolute;
-  top: 7px;
-  left: 71px;
-  font-size: 16px;
+  top: 0.07rem;
+  left: 1.22rem;
+  font-size: 0.16rem;
   color: #fff;
   font-weight: bold;
 }
@@ -224,14 +224,6 @@ textarea {
 }
 .topBar-bottom > .Recommend_common {
   font-weight: bold;
-}
-@keyframes loginMove {
-  form {
-    transform: translate(-50px, 100px);
-  }
-  20% {
-    transform: translate(-50px, 30px) scale(3, 3);
-  }
 }
 .bg-banner {
   width: 100%;
@@ -365,7 +357,7 @@ textarea {
 .index_list ul li .li_img {
   width: 2.4rem;
   height: 100%;
-  transform: translateX(-0.54rem) skew(29deg);
+  transform: translateX(-54px) skew(29deg);
   position: absolute;
   left: 0;
   top: 0;

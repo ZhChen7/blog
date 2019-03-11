@@ -476,7 +476,7 @@ textarea {
 .index_list ul li .li_img {
   width: 2.4rem;
   height: 100%;
-  transform: translateX(-0.54rem) skew(29deg);
+  transform: translateX(-54px) skew(29deg);
   position: absolute;
   left: 0;
   top: 0;
