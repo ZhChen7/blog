@@ -1,0 +1,122 @@
+@import "variable";
+.message{
+  margin-top: 20rem/@baseFontSize;
+  width: 100%;
+  margin-bottom: 30rem/@baseFontSize;
+  .message-header{
+    font-size: 13rem/@baseFontSize;
+    color: #000;
+    padding-bottom: 6rem/@baseFontSize;
+    letter-spacing: 3rem/@baseFontSize;
+    padding-left: 10rem/@baseFontSize;
+  }
+  ul{
+    width: 100%;
+    padding: 0rem/@baseFontSize 7rem/@baseFontSize;
+    li{
+      width: 100%;
+      height: 70rem/@baseFontSize;
+      position: relative;
+      border-bottom: 1rem/@baseFontSize solid #eee;
+      margin-top: 15rem/@baseFontSize;
+      .message-left{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 57rem/@baseFontSize;
+        padding-top: 5rem/@baseFontSize;
+        img{
+          display: block;
+          width: 40rem/@baseFontSize;
+          border-radius: 50%;
+          margin: 0 auto;
+        }
+      }
+      .message-right{
+        width: 100%;
+        padding-left: 57rem/@baseFontSize;
+        .message-right-header{
+          padding-left: 9rem/@baseFontSize;
+          width: 100%;
+          position: relative;
+          line-height: 19rem/@baseFontSize;
+          div{
+            font-size: 14rem/@baseFontSize;
+            color: #333;
+          }
+          .message-nickname{
+            color: #555;
+          }
+          .message-data{
+            color: #ccc;
+            font-size: 12rem/@baseFontSize;
+            padding-left: 5rem/@baseFontSize;
+          }
+          .message-right-dianzan{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            padding-top: 10rem/@baseFontSize;
+            padding-right: 18rem/@baseFontSize;
+           span{
+             &:nth-of-type(1){
+               font-size: 11rem/@baseFontSize;
+               color: #aaa;
+             }
+             &:nth-of-type(2){
+               color: red !important;
+               font-size: 15rem/@baseFontSize !important;
+             }
+           }
+          }
+        }
+        .message-right-context{
+          padding: 6rem/@baseFontSize 18rem/@baseFontSize;
+          width: 100%;
+          height: 50rem/@baseFontSize;
+          font-size: 12rem/@baseFontSize;
+          overflow:hidden;
+          text-overflow:ellipsis;
+           white-space:nowrap;
+          color: #999;
+        }
+      }
+    }
+  }
+  form{
+    width: 100%;
+    padding-right: 60rem/@baseFontSize;
+    position: relative;
+    overflow: hidden;
+    padding-left: 15rem/@baseFontSize;
+    margin-top: 13rem/@baseFontSize;
+    input{
+      width: 100%;
+      height: 30rem/@baseFontSize;
+      border-bottom: 1rem/@baseFontSize solid #aaa;
+      padding-left: 28rem/@baseFontSize;
+      color: #fe648f;
+    }
+    button{
+      position: absolute;
+      top: 8rem/@baseFontSize;
+      right: 17rem/@baseFontSize;
+      font-size: 14rem/@baseFontSize;
+      color: #fff;
+      border: none;
+      width: 51rem/@baseFontSize;
+      height: 30rem/@baseFontSize;
+      background: #fe648f;
+      box-shadow: 1rem/@baseFontSize -4rem/@baseFontSize 21rem/@baseFontSize 10rem/@baseFontSize #fe648f ;
+      border-radius: 2rem/@baseFontSize;
+      letter-spacing: 2rem/@baseFontSize;
+    }
+  }
+}
+//.markfs{
+//  width: 100%;
+//  overflow: hidden;
+//  padding: 0 5px !important;
+//}

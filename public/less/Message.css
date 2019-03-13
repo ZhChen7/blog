@@ -1,0 +1,116 @@
+@charset "utf-8";
+.message {
+  margin-top: 0.2rem;
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
+.message .message-header {
+  font-size: 0.13rem;
+  color: #000;
+  padding-bottom: 0.06rem;
+  letter-spacing: 0.03rem;
+  padding-left: 0.1rem;
+}
+.message ul {
+  width: 100%;
+  padding: 0rem 0.07rem;
+}
+.message ul li {
+  width: 100%;
+  height: 0.7rem;
+  position: relative;
+  border-bottom: 0.01rem solid #eee;
+  margin-top: 0.15rem;
+}
+.message ul li .message-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0.57rem;
+  padding-top: 0.05rem;
+}
+.message ul li .message-left img {
+  display: block;
+  width: 0.4rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.message ul li .message-right {
+  width: 100%;
+  padding-left: 0.57rem;
+}
+.message ul li .message-right .message-right-header {
+  padding-left: 0.09rem;
+  width: 100%;
+  position: relative;
+  line-height: 0.19rem;
+}
+.message ul li .message-right .message-right-header div {
+  font-size: 0.14rem;
+  color: #333;
+}
+.message ul li .message-right .message-right-header .message-nickname {
+  color: #555;
+}
+.message ul li .message-right .message-right-header .message-data {
+  color: #ccc;
+  font-size: 0.12rem;
+  padding-left: 0.05rem;
+}
+.message ul li .message-right .message-right-header .message-right-dianzan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding-top: 0.1rem;
+  padding-right: 0.18rem;
+}
+.message ul li .message-right .message-right-header .message-right-dianzan span:nth-of-type(1) {
+  font-size: 0.11rem;
+  color: #aaa;
+}
+.message ul li .message-right .message-right-header .message-right-dianzan span:nth-of-type(2) {
+  color: red !important;
+  font-size: 0.15rem !important;
+}
+.message ul li .message-right .message-right-context {
+  padding: 0.06rem 0.18rem;
+  width: 100%;
+  height: 0.5rem;
+  font-size: 0.12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #999;
+}
+.message form {
+  width: 100%;
+  padding-right: 0.6rem;
+  position: relative;
+  overflow: hidden;
+  padding-left: 0.15rem;
+  margin-top: 0.13rem;
+}
+.message form input {
+  width: 100%;
+  height: 0.3rem;
+  border-bottom: 0.01rem solid #aaa;
+  padding-left: 0.28rem;
+  color: #fe648f;
+}
+.message form button {
+  position: absolute;
+  top: 0.08rem;
+  right: 0.17rem;
+  font-size: 0.14rem;
+  color: #fff;
+  border: none;
+  width: 0.51rem;
+  height: 0.3rem;
+  background: #fe648f;
+  box-shadow: 0.01rem -0.04rem 0.21rem 0.1rem #fe648f;
+  border-radius: 0.02rem;
+  letter-spacing: 0.02rem;
+}
+/*# sourceMappingURL=Message.css.map */

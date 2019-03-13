@@ -6,6 +6,7 @@
 let express = require('express')
 let user = require('./models/user')
 let publish = require('./models/publish')
+let message = require('./models/message')
 let md5 = require('blueimp-md5')
 let router = express.Router()
 const fs = require('fs');
@@ -16,9 +17,8 @@ router.get('/', function (req, res) {
         if (err) {
             return res.status(500).send('Serve Error')
         }
-
-        res.render('index.html',{
-            publish:publish,
+        res.render('index.html', {
+            publish: publish,
             user: req.session.user
         })
     })
@@ -29,8 +29,8 @@ router.get('/category', function (req, res) {
         if (err) {
             return res.status(500).send('Serve Error')
         }
-        res.render('category.html',{
-            publish:publish
+        res.render('category.html', {
+            publish: publish
         })
     })
 
@@ -41,8 +41,8 @@ router.get('/search', function (req, res) {
         if (err) {
             return res.status(500).send('Serve Error')
         }
-        res.render('search.html',{
-            publish:publish
+        res.render('search.html', {
+            publish: publish
         })
     })
 
@@ -128,10 +128,19 @@ router.post('/register', function (req, res, next) {
 })
 
 router.get('/publish', function (req, res) {
-    res.render('publish.html')
+    let user=req.session.user
+       if(user){
+           if(user.nickname == "周琛"){
+               res.render('publish.html')
+           }else{
+               res.render('放过小弟吧！')
+           }
+       }else{
+           res.render('放过小弟吧！')
+       }
 })
 
-router.post('/publish', function (req, res,next) {
+router.post('/publish', function (req, res, next) {
     let body = req.body
     new publish(body).save(function (err, publish) {
         if (err) {
@@ -145,26 +154,86 @@ router.post('/publish', function (req, res,next) {
     })
 })
 
-router.get('/mainbody',function (req,res) {
-    res.render('MainBody.html')
+
+router.get("/:docName", function (req, res, next) {
+    docId = req.params.docName.replace(/"/g, '')
+    publish.findById(docId, function (err, publish) {
+        if (err) {
+            return next(err)
+        }
+        fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+            if (err) {
+                console.log(err);
+            } else {
+                htmlStr = marked(data.toString());
+                // console.log(htmlStr)
+                // console.log(typeof (htmlStr))
+                res.type('html')
+
+                // console.log(publish.publishMainBodyUrl)
+                message.find({
+                    message_type: publish.publishMainBodyUrl
+                }, function (err, message) {
+                    if (err) {
+                        return next(err)
+                    }
+                    res.render('MainBody.html', {
+                        doc: htmlStr,
+                        publish: publish,
+                        message: message
+                    });
+                })
+            }
+
+
+        });
+    })
+
+
 })
 
+router.post('/message', function (req, res, next) {
+    let body = req.body
+    let user = req.session.user
+    if (!user) {
+        return res.status(200).json({
+            err_code: 1,
+            message: '用户没有登陆.'
+        })
+    } else {
+        body.message_nickname = user.nickname
 
-router.get("/:docName", function(req, res){
-    console.log(req.params.docName);
-    // fs.readFile(__dirname+'/../public/doc/'+ req.params.docName +'.md', function(err, data){
-    //     if(err){
-    //         console.log("文件不存在！");
-    //         res.send("文件不存在！");
-    //     }else{
-    //         console.log(data);
-    //         htmlStr = marked(data.toString());
-    //         res.render('doc', {doc: htmlStr});
-    //     }
-    // });
-});
+        new message(body).save(function (err, data) {
+            if (err) {
+                return next(err)
+            }
+            return res.status(200).json({
+                err_code: 0,
+                message: data
+            })
+            // publish.findOne({
+            //     publishMainBodyUrl:data.message_type
+            // },function (err,publish) {
+            //     if (err) {
+            //         return next(err)
+            //     }
+            //     console.log(publish)
+            //     message.find(function (err, message) {
+            //         if (err) {
+            //             return next(err)
+            //         }
+            //         console.log(message)
+            //         return res.status(200).json({
+            //             err_code: 0,
+            //             message: message,
+            //             publish:publish
+            //         })
+            //     })
+            // })
+        })
+    }
 
-
+})
 
 
 //导出router
