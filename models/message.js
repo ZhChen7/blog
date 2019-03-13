@@ -27,6 +27,9 @@ let MessageSchema =new Schema({
     message_ChatHead:{
         type: String,
         default: '/images/avatar.jpg'
+    },
+    UTCtodata:{
+       type:String
     }
 })
 

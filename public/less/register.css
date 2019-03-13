@@ -79,9 +79,7 @@
   border: 1px solid red;
 }
 .public_footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  margin-top: 150px;
 }
 body {
   background: linear-gradient(-63deg, pink 7%, #fe648f 60%, seashell);

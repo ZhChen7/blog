@@ -17,6 +17,10 @@ router.get('/', function (req, res) {
         if (err) {
             return res.status(500).send('Serve Error')
         }
+
+        publish.forEach(function (e) {
+            e.UTCtodata = new Date(e.publishDate).toLocaleString()
+        })
         res.render('index.html', {
             publish: publish,
             user: req.session.user
@@ -128,16 +132,16 @@ router.post('/register', function (req, res, next) {
 })
 
 router.get('/publish', function (req, res) {
-    let user=req.session.user
-       if(user){
-           if(user.nickname == "周琛"){
-               res.render('publish.html')
-           }else{
-               res.render('放过小弟吧！')
-           }
-       }else{
-           res.render('放过小弟吧！')
-       }
+    let user = req.session.user
+    if (user) {
+        if (user.nickname == "周琛") {
+            res.render('publish.html')
+        } else {
+            res.render('放过小弟吧！')
+        }
+    } else {
+        res.render('放过小弟吧！')
+    }
 })
 
 router.post('/publish', function (req, res, next) {
@@ -177,6 +181,10 @@ router.get("/:docName", function (req, res, next) {
                     if (err) {
                         return next(err)
                     }
+                    message.forEach(function (e) {
+                        e.UTCtodata = new Date(e.message_time).toLocaleString()
+                    })
+
                     res.render('MainBody.html', {
                         doc: htmlStr,
                         publish: publish,

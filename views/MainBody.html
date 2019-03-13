@@ -1,31 +1,31 @@
 {{extend './layouts/layout-blog.html'}}
 
-{{block 'title'}}主体内容{{/block}}
+{{block 'title'}}New World{{/block}}
 {{block 'style'}}
 <link rel="stylesheet" type="text/less" href="/less/Message.less">
 <link rel="stylesheet" href="/css/markcss/markfs.css">
 <!--<script id="getheros" type="text/html">-->
-    <!--{{each message}}-->
-    <!--<li>-->
-        <!--<div class="message-left">-->
-            <!--<img src="/images/author.jpg" alt="">-->
-        <!--</div>-->
-        <!--<div class="message-right">-->
-            <!--<header class="message-right-header">-->
-                <!--<div class="message-nickname">{{$value.message_nickname}}</div>-->
-                <!--<div class="message-data">{{$value.message_time}}</div>-->
-                <!--<div class="message-right-dianzan">-->
-                    <!--<span class="dianzan-num">999</span>-->
-                    <!--<span class="iconfont">&#xe719;</span>-->
-                <!--</div>-->
+<!--{{each message}}-->
+<!--<li>-->
+<!--<div class="message-left">-->
+<!--<img src="/images/author.jpg" alt="">-->
+<!--</div>-->
+<!--<div class="message-right">-->
+<!--<header class="message-right-header">-->
+<!--<div class="message-nickname">{{$value.message_nickname}}</div>-->
+<!--<div class="message-data">{{$value.message_time}}</div>-->
+<!--<div class="message-right-dianzan">-->
+<!--<span class="dianzan-num">999</span>-->
+<!--<span class="iconfont">&#xe719;</span>-->
+<!--</div>-->
 
-            <!--</header>-->
-            <!--<article class="message-right-context">-->
-                <!--<span>{{$value.message_content}}</span>-->
-            <!--</article>-->
-        <!--</div>-->
-    <!--</li>-->
-    <!--{{/each}}-->
+<!--</header>-->
+<!--<article class="message-right-context">-->
+<!--<span>{{$value.message_content}}</span>-->
+<!--</article>-->
+<!--</div>-->
+<!--</li>-->
+<!--{{/each}}-->
 <!--</script>-->
 {{/block}}
 
@@ -37,15 +37,15 @@
 <div class="message">
     <header class="message-header">精彩评论:</header>
     <ul>
-        {{each message}}
+        <% for(var i = message.length -1; i >=0; i--){ %>
         <li>
             <div class="message-left">
                 <img src="/images/author.jpg" alt="">
             </div>
             <div class="message-right">
                 <header class="message-right-header">
-                    <div class="message-nickname">{{$value.message_nickname}}</div>
-                    <div class="message-data">{{$value.message_time}}</div>
+                    <div class="message-nickname">{{message[i].message_nickname}}</div>
+                    <div class="message-data">{{message[i].UTCtodata}}</div>
                     <div class="message-right-dianzan">
                         <span class="dianzan-num">999</span>
                         <span class="iconfont">&#xe719;</span>
@@ -53,45 +53,38 @@
 
                 </header>
                 <article class="message-right-context">
-                    <span>{{$value.message_content}}</span>
+                    <span>{{message[i].message_content}}</span>
                 </article>
             </div>
         </li>
-        {{/each}}
+        <%}%>
     </ul>
     <form id="message_form">
-        <input type="search" name="message_content" id="send-message" placeholder="分享下你的心得..."  required min="2">
+        <input type="search" name="message_content" id="send-message" placeholder="分享下你的心得..." required min="2">
         <input type="hidden" name="message_type" value="{{publish.publishMainBodyUrl}}">
-         <button type="submit">发送</button>
+        <button type="submit">发送</button>
     </form>
 </div>
 {{/block}}
-
 {{block 'script'}}
 <!--<script src="/art-template/lib/template-web.js"></script>-->
 <!--<script src="bootstrap/dist/css/bootstrap.css"></script>-->
 <script>
-    $('#message_form').on('submit',function (e) {
+    $('#message_form').on('submit', function (e) {
         e.preventDefault()
-        let formDate=$(this).serialize()
+        let formDate = $(this).serialize()
         console.log(formDate)
         $.ajax({
-            url:'/message',
-            type:'post',
-            data:formDate,
-            dataType:'json',
-            success:function (data) {
-                let err_code= data.err_code
-                if(err_code===1){
-                    window.location.href='/login'
-                }if(err_code===0){
-                    // alert('上传成功！')
-                    // window.location.href='/{{publish._id}}'
-                    // console.log(data)
-                    // var htnlStr = template("getheros",{
-                    //     message:data.message
-                    // })
-                    // $(".message>ul").html(htnlStr);
+            url: '/message',
+            type: 'post',
+            data: formDate,
+            dataType: 'json',
+            success: function (data) {
+                let err_code = data.err_code
+                if (err_code === 1) {
+                    window.location.href = '/login'
+                }
+                if (err_code === 0) {
                     location.reload();
                 }
             }

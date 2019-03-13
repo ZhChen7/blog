@@ -470,13 +470,13 @@ textarea {
   position: relative;
   overflow: hidden;
   margin-top: 0.32rem;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 2px #eee;
+  border-radius: 0.1rem;
+  box-shadow: 0.05rem 0.05rem 0.05rem 0.02rem #eee;
 }
 .index_list ul li .li_img {
   width: 2.4rem;
   height: 100%;
-  transform: translateX(-54px) skew(29deg);
+  transform: translateX(-0.54rem) skew(29deg);
   position: absolute;
   left: 0;
   top: 0;
@@ -497,16 +497,17 @@ textarea {
 .index_list ul li .list_time span {
   position: absolute;
   top: 0.07rem;
-  right: 1.06rem;
+  right: 0.9rem;
   font-size: 0.18rem;
 }
 .index_list ul li .list_time .icon-shijianriqi {
-  right: 2.02rem;
-  font-size: 0.19rem !important;
+  right: 1.91rem;
+  font-size: 0.16rem !important;
   color: pink !important;
 }
 .index_list ul li .list_time .list_time_submit {
-  text-decoration: underline #9C27B0;
+  font-size: 0.1rem;
+  top: 0.1rem;
 }
 .index_list ul li .list_main {
   width: 100%;

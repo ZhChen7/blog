@@ -28,7 +28,10 @@ let publishSchema =new Schema({
    publishMainBodyUrl:{
        type:String,
        required:true
-   }
+   },
+    UTCtodata:{
+        type:String
+    }
 })
 
 module.exports = mongoose.model('Publish', publishSchema)
