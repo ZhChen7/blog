@@ -7,8 +7,8 @@
   z-index: 999;
   .topBar-main{
     width: 100%;
-    max-width: 750px;
-    min-width: 320px;
+    max-width: 750rem/@baseFontSize;
+    min-width: 320rem/@baseFontSize;
     margin: 0 auto;
     padding-top: 36rem/@baseFontSize;
     width: 100%;
@@ -72,15 +72,22 @@
       .username{
         position: absolute;
         top: 4rem/@baseFontSize;
-        right: 81rem/@baseFontSize;
+        right: 68rem/@baseFontSize;
         font-size: 14rem/@baseFontSize;
-        color: #fe3348;
+        width: 120rem/@baseFontSize;
+        //border: 1rem/@baseFontSize solid black;
+        text-align: center;
+        height: 30rem/@baseFontSize;
+        line-height: 30rem/@baseFontSize;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #ff8287;
+        letter-spacing: 2rem/@baseFontSize;
         span{
           font-size: 16rem/@baseFontSize;
         }
-        .bixin{
-          color: #ff3b3b !important;
-        }
+
       }
       .publish{
         position: absolute;
@@ -115,10 +122,10 @@
 
 //@keyframes loginMove {
 //  form{
-//        transform: translate(-50px,100px);
+//        transform: translate(-50rem/@baseFontSize,100rem/@baseFontSize);
 //  }
 //  20%{
-//     transform:translate(-50px,30px) scale(3,3);
+//     transform:translate(-50rem/@baseFontSize,30rem/@baseFontSize) scale(3,3);
 //  }
 //
 //}

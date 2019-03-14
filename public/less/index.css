@@ -127,8 +127,8 @@ textarea {
   z-index: 999;
 }
 .topBar .topBar-main {
-  max-width: 750px;
-  min-width: 320px;
+  max-width: 7.5rem;
+  min-width: 3.2rem;
   margin: 0 auto;
   padding-top: 0.36rem;
   width: 100%;
@@ -190,15 +190,20 @@ textarea {
 .topBar .topBar-main .topBar-top .username {
   position: absolute;
   top: 0.04rem;
-  right: 0.81rem;
+  right: 0.68rem;
   font-size: 0.14rem;
-  color: #fe3348;
+  width: 1.2rem;
+  text-align: center;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff8287;
+  letter-spacing: 0.02rem;
 }
 .topBar .topBar-main .topBar-top .username span {
   font-size: 0.16rem;
-}
-.topBar .topBar-main .topBar-top .username .bixin {
-  color: #ff3b3b !important;
 }
 .topBar .topBar-main .topBar-top .publish {
   position: absolute;
@@ -313,7 +318,7 @@ textarea {
 .bg-nav ul li a .nav-icon {
   width: 0.55rem;
   height: 0.55rem;
-  background: #9C27B0;
+  background: #b0425f;
   margin: 0 auto;
   border-radius: 50%;
   text-align: center;
@@ -325,7 +330,7 @@ textarea {
   display: block;
   font-size: 0.13rem;
   font-weight: 600;
-  margin-top: 0.03rem;
+  margin-top: 0.08rem;
   color: #777;
 }
 .index_list {
@@ -399,17 +404,30 @@ textarea {
   width: 100%;
   height: 100%;
   background: #fff;
-  padding-left: 3.07rem;
+  padding-left: 2.33rem;
   padding-top: 0.16rem;
+  text-align: center;
 }
 .index_list ul li .list_main a header {
-  color: black;
-  font-size: 0.24rem;
+  font-size: 0.2rem;
+  text-align: center;
+  color: #777;
 }
 .index_list ul li .list_main a .intro_article {
-  margin-left: -0.27rem;
-  margin-top: 0.2rem;
-  font-size: 0.24rem;
+  width: 2.22rem;
+  font-size: 0.12rem;
+  margin-left: 0.1rem;
+  margin-top: 0.18rem;
+  margin-bottom: 0.03rem;
+  color: #bbb;
+}
+.index_list ul li .list_main a .text-Tag {
+  border: 0.01rem solid pink;
+  box-shadow: 0px 1px 4px 4px pink inset;
+  font-size: 0.1rem;
+  border-radius: 10px;
+  padding: 0.02rem 0.07rem;
+  color: #110708;
 }
 .index_list ul li:nth-of-type(1) {
   margin-top: 0.2rem;
@@ -602,39 +620,39 @@ textarea {
 }
 .Rotation .School_Intro {
   width: 100%;
-  padding: 15px 10px;
+  padding: 0.15rem 0.1rem;
 }
 .Rotation .School_Intro a {
   width: 100%;
   display: block;
-  margin: 20px 10px;
+  margin: 0.2rem 0.1rem;
 }
 .Rotation .School_Intro a img {
-  width: 120px;
+  width: 1.2rem;
   display: block;
   float: left;
-  margin-right: 20px;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  box-shadow: 10px 10px 34px 1px #eee;
+  margin-right: 0.2rem;
+  border-right: 0.01rem solid #eee;
+  border-bottom: 0.01rem solid #eee;
+  box-shadow: 0.1rem 0.1rem 0.34rem 0.01rem #eee;
 }
 .Rotation .School_Intro article {
-  font-size: 14px;
+  font-size: 0.14rem;
 }
 .Rotation .School_Intro article a {
-  font-size: 18px;
+  font-size: 0.18rem;
   color: #136ec2;
 }
 .Rotation .School_Intro article b {
   color: #136ec2;
-  font-size: 15px;
+  font-size: 0.15rem;
 }
 .Rotation .School_Intro article span {
   color: red;
-  font-size: 9px;
+  font-size: 0.09rem;
   position: relative;
-  top: -2px;
-  left: -11px;
+  top: -0.02rem;
+  left: -0.11rem;
 }
 .dynamic {
   width: 100%;
@@ -693,7 +711,7 @@ textarea {
 }
 .dynamic .dynamic-body ul li a .dynamic-body-header .dynamic-body-header-time span {
   font-size: 0.15rem !important;
-  color: #9C27B0 !important;
+  color: #b0425f !important;
 }
 .dynamic .dynamic-body ul li a .dynamic-body-footer {
   width: 100%;
@@ -733,6 +751,7 @@ textarea {
   }
 }
 .public_footer {
+  margin-top: 30px;
   width: 100%;
   opacity: 0.8;
   background: rgba(28, 14, 35, 0.8);

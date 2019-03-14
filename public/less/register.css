@@ -30,8 +30,10 @@
 .register form fieldset input {
   width: 100%;
   border-bottom: 0.01rem solid #ccc;
-  height: 0.3rem;
-  font-size: 0.13rem;
+  border-radius: 13px;
+  box-shadow: 2px 1px 9px 5px #b01f27;
+  height: 34px;
+  font-size: 13px;
   padding-left: 0.5rem;
   opacity: 0.3;
   margin: 0.1rem 0;

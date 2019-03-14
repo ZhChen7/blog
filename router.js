@@ -170,11 +170,7 @@ router.get("/:docName", function (req, res, next) {
                 console.log(err);
             } else {
                 htmlStr = marked(data.toString());
-                // console.log(htmlStr)
-                // console.log(typeof (htmlStr))
                 res.type('html')
-
-                // console.log(publish.publishMainBodyUrl)
                 message.find({
                     message_type: publish.publishMainBodyUrl
                 }, function (err, message) {
@@ -184,7 +180,6 @@ router.get("/:docName", function (req, res, next) {
                     message.forEach(function (e) {
                         e.UTCtodata = new Date(e.message_time).toLocaleString()
                     })
-
                     res.render('MainBody.html', {
                         doc: htmlStr,
                         publish: publish,
@@ -192,12 +187,8 @@ router.get("/:docName", function (req, res, next) {
                     });
                 })
             }
-
-
         });
     })
-
-
 })
 
 router.post('/message', function (req, res, next) {

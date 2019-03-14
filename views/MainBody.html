@@ -4,36 +4,12 @@
 {{block 'style'}}
 <link rel="stylesheet" type="text/less" href="/less/Message.less">
 <link rel="stylesheet" href="/css/markcss/markfs.css">
-<!--<script id="getheros" type="text/html">-->
-<!--{{each message}}-->
-<!--<li>-->
-<!--<div class="message-left">-->
-<!--<img src="/images/author.jpg" alt="">-->
-<!--</div>-->
-<!--<div class="message-right">-->
-<!--<header class="message-right-header">-->
-<!--<div class="message-nickname">{{$value.message_nickname}}</div>-->
-<!--<div class="message-data">{{$value.message_time}}</div>-->
-<!--<div class="message-right-dianzan">-->
-<!--<span class="dianzan-num">999</span>-->
-<!--<span class="iconfont">&#xe719;</span>-->
-<!--</div>-->
-
-<!--</header>-->
-<!--<article class="message-right-context">-->
-<!--<span>{{$value.message_content}}</span>-->
-<!--</article>-->
-<!--</div>-->
-<!--</li>-->
-<!--{{/each}}-->
-<!--</script>-->
+<link rel="stylesheet" type="text/css" href="@{static}/ueditor/third-party/prismjs/prism.css">
 {{/block}}
-
 {{block 'body'}}
 <div id="markfs">
     {{@ doc }}
 </div>
-
 <div class="message">
     <header class="message-header">精彩评论:</header>
     <ul>
@@ -67,8 +43,8 @@
 </div>
 {{/block}}
 {{block 'script'}}
-<!--<script src="/art-template/lib/template-web.js"></script>-->
-<!--<script src="bootstrap/dist/css/bootstrap.css"></script>-->
+<script type="text/javascript" src="@{static}/ueditor/third-party/prismjs/prism.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script>
     $('#message_form').on('submit', function (e) {
         e.preventDefault()
@@ -90,6 +66,5 @@
             }
         })
     })
-
 </script>
 {{/block}}

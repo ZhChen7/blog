@@ -30,8 +30,10 @@
 .login-form form fieldset input {
   width: 100%;
   border-bottom: 0.01rem solid #ccc;
-  height: 0.3rem;
-  font-size: 0.13rem;
+  border-radius: 18px;
+  box-shadow: 2px 1px 9px 5px #9C27B0;
+  height: 34px;
+  font-size: 13px ;
   padding-left: 0.5rem;
   opacity: 0.3;
   margin: 0.2rem 0;
