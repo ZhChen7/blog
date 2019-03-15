@@ -17,10 +17,11 @@ router.get('/', function (req, res) {
         if (err) {
             return res.status(500).send('Serve Error')
         }
-
         publish.forEach(function (e) {
             e.UTCtodata = new Date(e.publishDate).toLocaleString()
         })
+
+      console.log(publish)
         res.render('index.html', {
             publish: publish,
             user: req.session.user
@@ -165,29 +166,56 @@ router.get("/:docName", function (req, res, next) {
         if (err) {
             return next(err)
         }
-        fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
-            if (err) {
-                console.log(err);
-            } else {
-                htmlStr = marked(data.toString());
-                res.type('html')
-                message.find({
-                    message_type: publish.publishMainBodyUrl
-                }, function (err, message) {
-                    if (err) {
-                        return next(err)
-                    }
-                    message.forEach(function (e) {
-                        e.UTCtodata = new Date(e.message_time).toLocaleString()
+        if(publish.wholepublishIdentifying == "代码"){
+            fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    htmlStr = marked(data.toString());
+                    res.type('html')
+                    message.find({
+                        message_type: publish.publishMainBodyUrl
+                    }, function (err, message) {
+                        if (err) {
+                            return next(err)
+                        }
+                        message.forEach(function (e) {
+                            e.UTCtodata = new Date(e.message_time).toLocaleString()
+                        })
+                        res.render('MainBody.html', {
+                            doc: htmlStr,
+                            publish: publish,
+                            message: message
+                        });
                     })
-                    res.render('MainBody.html', {
-                        doc: htmlStr,
-                        publish: publish,
-                        message: message
-                    });
-                })
-            }
-        });
+                }
+            });
+        }
+        if(publish.wholepublishIdentifying == "心得体会"){
+            fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    htmlStr = marked(data.toString());
+                    res.type('html')
+                    message.find({
+                        message_type: publish.publishMainBodyUrl
+                    }, function (err, message) {
+                        if (err) {
+                            return next(err)
+                        }
+                        message.forEach(function (e) {
+                            e.UTCtodata = new Date(e.message_time).toLocaleString()
+                        })
+                        res.render('MainBody.html', {
+                            doc: htmlStr,
+                            publish: publish,
+                            message: message
+                        });
+                    })
+                }
+            });
+        }
     })
 })
 

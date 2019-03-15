@@ -12,11 +12,11 @@
                 <span class="iconfont icon-sousuo"></span>
             </a>
             {{if user}}
-                {{if user.nickname == "周琛"}}
-                <a href="/publish" class="publish">
-                    <span>发表</span>
-                </a>
-                {{/if}}
+            {{if user.nickname == "周琛"}}
+            <a href="/publish" class="publish">
+                <span>发表</span>
+            </a>
+            {{/if}}
             <a href="javascript:;" class="username"> <span>{{user.nickname}}</span></a>
             {{else}}
             <a href="/login" class="login">
@@ -24,10 +24,6 @@
             </a>
 
             {{/if}}
-
-
-
-
         </div>
         <div class="topBar-bottom">
             <a href="javascript:;" class="Recommend_common">推荐</a>

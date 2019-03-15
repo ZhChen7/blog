@@ -56,6 +56,6 @@ app.use(function (err,req,res,next) {
 })
 
 
-app.listen(3000,function () {
+app.listen(80,function () {
     console.log('app is running!')
 })

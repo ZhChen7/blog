@@ -1,98 +1,134 @@
-.dynamic{
+.dynamic {
   width: 100%;
-  .dynamic-header{
+
+  .dynamic-header {
     width: 100%;
-    .titile{
+
+    .titile {
       width: 100%;
       height: 100%;
-      color: #111;
+      color: #fe6e7b;
       font-size: 18rem/@baseFontSize;
-      letter-spacing:11rem/@baseFontSize;
+      letter-spacing: 11rem/@baseFontSize;
       padding-top: 52rem/@baseFontSize;
-      span{
+
+      span {
         display: block;
         margin: 0 auto;
-        overflow: hidden;    //超出部分隐藏
-        white-space: nowrap;    //不换行
-        text-overflow:clip;     //文字超出部分用省略号表示
+        overflow: hidden; //超出部分隐藏
+        white-space: nowrap; //不换行
+        text-overflow: clip; //文字超出部分用省略号表示
         animation: contextMove 5s ease-in-out forwards;
         animation-play-state: paused;
       }
     }
   }
-  .dynamic-body{
+
+  .dynamic-body {
     width: 100%;
-    ul{
+
+    ul {
       width: 100%;
       padding-top: 9rem/@baseFontSize;
       padding-left: 39rem/@baseFontSize;
-      li{
+
+      li {
         float: left;
         margin-left: 57rem/@baseFontSize;
         margin-top: 41rem/@baseFontSize;
-        transform: skew(163deg,-14deg);
         box-shadow: 5px 5px 5px #666;
-        animation: liMove 3s linear 1;
+        animation: liMove 5s linear 1;
         animation-play-state: paused;
-        a{
+
+        a {
           width: 195rem/@baseFontSize;
           height: 195rem/@baseFontSize;
           display: block;
-          .dynamic-body-header{
+
+          .dynamic-body-header {
             width: 100%;
-            .dynamic-body-header-time{
+
+            .dynamic-body-header-time {
               margin-left: -20rem/@baseFontSize;
-              font-size: 18rem/@baseFontSize;
+              font-size: 12rem/@baseFontSize;
               text-align: center;
               letter-spacing: 1rem/@baseFontSize;
               padding-top: 12rem/@baseFontSize;
-              span{
-                font-size: 15rem/@baseFontSize !important;
+
+              span {
+                font-size: 11rem/@baseFontSize !important;
                 color: @topBarColor !important;
               }
             }
           }
-          .dynamic-body-footer{
+
+          .dynamic-body-footer {
+            position: relative;
             width: 100%;
-            img{
+
+            img {
               display: block;
               width: 100%;
+            }
+
+            span {
+              position: absolute;
+              top: 60rem/@baseFontSize;
+              left: 0;
+              z-index: 666;
+              font-size: 13px;
+              width: 100%;
+              text-align: center;
+              color: transparent;
+              background-image: linear-gradient(to right, #82ffbc, #fe112e, #ff56cb, #ffbebc, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              animation: ColorMove 30s infinite linear;
             }
           }
         }
       }
-      li:nth-of-type(odd){
+
+      li:nth-of-type(odd) {
         margin-left: 0;
+        margin-top: 15rem/@baseFontSize;
       }
     }
   }
 }
 
 @keyframes contextMove {
-  from{
-       width: 0;
-       opacity: 0.6;
+  from {
+    width: 0;
+    opacity: 0.6;
   }
-   30%{
-      transform: scale(2,2) skew(-30deg);
-   }
-    60%{
-    transform: scale(3,3) skew(30deg);
+  30% {
+    transform: scale(2, 2) skew(-30deg);
   }
-  to{
-       width: 278rem/@baseFontSize;
-       opacity: 0.9;
-     }
+  60% {
+    transform: scale(3, 3) skew(30deg);
+  }
+  to {
+    width: 278rem/@baseFontSize;
+    opacity: 0.9;
+  }
 }
 
 
 @keyframes liMove {
-  from{
-      transform: rotate(30deg) scale(0.1,0.1);
+  from {
+    transform: translateY(15px);
   }
-   20%{
-        transform: scale(1.2,1.2);
-}to{
-       transform: rotate(90deg) ;
-     }
+  30% {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+@keyframes ColorMove {
+  0% {
+    background-position: -330px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

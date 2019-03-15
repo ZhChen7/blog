@@ -13,9 +13,19 @@
         <label for="publishIntro">文章简单介绍：</label>
         <input type="search" name="publishIntro" id="publishIntro" placeholder="文章简单介绍" autocomplete>
 
-        <label for="publishIdentifying">文章分类：</label>
+        <label for="wholepublishIdentifying">整个的文章分类：</label>
+        <input type="search" name="wholepublishIdentifying" list="url_list1" id="wholepublishIdentifying" placeholder="文章分类"
+               autocomplete>
+
+        <datalist id="url_list1">
+            <option value="心得体会"/>
+            <option value="代码"/>
+        </datalist>
+
+        <label for="publishIdentifying">代码文章分类：</label>
         <input type="search" name="publishIdentifying" list="url_list" id="publishIdentifying" placeholder="文章分类"
                autocomplete>
+
         <datalist id="url_list">
             <option value="css"/>
             <option value="javascript"/>

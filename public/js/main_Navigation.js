@@ -43,24 +43,31 @@ let main_Navigation = function () {
         distanceX = moveX - startX
         distanceY = moveY - startY
         let translateX = -width * index_Navigation + distanceX;
-        // console.log("distanceX :"+ distanceX)
+        // console.log("distanceX :" + translateX)
         // console.log("distanceY :"+ distanceY)
 
-         if(distanceX >= 30){
-
-
-         }
-
-
-        if (Math.abs(distanceY)<= 10) {
+       console.log(index_Navigation)
+        if (Math.abs(distanceY) <= 10) {
             if (distanceX != 0) {
                 e.preventDefault()
                 if (translateX > 0) {
                     settanslateX(0)
+                    isMove = false
                 } else {
                     settanslateX(translateX)
                     isMove = true
                 }
+                if(index_Navigation == 2){
+                    console.log('yes')
+                    console.log(distanceX)
+                    if(distanceX<0){
+                        settanslateX(-width * index_Navigation)
+                        isMove = false
+                    }else{
+                        isMove = true
+                    }
+                }
+
             }
         }
 
@@ -71,7 +78,6 @@ let main_Navigation = function () {
         if (isMove) {
             e.stopPropagation()
             e.preventDefault()
-            console.log(width)
             if (Math.abs(distanceX) < width / 3) {
                 addTranslation();
                 let translateX = -width * index_Navigation;

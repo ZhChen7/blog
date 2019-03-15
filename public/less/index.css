@@ -127,8 +127,8 @@ textarea {
   z-index: 999;
 }
 .topBar .topBar-main {
-  max-width: 7.5rem;
-  min-width: 3.2rem;
+  max-width: 750px;
+  min-width: 320px;
   margin: 0 auto;
   padding-top: 0.36rem;
   width: 100%;
@@ -411,7 +411,11 @@ textarea {
 .index_list ul li .list_main a header {
   font-size: 0.2rem;
   text-align: center;
-  color: #777;
+  color: transparent;
+  background-image: linear-gradient(to right, red, sandybrown, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ColorMove 30s infinite linear;
 }
 .index_list ul li .list_main a .intro_article {
   width: 2.22rem;
@@ -431,6 +435,14 @@ textarea {
 }
 .index_list ul li:nth-of-type(1) {
   margin-top: 0.2rem;
+}
+@keyframes ColorMove {
+  0% {
+    background-position: -330px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 .sidebar {
   width: 100%;
@@ -663,7 +675,7 @@ textarea {
 .dynamic .dynamic-header .titile {
   width: 100%;
   height: 100%;
-  color: #111;
+  color: #fe6e7b;
   font-size: 0.18rem;
   letter-spacing: 0.11rem;
   padding-top: 0.52rem;
@@ -689,9 +701,8 @@ textarea {
   float: left;
   margin-left: 0.57rem;
   margin-top: 0.41rem;
-  transform: skew(163deg, -14deg);
   box-shadow: 5px 5px 5px #666;
-  animation: liMove 3s linear 1;
+  animation: liMove 5s linear 1;
   animation-play-state: paused;
 }
 .dynamic .dynamic-body ul li a {
@@ -704,24 +715,40 @@ textarea {
 }
 .dynamic .dynamic-body ul li a .dynamic-body-header .dynamic-body-header-time {
   margin-left: -0.2rem;
-  font-size: 0.18rem;
+  font-size: 0.12rem;
   text-align: center;
   letter-spacing: 0.01rem;
   padding-top: 0.12rem;
 }
 .dynamic .dynamic-body ul li a .dynamic-body-header .dynamic-body-header-time span {
-  font-size: 0.15rem !important;
+  font-size: 0.11rem !important;
   color: #b0425f !important;
 }
 .dynamic .dynamic-body ul li a .dynamic-body-footer {
+  position: relative;
   width: 100%;
 }
 .dynamic .dynamic-body ul li a .dynamic-body-footer img {
   display: block;
   width: 100%;
 }
+.dynamic .dynamic-body ul li a .dynamic-body-footer span {
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+  z-index: 666;
+  font-size: 13px;
+  width: 100%;
+  text-align: center;
+  color: transparent;
+  background-image: linear-gradient(to right, #82ffbc, #fe112e, #ff56cb, #ffbebc, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ColorMove 30s infinite linear;
+}
 .dynamic .dynamic-body ul li:nth-of-type(odd) {
   margin-left: 0;
+  margin-top: 0.15rem;
 }
 @keyframes contextMove {
   from {
@@ -741,13 +768,18 @@ textarea {
 }
 @keyframes liMove {
   from {
-    transform: rotate(30deg) scale(0.1, 0.1);
+    transform: translateY(15px);
   }
-  20% {
+  30% {
     transform: scale(1.2, 1.2);
   }
-  to {
-    transform: rotate(90deg);
+}
+@keyframes ColorMove {
+  0% {
+    background-position: -330px 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 .public_footer {

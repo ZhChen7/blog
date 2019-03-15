@@ -6,98 +6,25 @@
    </header>
     <div class="dynamic-body">
         <ul class="clearFix">
-            <li>
-                <a href="javascrip:;">
-                    <header class="dynamic-body-header">
-                        <div class="dynamic-body-header-time">
-                            <span class="iconfont">&#xe607;</span>
-                            2019/2/28
-                        </div>
-                    </header>
-                    <footer class="dynamic-body-footer">
-                        <img src="/images/dt.jpg" alt="">
-                    </footer>
-                </a>
-            </li>
-
-            <li>
-                <a href="javascrip:;">
-                    <header class="dynamic-body-header">
-                        <div class="dynamic-body-header-time">
-                            <span class="iconfont">&#xe607;</span>
-                            2019/2/28
-                        </div>
-                    </header>
-                    <footer class="dynamic-body-footer">
-                        <img src="/images/dt.jpg" alt="">
-                    </footer>
-                </a>
-            </li>
-            <li>
-                <a href="javascrip:;">
-                    <header class="dynamic-body-header">
-                        <div class="dynamic-body-header-time">
-                            <span class="iconfont">&#xe607;</span>
-                            2019/2/28
-                        </div>
-                    </header>
-                    <footer class="dynamic-body-footer">
-                        <img src="/images/dt.jpg" alt="">
-                    </footer>
-                </a>
-            </li>
-            <li>
-                <a href="javascrip:;">
-                    <header class="dynamic-body-header">
-                        <div class="dynamic-body-header-time">
-                            <span class="iconfont">&#xe607;</span>
-                            2019/2/28
-                        </div>
-                    </header>
-                    <footer class="dynamic-body-footer">
-                        <img src="/images/dt.jpg" alt="">
-                    </footer>
-                </a>
-            </li>
-            <li>
-                <a href="javascrip:;">
-                    <header class="dynamic-body-header">
-                        <div class="dynamic-body-header-time">
-                            <span class="iconfont">&#xe607;</span>
-                            2019/2/28
-                        </div>
-                    </header>
-                    <footer class="dynamic-body-footer">
-                        <img src="/images/dt.jpg" alt="">
-                    </footer>
-                </a>
-            </li>
-            <li>
-                <a href="javascrip:;">
-                    <header class="dynamic-body-header">
-                        <div class="dynamic-body-header-time">
-                            <span class="iconfont">&#xe607;</span>
-                            2019/2/28
-                        </div>
-                    </header>
-                    <footer class="dynamic-body-footer">
-                        <img src="/images/dt.jpg" alt="">
-                    </footer>
-                </a>
-            </li>
-            <li>
-                <a href="javascrip:;">
-                    <header class="dynamic-body-header">
-                        <div class="dynamic-body-header-time">
-                            <span class="iconfont">&#xe607;</span>
-                            2019/2/28
-                        </div>
-                    </header>
-                    <footer class="dynamic-body-footer">
-                        <img src="/images/dt.jpg" alt="">
-                    </footer>
-                </a>
-            </li>
+            <% for(var i = publish.length -1; i >=0; i--){ %>
+                {{if publish[i].wholepublishIdentifying == "心得体会"}}
+                <li>
+                    <a href="/{{publish[i]._id}}">
+                        <header class="dynamic-body-header">
+                            <div class="dynamic-body-header-time">
+                                <span class="iconfont">&#xe613;</span>
+                                {{publish[i].UTCtodata}}
+                            </div>
+                        </header>
+                        <!--img   276 * 243-->
+                        <footer class="dynamic-body-footer">
+                            <img src="{{publish[i].publishImgUrl}}" alt="{{publish[i].publishMainBodyUrl}}">
+                            <span>喜欢孤独</span>
+                        </footer>
+                    </a>
+                </li>
+                {{/if}}
+            <% } %>
         </ul>
     </div>
 </div>

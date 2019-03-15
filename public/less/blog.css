@@ -526,7 +526,11 @@ textarea {
 .index_list ul li .list_main a header {
   font-size: 0.2rem;
   text-align: center;
-  color: #777;
+  color: transparent;
+  background-image: linear-gradient(to right, red, sandybrown, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ColorMove 30s infinite linear;
 }
 .index_list ul li .list_main a .intro_article {
   width: 2.22rem;
@@ -546,6 +550,14 @@ textarea {
 }
 .index_list ul li:nth-of-type(1) {
   margin-top: 0.2rem;
+}
+@keyframes ColorMove {
+  0% {
+    background-position: -330px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 .blog-header-footer {
   position: relative;

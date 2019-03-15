@@ -77,7 +77,11 @@
           header {
             font-size: 20rem/@baseFontSize;
             text-align: center;
-            color: #777;
+            color: transparent;
+            background-image: linear-gradient(to right, red, sandybrown, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: ColorMove 30s infinite linear;
           }
 
           .intro_article {
@@ -87,8 +91,8 @@
             margin-top: 18rem/@baseFontSize;
             margin-bottom: 3rem/@baseFontSize;
             color: #bbb;
-          }
 
+          }
           .text-Tag {
             border: 1rem/@baseFontSize solid pink;
             box-shadow: 0px 1px 4px 4px pink inset;
@@ -104,4 +108,9 @@
       margin-top: 20rem/@baseFontSize;
     }
   }
+}
+
+@keyframes ColorMove {
+  0%{background-position: -330px 0;}
+  100%{background-position: 0 0;}
 }
