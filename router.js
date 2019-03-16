@@ -20,8 +20,6 @@ router.get('/', function (req, res) {
         publish.forEach(function (e) {
             e.UTCtodata = new Date(e.publishDate).toLocaleString()
         })
-
-      console.log(publish)
         res.render('index.html', {
             publish: publish,
             user: req.session.user
@@ -29,11 +27,27 @@ router.get('/', function (req, res) {
     })
 })
 
-router.get('/category', function (req, res) {
+router.get('/category', function (req, res, next) {
     publish.find(function (err, publish) {
         if (err) {
-            return res.status(500).send('Serve Error')
+            return next(err)
         }
+        let arr = []
+        publish.forEach(function (e) {
+            arr.push(e.publishIdentifying)
+        })
+
+        function unique(arr) {
+            const seen = new Map()
+            return arr.filter((a) => !seen.has(a) && seen.set(a, 1))
+        }
+
+        let newarr = unique(arr)
+
+        publish.forEach(function (e) {
+            e.newarr = newarr
+        })
+
         res.render('category.html', {
             publish: publish
         })
@@ -152,13 +166,30 @@ router.post('/publish', function (req, res, next) {
             return next(err)
         }
 
+
         res.status(200).json({
             err_code: 0,
             message: 'OK'
         })
+
     })
 })
 
+router.get('/:sortname',function (req,res,next) {
+    console.log(req.params.sortname)
+    publish.find({
+        publishIdentifying:req.params.sortname
+    },function (err,publish) {
+        if (err) {
+            return next(err)
+        }
+        console.log(publish)
+        res.render('sortlayout.html',{
+            publish:publish
+        })
+    })
+
+})
 
 router.get("/:docName", function (req, res, next) {
     docId = req.params.docName.replace(/"/g, '')
@@ -166,7 +197,7 @@ router.get("/:docName", function (req, res, next) {
         if (err) {
             return next(err)
         }
-        if(publish.wholepublishIdentifying == "代码"){
+        if (publish.wholepublishIdentifying == "代码") {
             fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
                 if (err) {
                     console.log(err);
@@ -191,7 +222,7 @@ router.get("/:docName", function (req, res, next) {
                 }
             });
         }
-        if(publish.wholepublishIdentifying == "心得体会"){
+        if (publish.wholepublishIdentifying == "心得体会") {
             fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
                 if (err) {
                     console.log(err);

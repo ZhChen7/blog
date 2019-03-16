@@ -46,7 +46,7 @@ let main_Navigation = function () {
         // console.log("distanceX :" + translateX)
         // console.log("distanceY :"+ distanceY)
 
-       console.log(index_Navigation)
+       // console.log(index_Navigation)
         if (Math.abs(distanceY) <= 10) {
             if (distanceX != 0) {
                 e.preventDefault()
@@ -58,8 +58,8 @@ let main_Navigation = function () {
                     isMove = true
                 }
                 if(index_Navigation == 2){
-                    console.log('yes')
-                    console.log(distanceX)
+                    // console.log('yes')
+                    // console.log(distanceX)
                     if(distanceX<0){
                         settanslateX(-width * index_Navigation)
                         isMove = false
@@ -92,7 +92,7 @@ let main_Navigation = function () {
                 addTranslation();
                 let translateX = -width * index_Navigation;
                 settanslateX(translateX);
-                console.log(index_Navigation)
+                // console.log(index_Navigation)
                 $('.topBar-bottom>a').eq(index_Navigation).addClass('Recommend_common').siblings().removeClass('Recommend_common')
                 if (index_Navigation === 1) {
                     animation_play_start($('.Recond'))

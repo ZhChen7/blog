@@ -481,8 +481,10 @@ textarea {
   position: absolute;
   left: 0;
   top: 0;
+  overflow: hidden;
 }
 .index_list ul li .li_img img {
+  transform: translateX(28px) skew(-29deg);
   display: block;
   width: 2.4rem;
 }
