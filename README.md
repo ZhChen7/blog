@@ -1,35 +1,13 @@
-# 博客
+![1552893188042](C:\Users\ZC\AppData\Roaming\Typora\typora-user-images\1552893188042.png)
 
-## 起步
+![1552893217992](C:\Users\ZC\AppData\Roaming\Typora\typora-user-images\1552893217992.png)
 
-- 搭建所需环境
+![1552893273968](C:\Users\ZC\AppData\Roaming\Typora\typora-user-images\1552893273968.png)
 
-  - less环境
+![1552893314352](C:\Users\ZC\AppData\Roaming\Typora\typora-user-images\1552893314352.png)
 
-  - node环境 
+![1552893358306](C:\Users\ZC\AppData\Roaming\Typora\typora-user-images\1552893358306.png)
 
-    
-
-- 目录结构
-
-  ```javascript
-  - blogM 
-      - node_modules ----- 存放第三方框架模板（npm包）
-      - public  ---- 存放静态资源（供客户端调用）
-                  imgages -------	 存放图片
-                  js     -------客户端js文件
-                  less   ------less文件
-                  lib    -----可能需要的外部资源
-                 
-      - views     -------   存放页面
-      - app.js     -------  node入口模块
-      - router.js  -------  路由模块（各种路由操作）
-      - package.json  -------可以看安装了哪些依赖（安装npm包时---  --save）
-      - README.md	   --------README文件（概览）
-  ```
-
-  
-
-  ​           
+- ​           
 
   ​              

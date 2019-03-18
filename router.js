@@ -175,80 +175,81 @@ router.post('/publish', function (req, res, next) {
     })
 })
 
-router.get('/:sortname',function (req,res,next) {
-    console.log(req.params.sortname)
-    publish.find({
-        publishIdentifying:req.params.sortname
-    },function (err,publish) {
-        if (err) {
-            return next(err)
-        }
-        console.log(publish)
-        res.render('sortlayout.html',{
-            publish:publish
-        })
-    })
-
-})
 
 router.get("/:docName", function (req, res, next) {
-    docId = req.params.docName.replace(/"/g, '')
-    publish.findById(docId, function (err, publish) {
-        if (err) {
-            return next(err)
-        }
-        if (publish.wholepublishIdentifying == "代码") {
-            fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    htmlStr = marked(data.toString());
-                    res.type('html')
-                    message.find({
-                        message_type: publish.publishMainBodyUrl
-                    }, function (err, message) {
-                        if (err) {
-                            return next(err)
-                        }
-                        message.forEach(function (e) {
-                            e.UTCtodata = new Date(e.message_time).toLocaleString()
+    let docId = req.params.docName.replace(/"/g, '')
+    let p = /[0-9]/;
+    let b = p.test(docId);//true,说明有数字
+    if (b) {
+        publish.findById(docId, function (err, publish) {
+            if (err) {
+                return next(err)
+            }
+            if (publish.wholepublishIdentifying == "代码") {
+                fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        htmlStr = marked(data.toString());
+                        res.type('html')
+                        message.find({
+                            message_type: publish.publishMainBodyUrl
+                        }, function (err, message) {
+                            if (err) {
+                                return next(err)
+                            }
+                            message.forEach(function (e) {
+                                e.UTCtodata = new Date(e.message_time).toLocaleString()
+                            })
+                            res.render('MainBody.html', {
+                                doc: htmlStr,
+                                publish: publish,
+                                message: message
+                            });
                         })
-                        res.render('MainBody.html', {
-                            doc: htmlStr,
-                            publish: publish,
-                            message: message
-                        });
-                    })
-                }
-            });
-        }
-        if (publish.wholepublishIdentifying == "心得体会") {
-            fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    htmlStr = marked(data.toString());
-                    res.type('html')
-                    message.find({
-                        message_type: publish.publishMainBodyUrl
-                    }, function (err, message) {
-                        if (err) {
-                            return next(err)
-                        }
-                        message.forEach(function (e) {
-                            e.UTCtodata = new Date(e.message_time).toLocaleString()
+                    }
+                });
+            }
+            if (publish.wholepublishIdentifying == "心得体会") {
+                fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        htmlStr = marked(data.toString());
+                        res.type('html')
+                        message.find({
+                            message_type: publish.publishMainBodyUrl
+                        }, function (err, message) {
+                            if (err) {
+                                return next(err)
+                            }
+                            message.forEach(function (e) {
+                                e.UTCtodata = new Date(e.message_time).toLocaleString()
+                            })
+                            res.render('MainBody.html', {
+                                doc: htmlStr,
+                                publish: publish,
+                                message: message
+                            });
                         })
-                        res.render('MainBody.html', {
-                            doc: htmlStr,
-                            publish: publish,
-                            message: message
-                        });
-                    })
-                }
-            });
-        }
-    })
+                    }
+                });
+            }
+        })
+    } else {
+        publish.find({
+            publishIdentifying: req.params.docName
+        }, function (err, publish) {
+            if (err) {
+                return next(err)
+            }
+            res.render('sortlayout.html', {
+                publish: publish
+            })
+        })
+    }
 })
+
 
 router.post('/message', function (req, res, next) {
     let body = req.body

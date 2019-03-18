@@ -46,7 +46,12 @@
             color: #333;
           }
           .message-nickname{
-            color: #555;
+            color: transparent;
+            background-image: linear-gradient(to right, red, sandybrown, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: ColorMove 30s infinite linear;
+            font-size: 12px;
           }
           .message-data{
             color: #ccc;
@@ -122,3 +127,9 @@
 //  overflow: hidden;
 //  padding: 0 5px !important;
 //}
+
+
+@keyframes ColorMove {
+  0%{background-position: -330px 0;}
+  100%{background-position: 0 0;}
+}

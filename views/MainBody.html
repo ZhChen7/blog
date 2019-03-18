@@ -4,15 +4,16 @@
 {{block 'style'}}
 <link rel="stylesheet" type="text/less" href="/less/Message.less">
 <link rel="stylesheet" href="/css/markcss/markfs.css">
+<link rel="stylesheet" href="/css/fenye/fenye.css">
 <link rel="stylesheet" type="text/css" href="@{static}/ueditor/third-party/prismjs/prism.css">
 {{/block}}
 {{block 'body'}}
 <div id="markfs">
     {{@ doc }}
 </div>
-<div class="message">
+<div class="message" id="containet">
     <header class="message-header">精彩评论:</header>
-    <ul>
+    <ul id="pageMain">
         <% for(var i = message.length -1; i >=0; i--){ %>
         <li>
             <div class="message-left">
@@ -35,14 +36,22 @@
         </li>
         <%}%>
     </ul>
+    <!-- 分页按钮 -->
+    <div id="pageBox">
+        <span id="prev">上一页</span>
+        <ul id="pageNav"></ul>
+        <span id="next">下一页</span>
+    </div>
     <form id="message_form">
         <input type="search" name="message_content" id="send-message" placeholder="分享下你的心得..." required min="2">
         <input type="hidden" name="message_type" value="{{publish.publishMainBodyUrl}}">
         <button type="submit">发送</button>
     </form>
+
 </div>
 {{/block}}
 {{block 'script'}}
+<script src="/js/fenye.js"></script>
 <script type="text/javascript" src="@{static}/ueditor/third-party/prismjs/prism.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script>

@@ -1,10 +1,10 @@
-<div class="index_list">
-    <h3>感谢您的抬爱！<span class="iconfont icon-love" style="color: red !important;"></span></h3>
+<div class="index_list" >
+    <h3>感谢您的抬爱！
+    <span class="iconfont icon-love" style="color: red !important;"></span></h3>
     <ul>
-
         <% for(var i = publish.length -1; i >=0; i--){ %>
             {{if publish[i].wholepublishIdentifying == "代码"}}
-            <li>
+            <li data-scroll-reveal="enter bottom over 1s">
                 <div class="li_img">
                     <img src="{{publish[i].publishImgUrl}}" alt="{{publish[i].wholepublishIdentifying}}">
                 </div>

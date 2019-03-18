@@ -22,11 +22,19 @@
          <div class="search-intro">搜索页</div>
      </div>
  </header>
-
     {{include './parties/Recommend/index_list.html'}}
     {{include './parties/public_footer.html'}}
-
 </div>
 </body>
-<script src="/jquery/dist/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/main_Navigation.js"></script>
+<script src="/lib/scrollReveal.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        (function($) {
+            'use strict';
+            window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+        })();
+    });
+</script>
 </html>

@@ -1,0 +1,17 @@
+#pageBox{
+    width: 100%;
+    text-align: center;
+}
+
+#pageBox>ul{
+    width: 80px;
+    display: inline-block;
+}
+#pageBox> span{
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    font-size: 10px;
+    color: #9C27B0;
+    font-weight: bold;
+}

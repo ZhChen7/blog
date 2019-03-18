@@ -37,7 +37,7 @@
         margin-left: 57rem/@baseFontSize;
         margin-top: 41rem/@baseFontSize;
         box-shadow: 5px 5px 5px #666;
-        animation: liMove 5s linear 1;
+        animation: liMove 5s linear infinite;
         animation-play-state: paused;
 
         a {
@@ -114,13 +114,12 @@
   }
 }
 
-
 @keyframes liMove {
-  from {
-    transform: translateY(15px);
+  from{
+    transform: scale(1,1);
   }
-  30% {
-    transform: scale(1.2, 1.2);
+  30%{
+    transform: scale(1.1,1.1);
   }
 }
 

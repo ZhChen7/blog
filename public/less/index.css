@@ -203,7 +203,7 @@ textarea {
   letter-spacing: 0.02rem;
 }
 .topBar .topBar-main .topBar-top .username span {
-  font-size: 0.16rem;
+  font-size: 14px;
 }
 .topBar .topBar-main .topBar-top .publish {
   position: absolute;
@@ -704,7 +704,7 @@ textarea {
   margin-left: 0.57rem;
   margin-top: 0.41rem;
   box-shadow: 5px 5px 5px #666;
-  animation: liMove 5s linear 1;
+  animation: liMove 5s linear infinite;
   animation-play-state: paused;
 }
 .dynamic .dynamic-body ul li a {
@@ -770,10 +770,10 @@ textarea {
 }
 @keyframes liMove {
   from {
-    transform: translateY(15px);
+    transform: scale(1, 1);
   }
   30% {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.1, 1.1);
   }
 }
 @keyframes ColorMove {

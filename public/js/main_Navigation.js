@@ -1,7 +1,6 @@
 $(function () {
     main_Navigation()
 })
-
 let main_Navigation = function () {
     let addTranslation = function () {
         $('.main_Navigation_nav').css({
@@ -14,7 +13,6 @@ let main_Navigation = function () {
             transform: 'translateX(' + translateX + 'px)',
             webkitTransform: 'translateX(' + translateX + 'px)'
         })
-
     }
     let startX = 0
     let startY = 0
@@ -26,6 +24,7 @@ let main_Navigation = function () {
     let width = 0
     let index_Navigation = 0
 
+    console.log(index_Navigation)
     setTimeout(function () {
         width = document.querySelector('.bg-container').offsetWidth
     }, 100)
@@ -43,10 +42,9 @@ let main_Navigation = function () {
         distanceX = moveX - startX
         distanceY = moveY - startY
         let translateX = -width * index_Navigation + distanceX;
-        // console.log("distanceX :" + translateX)
-        // console.log("distanceY :"+ distanceY)
-
-       // console.log(index_Navigation)
+        console.log("distanceX :" + translateX)
+        console.log("distanceY :"+ distanceY)
+       console.log(index_Navigation)
         if (Math.abs(distanceY) <= 10) {
             if (distanceX != 0) {
                 e.preventDefault()
@@ -58,8 +56,6 @@ let main_Navigation = function () {
                     isMove = true
                 }
                 if(index_Navigation == 2){
-                    // console.log('yes')
-                    // console.log(distanceX)
                     if(distanceX<0){
                         settanslateX(-width * index_Navigation)
                         isMove = false
@@ -70,11 +66,17 @@ let main_Navigation = function () {
 
             }
         }
-
-
     })
 
     $('.main_Navigation_nav').on('touchend', function (e) {
+        if(index_Navigation == 0){
+            if (Math.abs(distanceX) < width / 3) {
+                addTranslation();
+                let translateX = -width * index_Navigation;
+                settanslateX(translateX);
+                index_Navigation=0
+            }
+        }
         if (isMove) {
             e.stopPropagation()
             e.preventDefault()
@@ -92,7 +94,6 @@ let main_Navigation = function () {
                 addTranslation();
                 let translateX = -width * index_Navigation;
                 settanslateX(translateX);
-                // console.log(index_Navigation)
                 $('.topBar-bottom>a').eq(index_Navigation).addClass('Recommend_common').siblings().removeClass('Recommend_common')
                 if (index_Navigation === 1) {
                     animation_play_start($('.Recond'))
@@ -115,16 +116,17 @@ let main_Navigation = function () {
 
     })
 
+    $('.backindex').click(function () {
+        index_Navigation=0
+        addTranslation()
+        settanslateX(0)
+        $('.topBar-bottom>a').eq(0).addClass('Recommend_common').siblings().removeClass('Recommend_common')
+
+    })
+
     let animation_play_start = function (el) {
         el.css({
             'animation-play-state': 'running'
         })
     }
-
-    let animation_play_pause = function (el) {
-        el.css({
-            'animation-play-state': 'paused'
-        })
-    }
-
 }

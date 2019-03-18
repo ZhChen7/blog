@@ -8,7 +8,7 @@
         <ul class="clearFix">
             <% for(var i = publish.length -1; i >=0; i--){ %>
                 {{if publish[i].wholepublishIdentifying == "心得体会"}}
-                <li>
+                <li data-scroll-reveal="enter bottom over 1s">
                     <a href="/{{publish[i]._id}}">
                         <header class="dynamic-body-header">
                             <div class="dynamic-body-header-time">
@@ -19,7 +19,7 @@
                         <!--img   276 * 243-->
                         <footer class="dynamic-body-footer">
                             <img src="{{publish[i].publishImgUrl}}" alt="{{publish[i].publishMainBodyUrl}}">
-                            <span>喜欢孤独</span>
+                            <span>{{publish[i].publishIntro}}</span>
                         </footer>
                     </a>
                 </li>

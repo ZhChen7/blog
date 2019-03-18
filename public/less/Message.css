@@ -51,7 +51,12 @@
   color: #333;
 }
 .message ul li .message-right .message-right-header .message-nickname {
-  color: #555;
+  color: transparent;
+  background-image: linear-gradient(to right, red, sandybrown, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ColorMove 30s infinite linear;
+  font-size: 12px;
 }
 .message ul li .message-right .message-right-header .message-data {
   color: #ccc;
@@ -113,5 +118,13 @@
   box-shadow: 0.01rem -0.04rem 0.21rem 0.1rem #fe648f;
   border-radius: 0.02rem;
   letter-spacing: 0.02rem;
+}
+@keyframes ColorMove {
+  0% {
+    background-position: -330px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 /*# sourceMappingURL=Message.css.map */
