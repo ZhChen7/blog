@@ -42,8 +42,11 @@ router.get('/category', function (req, res, next) {
             return arr.filter((a) => !seen.has(a) && seen.set(a, 1))
         }
 
-        let newarr = unique(arr)
+        let newarr = unique(arr).filter(function (e) {
+            return e != ''
+        })
 
+        console.log(newarr)
         publish.forEach(function (e) {
             e.newarr = newarr
         })
@@ -52,7 +55,6 @@ router.get('/category', function (req, res, next) {
             publish: publish
         })
     })
-
 })
 
 router.get('/search', function (req, res) {
