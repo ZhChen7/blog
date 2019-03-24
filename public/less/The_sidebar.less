@@ -44,21 +44,22 @@
         position: absolute;
         bottom: 8rem/@baseFontSize;
         right: 20rem/@baseFontSize;
-        display: flex;
+        //display: flex;
         .Click-num{
-          width: 19rem/@baseFontSize;
-          height: 24rem/@baseFontSize;
-          font-size: 14rem/@baseFontSize;
-          border-radius: 70%;
+          font-size: 14px;
           text-align: center;
-          line-height: 24rem/@baseFontSize;
-          background: #000;
-          color: #fff;
           font-weight: 700;
-          margin:5rem/@baseFontSize 9rem/@baseFontSize;
+          background: linear-gradient(45deg,red, #ffedce, #fff8ac);
+          padding: 0 5px;
+          border-radius: 10px;
+          color: #fe6b70;
         }
         .dianzan{
           color: #FE6D33 !important;
+          font-size: 20px !important;
+          display: inline-block;
+          animation: dianzanAnimation 3s linear both;
+          animation-play-state: paused;
         }
       }
     }
@@ -152,5 +153,17 @@
   }
   to{
     transform: translate(140rem/@baseFontSize,0) rotateY(360deg) scale(1.5,1.5);
+  }
+}
+
+@keyframes dianzanAnimation {
+  form{
+    transform: translate(0px,40px) scale(1,2,1.2);
+  }
+  40%{
+      transform: translate(-50px,-40px) scale(2,2);
+  }
+  80%{
+    transform: translate(0px,-80px) scale(3,3);
   }
 }

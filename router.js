@@ -36,21 +36,19 @@ router.get('/category', function (req, res, next) {
         publish.forEach(function (e) {
             arr.push(e.publishIdentifying)
         })
-
         function unique(arr) {
             const seen = new Map()
             return arr.filter((a) => !seen.has(a) && seen.set(a, 1))
         }
-
         let newarr = unique(arr).filter(function (e) {
             return e != ''
         })
-
-        console.log(newarr)
         publish.forEach(function (e) {
             e.newarr = newarr
         })
-
+        publish.forEach(function (e) {
+            e.UTCtodata = new Date(e.publishDate).toLocaleString()
+        })
         res.render('category.html', {
             publish: publish
         })
@@ -62,6 +60,9 @@ router.get('/search', function (req, res) {
         if (err) {
             return res.status(500).send('Serve Error')
         }
+        publish.forEach(function (e) {
+            e.UTCtodata = new Date(e.publishDate).toLocaleString()
+        })
         res.render('search.html', {
             publish: publish
         })
@@ -228,6 +229,7 @@ router.get("/:docName", function (req, res, next) {
                             message.forEach(function (e) {
                                 e.UTCtodata = new Date(e.message_time).toLocaleString()
                             })
+
                             res.render('MainBody.html', {
                                 doc: htmlStr,
                                 publish: publish,
@@ -245,6 +247,9 @@ router.get("/:docName", function (req, res, next) {
             if (err) {
                 return next(err)
             }
+            publish.forEach(function (e) {
+                e.UTCtodata = new Date(e.publishDate).toLocaleString()
+            })
             res.render('sortlayout.html', {
                 publish: publish
             })

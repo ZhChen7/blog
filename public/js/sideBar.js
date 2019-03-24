@@ -5,11 +5,7 @@ $(function (e) {
     //侧边栏动画效果
     sideBar_showAndhide()
 
-
-
-    $('.icon-icon').click(function () {
-        console.log('1')
-    })
+    dianzanAnimation()
 })
 
 let sideBar_Position=function () {
@@ -127,5 +123,18 @@ let SideBar_Show = function () {
 
             $('.Sidebar_Show_imgLogo').hide(1000)
         })
+    })
+}
+
+
+let dianzanAnimation =function () {
+    $('.dianzan').click(function () {
+        let num= parseInt($('.Click-num').html())
+         num= num+1
+        $('.Click-num').html(num)
+        $('.dianzan').css({
+            'animation-play-state':'running'
+        })
+
     })
 }

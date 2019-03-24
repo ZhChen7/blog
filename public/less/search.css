@@ -8,7 +8,7 @@
 }
 .search-header .search-header-main {
   height: 1rem;
-  background: #b0425f;
+  background: #9C27B0;
   position: relative;
 }
 .search-header .search-header-main .Back {
@@ -42,7 +42,7 @@
   margin-top: 0.13rem;
   font-size: 0.17rem;
   color: pink;
-  background: #b0425f;
+  background: #9C27B0;
   border-bottom: 0.01rem solid #fff;
   padding-left: 0.06rem;
 }

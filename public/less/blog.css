@@ -75,6 +75,7 @@
 }
 body {
   font-size: 24px;
+  background: linear-gradient(to right, sandybrown, #9C27B0, #ff8dac);
 }
 ul,
 ol {
@@ -195,7 +196,7 @@ textarea {
   letter-spacing: 0.02rem;
 }
 .blog-header .blog-header-main .blog_center .blog_center_context span {
-  color: #b0425f;
+  color: #9C27B0;
   opacity: 0.6;
 }
 .blog-header .blog-header-main .blog_center .blog_center_intro {
@@ -344,22 +345,22 @@ textarea {
   position: absolute;
   bottom: 0.08rem;
   right: 0.2rem;
-  display: flex;
 }
 .sidebar .sidebar-main .sidebar-header .Click-heart .Click-num {
-  width: 0.19rem;
-  height: 0.24rem;
-  font-size: 0.14rem;
-  border-radius: 70%;
+  font-size: 14px;
   text-align: center;
-  line-height: 0.24rem;
-  background: #000;
-  color: #fff;
   font-weight: 700;
-  margin: 0.05rem 0.09rem;
+  background: linear-gradient(45deg, red, #ffedce, #fff8ac);
+  padding: 0 5px;
+  border-radius: 10px;
+  color: #fe6b70;
 }
 .sidebar .sidebar-main .sidebar-header .Click-heart .dianzan {
   color: #FE6D33 !important;
+  font-size: 20px !important;
+  display: inline-block;
+  animation: dianzanAnimation 3s linear both;
+  animation-play-state: paused;
 }
 .sidebar .sidebar-main .sidebar-bottom {
   width: 100%;
@@ -446,6 +447,17 @@ textarea {
   }
   to {
     transform: translate(1.4rem, 0) rotateY(360deg) scale(1.5, 1.5);
+  }
+}
+@keyframes dianzanAnimation {
+  form {
+    transform: translate(0px, 40px) scale(1, 2, 1.2);
+  }
+  40% {
+    transform: translate(-50px, -40px) scale(2, 2);
+  }
+  80% {
+    transform: translate(0px, -80px) scale(3, 3);
   }
 }
 .index_list {

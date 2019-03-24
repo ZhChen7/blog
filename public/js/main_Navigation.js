@@ -24,7 +24,7 @@ let main_Navigation = function () {
     let width = 0
     let index_Navigation = 0
 
-    console.log(index_Navigation)
+    // console.log(index_Navigation)
     setTimeout(function () {
         width = document.querySelector('.bg-container').offsetWidth
     }, 100)
@@ -42,9 +42,8 @@ let main_Navigation = function () {
         distanceX = moveX - startX
         distanceY = moveY - startY
         let translateX = -width * index_Navigation + distanceX;
-        console.log("distanceX :" + translateX)
-        console.log("distanceY :"+ distanceY)
-       console.log(index_Navigation)
+        // console.log("distanceX :" + translateX)
+        // console.log("distanceY :"+ distanceY)
         if (Math.abs(distanceY) <= 10) {
             if (distanceX != 0) {
                 e.preventDefault()
@@ -55,11 +54,11 @@ let main_Navigation = function () {
                     settanslateX(translateX)
                     isMove = true
                 }
-                if(index_Navigation == 2){
-                    if(distanceX<0){
+                if (index_Navigation == 2) {
+                    if (distanceX < 0) {
                         settanslateX(-width * index_Navigation)
                         isMove = false
-                    }else{
+                    } else {
                         isMove = true
                     }
                 }
@@ -69,14 +68,6 @@ let main_Navigation = function () {
     })
 
     $('.main_Navigation_nav').on('touchend', function (e) {
-        if(index_Navigation == 0){
-            if (Math.abs(distanceX) < width / 3) {
-                addTranslation();
-                let translateX = -width * index_Navigation;
-                settanslateX(translateX);
-                index_Navigation=0
-            }
-        }
         if (isMove) {
             e.stopPropagation()
             e.preventDefault()
@@ -117,7 +108,7 @@ let main_Navigation = function () {
     })
 
     $('.backindex').click(function () {
-        index_Navigation=0
+        index_Navigation = 0
         addTranslation()
         settanslateX(0)
         $('.topBar-bottom>a').eq(0).addClass('Recommend_common').siblings().removeClass('Recommend_common')

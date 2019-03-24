@@ -75,6 +75,7 @@
 }
 body {
   font-size: 24px;
+  background: linear-gradient(to right, sandybrown, #9C27B0, #ff8dac);
 }
 ul,
 ol {
@@ -133,7 +134,7 @@ textarea {
   padding-top: 0.36rem;
   width: 100%;
   height: 100%;
-  background: #9C27B0;
+  background: linear-gradient(#5479ee, #3170ee 15%, #9C27B0);
 }
 .topBar .topBar-main .topBar-top {
   width: 100%;
@@ -318,7 +319,7 @@ textarea {
 .bg-nav ul li a .nav-icon {
   width: 0.55rem;
   height: 0.55rem;
-  background: #b0425f;
+  background: #9C27B0;
   margin: 0 auto;
   border-radius: 50%;
   text-align: center;
@@ -495,22 +496,22 @@ textarea {
   position: absolute;
   bottom: 0.08rem;
   right: 0.2rem;
-  display: flex;
 }
 .sidebar .sidebar-main .sidebar-header .Click-heart .Click-num {
-  width: 0.19rem;
-  height: 0.24rem;
-  font-size: 0.14rem;
-  border-radius: 70%;
+  font-size: 14px;
   text-align: center;
-  line-height: 0.24rem;
-  background: #000;
-  color: #fff;
   font-weight: 700;
-  margin: 0.05rem 0.09rem;
+  background: linear-gradient(45deg, red, #ffedce, #fff8ac);
+  padding: 0 5px;
+  border-radius: 10px;
+  color: #fe6b70;
 }
 .sidebar .sidebar-main .sidebar-header .Click-heart .dianzan {
   color: #FE6D33 !important;
+  font-size: 20px !important;
+  display: inline-block;
+  animation: dianzanAnimation 3s linear both;
+  animation-play-state: paused;
 }
 .sidebar .sidebar-main .sidebar-bottom {
   width: 100%;
@@ -597,6 +598,17 @@ textarea {
   }
   to {
     transform: translate(1.4rem, 0) rotateY(360deg) scale(1.5, 1.5);
+  }
+}
+@keyframes dianzanAnimation {
+  form {
+    transform: translate(0px, 40px) scale(1, 2, 1.2);
+  }
+  40% {
+    transform: translate(-50px, -40px) scale(2, 2);
+  }
+  80% {
+    transform: translate(0px, -80px) scale(3, 3);
   }
 }
 .main_Navigation {
@@ -724,7 +736,7 @@ textarea {
 }
 .dynamic .dynamic-body ul li a .dynamic-body-header .dynamic-body-header-time span {
   font-size: 0.11rem !important;
-  color: #b0425f !important;
+  color: #9C27B0 !important;
 }
 .dynamic .dynamic-body ul li a .dynamic-body-footer {
   position: relative;

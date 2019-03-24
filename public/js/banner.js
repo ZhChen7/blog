@@ -8,19 +8,17 @@ window.onload = function () {
 
 }
 let searchshow = function () {
-    let nav = document.querySelector('.topBar');
+    let nav = document.querySelector('.topBar>.topBar-main');
     window.onscroll = function () {
         let scrollTop = window.pageYOffset;
-        let opacity=0 ;
-        if (scrollTop < 170) {
-            opacity = scrollTop / 170 * 0.85;
+        console.log(scrollTop)
+        if (scrollTop<170) {
+            $('.topBar-bottom').hide(3000)
         } else {
-            opacity =0.85
 
         }
-
     }
-    nav.style.background = 'rgba(201,21,35,' + opacity + ')';
+
 };
 let banner = function () {
     let bannerBox = document.querySelector('.bg-banner>.banner-main');
