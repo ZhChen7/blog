@@ -1,0 +1,142 @@
+@import "variable";
+
+.his {
+  width: 100%;
+  margin-top: -50rem/@baseFontSize;
+  position: relative;
+
+  .main {
+    width: 500rem/@baseFontSize;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    .his-portrait {
+      position: relative;
+      z-index: 7777;
+      transform: translateY(-50%);
+
+      a {
+        display: block;
+        width: 150rem/@baseFontSize;
+        height: 150rem/@baseFontSize;
+        background: red;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    .his-middle {
+      width: 100%;
+      text-align: center;
+      margin-top: -55rem/@baseFontSize;
+
+      .hisname {
+        font-size: 16rem/@baseFontSize;
+        line-height: 31rem/@baseFontSize;
+        letter-spacing: 5rem/@baseFontSize;
+        display: block;
+        color: #ccc;
+        span {
+          display: inline-block;
+          &:nth-of-type(1) {
+            animation: zhouMove 10s linear backwards;
+          }
+          &:nth-of-type(2){
+            animation: chenMove 5s 10s linear backwards;
+          }
+        }
+      }
+
+      .hisintro {
+        display: inline-block;
+        font-size: 18rem/@baseFontSize;
+        color: transparent;
+        background-image: linear-gradient(to right, red, sandybrown, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 5rem/@baseFontSize;
+        letter-spacing: 10rem/@baseFontSize;
+        animation: hisintroMove 15s 12s ease-in-out backwards;
+      }
+    }
+
+    .his-bottom {
+      width: 100%;
+      margin-top: 40rem/@baseFontSize;
+      text-align: center;
+
+      #main {
+        width: 500rem/@baseFontSize !important;
+        height: 400rem/@baseFontSize !important;
+      }
+    }
+  }
+}
+
+@keyframes zhouMove {
+  from {
+    transform: translate(-600px, -600px);
+    opacity: 0;
+  }
+  30%{
+    opacity: 0.5;
+    transform: scale(3, 3) rotate(-270deg);
+    color: #ff1130;
+  }
+  70% {
+    opacity: 0.7;
+    transform: scale(2, 2) rotate(45deg);
+    color: #602dfa;
+  }
+  to {
+    transform: translate(0px, 60px)  scale(4,4);
+    color: aqua;
+  }
+}
+
+@keyframes chenMove {
+ from{
+   transform: translate(600px,-600px);
+ }
+  30%{
+    opacity: 0.5;
+    transform: scale(2, 2) rotate(170deg);
+    color: #adb4ff;
+  }
+  70% {
+    opacity: 0.5;
+    transform: scale(2, 2) rotate(60deg);
+    color: #7317fa;
+  }
+  to {
+    transform: translate(0px, 60px) scale(4,4);
+    color: #74ff66;
+  }
+}
+
+@keyframes hisintroMove {
+  from{
+    transform: translate(1000px,60px);
+    width: 0;
+  }
+  20%{
+    transform: scale(0,0) translateZ(30deg,0,0);
+    opacity: 0.2;
+    width: 10px;
+  }
+  40%{
+    transform: scale(1.5,1.5);
+    opacity: 0.8;
+    width: 40px;
+  }
+  to{
+    transform: translate(0, 0) rotate(45deg);
+  }
+}

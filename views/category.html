@@ -1,8 +1,14 @@
 {{extend './layouts/layout-blog.html'}}
 
 {{block 'title'}}category 分类{{/block}}
-
+{{block 'style'}}
+ <link rel="stylesheet" href="/css/preloader/mainload.css">
+{{/block}}
 {{block 'body'}}
+    {{include './parties/load/load.html'}}
     {{include './parties/category/Category-part.html'}}
     {{include './parties/Recommend/index_list.html'}}
+{{/block}}
+{{block 'script'}}
+<script src="/js/load.js"></script>
 {{/block}}

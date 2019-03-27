@@ -75,7 +75,7 @@
 }
 body {
   font-size: 24px;
-  background: linear-gradient(to right, sandybrown, #9C27B0, #ff8dac);
+  background: linear-gradient(66deg, #f42322, #ff4645, pink, #9C27B0, #ff8dac);
 }
 ul,
 ol {
@@ -204,7 +204,7 @@ textarea {
   letter-spacing: 0.02rem;
 }
 .topBar .topBar-main .topBar-top .username span {
-  font-size: 14px;
+  font-size: 0.14rem;
 }
 .topBar .topBar-main .topBar-top .publish {
   position: absolute;
@@ -213,6 +213,16 @@ textarea {
   font-size: 0.16rem;
   color: #fff;
   font-weight: bold;
+}
+.topBar .topBar-main .topBar-top .audio {
+  position: absolute;
+  top: 0;
+  left: 1.26rem;
+  animation: audioMove 7s linear infinite;
+}
+.topBar .topBar-main .topBar-top .audio span {
+  font-size: 0.3rem !important;
+  color: pink !important;
 }
 .topBar .topBar-main .topBar-bottom {
   width: 100%;
@@ -230,6 +240,23 @@ textarea {
 }
 .topBar-bottom > .Recommend_common {
   font-weight: bold;
+}
+@keyframes audioMove {
+  from {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(2, 2);
+  }
+  50% {
+    transform: scale(2.3, 2.3);
+  }
+  70% {
+    transform: scale(1.7, 1.7);
+  }
+  to {
+    transform: scale(1, 1);
+  }
 }
 .bg-banner {
   width: 100%;
@@ -701,6 +728,7 @@ textarea {
   white-space: nowrap;
   text-overflow: clip;
   animation: contextMove 5s ease-in-out forwards;
+  -webkit-animation: contextMove 5s ease-in-out forwards;
   animation-play-state: paused;
 }
 .dynamic .dynamic-body {
@@ -717,6 +745,7 @@ textarea {
   margin-top: 0.41rem;
   box-shadow: 5px 5px 5px #666;
   animation: liMove 5s linear infinite;
+  -webkit-animation: liMove 5s linear infinite;
   animation-play-state: paused;
 }
 .dynamic .dynamic-body ul li a {

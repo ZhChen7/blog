@@ -36,10 +36,12 @@ router.get('/category', function (req, res, next) {
         publish.forEach(function (e) {
             arr.push(e.publishIdentifying)
         })
+
         function unique(arr) {
             const seen = new Map()
             return arr.filter((a) => !seen.has(a) && seen.set(a, 1))
         }
+
         let newarr = unique(arr).filter(function (e) {
             return e != ''
         })
@@ -73,6 +75,10 @@ router.get('/search', function (req, res) {
 
 router.get('/timeline', function (req, res) {
     res.render('timeline.html')
+})
+
+router.get('/his',function (req,res) {
+      res.render('his.html')
 })
 
 router.get('/login', function (req, res) {

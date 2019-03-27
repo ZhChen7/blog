@@ -1,25 +1,33 @@
 window.onload = function () {
-    // 导航栏渐显
-    // searchshow();
-
     // 轮播图
     banner();
+    //音乐播放组件
+    audioPlay()
 
 
 }
-let searchshow = function () {
-    let nav = document.querySelector('.topBar>.topBar-main');
-    window.onscroll = function () {
-        let scrollTop = window.pageYOffset;
-        console.log(scrollTop)
-        if (scrollTop<170) {
-            $('.topBar-bottom').hide(3000)
-        } else {
-
+let audioPlay = function () {
+    let audio = document.getElementById('music1');
+        audio.play();
+    $("#btn").bind("touchstart", function bf() {
+        if (audio !== null) {
+            //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+            //alert(audio.paused);
+            if (audio.paused) {
+                audio.play(); //audio.play();// 这个就是播放
+                $('.audio').css({
+                    'animation-play-state':'running'
+                })
+            } else {
+                audio.pause(); // 这个就是暂停
+                $('.audio').css({
+                    'animation-play-state':'paused'
+                })
+            }
         }
-    }
+    })
+}
 
-};
 let banner = function () {
     let bannerBox = document.querySelector('.bg-banner>.banner-main');
     let imgBox = document.querySelector('.bg-banner>.banner-main>ul:first-child');

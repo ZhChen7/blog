@@ -19,6 +19,7 @@
     "body-parser": "^1.18.3",
     "bootstrap": "^3.3.7",
     "co": "^4.6.0",
+    "echarts": "^4.2.1",
     "express": "^4.16.4",
     "express-art-template": "^1.0.1",
     "express-session": "^1.15.6",

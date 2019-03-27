@@ -4,10 +4,12 @@
 {{block 'style'}}
 <link rel="stylesheet" type="text/less" href="/less/Message.less">
 <link rel="stylesheet" href="/css/markcss/markfs.css">
+<link rel="stylesheet" href="/css/preloader/mainload.css">
 <link rel="stylesheet" href="/css/fenye/fenye.css">
 <link rel="stylesheet" type="text/css" href="/lib/prism/prism.css">
 {{/block}}
 {{block 'body'}}
+{{include './parties/load/load.html'}}
 <div id="markfs">
     {{@ doc }}
 </div>
@@ -51,6 +53,7 @@
 </div>
 {{/block}}
 {{block 'script'}}
+<script src="/js/load.js"></script>
 <script src="/js/fenye.js"></script>
 <script type="text/javascript" src="/lib/prism/prism.js"></script>
 <script>

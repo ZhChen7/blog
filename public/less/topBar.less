@@ -85,7 +85,7 @@
         color: #ff8287;
         letter-spacing: 2rem/@baseFontSize;
         span{
-          font-size: 14px;
+          font-size: 14rem/@baseFontSize;
         }
 
       }
@@ -96,6 +96,16 @@
         font-size: 16rem/@baseFontSize;
         color: #fff;
         font-weight: bold;
+      }
+      .audio{
+        position: absolute;
+        top: 0;
+        left: 126rem/@baseFontSize;
+        animation: audioMove 7s linear infinite;
+        span{
+          font-size: 30rem/@baseFontSize !important;
+          color: pink !important;
+        }
       }
 
     }
@@ -120,12 +130,20 @@
    font-weight: bold;
 }
 
-//@keyframes loginMove {
-//  form{
-//        transform: translate(-50rem/@baseFontSize,100rem/@baseFontSize);
-//  }
-//  20%{
-//     transform:translate(-50rem/@baseFontSize,30rem/@baseFontSize) scale(3,3);
-//  }
-//
-//}
+@keyframes audioMove {
+  from{
+    transform: scale(1,1);
+  }
+  40%{
+    transform: scale(2,2);
+  }
+  50%{
+    transform: scale(2.3,2.3);
+  }
+  70%{
+    transform: scale(1.7,1.7);
+  }
+  to{
+    transform: scale(1,1);
+  }
+}

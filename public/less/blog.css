@@ -75,7 +75,7 @@
 }
 body {
   font-size: 24px;
-  background: linear-gradient(to right, sandybrown, #9C27B0, #ff8dac);
+  background: linear-gradient(66deg, #f42322, #ff4645, pink, #9C27B0, #ff8dac);
 }
 ul,
 ol {
