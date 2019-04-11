@@ -90,6 +90,7 @@ let main_Navigation = function () {
                     animation_play_start($('.Recond'))
                     animation_play_start($('.dynamic-body>ul>li'))
                 }
+                backtoTop()
             }
             isMove = false
         }
@@ -119,5 +120,21 @@ let main_Navigation = function () {
         el.css({
             'animation-play-state': 'running'
         })
+    }
+
+    let backtoTop=function(){
+        let s = $(window).scrollTop();
+        let v = 6;
+
+        let sobj = setInterval(function () {
+            s -= v;
+
+            if (s <= 0) {
+                s = 0;
+                clearInterval(sobj);
+            }
+
+            $(window).scrollTop(s);
+        }, 10);
     }
 }

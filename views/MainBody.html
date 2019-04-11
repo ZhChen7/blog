@@ -1,13 +1,11 @@
 {{extend './layouts/layout-blog.html'}}
 
 {{block 'title'}}New World{{/block}}
-{{block 'style'}}
-<link rel="stylesheet" type="text/less" href="/less/Message.less">
-<link rel="stylesheet" href="/css/markcss/markfs.css">
-<link rel="stylesheet" href="/css/preloader/mainload.css">
-<link rel="stylesheet" href="/css/fenye/fenye.css">
-<link rel="stylesheet" type="text/css" href="/lib/prism/prism.css">
-{{/block}}
+{{block 'style'}}<link rel="stylesheet" type="text/less" href="/less/Message.less">
+    <link rel="stylesheet" href="/css/markcss/markfs.css">
+    <link rel="stylesheet" href="/css/preloader/mainload.css">
+    <link rel="stylesheet" href="/css/fenye/fenye.css">
+    <link rel="stylesheet" type="text/css" href="/lib/prism/prism.css">{{/block}}
 {{block 'body'}}
 {{include './parties/load/load.html'}}
 <div id="markfs">

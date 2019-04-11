@@ -1,64 +1,11 @@
 {{extend './layouts/layout.html'}}
 {{block 'title'}}Change World{{/block}}
-{{block 'style'}}
-<link rel="stylesheet" type="text/less" href="/css/preloader/load.css">
-<style>
-
-</style>
-{{/block}}
+{{block 'style'}}<link rel="stylesheet" type="text/less" href="/css/preloader/load.css">{{/block}}
 {{block 'body'}}
-<div class="load">
-    <div class="cssload-wrap">
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-        <div class="cssload-circle"></div>
-    </div>
-</div>
 
-<div class="main_Navigation">
-    <div class="main_Navigation_nav">
-        <div class="Recommend">
-            {{include './parties/Recommend/banner.html'}}
-            {{include './parties/Recommend/nav.html'}}
-            {{include './parties/Recommend/index_list.html'}}
-        </div>
-        <div class="Dynamic">
-            {{include './parties/Dynamic/dynamic.html'}}
-        </div>
-        <div class="School">
-            {{include './parties/School/Rotation.html'}}
-        </div>
-    </div>
-</div>
+<div class="load"><div class="cssload-wrap"><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div></div></div>
+<div class="main_Navigation"><div class="main_Navigation_nav"><div class="Recommend">{{include'./parties/Recommend/banner.html'}}{{include'./parties/Recommend/nav.html'}}{{include'./parties/Recommend/index_list.html'}}</div><div class="Dynamic">{{include'./parties/Dynamic/dynamic.html'}}</div><div class="School">{{include'./parties/School/Rotation.html'}}</div></div></div>{{include './parties/backTop/backTop.html'}}
 {{/block}}
-
 {{block 'script'}}
 <script src="/js/main_Navigation.js"></script>
 <script src="/js/banner.js"></script>
@@ -79,5 +26,4 @@
         })();
     });
 </script>
-
 {{/block}}
