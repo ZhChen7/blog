@@ -1,12 +1,9 @@
-$(function (e) {
+$(function () {
     //调整侧边栏位置
     sideBar_Position()
-
     //侧边栏动画效果
     sideBar_showAndhide()
-
     dianzanAnimation()
-
     //backTop
     backTop()
 })
@@ -172,12 +169,12 @@ let backTop = function () {
         }, 10);
     })
 
-   window.addEventListener('scroll',function () {
-       let scrollTop=$(window).scrollTop()
-       if(scrollTop >=20){
-          $('.backTop').show(1400)
-       }else{
-           $('.backTop').hide(1000)
-       }
-   })
+    window.addEventListener('scroll', function () {
+        let scrollTop = $(window).scrollTop()
+        if (scrollTop >= 20) {
+            $('.backTop').show(1400)
+        } else {
+            $('.backTop').hide(1000)
+        }
+    })
 }

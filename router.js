@@ -74,11 +74,23 @@ router.get('/search', function (req, res) {
 })
 
 router.get('/timeline', function (req, res) {
-    res.render('timeline.html')
+    publish.find(function (err, publish) {
+        if (err) {
+            return res.status(500).send('Serve Error')
+        }
+        publish.forEach(function (e) {
+            e.UTCtodata = new Date(e.publishDate).toLocaleString()
+            e.year=new Date(e.publishDate).toLocaleString().substring(0,4)
+        })
+
+        res.render('timeline.html', {
+            publish: publish
+        })
+    })
 })
 
-router.get('/his',function (req,res) {
-      res.render('his.html')
+router.get('/his', function (req, res) {
+    res.render('his.html')
 })
 
 router.get('/login', function (req, res) {
@@ -174,93 +186,89 @@ router.post('/publish', function (req, res, next) {
         if (err) {
             return next(err)
         }
-
-
         res.status(200).json({
             err_code: 0,
             message: 'OK'
         })
-
     })
 })
 
 
-router.get("/:docName", function (req, res, next) {
+router.get("/code/:docName", function (req, res, next) {
     let docId = req.params.docName.replace(/"/g, '')
-    let p = /[0-9]/;
-    let b = p.test(docId);//true,说明有数字
-    if (b) {
-        publish.findById(docId, function (err, publish) {
-            if (err) {
-                return next(err)
-            }
-            if (publish.wholepublishIdentifying == "代码") {
-                fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        htmlStr = marked(data.toString());
-                        res.type('html')
-                        message.find({
-                            message_type: publish.publishMainBodyUrl
-                        }, function (err, message) {
-                            if (err) {
-                                return next(err)
-                            }
-                            message.forEach(function (e) {
-                                e.UTCtodata = new Date(e.message_time).toLocaleString()
-                            })
-                            res.render('MainBody.html', {
-                                doc: htmlStr,
-                                publish: publish,
-                                message: message
-                            });
+    publish.findById(docId, function (err, publish) {
+        if (err) {
+            return next(err)
+        }
+        if (publish.wholepublishIdentifying == "代码") {
+            fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    htmlStr = marked(data.toString());
+                    res.type('html')
+                    message.find({
+                        message_type: publish.publishMainBodyUrl
+                    }, function (err, message) {
+                        if (err) {
+                            return next(err)
+                        }
+                        message.forEach(function (e) {
+                            e.UTCtodata = new Date(e.message_time).toLocaleString()
                         })
-                    }
-                });
-            }
-            if (publish.wholepublishIdentifying == "心得体会") {
-                fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        htmlStr = marked(data.toString());
-                        res.type('html')
-                        message.find({
-                            message_type: publish.publishMainBodyUrl
-                        }, function (err, message) {
-                            if (err) {
-                                return next(err)
-                            }
-                            message.forEach(function (e) {
-                                e.UTCtodata = new Date(e.message_time).toLocaleString()
-                            })
+                        res.render('MainBody.html', {
+                            doc: htmlStr,
+                            publish: publish,
+                            message: message
+                        });
+                    })
+                }
+            });
+        }
+        if (publish.wholepublishIdentifying == "心得体会") {
+            fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    htmlStr = marked(data.toString());
+                    res.type('html')
+                    message.find({
+                        message_type: publish.publishMainBodyUrl
+                    }, function (err, message) {
+                        if (err) {
+                            return next(err)
+                        }
+                        message.forEach(function (e) {
+                            e.UTCtodata = new Date(e.message_time).toLocaleString()
+                        })
 
-                            res.render('MainBody.html', {
-                                doc: htmlStr,
-                                publish: publish,
-                                message: message
-                            });
-                        })
-                    }
-                });
-            }
+                        res.render('MainBody.html', {
+                            doc: htmlStr,
+                            publish: publish,
+                            message: message
+                        });
+                    })
+                }
+            });
+        }
+    })
+
+})
+
+router.get("/sort/:sortName", function (req, res, next) {
+    publish.find({
+        publishIdentifying: req.params.sortName
+    }, function (err, publish) {
+        if (err) {
+            return next(err)
+        }
+        publish.forEach(function (e) {
+            e.UTCtodata = new Date(e.publishDate).toLocaleString()
         })
-    } else {
-        publish.find({
-            publishIdentifying: req.params.docName
-        }, function (err, publish) {
-            if (err) {
-                return next(err)
-            }
-            publish.forEach(function (e) {
-                e.UTCtodata = new Date(e.publishDate).toLocaleString()
-            })
-            res.render('sortlayout.html', {
-                publish: publish
-            })
+        res.render('sortlayout.html', {
+            publish: publish
         })
-    }
+    })
 })
 
 
@@ -283,28 +291,8 @@ router.post('/message', function (req, res, next) {
                 err_code: 0,
                 message: data
             })
-            // publish.findOne({
-            //     publishMainBodyUrl:data.message_type
-            // },function (err,publish) {
-            //     if (err) {
-            //         return next(err)
-            //     }
-            //     console.log(publish)
-            //     message.find(function (err, message) {
-            //         if (err) {
-            //             return next(err)
-            //         }
-            //         console.log(message)
-            //         return res.status(200).json({
-            //             err_code: 0,
-            //             message: message,
-            //             publish:publish
-            //         })
-            //     })
-            // })
         })
     }
-
 })
 
 
