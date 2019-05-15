@@ -75,7 +75,8 @@
 }
 body {
   font-size: 24px;
-  background: linear-gradient(66deg, #f42322, #ff4645, #ff2fd3, #9C27B0, #ff8dac);
+  background: linear-gradient(66deg, #fffaf1, #ff487f, #f5e1da, #9c27b0, #ff8dac);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 ul,
 ol {
@@ -134,7 +135,7 @@ textarea {
   padding-top: 0.36rem;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#5479ee, #3170ee 15%, #9C27B0);
+  background: linear-gradient(#5479ee, #3170ee 15%, #9c27b0);
 }
 .topBar .topBar-main .topBar-top {
   width: 100%;
@@ -260,7 +261,7 @@ textarea {
 }
 .bg-banner {
   width: 100%;
-  background: -webkit-linear-gradient(#9C27B0 50%, #fff 50%);
+  background: -webkit-linear-gradient(#9c27b0 50%, #fff 50%);
   overflow: hidden;
   padding: 0rem 0.07rem;
 }
@@ -346,7 +347,7 @@ textarea {
 .bg-nav ul li a .nav-icon {
   width: 0.55rem;
   height: 0.55rem;
-  background: #9C27B0;
+  background: #9c27b0;
   margin: 0 auto;
   border-radius: 50%;
   text-align: center;
@@ -404,7 +405,7 @@ textarea {
 .index_list ul li .list_time {
   width: 2.97rem;
   height: 1.07rem;
-  background: linear-gradient(#00c4ff2e, #f2c0ff91, #fff);
+  background: linear-gradient(rgba(0, 196, 255, 0.18039216), rgba(242, 192, 255, 0.56862745), #fff);
   position: absolute;
   bottom: -0.45rem;
   right: -0.53rem;
@@ -422,7 +423,7 @@ textarea {
   color: pink !important;
 }
 .index_list ul li .list_time .list_time_submit {
-  color: #ff8400ad;
+  color: rgba(255, 132, 0, 0.67843137);
   font-size: 0.1rem;
   top: 0.1rem;
 }
@@ -580,20 +581,25 @@ textarea {
   display: block;
   margin-top: -0.03rem !important;
 }
+.sidebar .sidebar-main .sidebar-bottom .iconAll .csdn {
+  color: red!important;
+}
 .sidebar .sidebar-main .sidebar-bottom .Show-img {
   width: 100%;
 }
 .sidebar .sidebar-main .sidebar-bottom .Show-img .weixin,
 .sidebar .sidebar-main .sidebar-bottom .Show-img .Alipay,
 .sidebar .sidebar-main .sidebar-bottom .Show-img .cell_phone,
-.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin {
+.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .dashang {
   width: 100%;
   display: none;
 }
 .sidebar .sidebar-main .sidebar-bottom .Show-img .weixin img,
 .sidebar .sidebar-main .sidebar-bottom .Show-img .Alipay img,
 .sidebar .sidebar-main .sidebar-bottom .Show-img .cell_phone img,
-.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin img {
+.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin img,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .dashang img {
   display: block;
   width: 100%;
 }
@@ -766,7 +772,7 @@ textarea {
 }
 .dynamic .dynamic-body ul li a .dynamic-body-header .dynamic-body-header-time span {
   font-size: 0.11rem !important;
-  color: #9C27B0 !important;
+  color: #9c27b0 !important;
 }
 .dynamic .dynamic-body ul li a .dynamic-body-footer {
   position: relative;
@@ -922,12 +928,13 @@ textarea {
   z-index: 999;
   width: 34px;
   text-align: center;
+  display: none;
 }
-.backTop di a {
+.backTop a {
   width: 100%;
   display: block;
 }
-.backTop di a span {
+.backTop a span {
   color: #ff1a41 !important;
   font-size: 24px !important;
 }

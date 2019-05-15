@@ -75,7 +75,8 @@
 }
 body {
   font-size: 24px;
-  background: linear-gradient(66deg, #f42322, #ff4645, #ff2fd3, #9C27B0, #ff8dac);
+  background: linear-gradient(66deg, #fffaf1, #ff487f, #f5e1da, #9c27b0, #ff8dac);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 ul,
 ol {
@@ -196,7 +197,7 @@ textarea {
   letter-spacing: 0.02rem;
 }
 .blog-header .blog-header-main .blog_center .blog_center_context span {
-  color: #9C27B0;
+  color: #9c27b0;
   opacity: 0.6;
 }
 .blog-header .blog-header-main .blog_center .blog_center_intro {
@@ -401,20 +402,25 @@ textarea {
   display: block;
   margin-top: -0.03rem !important;
 }
+.sidebar .sidebar-main .sidebar-bottom .iconAll .csdn {
+  color: red!important;
+}
 .sidebar .sidebar-main .sidebar-bottom .Show-img {
   width: 100%;
 }
 .sidebar .sidebar-main .sidebar-bottom .Show-img .weixin,
 .sidebar .sidebar-main .sidebar-bottom .Show-img .Alipay,
 .sidebar .sidebar-main .sidebar-bottom .Show-img .cell_phone,
-.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin {
+.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .dashang {
   width: 100%;
   display: none;
 }
 .sidebar .sidebar-main .sidebar-bottom .Show-img .weixin img,
 .sidebar .sidebar-main .sidebar-bottom .Show-img .Alipay img,
 .sidebar .sidebar-main .sidebar-bottom .Show-img .cell_phone img,
-.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin img {
+.sidebar .sidebar-main .sidebar-bottom .Show-img .douyin img,
+.sidebar .sidebar-main .sidebar-bottom .Show-img .dashang img {
   display: block;
   width: 100%;
 }
@@ -521,7 +527,7 @@ textarea {
   color: pink !important;
 }
 .index_list ul li .list_time .list_time_submit {
-  color: #ff8400ad;
+  color: rgba(255, 132, 0, 0.67843137);
   font-size: 0.1rem;
   top: 0.1rem;
 }
@@ -618,7 +624,7 @@ textarea {
   letter-spacing: 0.02rem;
   color: #fff;
   border-radius: 0.12rem;
-  background: #9C27B0;
+  background: linear-gradient(-23deg, #c1f1f3, rgba(246, 159, 179, 0) 20%, rgba(0, 161, 255, 0.47));
 }
 .blog-header-footer .blog-header-footer-main .blog_bottom_bottom ul li a span {
   font-size: 0.08rem;
