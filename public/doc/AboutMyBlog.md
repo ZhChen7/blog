@@ -34,7 +34,9 @@ let sideBar_Position=function () {
 
 
 
-效果：![侧边栏位置固定](http://static.zxinc520.com/blogimage/20190318/882NvBogVr0t.png?imageslim)
+效果：![侧边栏位置固定]
+
+![mark](http://static.zxinc520.com/blog/20190525/hModlCjlfsUO.png?imageslim)
 
 
 
@@ -94,87 +96,87 @@ let sideBar_Position=function () {
 
 
 
-3. ### 列表动态跳转问题，列表跳转和分类列表跳转冲突问题（node.js）,
+###### 3.列表动态跳转问题，列表跳转和分类列表跳转冲突问题（node.js）,
 
-    --解决方案：
+--解决方案：
 
-   ~~~javascript
-   router.get("/:docName", function (req, res, next) {
-       let docId = req.params.docName.replace(/"/g, '')
-       let p = /[0-9]/;
-       let b = p.test(docId);//true,说明有数字
-       if (b) {
-           publish.findById(docId, function (err, publish) {
-               if (err) {
-                   return next(err)
-               }
-               if (publish.wholepublishIdentifying == "代码") {
-                   fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
-                       if (err) {
-                           console.log(err);
-                       } else {
-                           htmlStr = marked(data.toString());
-                           res.type('html')
-                           message.find({
-                               message_type: publish.publishMainBodyUrl
-                           }, function (err, message) {
-                               if (err) {
-                                   return next(err)
-                               }
-                               message.forEach(function (e) {
-                                   e.UTCtodata = new Date(e.message_time).toLocaleString()
-                               })
-                               res.render('MainBody.html', {
-                                   doc: htmlStr,
-                                   publish: publish,
-                                   message: message
-                               });
-                           })
-                       }
-                   });
-               }
-               if (publish.wholepublishIdentifying == "心得体会") {
-                   fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
-                       if (err) {
-                           console.log(err);
-                       } else {
-                           htmlStr = marked(data.toString());
-                           res.type('html')
-                           message.find({
-                               message_type: publish.publishMainBodyUrl
-                           }, function (err, message) {
-                               if (err) {
-                                   return next(err)
-                               }
-                               message.forEach(function (e) {
-                                   e.UTCtodata = new Date(e.message_time).toLocaleString()
-                               })
-                               res.render('MainBody.html', {
-                                   doc: htmlStr,
-                                   publish: publish,
-                                   message: message
-                               });
-                           })
-                       }
-                   });
-               }
-           })
-       } else {
-           publish.find({
-               publishIdentifying: req.params.docName
-           }, function (err, publish) {
-               if (err) {
-                   return next(err)
-               }
-               res.render('sortlayout.html', {
-                   publish: publish
-               })
-           })
-       }
-   })
-   ~~~
+~~~javascript
+router.get("/:docName", function (req, res, next) {
+    let docId = req.params.docName.replace(/"/g, '')
+    let p = /[0-9]/;
+    let b = p.test(docId);//true,说明有数字
+    if (b) {
+        publish.findById(docId, function (err, publish) {
+            if (err) {
+                return next(err)
+            }
+            if (publish.wholepublishIdentifying == "代码") {
+                fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        htmlStr = marked(data.toString());
+                        res.type('html')
+                        message.find({
+                            message_type: publish.publishMainBodyUrl
+                        }, function (err, message) {
+                            if (err) {
+                                return next(err)
+                            }
+                            message.forEach(function (e) {
+                                e.UTCtodata = new Date(e.message_time).toLocaleString()
+                            })
+                            res.render('MainBody.html', {
+                                doc: htmlStr,
+                                publish: publish,
+                                message: message
+                            });
+                        })
+                    }
+                });
+            }
+            if (publish.wholepublishIdentifying == "心得体会") {
+                fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        htmlStr = marked(data.toString());
+                        res.type('html')
+                        message.find({
+                            message_type: publish.publishMainBodyUrl
+                        }, function (err, message) {
+                            if (err) {
+                                return next(err)
+                            }
+                            message.forEach(function (e) {
+                                e.UTCtodata = new Date(e.message_time).toLocaleString()
+                            })
+                            res.render('MainBody.html', {
+                                doc: htmlStr,
+                                publish: publish,
+                                message: message
+                            });
+                        })
+                    }
+                });
+            }
+        })
+    } else {
+        publish.find({
+            publishIdentifying: req.params.docName
+        }, function (err, publish) {
+            if (err) {
+                return next(err)
+            }
+            res.render('sortlayout.html', {
+                publish: publish
+            })
+        })
+    }
+})
+~~~
 
-   
+
 
 ###  4:UTC时间问题
 

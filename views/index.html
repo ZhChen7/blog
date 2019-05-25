@@ -1,6 +1,6 @@
 {{extend './layouts/layout.html'}}
 {{block 'title'}}Change World{{/block}}
-{{block 'style'}}<link rel="stylesheet" href="/css/preloader/load.css">{{/block}}
+{{block 'style'}}<link rel="stylesheet" href="/css/preloader/load.css"><link rel="stylesheet" href="/css/IndexCanvas/IndexCanvas.css">{{/block}}
 {{block 'body'}}
 
 <div class="load"><div class="cssload-wrap"><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div></div></div>
@@ -14,7 +14,7 @@
 <script>
     document.onreadystatechange = function () {//即在加载的过程中执行下面的代码
         if (document.readyState == "complete") {//complete加载完成
-            $(".load").fadeOut();
+            $(".load").fadeOut(500);
         }
     }
 </script>
@@ -26,4 +26,5 @@
         })();
     });
 </script>
+<!--<script src="/canvas-nest.js/dist/canvas-nest.js" count="150" color="248,171,166" pointColor="255,105,180" zIndex="10000"></script>-->
 {{/block}}

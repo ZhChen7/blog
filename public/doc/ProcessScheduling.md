@@ -653,3 +653,460 @@ void arithmetic()
 ![mark](http://static.zxinc520.com/blog/20190513/fWvr6o5WnCac.gif)
 
 ![mark](http://static.zxinc520.com/blog/20190513/UBx2BDfscUbD.gif)
+
+
+
+#### 进程调度4：时间片轮转
+
+问题描述：要求输入N个进程（0<N<=100），输入时间片M（0<M〈=5），按照进程输入的顺序以时间片轮转的方法输出指定的第K轮（K>0）执行的那个进程的进程名。
+
+ 
+
+输入格式：程序首先输入一个正整数M（0<M〈=5）作为时间片，下一行输入一个正整数N（0<N<=100），接下来输入为N行，以回车符号作为分隔，每行有2个数据，以空格作为分隔。第一个数据是字符串（长度小于等于10），该字符串为进程名，第2个数据类型为整型，表示该进程需要的运行时间。最后输入一个正整数K，作为时间片轮转的次数（次数从1开始计数）。
+
+ 
+
+输出格式：输出一个字符串，为最后执行进程的进程名；若无进程运行，则输出“over”（不含双引号，所有字母皆为小写）。
+
+ 
+
+样例输入1：
+
+1
+
+3
+
+P1 1
+
+P2 2
+
+P3 3
+
+3
+
+样例输出1：P3
+
+ 
+
+样例输入2：
+
+1
+
+3
+
+P1 1
+
+P2 2
+
+P3 3
+
+10
+
+样例输出2：over
+
+ 
+
+样例输入3：
+
+2
+
+3
+
+P1 1
+
+P2 2
+
+P3 3
+
+4
+
+样例输出3：P3
+
+
+
+*代码展示：*
+
+```js
+#include <stdio.h>
+#include <string.h> //strcpy()
+#include<stdlib.h>//malloc()
+void insertQuestion();
+ void insertNode(char ProcessName[5],int Time);
+void view();
+void arithmetic(int M,int n,int count);
+typedef struct process
+{
+    char ProcessName[5];
+    int Priority;
+    int Time;
+    struct process *next;
+}nodelist;
+
+nodelist *pHead=NULL;//存放调度的首节点地址
+
+int main(){
+    insertQuestion();
+    // view();
+    return 0;
+}
+
+//添加问题
+void insertQuestion()
+{
+    void insertNode(char ProcessName[5],int Time);
+	void arithmetic(int M,int n,int count);
+    char ProcessName[5];
+    int Priority;
+    int Time;
+    int i=0;
+    int n;
+	int M;
+	int count;
+	scanf("%d",&M);
+    scanf("%d",&n);
+    for (i = 0; i < n; i++)
+    {
+      scanf("%s %d",ProcessName,&Time);
+      insertNode(ProcessName,Time);
+    }
+	scanf("%d",&count);
+	arithmetic(M,n,count);
+}
+
+//将数据插入链表
+void insertNode(char ProcessName[5],int Time)
+{
+    //申请存储空间
+    nodelist *pNew=(nodelist *)malloc(sizeof(nodelist));
+    nodelist *p,*q;
+    strcpy(pNew->ProcessName,ProcessName);
+    pNew->Time = Time;
+    pNew->next=NULL;
+    // printf("5\n");
+        if(pHead==NULL) //插入前链表为空，新插入的节点为头节点
+        {
+            pHead=pNew;    
+            //p1=pHead;
+        }
+        else  
+        {
+            //将地址为pNew的节点插入到首地址为pHead的链表的尾部
+            /*p1->next=pNew;
+            p1=pNew;    
+            pNew->next=NULL;*/
+            p=pHead;
+            //q=(nodelist *)malloc(sizeof(nodelist));
+            if(p->next!=0)     //文件不为空，即pHead后面有数据
+            {
+                while(p->next!=0)
+                {
+                q=p->next;
+                p=q;
+                }
+                p->next=pNew;
+                pNew->next=NULL;
+            }
+            else if (p->next==0) //只有头结点，即pHead后面无数据
+            {
+                //将地址为pNew的节点插入到首地址为pHead的链表的尾部
+                p->next=pNew;
+                p=pNew;
+                pNew->next=NULL;
+            }
+
+        }
+}
+
+//显示链表中的数据
+void view()
+{
+    /* 显示所有的结果 */
+    nodelist *p=pHead;
+    if(pHead!=NULL)
+    {      
+            while(p!=NULL)
+            {    
+                printf("%s ",p->ProcessName);
+                printf("%d ",p->Time);
+                p=p->next;
+                printf("\n");
+            }
+    }
+    else
+    {
+      printf("链表中啥都没有！\n");
+    }
+}
+
+
+void arithmetic(int M,int n,int count)
+{
+    //相关算法实现
+    nodelist *p=pHead;
+    int index=0;
+    int i=0;
+    int forcount=0;
+    int Numcount=0;
+    int sum=0;
+    int flag=0;
+    int finallyNum=0;
+	 // printf("%d %d %d\n",M,n,count);
+     // printf("%d\n",count/n);
+
+    if(count%n==0)
+    {
+        forcount=count/n;
+    }else{
+        forcount=count/n+1;
+    } 
+     // printf("forcount:%d\n", forcount);
+     for (i = 0; i < forcount; i++)
+         {
+                    while(p!=NULL)
+                    {    
+
+                        if(p->Time>0){
+
+                            p->Time=p->Time - M;
+                            // printf("%s\n",p->ProcessName);
+                            // view();
+                            // printf("\n");
+                            Numcount++;
+                            // printf("%d\n",Numcount);
+                            finallyNum=Numcount;
+                            if (Numcount==count)
+                            {
+                              printf("%s\n",p->ProcessName);  
+                            }
+                        }
+                        
+                         p=p->next;
+                    }
+                    p=pHead;
+         }   
+if(finallyNum < count){
+   printf("over\n");
+}     
+}
+```
+
+![mark](http://static.zxinc520.com/blog/20190522/EE00fbgzk6Ho.gif)
+
+![mark](http://static.zxinc520.com/blog/20190522/FAQDVGbxoawJ.gif)
+
+![mark](http://static.zxinc520.com/blog/20190522/ddwSvMe4TwsW.gif)
+
+------
+
+
+
+#### 存储管理1
+
+问题描述：现有一个8*8的存储器，要对其空间进行分配。（下标从0开始，最后一个内存块下标为63）。现已有块号为1、7、13、23、47、59的几个内存块被占用。现操作系统要求申请N块内存空间（0<N<=64），当输入的块数N超出其剩余空闲块数的时候，输出为“false”，当输入为合理范围的时候，就输出其以行主序分配的最后一个内存空间的下标。 
+
+ 
+
+输入格式：程序要求输入一个整型数N，表示要申请分配空间的大小。
+
+ 
+
+输出格式：输出为一个整型数，表示最后一个被分配空间的下标。
+
+ 
+
+样例输入1：
+
+3
+
+样例输出1：
+
+3
+
+ 
+
+样例输入2：
+
+100
+
+样例输出2：
+
+false
+
+ 
+
+样例输入3：
+
+50
+
+样例输出3：
+
+54
+
+
+
+*源代码*：
+
+```js
+#include <stdio.h>
+int main()
+{
+    int arr[64]={0};
+    int i=0;
+    int n;
+    int count=0;
+    arr[1]=1;
+    arr[7]=1;
+    arr[13]=1;
+    arr[23]=1;
+    arr[47]=1;
+    arr[59]=1;
+    scanf("%d",&n);
+    if (n>58)
+    {
+    	printf("false\n");
+    }else{
+    	 for (i = 0; i < n+1; i++)
+		    {
+		    	if (arr[i]==1)
+		    	{
+		    		count++;
+		   		}
+		 	}
+ 	printf("%d\n", count+n-1);
+    }   
+	return 0;
+}
+```
+
+
+
+![mark](http://static.zxinc520.com/blog/20190522/fhJf38dsniWT.gif)
+
+![mark](http://static.zxinc520.com/blog/20190522/G8b9fg3D0LVM.gif)
+
+![mark](http://static.zxinc520.com/blog/20190522/cy8XL8vNxJrJ.gif)
+
+
+
+#### 存储管理2
+
+问题描述：现有一个8*8的存储器，要对其空间进行分配。（下标从0开始，最后一个内存块下标为63）。现已有块号为2、7、13、23、37、47、59、61的几个内存块被占用。要求输入需分配的进程数M（0<M<=56），接下来输入为M个整型数，每个数为各个进程需占用的内存块数。当分配到某进程时，其剩余空闲块数可以分配，就输出当前进程分配的最后一个内存空间的下标。当分配到某进程时，其进程块数超出剩余空闲块数无法分配，输出为“false”（不含双引号，且为全小写）。输出的多个下标（或"false"）之间用空格隔开。 
+
+ 
+
+输入格式：程序输入分为两行，第一行要求输入一个整型数M，表示要所需分配空间的进程数，接下来的第二行输入M个整型数，每个数之间用空格隔开，表示M个进程每个进程占用的内存空间大小。
+
+ 
+
+输出格式：输出为M组整型数（或"false"），每个整型数表示该进程最后一个被分配的内存空间的下标（或"false"），下标（或"false"）之间用空格隔开。
+
+ 
+
+样例输入1：
+
+3
+
+3 3 3
+
+样例输出1：
+
+3 6 10
+
+ 
+
+样例输入2：
+
+4
+
+3 3 64 3
+
+样例输出2：
+
+3 6 false 10
+
+*源代码：*
+
+```js
+#include <stdio.h>
+int main()
+{
+	void funsave(int n,int arr[64],int residue);
+    int arr[64]={0};
+    int num[200]={0};
+    int inputnum;
+    int i=0;
+    int x[64]={0};
+    int sumsheng=56;
+    arr[2]=1;
+    arr[7]=1;
+    arr[13]=1;
+    arr[23]=1;
+    arr[37]=1;
+    arr[47]=1;
+    arr[59]=1;
+    arr[61]=1;
+    scanf("%d",&inputnum);
+    for (i = 0; i < inputnum; i++)
+    {
+        scanf("%d",&num[i]);
+        sumsheng=sumsheng-num[i];
+        x[i]=sumsheng;
+    }
+
+     
+     for (i = 0; i < inputnum; i++)
+     {
+     	funsave(num[i],arr,x[i]);
+     }
+      
+	return 0;
+}
+
+void funsave(int n,int arr[64],int residue){
+    int i=0;
+    int count=0;
+    int indexI=0;
+    int flag=0;
+    
+	if (n>58)
+    {
+    	printf("false ");
+    }else{
+    	 if (arr[0]==0)
+    	 {
+    	 	 for (i = 0; i < n; i++)
+		    {
+		    	if (arr[i]==1)
+		    	{
+		    		count++;
+		   		}
+		 	}
+    	 }else{
+
+    	 	 for (i = 0; i < 64; i++)
+		    {
+		    	if (arr[i]==0)
+		    	{
+		    		count=i;
+		    		goto LOOP;
+		   		}
+
+		 	}
+    	 }
+    	
+	LOOP: printf("%d ", count+n-1);
+    }
+
+ if( n <residue ){
+	for (i = 0; i < count+n; i++)
+	   {
+	   	  arr[i]=1;
+	   }
+ }
+}
+```
+
+![mark](http://static.zxinc520.com/blog/20190523/iyJhP4Rqt9KS.gif)
+
+![mark](http://static.zxinc520.com/blog/20190523/ri4eCOgCqxI1.gif)
+

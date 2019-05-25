@@ -15,7 +15,6 @@ let session=require('express-session')
 const path = require('path')
 let app=express()
 
-
 //公开资源
 app.use(express.static('public'))
 app.use(express.static('node_modules'))
