@@ -26,9 +26,12 @@
 
 ![mark](http://static.zxinc520.com/blog/20190415/67j7Iq3tsM4q.png?imageslim)
 
-- 在页面中引入图片有两种方式
-  - img标签引入
-  - css引入
+
+
+#### 在页面中引入图片有两种方式
+
+- img标签引入
+- css引入
 
 
 
@@ -36,19 +39,19 @@
 
 ### 安装：**file-loader** 包
 
-1. 1.运行 `npm i url-loader file-loader -D`  来安装 **file-loader** 包
+1.  运行 `npm i url-loader file-loader -D`  来安装 **file-loader** 包
 
 ![mark](http://static.zxinc520.com/blog/20190415/tFYCSVQRUkQu.png?imageslim)
 
 ​	
 
-2. 2.配置 webpack.config.js 文件
+2.  配置 webpack.config.js 文件
 
 ![mark](http://static.zxinc520.com/blog/20190415/cELvBLsveIEX.png?imageslim)
 
 
 
-3. 3.运行` npm run dev`
+3.   运行` npm run dev`
 
 ![mark](http://static.zxinc520.com/blog/20190415/VVGGMT2828JL.gif)
 
@@ -89,7 +92,7 @@
 
 **解决方案**：
 
-1. 1.配置 webpack.config.js 
+1.  配置 webpack.config.js 
 
 ```javascript
 {test:/\.(ttf|eot|svg|woff|woff2)$/,use:'url-loader'},//这是 处理 字体文件的 loader
@@ -97,7 +100,7 @@
 
 ![mark](http://static.zxinc520.com/blog/20190417/K7a1le382DJs.png?imageslim)
 
-2. 2. 运行 `npm run dev`
+2.  运行 `npm run dev`
 
 
 
@@ -107,18 +110,18 @@
 
 **问题描述**：
 
-1. 1.webpack中默认只能处理一部分es6语法，一些更高级的es6语法或者es7语法webpack处理不了，这时候就需要借助第三方loader帮助webpack处理这些语法
-2. 2.class是es6中提供的语法，是用来实现es6中面向对象编程的方式，class和static与Java中类似
+1.  webpack中默认只能处理一部分es6语法，一些更高级的es6语法或者es7语法webpack处理不了，这时候就需要借助第三方loader帮助webpack处理这些语法
+2.  class是es6中提供的语法，是用来实现es6中面向对象编程的方式，class和static与Java中类似
 
 ![mark](http://static.zxinc520.com/blog/20190416/4zFaWW0Qqco2.png?imageslim)
 
 **解决方案**：
 
-1. 1.通过 **babel** 可以将高级语法转化为低级语法
-2. 2。安装，运行两个命令，安装两套包，去安装 babel 相关的功能
-   - 第一套包：`npm i babel-core babel-loader babel-plugin-transform-runtime -D` 
-   - 第二套包：`npm i babel-preset-env babel-preset-stage-0 -D`
-3. 3.打开webpack配置文件，在module节点写的rules数组中添加一个新的匹配规则
+1.  通过 **babel** 可以将高级语法转化为低级语法
+2.  安装，运行两个命令，安装两套包，去安装 babel 相关的功能
+   - **第一套包**：`npm i babel-core babel-loader babel-plugin-transform-runtime -D` 
+   - **第二套包**：`npm i babel-preset-env babel-preset-stage-0 -D`
+3.  打开webpack配置文件，在module节点写的rules数组中添加一个新的匹配规则
 
 ```javascript
 	{test:/\.js$/,use:'babel-loader',exclude:/node_modules/}
@@ -133,7 +136,7 @@
 - 如果排除node_module，babel会把node_module目录下的所有第三方js文件都打包编译，这会非常消耗CPU，同时打包速度非常慢
 - babel 把node_module中的js文件转化完毕项目也无法正常运行
 
-4. 4.在项目的根目录中新建一个叫做 **.babelrc** 的 babel 配置文件，这个配置文件属于 **json格式**
+4.  在项目的根目录中新建一个叫做 **.babelrc** 的 babel 配置文件，这个配置文件属于 **json格式**
 
 ```javascript
 {
@@ -210,7 +213,7 @@ npm:
 
 
 
-- **基本使用**
+*基本使用**
 
 ```html
 <div id="app"></div>
@@ -247,11 +250,11 @@ npm:
 
 ## 重点：在webpack 中 尝试 使用 Vue
 
-1. 1.**直接导入 Vue包**：
+1.  **直接导入 Vue包**：
 
    ![mark](http://static.zxinc520.com/blog/20190417/fl74cG8ej4BE.png?imageslim)
 
-- 结果报错：
+**结果报错**：
 
 ![mark](http://static.zxinc520.com/blog/20190417/wte2gIV3SL5L.png?imageslim)
 
@@ -263,10 +266,10 @@ npm:
 
 #### - 回顾 ：包的 **查找** 规则
 
-1. 1.找 项目根目录中有没有 node_modules 的文件夹
-2. 2.在node_modules  中，根据包名，找对应的 vue 文件夹
-3. 3.在 vue 文件夹中，找 一个叫 package.json 的包配置文件
-4. 4.在 package.json 文件中，查找 一个 main 属性【mian属性指定了这个包在被加载的时候的入口文件】
+1.  找 项目根目录中有没有 node_modules 的文件夹
+2.  在node_modules  中，根据包名，找对应的 vue 文件夹
+3.  在 vue 文件夹中，找 一个叫 package.json 的包配置文件
+4.  在 package.json 文件中，查找 一个 main 属性【mian属性指定了这个包在被加载的时候的入口文件】
 
 
 
@@ -290,7 +293,7 @@ npm:
 
 ## 定义 文件形式 vue组件 加载到页面上
 
-- 例如：
+**例如**：
 
 ![mark](http://static.zxinc520.com/blog/20190417/znhigwsi4kiE.png?imageslim)
 
@@ -308,9 +311,9 @@ npm:
 
 **解决方案：**
 
-**1.安装**：执行 `npm i vue-loader vue-template-compiler -D` 命令
+1. 安装：执行 `npm i vue-loader vue-template-compiler -D` 命令
 
-**2.配置 webpack.config.js 文件**
+2. 配置  webpack.config.js 文件
 
 ```javascript
 {test:/\.vue$/,use:'vue-loader'} 	//处理 .vue后缀名的 loader
@@ -356,31 +359,31 @@ module.exports = {
 
 
 
-### 总结梳理：
+## 总结梳理：
 
-- 总结梳理： webpack 中如何使用 vue
+#### 总结梳理： webpack 中如何使用 vue
 
-  - 1.安装vue的包：  cnpm i vue -S
+1. 安装vue的包：  cnpm i vue -S
 
-  - 2.由于 在 webpack 中，推荐使用 .vue 这个组件模板文件定义组件，所以，需要安装 能解析这种文件的 loader  ，执行命令： `cnpm i vue-loader vue-template-complier -D`
+2. 由于 在 webpack 中，推荐使用 .vue 这个组件模板文件定义组件，所以，需要安装 能解析这种文件的 loader  ，执行命令： `cnpm i vue-loader vue-template-complier -D`
 
-  - 3.在 main.js 中，导入 vue 模块  import Vue from 'vue'
+3. 在 main.js 中，导入 vue 模块  import Vue from 'vue'
 
-  - 4.定义一个 .vue 结尾的组件，其中，组件有三部分组成： template script style
+4. 定义一个 .vue 结尾的组件，其中，组件有三部分组成： template script style
 
-  - 5.使用 import login from './login.vue' 导入这个组件
+5. 使用 import login from './login.vue' 导入这个组件
 
-  - 6.创建 vm 的实例 var vm = new Vue({ el: '#app', render: c => c(login) })
+6. 创建 vm 的实例 var vm = new Vue({ el: '#app', render: c => c(login) })
 
-  - 7.在页面中创建一个 id 为 app 的 div 元素，作为我们 vm 实例要控制的区域；
+7. 在页面中创建一个 id 为 app 的 div 元素，作为我们 vm 实例要控制的区域；
 
-    
 
-    
+
+
 
 ## export default 和 export 的使用方式
 
-基本使用：
+**基本使用：**
 
 ```vue
 <template>
@@ -411,7 +414,7 @@ module.exports = {
 
 ![mark](http://static.zxinc520.com/blog/20190417/VJ8FVeRYb0oV.png?imageslim)
 
-### export，import ，export default是什么？
+## export，import ，export default是什么？
 
 ES6模块主要有两个功能：export和import
 **export** 用于对外输出本模块（一个文件可以理解为一个模块）变量的接口
@@ -432,13 +435,15 @@ ES6模块主要有两个功能：export和import
 module.exports和 exports 来暴露成员
 ```
 
-### export与export default
+
+
+## export与export default
 
 上面讲的是export和import，但是 **export** 跟 **export default** 有什么区别呢？如下：
 
-1. 1、export与export default均可用于导出常量、函数、文件、模块等
-2. 2、你可以在其它文件或模块中通过import+(常量 | 函数 | 文件 | 模块)名的方式，将其导入，以便能够对其进行使用
-3. 3、在一个文件或模块中，export、import可以有多个，export default 仅有一个，**export default** 只能导出**一个默认模块**，这个模块**可以匿名**（ 引入的时候可以给这个模块取任意名字，例如 "obj"，且不需要用大括号括起来。）
+1.  export与export default均可用于导出常量、函数、文件、模块等
+2.  你可以在其它文件或模块中通过import+(常量 | 函数 | 文件 | 模块)名的方式，将其导入，以便能够对其进行使用
+3.  在一个文件或模块中，export、import可以有多个，export default 仅有一个，**export default** 只能导出**一个默认模块**，这个模块**可以匿名**（ 引入的时候可以给这个模块取任意名字，例如 "obj"，且不需要用大括号括起来。）
 
 **export ：**
 
@@ -475,7 +480,7 @@ export default {
 import obj from 'demo1'
 ```
 
-4. 4、通过export方式导出，在导入时要**加 { }**，export default则 **不需要**
+4.  通过export方式导出，在导入时要**加 { }**，export default则 **不需要**
 
 这样来说其实很多时候export与export default可以实现同样的目的，只是用法有些区别。注意第四条，通过export方式导出，在导入时要加{ }，export default则不需要。使用export default命令，为模块指定默认输出，这样就不需要知道所要加载模块的变量名。
 
@@ -516,7 +521,7 @@ new Vue({
 
 ## 结合webpack使用vue-router
 
-1. 1.安装  `npm i vue-router -S `
+1.  安装  `npm i vue-router -S `
 
 例：
 

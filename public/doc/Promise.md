@@ -26,36 +26,37 @@ Promise就是实现异步编程的一种解决方案，核心就是Promise对象
 
 **Promise对象的两个特点**：
 
-1. （1）对象的状态不受外界影响。有三种状态：pending(进行中)、resolved(已成功)、rejected(已失败); 
-2. （2）一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从pending变为resolved和从pending变为rejected。 
+1.  对象的状态不受外界影响。有三种状态：pending(进行中)、resolved(已成功)、rejected(已失败); 
+
+2.  一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从pending变为resolved和从pending变为rejected。 
 
 **Promise缺点：** 
 
-1. （1）无法取消Promise，一旦新建它就会立即执行，无法中途取消; 
-2. （2）如果不设置回调函数，Promise内部抛出的错误，不会反应到外部; 
-3. （3）当处于pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）
+1.  无法取消Promise，一旦新建它就会立即执行，无法中途取消; 
+2.  如果不设置回调函数，Promise内部抛出的错误，不会反应到外部; 
+3.  当处于pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）
 
 ------
 
 #### **基本概念：**
 
-1. 1.Promise 是一个构造函数，既然是构造函数，那么，我们就可以 new Promise() 得到一个Promise  的实例
+1.  Promise 是一个构造函数，既然是构造函数，那么，我们就可以 new Promise() 得到一个Promise  的实例
 
-2. 2.在Promise 上，有两个函数，分别叫做 **resolve**（成功之后的回调函数） 和 **reject**（失败之后的回调函数）
+2.  在Promise 上，有两个函数，分别叫做 **resolve**（成功之后的回调函数） 和 **reject**（失败之后的回调函数）
 
-3. 3.在 Promise  构造函数的 Prototype 属性上，有一个 **.then()** 方法，也就说，只要是 Promise 构造函数创建的实例，都可以访问到 .then() 方法。
+3.  在 Promise  构造函数的 Prototype 属性上，有一个 **.then()** 方法，也就说，只要是 Promise 构造函数创建的实例，都可以访问到 .then() 方法。
 
-4. 4.Promise 表示一个 异步操作，每当我们 new 一个 Promise 的实例，这个实例，就表示一个具体的异步操作
+4.  Promise 表示一个 异步操作，每当我们 new 一个 Promise 的实例，这个实例，就表示一个具体的异步操作
 
-5. 5.既然 Promise 创建的实例，是一个异步操作，那么，这个 异步操作的结果，只能有两种状态：
+5.  既然 Promise 创建的实例，是一个异步操作，那么，这个 异步操作的结果，只能有两种状态：
 
-   ​		5.1 状态1： 异步执行成功了，需要在内部调用成功的回调函数（**resolve**），把结果返回给调用者。
+   ​		5.1 **状态1**： 异步执行成功了，需要在内部调用成功的回调函数（**resolve**），把结果返回给调用者。
 
-   ​		5.2 状态2： 异步执行失败了，需要在内部调用失败的回调函数（**reject**），把结果返回给调用者。
+   ​		5.2  **状态2**： 异步执行失败了，需要在内部调用失败的回调函数（**reject**），把结果返回给调用者。
 
    ​		5.3 由于 Promise 的实例，是一个异步操作，所以，内部拿到 操作结果后，无法使用 return 把操作的结果返回给调用者；这时候，只能使用回调函数的形式，来把 成功 或 失败的结果，返回给调用者。
 
-6. 6.我们可以在 new 出来的 Promise  实例上，调用 **.then() 方法**，【预先】为这个 Promise 异步操作指定 成功（**resolve**）和 失败（**reject**）回调函数
+6. 我们可以在 new 出来的 Promise  实例上，调用 **.then() 方法**，【预先】为这个 Promise 异步操作指定 成功（**resolve**）和 失败（**reject**）回调函数
 
 
 
@@ -65,9 +66,9 @@ Promise就是实现异步编程的一种解决方案，核心就是Promise对象
 
 
 
-**代码实际演示**：
+*代码实际演示：*
 
-**目录结构：**
+目录结构：
 
 ![mark](http://static.zxinc520.com/blog/20190420/djU0REH3KKbb.png?imageslim)
 
@@ -123,9 +124,7 @@ console.log(result)
 
 
 
-### **解决方案：使用回调函数**
-
-------
+## 解决方案：使用回调函数
 
 **封装读取文件的方法.js**：
 
@@ -156,7 +155,7 @@ getFileByPath(path.join(__dirname, './files/1.txt'),(dataStr)=>{
 
 ## 封装读取文件的方法--改进：
 
-- **callback中，设置两个参数（err, dataStr）**
+#### callback中，设置两个参数（err, dataStr）
 
 **封装读取文件的方法.js**：
 
@@ -191,7 +190,7 @@ getFileByPath(path.join(__dirname, './files/1.txt'), (err, dataStr) => {
 
 ## 封装读取文件的方法-提高版
 
-- **拆分成 两个 回调（getFileByPath (fpath, succCb, errCb)）**
+#### 拆分成 两个 回调（getFileByPath (fpath, succCb, errCb)）
 
 **封装读取文件的方法-提高版.js：**
 
@@ -236,7 +235,7 @@ getFileByPath(path.join(__dirname, './files/1.txt'), (dataStr) => {
 
 ### 需求：先读取文件1，在读取文件2，最后读取文件3
 
-初步实现：
+###### ***初步实现：***
 
 ```javascript
 //使用回调函数
@@ -269,7 +268,7 @@ getFileByPath(path.join(__dirname, './files/1.txt'), (dataStr) => {
 
 
 
-使用  **Promise **:
+### 使用  **Promise **:
 
 ```javascript
 const fs = require('fs')

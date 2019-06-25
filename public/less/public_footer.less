@@ -4,26 +4,32 @@
   opacity: 0.8;
   background: @public-footerColor;
   .public_footer_main{
-    padding-top: 5rem/@baseFontSize;
-    height: @public_footer_height;
-    width: 350rem/@baseFontSize;
+    padding-top: 19px;
+    width: 390rem/@baseFontSize;
     margin: 0 auto;
-    overflow: hidden;
+    //overflow: hidden;
 
     .footer-intro{
       width: 100%;
       ul{
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 0 !important;
         li{
           width: 50%;
-          float: left;
-          font-size: 13rem/@baseFontSize;
+          font-size: 13rem/@baseFontSize !important;
           color: #fff;
            border-left: 1rem/@baseFontSize solid #ccc;
            border-bottom: 1rem/@baseFontSize solid #ccc;
-            text-align: center;
-            padding: 11rem/@baseFontSize 0rem/@baseFontSize ;
-            height: 40rem/@baseFontSize;
+          list-style: none !important;
+          text-align: center;
+          height: 30rem/@baseFontSize;
+          line-height: 30rem/@baseFontSize;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
           span{
             font-size: 17rem/@baseFontSize !important;
           }
@@ -70,24 +76,34 @@
     }
     .public_footer_bottom{
       width: 100%;
+      padding-top: 10rem/@baseFontSize;
       ul{
         width: 100%;
         text-align: center;
         height: 32rem/@baseFontSize;
         line-height: 28rem/@baseFontSize;
+        padding-left: 0 !important;
+        display: flex;
+        justify-content: center;
         a{
-           padding-left: 17rem/@baseFontSize;
+          height: 100%;
+          padding-left: 17rem/@baseFontSize;
+          margin: 0 0 !important;
            span{
              font-size: 24rem/@baseFontSize !important;
            }
           .qq{
+            margin-left: 5rem/@baseFontSize;
+            display: block;
+            width: 100%;
             position: relative;
             top: 3rem/@baseFontSize;
-            left: -5rem/@baseFontSize;
-            margin-left: 5rem/@baseFontSize;
-            img{
-              width: 22rem/@baseFontSize;
-            }
+            left: 0;
+              img{
+                display: block;
+                width: 22rem/@baseFontSize;
+              }
+
           }
 
         }

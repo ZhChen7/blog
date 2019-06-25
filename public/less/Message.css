@@ -17,10 +17,11 @@
 }
 .message ul li {
   width: 100%;
-  height: 0.7rem;
   position: relative;
   border-bottom: 0.01rem solid #eee;
   margin-top: 0.19rem;
+  padding-bottom: 15px;
+  list-style: none !important;
 }
 .message ul li .message-left {
   position: absolute;
@@ -52,7 +53,7 @@
 }
 .message ul li .message-right .message-right-header .message-nickname {
   color: transparent;
-  background-image: linear-gradient(to right, red, sandybrown, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+  background-image: linear-gradient(to right, #eb77ff, sandybrown, #762aff, #fbf0ff, yellow, orange, red, orange, yellow, green, yellow, orange, red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: ColorMove 30s infinite linear;
@@ -82,7 +83,6 @@
 .message ul li .message-right .message-right-context {
   padding: 0.01rem 0.18rem;
   width: 100%;
-  height: 0.5rem;
   font-size: 0.12rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -105,19 +105,23 @@
   padding-left: 0.28rem;
   color: #fe648f;
 }
+.message form input::placeholder {
+  color: red;
+}
 .message form button {
   position: absolute;
-  top: 0.08rem;
+  top: 0;
   right: 0.17rem;
   font-size: 0.14rem;
   color: #fff;
   border: none;
   width: 0.51rem;
   height: 0.3rem;
+  line-height: 0.3rem;
   background: #fe648f;
-  box-shadow: 0.01rem -0.04rem 0.21rem 0.1rem #fe648f;
   border-radius: 0.02rem;
   letter-spacing: 0.02rem;
+  box-shadow: 1px 1px 1px 1px #fe648f;
 }
 @keyframes ColorMove {
   0% {
@@ -126,5 +130,11 @@
   100% {
     background-position: 0 0;
   }
+}
+ul > li {
+  list-style: disc;
+}
+ol > li {
+  list-style: decimal ;
 }
 /*# sourceMappingURL=Message.css.map */

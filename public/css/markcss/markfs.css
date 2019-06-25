@@ -1,12 +1,14 @@
 #markfs {
-    font-family: ubuntu, Tahoma, "Microsoft YaHei", arial, sans-serif;
-    color: #444;
-    line-height: 1;
-    padding: 0 5px;
+    font-size: 16px;
+    line-height: 1.8em;
+    letter-spacing: 0.1em;
+    position: relative;
 }
 
 img {
-    max-width: 100%
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 1000px) {
@@ -16,72 +18,116 @@ img {
     }
 }
 
-h1, h2, h3, h4 {
-    color: #111;
-    font-weight: 400;
-    margin-top: 1em
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0 10px;
+    padding: 0;
+    font-style: bold !important;
+    color: #009688 !important;
+    margin: 1.5em 5px !important;
+    padding: 0.5em 1em !important;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: Georgia, Palatino, serif
-}
+h1,h2{
+    text-align: center !important;
 
-dl, h1, h2, h3, h4, h5 {
-    margin-bottom: 16px;
-    padding: 0
 }
-
-p {
-    margin-top: 8px;
-    margin-bottom: 3px
-}
-
 h1 {
-    font-size: 24px;
-    line-height: 54px
+    font-size: 24px !important;
+    border-bottom: 1px solid #ddd !important;
 }
 
 h2 {
-    font-size: 21px;
-    line-height: 30px
-}
-
-h1, h2 {
-    border-bottom: 1px solid #EFEAEA;
-    padding-bottom: 10px
+    font-size: 20px !important;
+    border-bottom: 1px solid #eee !important;
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 30px
+    font-size: 18px;
 }
 
 h4 {
-    font-size: 21px;
-    line-height: 26px
+    font-size: 16px;
 }
 
-h5 {
-    font-size: 18px;
-    line-height: 23px
+pre, code {
+    font-size: 14px;
+    font-family: Roboto, 'Courier New', Consolas, Inconsolata, Courier, monospace;
+    margin: auto 5px;
+    line-height: 22px;
 }
 
-a {
-    color: #09f;
-    margin: 0 2px;
+code {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 2px;
+
+}
+
+pre {
+    font-size: 15px;
+    line-height: 1.4em;
+    display: block; !important;
+}
+
+pre code {
+    white-space: pre;
+    overflow: auto;
+    border-radius: 3px;
+    padding: 2px 4px;
+    display: block !important;
+}
+strong, b{
+    color: #BF360C;
+}
+
+em, i {
+    color: #009688;
+}
+
+hr {
+    border: 1px solid #BF360C;
+    margin: 1.5em auto;
+}
+p {
+    margin: 1.5em 5px !important;
+}
+table, pre, dl, blockquote, q, ul, ol {
+    margin: 10px 5px;
+}
+
+dl {
     padding: 0;
-    vertical-align: baseline;
-    text-decoration: none
 }
 
-a:hover {
-    text-decoration: none;
-    color: #f60
+dl dt {
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
 }
+
+dl dd {
+    margin: 0 0 10px;
+    padding: 0 10px;
+}
+
+blockquote, q {
+    border-left: 2px solid #009688;
+    padding: 0 10px;
+    color: #777;
+    quotes: none;
+    margin-left: 1em;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+    content: none;
+}
+
+
+
 
 ol, ul {
     padding: 0;
-    padding-left: 18px;
+    padding-left: 56px;
     margin: 0
 }
 
@@ -98,43 +144,10 @@ ol ol, ul ol {
     list-style-type: lower-roman
 }
 
-code, pre {
-    font-size: 9px !important;
-    width: 100%;: Consolas, Monaco, Andale Mono, monospace;
-    background-color: #f7f7f7;
-    color: inherit;
-}
 
-code {
-    font-family: Consolas, Monaco, Andale Mono, monospace;
-    margin: 0 2px
-}
 
-pre {
-    font-family: Consolas, Monaco, Andale Mono, monospace;
-    line-height: 1.7em;
-    overflow: auto;
-    padding: 6px 10px;
-    border-left: 2px solid #6CE26C
-}
 
-pre > code {
-    font-family: Consolas, Monaco, Andale Mono, monospace;
-    border: 0;
-    display: inline;
-    max-width: initial;
-    padding: 0;
-    margin: 0;
-    overflow: initial;
-    line-height: 1.6em;
-    font-size: .95em;
-    white-space: pre;
-    background: 0 0
-}
 
-code {
-    color: #666555
-}
 
 aside {
     display: block;
@@ -193,46 +206,104 @@ dd {
     margin-left: 0
 }
 
+
 table {
+    padding: 0;
+    border-collapse: collapse;
     border-spacing: 0;
-    width: 100%
+    font-size: 1em;
+    font: inherit;
+    border: 0;
+    margin: 0 auto;
 }
 
-table {
-    border: solid #ccc 1px
+tbody {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-table thead {
-    background: #f7f7f7
+table tr {
+    border: 0;
+    border-top: 1px solid #CCC;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
-table thead tr:hover {
-    background: #f7f7f7
+table tr:nth-child(2n) {
+    background-color: #F8F8F8;
 }
 
-table tr:hover {
-    background: #fbf8e9;
-    -o-transition: all .1s ease-in-out;
-    -webkit-transition: all .1s ease-in-out;
-    -moz-transition: all .1s ease-in-out;
-    -ms-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out
+table tr th, table tr td {
+    font-size: 16px;
+    border: 1px solid #CCC;
+    margin: 0;
+    padding: 5px 10px;
+    text-align: center;
 }
 
-.table th, table td {
-    border-left: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    padding: 10px;
-    text-align: left
+
+table tr th {
+    font-weight: bold;
+    color: #eee;
+    border: 1px solid #009688;
+    background-color: #009688;
 }
 
-table th {
-    border-top: none;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-    padding: 5px;
-    border-left: 1px solid #ccc
+a{
+    text-decoration: none;
+    color: #20a0ff;
+    margin: 0 4px;
 }
 
-table td:first-child, table th:first-child {
-    border-left: none
+li>ul>li{
+    list-style:circle;
 }
+
+video{
+    width: 100% !important;
+}
+
+.videobtn{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 23px;
+    right: 40px;
+    text-align: center;
+    line-height: 30px;
+    animation: videobtnMove 15s linear infinite;
+}
+
+.videobtn>span{
+    color: red !important;
+    font-size: 25px !important;
+}
+
+@keyframes videobtnMove {
+    from{
+        left: 50%;
+        transform: rotate(180deg);
+    }
+    40%{
+        left: 80%;
+        transform: scale(1.5,1.5);
+    }
+    55%{
+        left: 50%;
+        transform: scale(1,1);
+    }
+    70%{
+        left: 20%;
+        transform: scale(1.5,1.5);
+    }
+    to{
+        left: 50%;
+        transform: rotate(-180deg);
+    }
+}
+
+
+

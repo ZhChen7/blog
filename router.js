@@ -194,7 +194,7 @@ router.post('/publish', function (req, res, next) {
 })
 
 
-router.get("/code/:docName", function (req, res, next) {
+router.get("/lcj/:docName", function (req, res, next) {
     let docId = req.params.docName.replace(/"/g, '')
     publish.findById(docId, function (err, publish) {
         if (err) {

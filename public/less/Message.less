@@ -15,10 +15,11 @@
     padding: 0rem/@baseFontSize 7rem/@baseFontSize;
     li{
       width: 100%;
-      height: 70rem/@baseFontSize;
       position: relative;
       border-bottom: 1rem/@baseFontSize solid #eee;
       margin-top: 19rem/@baseFontSize;
+      padding-bottom: 15px;
+      list-style: none !important;
       .message-left{
         position: absolute;
         top: 0;
@@ -47,7 +48,7 @@
           }
           .message-nickname{
             color: transparent;
-            background-image: linear-gradient(to right, red, sandybrown, yellow, green, yellow, orange, red, orange, yellow, green, yellow, orange, red);
+            background-image: linear-gradient(to right, #eb77ff, sandybrown, #762aff, #fbf0ff, yellow, orange, red, orange, yellow, green, yellow, orange, red);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: ColorMove 30s infinite linear;
@@ -80,7 +81,6 @@
         .message-right-context{
           padding: 1rem/@baseFontSize 18rem/@baseFontSize;
           width: 100%;
-          height: 50rem/@baseFontSize;
           font-size: 12rem/@baseFontSize;
           overflow:hidden;
           text-overflow:ellipsis;
@@ -105,20 +105,23 @@
       padding-left: 28rem/@baseFontSize;
       color: #fe648f;
     }
-
+    input::placeholder {
+      color: red;
+    }
     button{
       position: absolute;
-      top: 8rem/@baseFontSize;
+      top: 0;
       right: 17rem/@baseFontSize;
       font-size: 14rem/@baseFontSize;
       color: #fff;
       border: none;
       width: 51rem/@baseFontSize;
       height: 30rem/@baseFontSize;
+      line-height: 30rem/@baseFontSize;
       background: #fe648f;
-      box-shadow: 1rem/@baseFontSize -4rem/@baseFontSize 21rem/@baseFontSize 10rem/@baseFontSize #fe648f ;
       border-radius: 2rem/@baseFontSize;
       letter-spacing: 2rem/@baseFontSize;
+      box-shadow: 1px 1px 1px 1px #fe648f;
     }
   }
 }
@@ -132,4 +135,11 @@
 @keyframes ColorMove {
   0%{background-position: -330px 0;}
   100%{background-position: 0 0;}
+}
+
+ul>li{
+  list-style: disc;
+}
+ol>li{
+  list-style: decimal ;
 }

@@ -1,16 +1,22 @@
-## 操作系统进程调度作业
+# 操作系统进程调度作业
 
 > 操作系统进程调度作业
 >
 > 锻炼下思维！
 
-#### 进程调度1
+## 进程调度1
 
-问题描述：要求输入3个进程，找出最先执行的那个进程的进程名。（如果遇到优先级一样，按照输入顺序执行。），本题中，优先数数值大的表示优先级比较高。
+**问题描述**：
 
-输入格式：程序要求输入3行，以回车符号作为分隔，每行有3个数据，以空格作为分隔。首先输入一个字符串（长度小于等于10），为进程名，第2个数据类型为整型，表示进程的优先数，第3个数据类型为整型，表示进程的运行时间。
+​                要求输入3个进程，找出最先执行的那个进程的进程名。（如果遇到优先级一样，按照输入顺序执行。），本题中，优先数数值大的表示优先级比较高。
 
-输出格式：输出一个字符串，为最先执行进程的进程名。
+**输入格式**：
+
+​		程序要求输入3行，以回车符号作为分隔，每行有3个数据，以空格作为分隔。首先输入一个字符串（长度小于等于10），为进程名，第2个数据类型为整型，表示进程的优先数，第3个数据类型为整型，表示进程的运行时间。
+
+**输出格式**：
+
+​		输出一个字符串，为最先执行进程的进程名。
 
 *样例输入1：*
 
@@ -26,11 +32,9 @@ P3
 
 
 
- 
-
 *样例输入2：*
 
-P1 10 10
+P1 130 10
 
 P2 100 100
 
@@ -103,13 +107,8 @@ void insertNode(char ProcessName[5],int Priority,int Time)
 		}
 		else  
 		{
-			//将地址为pNew的节点插入到首地址为pHead的链表的尾部
-			/*p1->next=pNew;
-			p1=pNew;    
-			pNew->next=NULL;*/
 			p=pHead;
-			//q=(nodelist *)malloc(sizeof(nodelist));
-			if(p->next!=0)     //文件不为空，即pHead后面有数据
+			if(p->next!=0)
 			{
 				while(p->next!=0)
 				{
@@ -119,9 +118,8 @@ void insertNode(char ProcessName[5],int Priority,int Time)
 				p->next=pNew;
 				pNew->next=NULL;
 			}
-			else if (p->next==0) //只有头结点，即pHead后面无数据
+			else if (p->next==0) 
 			{
-				//将地址为pNew的节点插入到首地址为pHead的链表的尾部
 				p->next=pNew;
 			    p=pNew;
 				pNew->next=NULL;
@@ -187,15 +185,21 @@ void arithmetic()
 
 ​				 ![mark](http://static.zxinc520.com/blog/20190513/XXOxTOQJ8P0H.gif)	
 
-#### 进程调度2
+## 进程调度2
 
-问题描述：要求输入N个进程（0<N<=100），找出最后执行的那个进程的进程名。（如果遇到优先级一样，按照输入顺序执行。），本题中，优先数数值较高的优先级也较高。
+**问题描述**：
 
-输入格式：程序首先要求输入一个整型值N，接下来输入为N行，以回车符号作为分隔，每行有3个数据，以空格作为分隔。首先输入一个字符串（长度小于等于10），该字符串为进程名。第2个数据类型为整型，表示进程的优先数。第3个数据类型为整型，表示进程的运行时间。
+​	要求输入N个进程（0<N<=100），找出最后执行的那个进程的进程名。（如果遇到优先级一样，按照输入顺序执行。），本题中，优先数数值较高的优先级也较高。
 
-输出格式：输出一个字符串，为最后执行进程的进程名。
+**输入格式**：
 
- 
+​	程序首先要求输入一个整型值N，接下来输入为N行，以回车符号作为分隔，每行有3个数据，以空格作为分隔。首先输入一个字符串（长度小于等于10），该字符串为进程名。第2个数据类型为整型，表示进程的优先数。第3个数据类型为整型，表示进程的运行时间。
+
+**输出格式：**
+
+​	输出一个字符串，为最后执行进程的进程名。
+
+
 
 *样例输入1：*
 
@@ -210,8 +214,6 @@ P3 3 3
 样例输出1：
 
 P3
-
- 
 
 
 
@@ -355,8 +357,6 @@ void arithmetic()
 	char FinallProcessName[5];
 	strcpy(ReturnProcessName,p->ProcessName);
 
-
-
 	if(pHead!=NULL)
 	{      
 
@@ -364,12 +364,8 @@ void arithmetic()
 		sum+=m->Time;
 	    m=m->next;
 	}
-    // printf("1\n");
-    // printf("%d\n",sum);
-    // printf("2\n");
 
-
-		for (int i = 0; i < sum; ++i)
+		for (i = 0; i < sum; ++i)
 		{
 			while(p!=NULL)
 			{	
@@ -381,15 +377,9 @@ void arithmetic()
 				p=p->next;
 
 			}
-							// printf("ReturnProcessName:%s\n", ReturnProcessName);
-					      	//printf("q->ProcessName:%s\n",q->ProcessName);
-					      	//printf("\n");
 				  	while(q!=NULL)
 						{	
-							 // printf("ReturnProcessName:%s\n", ReturnProcessName);
-      						 // printf("q->ProcessName:%s\n",q->ProcessName);
 							if(strcmp(q->ProcessName,ReturnProcessName) == 0){
-								// printf("%s ",q->ProcessName);
                                 strcpy(FinallProcessName,q->ProcessName);
 								q->Priority--;
 								q->Time--;
@@ -399,10 +389,6 @@ void arithmetic()
 					p=pHead;
 					q=pHead;
 					max=p->Priority;
-					// printf("\n");
-					// view();
-					// printf("\n");
-					
 					strcpy(ReturnProcessName,p->ProcessName);
 			
 		}	
@@ -417,13 +403,19 @@ void arithmetic()
 
 ![mark](http://static.zxinc520.com/blog/20190513/Ge7alyBXmauM.gif)
 
-#### 进程调度3
+## 进程调度3
 
-问题描述：要求输入N个进程（N为正整型数，0<N<=25535），输出按照优先级从高到低执行的进程名字符串序列,直至结束。（如果遇到优先级一样，按照输入顺序先后执行。），本题中，优先数数值较高的进程，优先级也较高。
+**问题描述**：
 
-输入格式：程序首先要求输入一个整型变量N，接下来输入为N行，以回车符号作为分隔，每行有3个数据，以空格作为分隔。首先输入一个字符串（长度小于等于10），该字符串为进程名。第2个数据类型为整型，表示进程的优先数。第3个数据类型为整型，表示进程的运行时间。
+​	要求输入N个进程（N为正整型数，0<N<=25535），输出按照优先级从高到低执行的进程名字符串序列,直至结束。（如果遇到优先级一样，按照输入顺序先后执行。），本题中，优先数数值较高的进程，优先级也较高。
 
-输出格式：输出1行，M个字符串，字符串之间用空格作为分隔。
+**输入格式**：
+
+​	程序首先要求输入一个整型变量N，接下来输入为N行，以回车符号作为分隔，每行有3个数据，以空格作为分隔。首先输入一个字符串（长度小于等于10），该字符串为进程名。第2个数据类型为整型，表示进程的优先数。第3个数据类型为整型，表示进程的运行时间。
+
+**输出格式**：
+
+​	输出1行，M个字符串，字符串之间用空格作为分隔。
 
  
 
@@ -441,8 +433,6 @@ P3 3 3
 
 P3 P2 P3 P1 P2 P3
 
- 
-
 
 
 样例输入2：
@@ -456,8 +446,6 @@ P2 1 1
 样例输出2：
 
 P1 P1 P1 P2
-
- 
 
 
 
@@ -473,7 +461,7 @@ P100 P99 P98 P97 P96 P95 P94 P93 P92 P91 P90 P89 P88 P87 P86 P85 P84 P83 P82 P81
 
 
 
-源代码：
+**源代码：**
 
 ```js
 #include <stdio.h>
@@ -611,7 +599,7 @@ void arithmetic()
     // printf("2\n");
 
 
-		for (int i = 0; i < sum; ++i)
+		for (i = 0; i < sum; ++i)
 		{
 			while(p!=NULL)
 			{	
@@ -656,17 +644,23 @@ void arithmetic()
 
 
 
-#### 进程调度4：时间片轮转
+## 进程调度4：时间片轮转
 
-问题描述：要求输入N个进程（0<N<=100），输入时间片M（0<M〈=5），按照进程输入的顺序以时间片轮转的方法输出指定的第K轮（K>0）执行的那个进程的进程名。
+**问题描述**：
 
- 
-
-输入格式：程序首先输入一个正整数M（0<M〈=5）作为时间片，下一行输入一个正整数N（0<N<=100），接下来输入为N行，以回车符号作为分隔，每行有2个数据，以空格作为分隔。第一个数据是字符串（长度小于等于10），该字符串为进程名，第2个数据类型为整型，表示该进程需要的运行时间。最后输入一个正整数K，作为时间片轮转的次数（次数从1开始计数）。
+​	要求输入N个进程（0<N<=100），输入时间片M（0<M〈=5），按照进程输入的顺序以时间片轮转的方法输出指定的第K轮（K>0）执行的那个进程的进程名。
 
  
 
-输出格式：输出一个字符串，为最后执行进程的进程名；若无进程运行，则输出“over”（不含双引号，所有字母皆为小写）。
+**输入格式**：
+
+​	程序首先输入一个正整数M（0<M〈=5）作为时间片，下一行输入一个正整数N（0<N<=100），接下来输入为N行，以回车符号作为分隔，每行有2个数据，以空格作为分隔。第一个数据是字符串（长度小于等于10），该字符串为进程名，第2个数据类型为整型，表示该进程需要的运行时间。最后输入一个正整数K，作为时间片轮转的次数（次数从1开始计数）。
+
+ 
+
+**输出格式**：
+
+​	输出一个字符串，为最后执行进程的进程名；若无进程运行，则输出“over”（不含双引号，所有字母皆为小写）。
 
  
 
@@ -900,19 +894,25 @@ if(finallyNum < count){
 
 
 
-#### 存储管理1
+## 存储管理1
 
-问题描述：现有一个8*8的存储器，要对其空间进行分配。（下标从0开始，最后一个内存块下标为63）。现已有块号为1、7、13、23、47、59的几个内存块被占用。现操作系统要求申请N块内存空间（0<N<=64），当输入的块数N超出其剩余空闲块数的时候，输出为“false”，当输入为合理范围的时候，就输出其以行主序分配的最后一个内存空间的下标。 
+**问题描述**：
 
- 
-
-输入格式：程序要求输入一个整型数N，表示要申请分配空间的大小。
+​	现有一个8*8的存储器，要对其空间进行分配。（下标从0开始，最后一个内存块下标为63）。现已有块号为1、7、13、23、47、59的几个内存块被占用。现操作系统要求申请N块内存空间（0<N<=64），当输入的块数N超出其剩余空闲块数的时候，输出为“false”，当输入为合理范围的时候，就输出其以行主序分配的最后一个内存空间的下标。 
 
  
 
-输出格式：输出为一个整型数，表示最后一个被分配空间的下标。
+**输入格式：**
+
+​	程序要求输入一个整型数N，表示要申请分配空间的大小。
 
  
+
+**输出格式**：
+
+​	输出为一个整型数，表示最后一个被分配空间的下标。
+
+
 
 样例输入1：
 
@@ -988,19 +988,25 @@ int main()
 
 
 
-#### 存储管理2
+## 存储管理2
 
-问题描述：现有一个8*8的存储器，要对其空间进行分配。（下标从0开始，最后一个内存块下标为63）。现已有块号为2、7、13、23、37、47、59、61的几个内存块被占用。要求输入需分配的进程数M（0<M<=56），接下来输入为M个整型数，每个数为各个进程需占用的内存块数。当分配到某进程时，其剩余空闲块数可以分配，就输出当前进程分配的最后一个内存空间的下标。当分配到某进程时，其进程块数超出剩余空闲块数无法分配，输出为“false”（不含双引号，且为全小写）。输出的多个下标（或"false"）之间用空格隔开。 
+**问题描述**：
 
- 
-
-输入格式：程序输入分为两行，第一行要求输入一个整型数M，表示要所需分配空间的进程数，接下来的第二行输入M个整型数，每个数之间用空格隔开，表示M个进程每个进程占用的内存空间大小。
+​	现有一个8*8的存储器，要对其空间进行分配。（下标从0开始，最后一个内存块下标为63）。现已有块号为2、7、13、23、37、47、59、61的几个内存块被占用。要求输入需分配的进程数M（0<M<=56），接下来输入为M个整型数，每个数为各个进程需占用的内存块数。当分配到某进程时，其剩余空闲块数可以分配，就输出当前进程分配的最后一个内存空间的下标。当分配到某进程时，其进程块数超出剩余空闲块数无法分配，输出为“false”（不含双引号，且为全小写）。输出的多个下标（或"false"）之间用空格隔开。 
 
  
 
-输出格式：输出为M组整型数（或"false"），每个整型数表示该进程最后一个被分配的内存空间的下标（或"false"），下标（或"false"）之间用空格隔开。
+**输入格式**：
+
+​	程序输入分为两行，第一行要求输入一个整型数M，表示要所需分配空间的进程数，接下来的第二行输入M个整型数，每个数之间用空格隔开，表示M个进程每个进程占用的内存空间大小。
 
  
+
+**输出格式：**
+
+​	输出为M组整型数（或"false"），每个整型数表示该进程最后一个被分配的内存空间的下标（或"false"），下标（或"false"）之间用空格隔开。
+
+
 
 样例输入1：
 
@@ -1028,20 +1034,25 @@ int main()
 
 ```js
 #include <stdio.h>
+#include <string.h>
 int main()
 {
-	void funsave(int n,int arr[64],int residue);
+  void funsave(int n,int arr[64],int residue);
     int arr[64]={0};
     int num[200]={0};
     int inputnum;
     int i=0;
     int x[64]={0};
     int sumsheng=56;
+    char thirdName[10];
+    char str[10];
+    int getInTStr;
     arr[2]=1;
     arr[7]=1;
     arr[13]=1;
     arr[23]=1;
     arr[37]=1;
+    arr[41]=1;
     arr[47]=1;
     arr[59]=1;
     arr[61]=1;
@@ -1049,17 +1060,19 @@ int main()
     for (i = 0; i < inputnum; i++)
     {
         scanf("%d",&num[i]);
-        sumsheng=sumsheng-num[i];
-        x[i]=sumsheng;
+        if (sumsheng>num[i])
+        {
+           sumsheng=sumsheng-num[i];
+        }
+      x[i]=sumsheng;
+       
     }
 
-     
      for (i = 0; i < inputnum; i++)
      {
-     	funsave(num[i],arr,x[i]);
+      funsave(num[i],arr,x[i]);
      }
-      
-	return 0;
+  return 0;
 }
 
 void funsave(int n,int arr[64],int residue){
@@ -1067,8 +1080,220 @@ void funsave(int n,int arr[64],int residue){
     int count=0;
     int indexI=0;
     int flag=0;
-    
-	if (n>58)
+    int arr1[20];
+    int arr2[20];
+    int finallyIndex=0;
+    int arrindex=0;
+    int arrindex2=0;
+   // printf("start n:%d\n",n);   
+    // printf("getInTStr:%d\n",getInTStr);
+  if (n>residue)
+    {
+      printf("false ");
+    }else{
+       if (arr[0]==0)
+       {
+         for (i = 0; i < n; i++)
+        {
+          if (arr[i]==1)
+          {
+            count++;
+          }
+      }
+       for (i = 0; i < count+n; i++)
+         {
+            if (arr[i]==0)
+            {
+                arr2[arrindex2]=i;
+                arrindex2++;
+            }
+            arr[i]=1;
+         }
+         printf("%d ", n+count-1);
+        
+       }else{
+        for (i = 0; i < 64; i++)
+        {
+          if (arr[i]==0)
+          {
+            indexI=i;
+            goto LOOP;
+          }
+        }
+
+       LOOP:for(i=indexI;i<indexI+n;i++){
+          if (arr[i]==1)
+          {
+            count++;
+          }
+        }
+        for (i = indexI; i < indexI+count+n; i++)
+         {
+          if (arr[i]==0)
+          {
+            finallyIndex=i;
+            arr1[arrindex]=i;
+          arrindex=arrindex+1;
+        
+          }
+            arr[i]=1;
+         }
+         printf("%d ", finallyIndex);
+
+       }
+      
+  
+    }
+}
+```
+
+![mark](http://static.zxinc520.com/blog/20190523/iyJhP4Rqt9KS.gif)
+
+![mark](http://static.zxinc520.com/blog/20190523/ri4eCOgCqxI1.gif)
+
+## 储存管理3
+
+**问题描述：**
+
+​	现有一个8*8的存储器，要对其已分配的空间进行分配及回收。（下标从0开始，最后一个内存块下标为63）。现已有块号为2、7、13、23、37、41、47、59、61的几个内存块被占用。要求输入需分配的进程数M（0<M<=55），接下来输入为M个整型数，每个数为各个进程需占用的内存块数。当分配到某进程时，其剩余空闲块数可以分配，就输出当前进程分配的最后一个内存空间的下标。当分配到某进程时，其进程块数超出剩余空闲块数无法分配，输出为“false”（不含双引号，且为全小写）。输出的多个下标（或"false"）之间用空格隔开。以上进程不管是否分配成功，按照输入顺序依次命名为p1、p2、p3………pM。回收的时候输入进程名pN，则返回进程名为pN的所有占用内存块号下标，如果该进程名不存在或输入的数值为不合理范围，则返回“false”。 
+
+ 
+
+**输入格式：**
+
+​	程序输入分为三行，第一行是一个整型数M，表示要所需分配空间的进程数，第二行为M个整型数，每个数之间用空格隔开，表示M个进程每个进程占用的内存空间大小。第三行为需要回收的进程名pN，p为小写字母，N为正整型数。
+
+ 
+
+**输出格式：**
+
+​	输出为两行，第一行为一组整型数，每个整型数表示该进程最后一个被分配的内存空间的下标，下标之间用空格隔开。第二行为一组整型数，表示被回收的进程的内存块下标，多个下标之间用空格隔开。
+
+ 
+
+样例输入1：
+
+3
+
+3 3 3
+
+p3
+
+样例输出1：
+
+3 6 10
+
+8 9 10
+
+ 
+
+样例输入2：
+
+4
+
+3 3 64 3
+
+p3
+
+样例输出2：
+
+3 6 false 10
+
+false
+
+*源代码：*
+
+```js
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int *funsave(int n,int arr[64],int residue,int getInTStr,int indexflag,int num[64]);
+    int arr[64]={0};
+    int num[200]={0};
+    int inputnum;
+    int i=0,j=0;
+    int x[64]={0};
+    int sumsheng=56;
+    char thirdName[10];
+    char str[10];
+    int getInTStr;
+     int *p;
+     int indexflag=0;
+    arr[2]=1;
+    arr[7]=1;
+    arr[13]=1;
+    arr[23]=1;
+    arr[37]=1;
+    arr[41]=1;
+    arr[47]=1;
+    arr[59]=1;
+    arr[61]=1;
+    scanf("%d",&inputnum);
+    for (i = 0; i < inputnum; i++)
+    {
+        scanf("%d",&num[i]);
+        if (sumsheng>num[i])
+        {
+        	 sumsheng=sumsheng-num[i];
+        }
+ 			x[i]=sumsheng;
+       
+    }
+    scanf("%s",thirdName);
+
+    strncpy(str, thirdName+1, 3);
+
+	getInTStr=atoi(str);
+
+     for (i = 0; i < inputnum; i++)
+     {
+     	p=funsave(num[i],arr,x[i],getInTStr,indexflag,num);
+     	
+     		indexflag=indexflag+1;
+     }
+     // printf("sumsheng:%d\n", sumsheng);
+     // for(i=0;i<inputnum;i++){
+     //       printf("%d ",num[i]);
+     //   }
+       // printf("\n");
+       for(i=0;i<inputnum;i++){
+           if(num[i]>sumsheng&&getInTStr==i+1){
+           		printf("false\n");
+           }
+       }
+       printf("\n");
+       if (getInTStr==1)
+       {
+	       for ( i = 0; i < num[0]; i++ )
+		   {
+		       printf("%d ", *(p + i));
+		   }
+       }
+
+
+ 
+	return 0;
+}
+
+int *funsave(int n,int arr[64],int residue,int getInTStr,int indexflag,int num[64]){
+    int i=0,j=0;
+    int count=0;
+    int indexI=0;
+    int flag=0;
+    static  int arr1[64][64];
+    static  int arr2[20];
+    int finallyIndex=0;
+    int arrindex=0;
+    int arrindex2=0;
+   // printf("start n:%d\n",n);   
+    // printf("getInTStr:%d\n",getInTStr);
+    // 
+    // for(i=0;i<10;i++){
+    // 	printf("%d ", num[i]);
+    // }
+    // printf("\n");
+	if (n>residue)
     {
     	printf("false ");
     }else{
@@ -1081,32 +1306,97 @@ void funsave(int n,int arr[64],int residue){
 		    		count++;
 		   		}
 		 	}
+		 	 for (i = 0; i < count+n; i++)
+			   {
+			   	  if (arr[i]==0)
+			   	  {
+			   	      arr2[arrindex2]=i;
+			   	      arrindex2++;
+			   	  }
+			   	  arr[i]=1;
+			   }
+			   printf("%d ", n+count-1);
+			  
+    	 }else{
+    	 	for (i = 0; i < 64; i++)
+    	 	{
+    	 		if (arr[i]==0)
+    	 		{
+    	 			indexI=i;
+    	 			goto LOOP;
+    	 		}
+    	 	}
+
+    	 LOOP:for(i=indexI;i<indexI+n;i++){
+    	 		if (arr[i]==1)
+		    	{
+		    		count++;
+		   		}
+    	 	}
+    	 	// printf("indexflag:%d\n", indexflag);
+    	 	for (i = indexI; i < indexI+count+n; i++)
+			   {
+			   	if (arr[i]==0)
+			   	{
+			   		finallyIndex=i;
+			   		arr1[indexflag-1][arrindex]=i;
+					arrindex=arrindex+1;
+			   	}
+			   	  arr[i]=1;
+			   }
+			    printf("%d ", finallyIndex);
+    			}	
+    	 }
+
+
+      
+    	 if (getInTStr==1)
+    	 {
+    	 	return arr2;
     	 }else{
 
-    	 	 for (i = 0; i < 64; i++)
-		    {
-		    	if (arr[i]==0)
-		    	{
-		    		count=i;
-		    		goto LOOP;
-		   		}
+    	 	// printf("getInTStr:%d\n", getInTStr);
+       //       printf("n:%d\n",n );
+       //       printf("indexflag:%d\n",indexflag );
+    	 	// for(i=0;i<10;i++)
+			    // {
+			    //     for(j=0;j< 10;j++)
+			    //     {
+			    //         printf("%d\t",arr1[i][j]);//访问i行j列的二维数组元素
+			    //     }
+			    //     printf("\n");
+			    // }
+			
+             if (n<=residue){
+         
+            
+             	 if (indexflag+1>=n)
+				 {
+				 		printf("\n");
 
-		 	}
+				        for(j=0;j<num[getInTStr-1];j++)
+				        {
+				        	if(arr1[getInTStr-2][j]!=0){
+ 									printf("%d ",arr1[getInTStr-2][j]);//访问i行j列的二维数组元素
+				        	}
+				           
+				        }
+				 }
+             
+			}
+			
+
+    	 	
     	 }
-    	
-	LOOP: printf("%d ", count+n-1);
-    }
 
- if( n <residue ){
-	for (i = 0; i < count+n; i++)
-	   {
-	   	  arr[i]=1;
-	   }
- }
-}
+   }
+
 ```
 
-![mark](http://static.zxinc520.com/blog/20190523/iyJhP4Rqt9KS.gif)
+![mark](http://static.zxinc520.com/blog/20190602/famTkQ0URtAP.gif)
 
-![mark](http://static.zxinc520.com/blog/20190523/ri4eCOgCqxI1.gif)
+![mark](http://static.zxinc520.com/blog/20190602/u7GSImrnET42.gif)
 
+![mark](http://static.zxinc520.com/blog/20190602/upFLuGwWxBsR.gif)
+
+![mark](http://static.zxinc520.com/blog/20190602/KXkISHw5iD2s.gif)

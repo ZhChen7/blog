@@ -215,28 +215,33 @@ textarea {
   background: rgba(28, 14, 35, 0.8);
 }
 .public_footer .public_footer_main {
-  padding-top: 0.05rem;
-  height: 1.25rem;
-  width: 3.5rem;
+  padding-top: 19px;
+  width: 3.9rem;
   margin: 0 auto;
-  overflow: hidden;
 }
 .public_footer .public_footer_main .footer-intro {
   width: 100%;
 }
 .public_footer .public_footer_main .footer-intro ul {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0 !important;
 }
 .public_footer .public_footer_main .footer-intro ul li {
   width: 50%;
-  float: left;
-  font-size: 0.13rem;
+  font-size: 0.13rem !important;
   color: #fff;
   border-left: 0.01rem solid #ccc;
   border-bottom: 0.01rem solid #ccc;
+  list-style: none !important;
   text-align: center;
-  padding: 0.11rem 0rem;
-  height: 0.4rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .public_footer .public_footer_main .footer-intro ul li span {
   font-size: 0.17rem !important;
@@ -275,26 +280,35 @@ textarea {
 }
 .public_footer .public_footer_main .public_footer_bottom {
   width: 100%;
+  padding-top: 0.1rem;
 }
 .public_footer .public_footer_main .public_footer_bottom ul {
   width: 100%;
   text-align: center;
   height: 0.32rem;
   line-height: 0.28rem;
+  padding-left: 0 !important;
+  display: flex;
+  justify-content: center;
 }
 .public_footer .public_footer_main .public_footer_bottom ul a {
+  height: 100%;
   padding-left: 0.17rem;
+  margin: 0 0 !important;
 }
 .public_footer .public_footer_main .public_footer_bottom ul a span {
   font-size: 0.24rem !important;
 }
 .public_footer .public_footer_main .public_footer_bottom ul a .qq {
+  margin-left: 0.05rem;
+  display: block;
+  width: 100%;
   position: relative;
   top: 0.03rem;
-  left: -0.05rem;
-  margin-left: 0.05rem;
+  left: 0;
 }
 .public_footer .public_footer_main .public_footer_bottom ul a .qq img {
+  display: block;
   width: 0.22rem;
 }
 .sidebar {

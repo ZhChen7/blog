@@ -1,23 +1,27 @@
 {{extend './layouts/layout-blog.html'}}
 
 {{block 'title'}}New World{{/block}}
-{{block 'style'}}<link rel="stylesheet" type="text/less" href="/less/Message.less">
-    <link rel="stylesheet" href="/css/markcss/markfs.css">
-    <link rel="stylesheet" href="/css/preloader/mainload.css">
-    <link rel="stylesheet" href="/css/fenye/fenye.css">
-    <link rel="stylesheet" type="text/css" href="/lib/prism/prism.css">{{/block}}
+{{block 'style'}}<link rel="stylesheet" type="text/less" href="/less/Message.less"><link href="/css/iconfont/iconfont.css" rel="stylesheet"><link rel="stylesheet" href="/css/markcss/markfs.css"><link rel="stylesheet" href="/css/preloader/mainload.css"><link rel="stylesheet" href="/css/fenye/fenye.css"><link rel="stylesheet" type="text/css" href="/lib/prism/prism.css">{{/block}}
 {{block 'body'}}
 {{include './parties/load/load.html'}}
 <div id="markfs">
-    {{@ doc }}
+    <audio id="music1" controls="controls" autoplay="autoplay" hidden>
+        <source src="http://static.zxinc520.com/M500004CU50m2JjBjr.mp3"
+                type="audio/ogg">
+        Your browser does not support the audio tag.
+    </audio>
+    <a href="javascript:;" class="videobtn audio" id="btn">
+        <span class="iconfont">&#xe6a1;</span>
+    </a>
+{{@ doc }}
 </div>
 <div class="message" id="containet">
-    <header class="message-header">精彩评论:</header>
+    <header class="message-header" style="color: #d25353">精彩评论:</header>
     <ul id="pageMain">
         <% for(var i = message.length -1; i >=0; i--){ %>
         <li>
             <div class="message-left">
-                <img src="/images/author.jpg" alt="">
+                <img src="http://static.zxinc520.com/blog/20190602/Q2ewqJIEUAe0.jpg?imageslim" alt="好看的小哥哥！">
             </div>
             <div class="message-right">
                 <header class="message-right-header">
@@ -43,7 +47,7 @@
         <span id="next">下一页</span>
     </div>
     <form id="message_form">
-        <input type="search" name="message_content" id="send-message" placeholder="分享下你的心得..." required min="2">
+        <input type="search" name="message_content" id="send-message" placeholder="留下言呗~好看的小哥哥小姐姐..." required min="2">
         <input type="hidden" name="message_type" value="{{publish.publishMainBodyUrl}}">
         <button type="submit">发送</button>
     </form>
@@ -51,9 +55,48 @@
 </div>
 {{/block}}
 {{block 'script'}}
+<script>
+    let audioPlay = function () {
+        let audio = document.getElementById('music1');
+        audio.play();
+        $("#btn").bind("click", function bf(e) {
+            e.stopPropagation()
+            if (audio !== null) {
+                //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+                //alert(audio.paused);
+                if (audio.paused) {
+                    audio.play(); //audio.play();// 这个就是播放
+                    $('.audio').css({
+                        'animation-play-state':'running'
+                    })
+                } else {
+                    audio.pause(); // 这个就是暂停
+                    $('.audio').css({
+                        'animation-play-state':'paused'
+                    })
+                }
+            }
+        })
+    }
+    audioPlay();
+
+</script>
 <script src="/js/load.js"></script>
 <script src="/js/fenye.js"></script>
 <script type="text/javascript" src="/lib/prism/prism.js"></script>
+<script src="/js/awesome-toc.min.js"></script>
+<script type="text/javascript">
+    $.awesome_toc({
+        autoDetectHeadings: true,
+        enableToTopButton: false,
+        title: "目录结构",
+        css: {
+            fontSize: "14px",
+            largeFontSize: "18px",
+        },
+    });
+
+</script>
 <script>
     $('#message_form').on('submit', function (e) {
         e.preventDefault()

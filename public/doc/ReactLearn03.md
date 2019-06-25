@@ -42,7 +42,7 @@ const cmtStyle={color:'red',fontSize:'30px'}
 
 
 
-#### 第二层封装
+#### 第二层封装：
 
 **合并成一个大的样式对象**
 
@@ -246,7 +246,9 @@ module.exports = {
 
 
 
-## 引出 css样式作用域的问题
+
+
+# 引出 css样式作用域的问题
 
 #### 给普通样式表加模块化    
 
@@ -254,26 +256,24 @@ module.exports = {
 
 ​		 [你真的知道 css-loader 怎么用吗？](https://juejin.im/entry/5826e755c4c9710054313d6e)
 
-### modules
+## modules
 
 **操作**：
 
-1. 1.配置 ***webpack.config.js***:
-
-   追加参数 *modules*：表示为 普通的 css 样式表，启用模块化。
+- 配置 ***webpack.config.js***:  追加参数 *modules*：表示为 普通的 css 样式表，启用模块化。
 
 ```js
 {test:/\.css$/,use:['style-loader','css-loader?modules']}
 ```
 
-***注意***：
+**注意**：
 
-- 1.css模块化，只针对 **类选择器** 和 **Id 选择器**生效。
-- 2.css 模块化，不会将 **标签选择器** 模块化。
+- css模块化，只针对 **类选择器** 和 **Id 选择器**生效。
+- css 模块化，不会将 **标签选择器** 模块化。
 
 
 
-***使用***：
+**使用**：
 
 ```js
 import cssobj from cmtList.scss
@@ -287,7 +287,7 @@ import cssobj from cmtList.scss
 
  
 
-### localIdentName
+## localIdentName
 
 > 通常modules参数还要通过localIdentName的配合来设置css的类名。在上文中我们看到没有设置localIdentName的css编译后是一串随机字符串，可读性很差，因此我们还需要对它的类名进行处理，这就用到了localIdentName。
 
@@ -344,7 +344,7 @@ import cssobj from cmtList.scss
 
 
 
-### 通过 local 和 global 设置类名是否被模块化
+## 通过 local 和 global 设置类名是否被模块化
 
 > 被 **:local()** 包裹起来的类名，会被模块化，默认情况下，所有的类名和ID 都被模块化了。
 >
@@ -376,25 +376,25 @@ import cssobj from cmtList.scss
 
 ## 在 React项目中 使用 bootsrtap
 
-1. 1.安装 bootstrap  我一般使用 3.3.7 版本
+1. 安装 bootstrap  我一般使用 3.3.7 版本
 
 ```shell
 npm i bootstrap@3.3.7 -S
 ```
 
-2. 2.安装 相关 路径 图标 加载依赖
+2. 安装 相关 路径 图标 加载依赖
 
 ```shell
 npm i url-loader file-loader -D
 ```
 
-3. 3.配置 webpack-config-js 文件
+3. 配置 webpack-config-js 文件
 
 ```js
 {test:/\.ttf|woff|woff2|eot|svg$/,use:'url-loader'}
 ```
 
-4. 4.导入 **bootstrap包** 并且 使用 *bootstrap类*
+4. 导入 **bootstrap包** 并且 使用 *bootstrap类*
 
 ```js
 import bootcss from 'bootstrap/dist/css/bootstrap.min.css'
@@ -422,13 +422,13 @@ import bootcss from 'bootstrap/dist/css/bootstrap.min.css'
 
 > ​	    [Sass/Scss、Less是什么?](https://www.cnblogs.com/wangpenghui522/p/5467560.html)
 
-1. 1.安装：
+1. 安装：
 
 ```shell
 npm i sass-loader node-sass -D
 ```
 
-2.配置 *webpack.comfig.js* :
+2. 配置 *webpack.comfig.js* :
 
 ```js
 {test:/\.css$/,use:['style-loader','css-loader']},

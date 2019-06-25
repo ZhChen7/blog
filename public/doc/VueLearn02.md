@@ -1,4 +1,4 @@
-## Vue第二天
+# Vue第二天
 
 > 以做案例逐渐深入学习
 >
@@ -6,7 +6,7 @@
 >
 > *believe in yourself* 
 
-#### 品牌列表案例
+## 品牌列表案例
 
 ~~~html
 <div id="app">
@@ -83,9 +83,9 @@
 
 
 
-#### 增加搜索功能
+### 增加搜索功能
 
-1. 方法一
+#### 方法一
 
 ~~~html
 <tr v-for="item in search(keywords)" :key="item.id">
@@ -109,7 +109,9 @@
 </script>
 ~~~
 
-2. 方法二  (使用 filter)
+
+
+#### 方法二  (使用 filter)
 
 ~~~html
 <script>
@@ -139,9 +141,7 @@
 
 ### 全局过滤器
 
-- 过滤器的定义语法
-
-​      **Vue.filter('过滤器的名称',function(){})**
+**过滤器的定义语法**：<u>Vue.filter('过滤器的名称',function(){})</u> 
 
 ~~~javascript
 //过滤器中的function，第一个参数，已经被规定死了，永远都是 过滤器 管道符前面 传递过来的数据
@@ -152,7 +152,7 @@ Vue.filter('过滤器的名称',function(data){
 
 
 
-- 写一个例子
+**写一个例子**
 
 ~~~html
 <div id="app">
@@ -176,7 +176,9 @@ Vue.filter('过滤器的名称',function(data){
 
 ![mark](http://static.zxinc520.com/blogimage/20190328/E2cejpC39vcl.png?imageslim)
 
-- 使用过滤器时（传参数）
+
+
+#### 使用过滤器时（传参数）
 
 ~~~html
    <div id="app">
@@ -198,7 +200,9 @@ Vue.filter('过滤器的名称',function(data){
     </script>
 ~~~
 
-- 使用过滤器时（传多个参数）
+
+
+#### 使用过滤器时（传多个参数）
 
 ~~~html
    <div id="app">
@@ -222,7 +226,9 @@ Vue.filter('过滤器的名称',function(data){
 
 ![mark](http://static.zxinc520.com/blogimage/20190328/fhuGqD3vbBl5.png?imageslim)
 
-- 使用过滤器时（多次调用）
+
+
+#### 使用过滤器时（多次调用）
 
 ~~~html
 <div id="app">
@@ -251,9 +257,9 @@ Vue.filter('过滤器的名称',function(data){
 
 ![mark](http://static.zxinc520.com/blogimage/20190328/1l2JyRlfFVKL.png?imageslim)
 
-##### 修改品牌列表案例，进行时间的格式化
+## 修改品牌列表案例，进行时间的格式化
 
-- 关键代码：
+### 关键代码：
 
 ~~~html
 <td>{{item.ctime | dataFormat}}</td>
@@ -275,7 +281,7 @@ Vue.filter('过滤器的名称',function(data){
 
 
 
-- 功能改进
+#### 功能改进
 
 ~~~html
 <td>{{item.ctime | dataFormat('')}}</td>
@@ -306,11 +312,9 @@ Vue.filter('过滤器的名称',function(data){
 
 ### 局部过滤器
 
-- 例子
+> <!--定义一个私有的过滤器（局部）-->
 
-  <!--定义一个私有的过滤器（局部）-->
-
-  - 过滤器调用的时候，采用的是就近原则，如果私有过滤器和全局过滤器名称一致了，这时候优先调用私有过滤器
+过滤器调用的时候，采用的是**就近原则**，<u>如果私有过滤器和全局过滤器名称一致了</u>，这时候**优先调用私有过滤器**
 
 ~~~html
 <div id="app1">
@@ -356,8 +360,9 @@ Vue.filter('过滤器的名称',function(data){
 
 
 
-- 时间补0的情况（如：2019-03-29 21:48:20）
-  - padStart()的运用
+### 时间补0的情况（如：2019-03-29 21:48:20）
+
+#### 	padStart()的运用
 
 ~~~javascript
 let m=(dt.getMonth()+1).toString().padStart(2,'0')
@@ -370,7 +375,7 @@ let d=dt.getDate().toString().padStart(2,'0')
 
 ## 按键修饰符
 
-- 按回车键添加数据（不用按添加按钮）
+#### 按回车键添加数据（不用按添加按钮）
 
 ~~~html
 <input type="text" class="form-control" v-model="name" id="name" @keyup.enter="add">
@@ -379,7 +384,7 @@ let d=dt.getDate().toString().padStart(2,'0')
 
 
 
-- 自定义全局按键修饰符
+#### 自定义全局按键修饰符
 
 ~~~html
 <input type="text" class="form-control" v-model="name" id="name" @keyup.f2="add">
@@ -397,7 +402,7 @@ let d=dt.getDate().toString().padStart(2,'0')
 
 ### 自定义全局指令
 
-- 自定义一个自动获取焦点的指令（v-focus）
+#### 自定义一个自动获取焦点的指令（v-focus）
 
 ~~~javascript
 //参数一：指令的名称，在定义的时候，指令的名称前面，不需要加 v- 前缀，
@@ -448,7 +453,7 @@ Vue.directive('focus', {
 
 ![mark](http://static.zxinc520.com/blogimage/20190329/QfOUnkjKHsEA.png?imageslim)
 
-- 自定义一个 设置字体颜色的 指令（v-color）
+#### 自定义一个 设置字体颜色的 指令（v-color）
 
 ~~~javascript
 //样式，只要通过指令绑定了元素，不管这个元素有没有被插入到页面中去，这个元素肯定有了一个内联的样式
@@ -460,7 +465,9 @@ bind: function (el) {
 })
 ~~~
 
-- 自定义一个 设置字体颜色的 指令 ( 传参数 )
+
+
+#### 自定义一个 设置字体颜色的 指令 ( 传参数 )
 
 ~~~html
 <input class="form-control" id="search" type="text"  v-model="keywords" 
@@ -586,7 +593,7 @@ directives: { //自定义私有指令
 
 [ Vue-resource 和 axios 的区别](http://www.cnblogs.com/both-eyes/p/10122243.html)
 
-- Vue-resource 的基本使用
+**Vue-resource 的基本使用**
 
 ~~~html
 <script src="../../vue.min.js"></script>

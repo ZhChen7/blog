@@ -1,4 +1,4 @@
-## Vue第三天
+Vue第三天
 
 > 过渡效果
 >
@@ -11,14 +11,17 @@
 Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。
 包括以下工具：
 
-- 1.在 CSS 过渡和动画中自动应用 class
-- 2.可以配合使用第三方 CSS 动画库，如 Animate.css
-- 3.在过渡钩子函数中使用 JavaScript 直接操作 DOM
-- 4.可以配合使用第三方 JavaScript 动画库，如 [Velocity.js](https://github.com/shepherdwind/velocity.js)
+1. 在 CSS 过渡和动画中自动应用 class
 
-### 1.使用过度类名实现动画
+2. 可以配合使用第三方 CSS 动画库，如 Animate.css
 
-- 写个简单例子说明：
+3. 在过渡钩子函数中使用 JavaScript 直接操作 DOM
+
+4. 可以配合使用第三方 JavaScript 动画库，如 [Velocity.js](https://github.com/shepherdwind/velocity.js)
+
+## 1.使用过度类名实现动画
+
+**写个简单例子说明：**
 
 ```html
  <!--自定义两组样式，来控制 transition 内部的元素实现动画-->
@@ -59,7 +62,7 @@ Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用�
 
 ![mark](http://static.zxinc520.com/blogimage/20190408/saPf7Rw6MKa5.gif)
 
-- 修改v-前缀(自定义前缀)
+**修改v-前缀(自定义前缀)**
 
 ```html
 <style>
@@ -80,7 +83,7 @@ Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用�
 </body>
 ```
 
-### 2.使用第三方类实现动画
+## 2.使用第三方类实现动画
 
 [animate.css官网](https://daneden.github.io/animate.css/)
 
@@ -100,7 +103,7 @@ Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用�
 </div>
 ```
 
-- 直接使用在元素身上
+**直接使用在元素身上**
 
 ```html
 <transition >
@@ -110,7 +113,7 @@ Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用�
 
 ### 3.JavaScript钩子
 
-- html:
+**html:**
 
 ```html
 <transition
@@ -127,7 +130,7 @@ Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用�
 </transition>
 ```
 
-- js
+**js**
 
 ```javascript
 methods: {
@@ -212,9 +215,9 @@ methods: {
 
 ![mark](http://static.zxinc520.com/blogimage/20190408/KnduLdOBz0cI.gif)
 
-### 列表过渡
+## 列表过渡
 
-目前为止，关于过渡我们已经讲到：
+*目前为止，关于过渡我们已经讲到*：
 
 - 单个节点
 - 一次渲染多个节点
@@ -222,13 +225,13 @@ methods: {
 那么怎么同时渲染整个列表，比如使用 `v-for` ？在这种场景中，使用`<transition-group>` 组件。在我们深入例子之前，先了解关于这个组件的几个特点：
 
 - 不同于 `<transition>`， 它会以一个真实元素呈现：默认为一个 `<span>`。你也可以通过 `tag` 特性更换为其他元素。
-- 元素 **一定需要** 指定唯一的 `key` 特性值
+- 元素 **一定需要** 指定唯一的 `**key` 特性值**
 
 
 
 举例说明：
 
-- 列表添加动画
+#### 列表添加动画
 
 ```html
 <style>
@@ -288,7 +291,7 @@ methods: {
 
 ![mark](http://static.zxinc520.com/blogimage/20190408/BniWO4XoExQy.gif)
 
-- 删除动画
+#### 删除动画
 
 ```html
 <style>
@@ -318,7 +321,7 @@ methods: {
 
 ![mark](http://static.zxinc520.com/blogimage/20190408/vkbO2TDtKy2q.gif)
 
-- 实现入场时候的效果（ appear 属性）
+#### 实现入场时候的效果（ appear 属性）
 
 ```html
 <ul>
@@ -331,12 +334,13 @@ methods: {
 
 ![mark](http://static.zxinc520.com/blogimage/20190408/yEodBeN1cCdm.gif)
 
-- 解决 ul 标签下 span 包裹问题
+#### 解决 ul 标签下 span 包裹问题
 
 ![mark](http://static.zxinc520.com/blogimage/20190402/vn2iYgGzCqCz.png?imageslim)
 
-- 解决方案
-- 去掉 ul 标签，并给 transition-group 标签加 tag="ul" 。
+### 解决方案
+
+**去掉 ul 标签，并给 transition-group 标签加 tag="ul" 。**
 
 ```html
 <transition-group appear tag="ul">
@@ -348,7 +352,7 @@ methods: {
 
 # 组件
 
-## 什么是组件？
+### 什么是组件？
 
 > 组件（Component）是 Vue.js 最强大的功能之一。组件可以扩展 HTML 元素，封装可重用的代码。在较高层面上，组件是自定义元素， Vue.js 的编译器为它添加特殊功能。在有些情况下，组件也可以是原生 HTML 元素的形式，以 is 特性扩展。
 >
@@ -382,7 +386,7 @@ methods: {
 >
 > ​        架构定位：横向分块（位于架构业务框架层）。
 
-#### **总结**
+### 总结
 
 ​           其实组件相当于**库**，把一些能在**项目里或者不同类型项目中**可复用的代码进行工具性的封装。
 
@@ -398,7 +402,7 @@ methods: {
 
 #### 创建组件的方式1
 
-实例：
+**实例：**
 
 ```html
 <div id="app">
@@ -437,7 +441,7 @@ Vue.component('myCom1', Vue.extend({
 
 #### 创建组件的方式2
 
-实例
+**实例**
 
 ```html
 <div id="app">
@@ -487,7 +491,7 @@ Vue.component('myCom1', Vue.extend({
 
 ### 私有组件
 
-- 自定义一个私有组件
+**自定义一个私有组件**
 
 ```html
 <div id="app">
@@ -507,9 +511,7 @@ Vue.component('myCom1', Vue.extend({
 </script>
 ```
 
-![mark](http://static.zxinc520.com/blogimage/20190402/oA5piSDptycq.png?imageslim)
-
- 同理而言：或者这样处理
+![mark](http://static.zxinc520.com/blogimage/20190402/oA5piSDptycq.png?imageslim)**同理而言：或者这样处理**
 
 ```html
 <div id="app">
@@ -539,11 +541,11 @@ Vue.component('myCom1', Vue.extend({
 
 ## 组件中的data和methods
 
-> 1.组件可以有自己的 data 数据
+> 1. 组件可以有自己的 data 数据
 >
-> 2.组件的 data 和 实例的data 有点不一样，实例中的data可以为一个对象，但组件的 data 必须为一个方法
+> 2. 组件的 data 和 实例的data 有点不一样，实例中的data可以为一个对象，但组件的 data 必须为一个方法
 >
-> 3.组件中的 data 除了为一个方法之外，这个方法内部，还必须返回一个对象才行
+> 3. 组件中的 data 除了为一个方法之外，这个方法内部，还必须返回一个对象才行
 
 ```javascript
 Vue.component('myCom1', {

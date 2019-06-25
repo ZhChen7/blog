@@ -147,9 +147,9 @@
 
 #### **methods,watch,computed的区别**
 
-1. 1.`computed` 属性的结果会被缓存，除非依赖的响应式属性变化才会重新计算。主要当作属性来使用；
-2. 2.`methods` 方法表示一个具体的操作，主要书写业务逻辑；
-3. 3.`watch` 一个对象，键是需要观察的表达式，值是对应回调函数。主要用来监听某些特定数据的变化，从而进行某些具体的业务逻辑操作；可以看作是 computed 和 methods 的结合体；
+1. `computed` 属性的结果会被缓存，除非依赖的响应式属性变化才会重新计算。主要当作属性来使用；
+2. `methods` 方法表示一个具体的操作，主要书写业务逻辑；
+3. `watch` 一个对象，键是需要观察的表达式，值是对应回调函数。主要用来监听某些特定数据的变化，从而进行某些具体的业务逻辑操作；可以看作是 computed 和 methods 的结合体；
 
 
 
@@ -194,15 +194,15 @@
 
 #### 2.网页中引入的静态资源多了以后有什么问题？？？
 
-1. 1.网页加载速度慢， 因为 我们要发起很多的二次请求；
-2. 2.要处理错综复杂的依赖关系
+1. 网页加载速度慢， 因为 我们要发起很多的二次请求；
+2. 要处理错综复杂的依赖关系
 
 
 
 #### 3.如何解决上述两个问题
 
-1. 1.合并、压缩、精灵图、图片的 Base64 编码
-2. 2.可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；
+1. 合并、压缩、精灵图、图片的 Base64 编码
+2. 可以使用之前学过的requireJS、也可以使用webpack可以解决各个包之间的复杂依赖关系；
 
 
 
@@ -243,7 +243,7 @@ webpack 是前端的一个项目构建工具，它是基于 Node.js 开发出来
 
 ## 第一阶段：用webpack打包 main.js 文件生成 bundle.js 文件
 
-- 目录结构：
+***目录结构***：
 
 ![mark](http://static.zxinc520.com/blog/20190412/lCOHlyRXWvxs.png?imageslim)
 
@@ -317,10 +317,10 @@ $(function () {
 
 ##### 当我们在 控制台，直接输入 **webpack** 命令执行的时候，webpack 做了以下几步：
 
-1. 1.首先，webpack 发现，我们并没有通过命令的形式，给它指定入口和出口
-2. 2.webpack 就会去 项目的 根目录中，查找一个叫做 `webpack.config.js` 的配置文件
-3. 3.当找到配置文件后，webpack 会去解析执行这个 配置文件，当解析执行完配置文件后，就得到了 配置文件中，导出的配置对象
-4. 4.当 webpack 拿到 配置对象后，就拿到了 配置对象中，指定的 入口  和 出口，然后进行打包构建；
+1. 首先，webpack 发现，我们并没有通过命令的形式，给它指定入口和出口
+2. webpack 就会去 项目的 根目录中，查找一个叫做 `webpack.config.js` 的配置文件
+3. 当找到配置文件后，webpack 会去解析执行这个 配置文件，当解析执行完配置文件后，就得到了 配置文件中，导出的配置对象
+4. 当 webpack 拿到 配置对象后，就拿到了 配置对象中，指定的 入口  和 出口，然后进行打包构建；
 
 
 
@@ -348,12 +348,12 @@ module.exports = {
 
 ## 使用 webpack-dev-server 这个工具，来实现自动打包编译的功能
 
-1. 1.运行 `npm i webpack-dev-server -D` 把这个工具安装到项目的本地开发依赖  [npm install --save 和 npm install -d的区别](https://blog.csdn.net/wangguoyu1996/article/details/80443861)
-2. 2.安装完毕后，这个 工具的用法， 和 webpack 命令的用法，完全一样
-3. 3.由于，我们是在项目中，本地安装的 webpack-dev-server ， 所以，无法把它当作 脚本命令，在powershell 终端中直接运行；（只有那些 安装到 全局 -g 的工具，才能在 终端中正常执行）
-4. 4.注意： webpack-dev-server 这个工具，如果想要正常运行，要求，在本地项目中，必须安装 webpack
-5. 5.webpack-dev-server 帮我们打包生成的 bundle.js 文件，并没有存放到 实际的 物理磁盘上；而是，直接托管到了 电脑的内存中，所以，我们在 项目根目录中，根本找不到 这个打包好的 bundle.js;
-6. 6.我们可以认为， webpack-dev-server 把打包好的 文件，以一种虚拟的形式，托管到了 咱们项目的 根目录中，虽然我们看不到它，但是，可以认为， 和 dist  src   node_modules  平级，有一个看不见的文件，叫做 bundle.js
+1. 运行 `npm i webpack-dev-server -D` 把这个工具安装到项目的本地开发依赖  [npm install --save 和 npm install -d的区别](https://blog.csdn.net/wangguoyu1996/article/details/80443861)
+2. 安装完毕后，这个 工具的用法， 和 webpack 命令的用法，完全一样
+3. 由于，我们是在项目中，本地安装的 webpack-dev-server ， 所以，无法把它当作 脚本命令，在powershell 终端中直接运行；（只有那些 安装到 全局 -g 的工具，才能在 终端中正常执行）
+4. 注意： webpack-dev-server 这个工具，如果想要正常运行，要求，在本地项目中，必须安装 webpack
+5. webpack-dev-server 帮我们打包生成的 bundle.js 文件，并没有存放到 实际的 物理磁盘上；而是，直接托管到了 电脑的内存中，所以，我们在 项目根目录中，根本找不到 这个打包好的 bundle.js;
+6. 我们可以认为， webpack-dev-server 把打包好的 文件，以一种虚拟的形式，托管到了 咱们项目的 根目录中，虽然我们看不到它，但是，可以认为， 和 dist  src   node_modules  平级，有一个看不见的文件，叫做 bundle.js
 
 
 
@@ -367,7 +367,7 @@ module.exports = {
 
 ![mark](http://static.zxinc520.com/blog/20190413/01rkpce0a7ou.png?imageslim)
 
-- 自动编译（保存代码即自动刷新浏览器）
+#### 自动编译（保存代码即自动刷新浏览器）
 
 ![mark](http://static.zxinc520.com/blog/20190413/sEKMRkaMQOuX.png?imageslim)
 
@@ -433,9 +433,9 @@ module.exports = {
 
 **实例作用（简单来说）**：  
 
-1. 1.自动在内存中根据指定页面生成一个内存的页面
+1. 自动在内存中根据指定页面生成一个内存的页面
 
-2. 2.自动，把打包好的 bundle.js 追加到页面中去
+2. 自动，把打包好的 bundle.js 追加到页面中去
 
    ![mark](http://static.zxinc520.com/blog/20190413/A77bGaRpNnBK.png?imageslim)
 
@@ -477,26 +477,26 @@ module.exports = {
 
 **webpack 处理第三方文件类型的过程：**
 
-1. 1.发现这个 要处理的文件不是JS文件，然后就去 配置文件中，查找有没有对应的第三方 loader 规则
-2. 2.如果能找到对应的规则， 就会调用 对应的 loader 处理 这种文件类型；
-3. 3.在调用loader 的时候，是从后往前调用的；
-4. 4.当最后的一个 loader 调用完毕，会把 处理的结果，直接交给 webpack 进行 打包合并，最终输出到  bundle.js 中去
+1. 发现这个 要处理的文件不是JS文件，然后就去 配置文件中，查找有没有对应的第三方 loader 规则
+2. 如果能找到对应的规则， 就会调用 对应的 loader 处理 这种文件类型；
+3. 在调用loader 的时候，是从后往前调用的；
+4. 当最后的一个 loader 调用完毕，会把 处理的结果，直接交给 webpack 进行 打包合并，最终输出到  bundle.js 中去
 
 
 
-- #### **打包 less 文件**
+## 打包 less 文件
 
 **第一步：安装包：**
 
-1. 1.安装  `npm i less-loader -D`
+1. 安装  `npm i less-loader -D`
 
    ![mark](http://static.zxinc520.com/blog/20190413/0bSMpt6TO1EJ.png?imageslim)
 
 
 
-2. 2. less-loader 内部依赖 less 包，所以安装 `npm i less -D`
+2. less-loader 内部依赖 less 包，所以安装 `npm i less -D`
 
-   ![mark](http://static.zxinc520.com/blog/20190413/5RJ7elAXllGf.png?imageslim)
+![mark](http://static.zxinc520.com/blog/20190413/5RJ7elAXllGf.png?imageslim)
 
 
 

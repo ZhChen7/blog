@@ -9,7 +9,7 @@ window.onload = function () {
 let audioPlay = function () {
     let audio = document.getElementById('music1');
         audio.play();
-    $("#btn").bind("touchstart", function bf() {
+    $("#btn").bind("click", function bf() {
         if (audio !== null) {
             //检测播放是否已暂停.audio.paused 在播放器播放时返回false.
             //alert(audio.paused);
