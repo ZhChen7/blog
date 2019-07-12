@@ -75,8 +75,8 @@
 }
 body {
   font-size: 24px;
-  background: linear-gradient(66deg, #fffaf1, #ff487f, #f5e1da, #9c27b0, #ff8dac);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #F0F3EF;
 }
 ul,
 ol {
@@ -604,7 +604,6 @@ textarea {
   width: 5rem;
   background: linear-gradient(hotpink, navajowhite, #136ec2);
   margin: 0 auto;
-  height: 2.71rem;
   padding: 0rem 0.44rem;
   border-radius: 0.14rem;
 }
@@ -619,14 +618,16 @@ textarea {
 .blog-header-footer .blog-header-footer-main .blog_bottom_bottom {
   width: 100%;
   margin: 0 auto;
+  padding-bottom: 15px;
 }
 .blog-header-footer .blog-header-footer-main .blog_bottom_bottom ul {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .blog-header-footer .blog-header-footer-main .blog_bottom_bottom ul li {
-  float: left;
-  width: 0.8rem;
-  margin: 0.08rem 0.28rem;
+  padding: 0.09rem 0.12rem;
 }
 .blog-header-footer .blog-header-footer-main .blog_bottom_bottom ul li a {
   width: 100%;
@@ -639,6 +640,8 @@ textarea {
   color: #fff;
   border-radius: 0.12rem;
   background: linear-gradient(-23deg, #c1f1f3, rgba(246, 159, 179, 0) 20%, rgba(0, 161, 255, 0.47));
+  padding: 0px 14px;
+  overflow: hidden;
 }
 .blog-header-footer .blog-header-footer-main .blog_bottom_bottom ul li a span {
   font-size: 0.08rem;

@@ -26,7 +26,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1.5em 5px !important;
     padding: 0.5em 1em !important;
 }
-
+h3, h4, h5, h6{
+    margin-bottom: -7px !important;
+}
 h1,h2{
     text-align: center !important;
 
@@ -89,7 +91,7 @@ hr {
     margin: 1.5em auto;
 }
 p {
-    margin: 1.5em 5px !important;
+    margin: 7px 5px !important;
 }
 table, pre, dl, blockquote, q, ul, ol {
     margin: 10px 5px;
@@ -127,12 +129,15 @@ blockquote::before, blockquote::after, q::before, q::after {
 
 ol, ul {
     padding: 0;
-    padding-left: 56px;
-    margin: 0
+    padding-left: 41px;
+    margin: 0;
+    width: 100%;
 }
 
 li {
-    line-height: 24px
+    line-height: 24px;
+    width: 100%;
+    word-break:break-all;
 }
 
 ol, p, ul {
@@ -254,7 +259,6 @@ table tr th {
 a{
     text-decoration: none;
     color: #20a0ff;
-    margin: 0 4px;
 }
 
 li>ul>li{
@@ -278,13 +282,14 @@ video{
 }
 
 .videobtn>span{
-    color: red !important;
+    color: #c4f5e1 !important;
     font-size: 25px !important;
 }
 
 @keyframes videobtnMove {
     from{
         left: 50%;
+        top: 100px;
         transform: rotate(180deg);
     }
     40%{
@@ -292,14 +297,17 @@ video{
         transform: scale(1.5,1.5);
     }
     55%{
+        top: -100px;
         left: 50%;
         transform: scale(1,1);
+        color: red;!important;
     }
     70%{
         left: 20%;
         transform: scale(1.5,1.5);
     }
     to{
+        top: -100px;
         left: 50%;
         transform: rotate(-180deg);
     }

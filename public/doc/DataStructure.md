@@ -251,14 +251,7 @@ console.log(array1.reduce(reducer, 5));
 
 *callback 被调用四次，每次调用的参数和返回值如下表*：
 
-| `callback`  | `accumulator` | `currentValue` | `currentIndex` | `array`           | return value |
-| ----------- | ------------- | -------------- | -------------- | ----------------- | ------------ |
-| first call  | `0`           | `1`            | `1`            | `[0, 1, 2, 3, 4]` | `1`          |
-| second call | `1`           | `2`            | `2`            | `[0, 1, 2, 3, 4]` | `3`          |
-| third call  | `3`           | `3`            | `3`            | `[0, 1, 2, 3, 4]` | `6`          |
-| fourth call | `6`           | `4`            | `4`            | `[0, 1, 2, 3, 4]` | `10`         |
-
-
+![mark](http://static.zxinc520.com/blog/20190625/FxoC6IyrTRcr.png?imageslim)
 
 ## ECMAScript 6 和 数组 新功能
 
@@ -632,7 +625,7 @@ console.log(arr)  // [7, 7, 7]
 
 > 数组实例的`copyWithin()`方法，在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。也就是说，使用这个方法，会修改当前数组。
 
-`Array.prototype.copyWithin(target, start = 0, end = this.length)`
+<u>Array.prototype.copyWithin(target, start = 0, end = this.length)</u> ：
 
 - 它接受三个参数。
   - target（必需）：从该位置开始替换数据。
