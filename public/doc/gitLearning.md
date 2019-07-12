@@ -113,7 +113,7 @@
 
 
 
-### git 查看日志
+### Git 查看日志
 
 > 查看日志----能够查看自己提交的信息
 >
@@ -133,11 +133,13 @@
 
 
 
-### git 版本回退
+### Git 版本回退
 
 > git 版本回退
 >
 > 场景：如果最后一次提交的代码有误，可以通过git 版本回退，回到代码无误的那一个状态。
+
+#### 根据索引回退
 
 1.  使用命令 `git log --oneline`查看状态
 
@@ -153,3 +155,195 @@
 
 ![mark](http://static.zxinc520.com/blog/20190711/rwuTTeqbAFNc.png?imageslim)
 
+
+
+#### 通过版本号回退
+
+> 通过版本号回退
+
+![mark](http://static.zxinc520.com/blog/20190712/VsLjP0uf8h8D.png?imageslim)
+
+命令：`git reset --hard ac97cbc `  回车执行
+
+![mark](http://static.zxinc520.com/blog/20190712/puqQzAUO57un.png?imageslim)
+
+![mark](http://static.zxinc520.com/blog/20190712/4b2kofXa5m3B.png?imageslim)
+
+
+
+#### git reflog
+
+> 可以看到每一次切换版本记录
+
+命令：`git reflog` 查看总体记录
+
+![mark](http://static.zxinc520.com/blog/20190712/rIsddoYu54q2.png?imageslim)
+
+
+
+
+
+### Git 分支的新建与合并
+
+> git 创建分支
+>
+> 运用场景：放开发者只开发完成部分代码，想保存代码,为了能够后续继续开发，可以创建分支。
+
+**现在让我们来看一个简单的分支与合并的例子，实际工作中大体也会用到这样的工作流程：**
+
+1. 开发某个网站。
+2. 为实现某个新的需求，创建一个分支。
+3. 在这个分支上开展工作。
+
+**假设此时，你突然接到一个电话说有个很严重的问题需要紧急修补，那么可以按照下面的方式处理：**
+
+1. 返回到原先已经发布到生产服务器上的分支。
+2. 为这次紧急修补建立一个新分支，并在其中修复问题。
+3. 通过测试后，回到生产服务器所在的分支，将修补分支合并进来，然后再推送到生产服务器上。
+4. 切换到之前实现新需求的分支，继续工作。
+
+
+
+### Git 分支的新建
+
+**新建分支** ：命令：`git branch <name>`
+
+![mark](http://static.zxinc520.com/blog/20190712/vCIxtjnYlgsu.png?imageslim)
+
+**查看分支信息** ：命令：`git branch` （ **绿色**  --> 代表正处于此分支）
+
+![mark](http://static.zxinc520.com/blog/20190712/R3t4POgEphiO.png?imageslim)
+
+**切换分支** ：命令 `git checkout dev`
+
+![mark](http://static.zxinc520.com/blog/20190712/MQQVVoNGu41k.png?imageslim)
+
+
+
+#### 在分支中提交部分代码
+
+> 类似于主分支 提交（一样）
+
+![mark](http://static.zxinc520.com/blog/20190712/gBcACkrl5Gxf.png?imageslim)
+
+
+
+### Git 合并分支
+
+> 合并分支
+>
+> **需求**：将 dev 分支 合并到主分支（master分支）上。
+
+1.  切换到 **master** 分支：命令：`git checkout master`
+
+![mark](http://static.zxinc520.com/blog/20190712/bKIzXXwv3Xnm.png?imageslim)
+
+2. 合并 dev 分支 到 master 分支上：命令：`git merge dev`
+
+![mark](http://static.zxinc520.com/blog/20190712/uMQR0k4u6qTT.png?imageslim)
+
+3. 查看自己的提交记录 命令：`git log --oneline`
+
+![mark](http://static.zxinc520.com/blog/20190712/gu7FKi6tGBkf.png?imageslim)
+
+
+
+### 上传至 github
+
+> `git push [地址] master`
+>
+> [参考廖雪峰的官方网站 github 篇](https://www.liaoxuefeng.com/wiki/896043488029600/900937935629664)
+>
+> 【地址】：例如：https://github.com/ZhChen7/Travel.git
+
+
+
+**git push** 推项目到 github：`git push [地址] master`
+
+
+
+####  从 github 拉下项目
+
+> github 拉下项目
+>
+> 【地址】：例如：https://github.com/ZhChen7/Travel.git
+
+
+
+**git pull** 从 github 拉下项目 ：`git pull [地址] master`
+
+**git clone** 从 github 复制项目（往往在第一次使用）：`git clone [地址]`
+
+
+
+### 通过 ssh 方式 上传 代码
+
+> 公钥 和 私钥 ；两者之间是有关联的。
+
+
+
+1. 生成 **公钥** 和 **私钥** 
+
+   命令：`ssh-keygen -t rsa -C <邮箱>`
+
+![mark](http://static.zxinc520.com/blog/20190712/2GKvEKipn11B.png?imageslim)
+
+![mark](http://static.zxinc520.com/blog/20190712/9qHzNoUvBgy2.png?imageslim)
+
+
+
+**找到生成的文件** ：
+
+![mark](http://static.zxinc520.com/blog/20190712/DPxGphRT9AXv.png?imageslim)
+
+
+
+**给自己的github 配置 ssh** ：
+
+![mark](http://static.zxinc520.com/blog/20190712/eK9KUtgXVIrN.png?imageslim)
+
+
+
+
+
+### 提交冲突
+
+> 先 **pull** 还是 先 **push**
+>
+> 应用场景：多人共同提交时，产生提交冲突时。
+
+
+
+**解决方案**：**先pull** 然后 **后push**
+
+
+
+
+
+
+
+### push 和 pull 简写
+
+> push 和 pull 简写
+>
+> 【地址简写】：`git remote add <变量名> <远程地址>` 
+
+
+
+**配置远程地址**（设置别名）：方便每一次不用输入很长的地址
+
+命令：`git remote add origin git@github.com:ZhChen7/Travel.git`
+
+即：为 `git@github.com:ZhChen7/Travel.git`设置别名：  **origin ** 
+
+
+
+#### 默认关联
+
+> 当我们在 push时，加上 **-u 参数** ，那么在**下次 push 时**；只用 写 `git push` 即可上传代码。
+>
+> （加上 **-u** 之后，git 会把当前分支 与 远程指定的分支 进行**关联**）
+
+
+
+下次 直接写 `git push` 相当于 写 `git push origin master` 。
