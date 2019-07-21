@@ -20,6 +20,37 @@ router.get('/', function (req, res) {
         publish.forEach(function (e) {
             e.UTCtodata = new Date(e.publishDate).toLocaleString()
         })
+        var arr = []
+        var Archivingarr = []
+        publish.forEach(function (e) {
+            if (e.publishIdentifying != '') {
+                arr.push(e.publishIdentifying)
+                Archivingarr.push(Geteverydata(e.UTCtodata))
+            }
+        })
+
+        function Geteverydata(data) {
+            data = data.split(' ')
+            data.pop()
+            data = data.toString()
+            data = data.split('-')
+            data.pop()
+            data[0] = data[0] + '年'
+            data[1] = data[1] + '月'
+            return data[0] + data[1]
+        }
+
+        function getWordCnt(arr) {
+            return arr.reduce(function (prev, next) {
+                prev[next] = (prev[next] + 1) || 1;
+                return prev;
+            }, {});
+        }
+
+        publish.push(getWordCnt(arr))
+        publish.push(getWordCnt(Archivingarr))
+        // console.log(getWordCnt(Archivingarr))
+        console.log(publish)
         res.render('index.html', {
             publish: publish,
             user: req.session.user
@@ -80,7 +111,7 @@ router.get('/timeline', function (req, res) {
         }
         publish.forEach(function (e) {
             e.UTCtodata = new Date(e.publishDate).toLocaleString()
-            e.year=new Date(e.publishDate).toLocaleString().substring(0,4)
+            e.year = new Date(e.publishDate).toLocaleString().substring(0, 4)
         })
 
         res.render('timeline.html', {
@@ -201,7 +232,7 @@ router.get("/lcj/:docName", function (req, res, next) {
             return next(err)
         }
         if (publish.wholepublishIdentifying == "代码") {
-            fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+            fs.readFile(__dirname + '/src/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
                 if (err) {
                     console.log(err);
                 } else {
@@ -226,7 +257,7 @@ router.get("/lcj/:docName", function (req, res, next) {
             });
         }
         if (publish.wholepublishIdentifying == "心得体会") {
-            fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+            fs.readFile(__dirname + '/src/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
                 if (err) {
                     console.log(err);
                 } else {

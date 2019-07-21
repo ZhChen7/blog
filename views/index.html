@@ -1,1 +1,68 @@
-{{extend'./layouts/layout.html'}}{{block'title'}}Change World{{/block}}{{block'style'}}<link rel="stylesheet"href="/css/preloader/load.css"><link rel="stylesheet"href="/css/IndexCanvas/IndexCanvas.css">{{/block}}{{block'body'}}<div class="load"><div class="cssload-wrap"><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div><div class="cssload-circle"></div></div></div><div class="main_Navigation"><div class="main_Navigation_nav"><div class="Recommend">{{include'./parties/Recommend/banner.html'}}{{include'./parties/Recommend/nav.html'}}{{include'./parties/Recommend/index_list.html'}}</div><div class="Dynamic">{{include'./parties/Dynamic/dynamic.html'}}</div><div class="School">{{include'./parties/School/Rotation.html'}}</div></div></div>{{include'./parties/backTop/backTop.html'}}{{/block}}{{block'script'}}<script src="/js/main_Navigation.js"></script><script src="/js/banner.js"></script><script src="/js/sideBar.js"></script><script src="/lib/scrollReveal.js"></script><script>document.onreadystatechange=function(){if(document.readyState=="complete"){$(".load").fadeOut(500)}}</script><script type="text/javascript">$(document).ready(function(){(function($){'use strict';window.scrollReveal=new scrollReveal({reset:true,move:'50px'})})()});</script>{{/block}}
+{{extend'./layouts/layout.html'}}{{block'title'}}Change World{{/block}}
+
+{{block'style'}}
+<link rel="stylesheet" href="/css/newpart/newpart.css">
+{{/block}}
+
+{{block'newpart'}}
+{{include'./parties/NewIndexPart/newpartone.html'}}
+{{/block}}
+{{block'body'}}
+<!--<div class="load">-->
+    <!--<div class="cssload-wrap">-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+        <!--<div class="cssload-circle"></div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="main_Navigation">
+    <div class="main_Navigation_nav">
+        <div class="Recommend">
+            {{include'./parties/Recommend/banner.html'}}{{include'./parties/Recommend/nav.html'}}{{include'./parties/Recommend/index_list.html'}}
+        </div>
+        <div class="Dynamic">{{include'./parties/Dynamic/dynamic.html'}}</div>
+        <div class="School">{{include'./parties/School/Rotation.html'}}</div>
+    </div>
+</div>
+{{include'./parties/backTop/backTop.html'}}
+
+{{/block}}{{block'script'}}
+<script src="/js/sideBar.js"></script>
+<script>document.onreadystatechange = function () {
+    if (document.readyState == "complete") {
+        $(".load").fadeOut(500)
+    }
+}</script>
+<script type="text/javascript">$(document).ready(function () {
+    (function ($) {
+        'use strict';
+        window.scrollReveal = new scrollReveal({reset: true, move: '50px'})
+    })()
+});</script>{{/block}}

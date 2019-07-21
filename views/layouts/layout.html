@@ -1,5 +1,24 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><meta name="description"content="个人博客"/><meta name="keywords"content="blog - 周琛 周琛的个人博客 移动端博客 博客 湖北师范大学 湖北师范大学前端 前端工程师"/><link rel="shortcut icon"href="你存放图标的路径/1616.ico"/><link rel="stylesheet"type="text/less"href="/less/index.less">{{block'style'}}{{/block}}<link rel="icon"href="/images/favicon.png"type="image/x-icon"><link href="/css/iconfont/iconfont.css"rel="stylesheet"><script src="/lib/less/less.min.js"></script><title>{{block'title'}}{{/block}}</title></head><body><div class="bg-container">{{include'../parties/index_header.html'}}{{block'body'}}{{/block}}{{include'../parties/The_sidebar.html'}}{{include'../parties/public_footer.html'}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="周琛的个人博客"/>
+    <meta name="keywords" content="blog - 周琛 周琛的个人博客 移动端博客 博客 湖北师范大学 湖北师范大学前端 前端工程师"/>
+    <link rel="stylesheet" type="text/less" href="/less/index.less">
+    {{block'style'}}{{/block}}
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link href="/css/iconfont/iconfont.css" rel="stylesheet">
+    <script src="/lib/less/less.min.js"></script>
+    <title>{{block'title'}}{{/block}}</title></head>
+<body>
+{{block'newpart'}}{{/block}}
+<div class="bg-container">
+    {{include'../parties/index_header.html'}}{{block'body'}}{{/block}}{{include'../parties/The_sidebar.html'}}{{include'../parties/public_footer.html'}}
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="/js/clicklove.js"></script>
-{{block'script'}}{{/block}}</body></html>
+<script src="/main.js"></script>
+{{block'script'}}{{/block}}
+</body>
+</html>

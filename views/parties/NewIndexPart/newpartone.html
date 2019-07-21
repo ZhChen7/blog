@@ -1,0 +1,97 @@
+<div class="newpartbox">
+    <div class="Personal_classification newpartbtnsort">
+        <header class=" Personal_classification_header">
+            <h3>个人分类</h3>
+        </header>
+        <div class="Personal_classification_content PersonalSort">
+            <ul>
+                {{each publish[publish.length-2]}}
+                <li>
+                    <a href="/sort/{{$index}}">{{$index}}
+                        <span>{{$value}}篇</span>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="text-center PersonalSortTextCenter">
+            <a href="javascript:;" class="btn-link-blue PersonalSortbtn">展开</a>
+        </div>
+    </div>
+
+    <div class="Archiving Personal_classification Archivinganimation">
+        <header class="Archiving_header Personal_classification_header">
+            <h3>归档</h3>
+        </header>
+        <div class="Archiving_content Personal_classification_content">
+            <ul>
+                {{each publish[publish.length-1]}}
+                <li>
+                    <a href="/sort/{{$index}}">{{$index}}
+                        <span>{{$value}}篇</span>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="Archiving_text-center text-center">
+            <a href="javascript:;" class="Archiving_btn-link-blue">展开</a>
+        </div>
+    </div>
+
+    <div class="Popular_articles Personal_classification">
+        <header class="Popular_articles Personal_classification_header">
+            <h3>热门文章</h3>
+        </header>
+        <div class="Popular_articles_content">
+            <ul>
+                <%for(var i=5;i>=0;i--){%>
+                <li>
+                    <a href="">{{publish[i].publishIntro}}</a>
+                    <p> 阅读数
+                        <span>11</span>
+                    </p>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="icon icon-red"></div>
+    <div class="icon icon-orange"></div>
+    <div class="icon icon-yellow"></div>
+    <div class="icon icon-green"></div>
+    <div class="icon icon-blue"></div>
+    <div class="icon icon-indigo"></div>
+    <div class="icon icon-violet"></div><br/>
+
+    <div class="icon icon-cyan"></div>
+    <div class="icon icon-magenta"></div>
+    <div class="icon icon-lime"></div>
+    <div class="icon icon-olive"></div>
+    <div class="icon icon-maroon"></div>
+    <div class="icon icon-purple"></div><br/>
+
+    <div class="icon icon-white"></div>
+    <div class="icon icon-gray10"></div>
+    <div class="icon icon-gray20"></div>
+    <div class="icon icon-gray30"></div>
+    <div class="icon icon-gray40"></div>
+    <div class="icon icon-gray50"></div>
+    <div class="icon icon-gray60"></div>
+    <div class="icon icon-gray70"></div>
+    <div class="icon icon-gray80"></div>
+    <div class="icon icon-gray90"></div>
+    <div class="icon icon-black"></div><br/>
+
+    <div class="icon icon-gradient"></div>
+    <div class="icon icon-kitten"></div>
+    <div class="icon icon-animation"></div>
+</div>
+</div>
+
+<div class="newpart_btn_box">
+    <a class="newpart_btn type1" href="javascript:;" style="color:#000">浏览他的主页</a>
+</div>

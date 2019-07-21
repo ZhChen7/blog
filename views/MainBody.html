@@ -81,10 +81,15 @@
     audioPlay();
 
 </script>
-<script src="/js/load.js"></script>
+<!--<script src="/js/load.js"></script>-->
 <script src="/js/fenye.js"></script>
 <script type="text/javascript" src="/lib/prism/prism.js"></script>
 <script src="/js/awesome-toc.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded',function () {
+        $(".load").fadeOut(800);
+    })
+</script>
 <script type="text/javascript">
     $.awesome_toc({
         autoDetectHeadings: true,

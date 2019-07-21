@@ -9,5 +9,9 @@
     {{include './parties/Recommend/index_list.html'}}
 {{/block}}
 {{block 'script'}}
-<script src="/js/load.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded',function () {
+        $(".load").fadeOut(800);
+    })
+</script>
 {{/block}}

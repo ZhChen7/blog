@@ -108,7 +108,7 @@ let sideBar_Position=function () {
                    return next(err)
                }
                if (publish.wholepublishIdentifying == "代码") {
-                   fs.readFile(__dirname + '/public/doc/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                   fs.readFile(__dirname + src + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
                        if (err) {
                            console.log(err);
                        } else {
@@ -133,7 +133,7 @@ let sideBar_Position=function () {
                    });
                }
                if (publish.wholepublishIdentifying == "心得体会") {
-                   fs.readFile(__dirname + '/public/feelings/' + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
+                   fs.readFile(__dirname + src + publish.publishMainBodyUrl + '.md', 'utf-8', function (err, data) {
                        if (err) {
                            console.log(err);
                        } else {

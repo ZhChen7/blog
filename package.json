@@ -4,7 +4,8 @@
   "description": "主要针对 移动端 开发",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,16 @@
     "moment": "^2.24.0",
     "mongoose": "^5.4.19",
     "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   }
 }
