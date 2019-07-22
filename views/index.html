@@ -1,47 +1,17 @@
 {{extend'./layouts/layout.html'}}{{block'title'}}Change World{{/block}}
 
 {{block'style'}}
+<link rel="stylesheet" href="/css/preloader/load.css">
 <link rel="stylesheet" href="/css/newpart/newpart.css">
 {{/block}}
 
 {{block'newpart'}}
+{{include './parties/load/indexLoad.html'}}
 {{include'./parties/NewIndexPart/newpartone.html'}}
+{{include'./parties/NewIndexPart/threeOtherofintro.html'}}
 {{/block}}
+
 {{block'body'}}
-<!--<div class="load">-->
-    <!--<div class="cssload-wrap">-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-        <!--<div class="cssload-circle"></div>-->
-    <!--</div>-->
-<!--</div>-->
 <div class="main_Navigation">
     <div class="main_Navigation_nav">
         <div class="Recommend">
@@ -55,11 +25,15 @@
 
 {{/block}}{{block'script'}}
 <script src="/js/sideBar.js"></script>
-<script>document.onreadystatechange = function () {
+<script>
+    document.onreadystatechange = function () {
     if (document.readyState == "complete") {
         $(".load").fadeOut(500)
+        $("#newpartbiggestbox").show()
     }
-}</script>
+}
+
+</script>
 <script type="text/javascript">$(document).ready(function () {
     (function ($) {
         'use strict';

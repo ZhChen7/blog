@@ -1,0 +1,96 @@
+body{
+  background: #000;
+  @include other($ot-of:hidden);
+  perspective: 2000px
+}
+
+.container{
+  @include bm(100%, 100%, $bm-dp:$dp-b, $bm-ps:$ps-rl);
+  perspective: 100%;
+  transform-style: preserve-3d;
+  animation: rotation 30s linear infinite
+}
+
+@keyframes rotation{
+  0%{
+    @include other(
+            $ot-tsf:rotateX(360deg) rotateY(-360deg) rotate(0deg)
+    )
+  }
+  100%{
+    @include other(
+            $ot-tsf:rotateX(-360deg) rotateY(360deg) rotate(360deg)
+    )
+  }
+}
+
+.item{
+  @include bm(100px, 100px, $bm-dp:$dp-b, $bm-ps:$ps-ab);
+  transform-style: preserve-3d
+}
+
+@for $i from 1 through 200{
+  .item:nth-child(#{$i}){
+    @include bm(
+            $bm-tp:random(550) + px,
+            $bm-lf:random(1250) + px
+    );
+    animation: scaling_#{$i} .2s ease (0 + .2s * ($i - 1)) both;
+    .side{
+      background: hsl($i * 15, 100%, 50%)
+    }
+  }
+  @keyframes scaling_#{$i}{
+    0%{
+      @include other(
+              $ot-tsf:scale(0, 0) translate3d(0, 0, 0)
+      )
+    }
+    100%{
+      @include other(
+              $ot-tsf:
+                      scale(random(400) / 200, random(400) / 200)
+                      translate3d(0, 0, random(50) * -20 + px)
+      )
+    }
+  }
+}
+
+.side{
+  @include sticky-banner(blk, tp);
+  @include bm($bm-hg:100%, $bm-ps:$ps-ab)
+}
+
+@for $i from 1 through 4{
+  .side:nth-child(#{$i}){
+    @include other(
+            $ot-tsf:
+                    rotateY(0deg + 90 * ($i - 1))
+                    translate3d(0, 0, 50px)
+    );
+    &:before{
+      background: linear-gradient(
+                      0deg, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0) 100%
+      );
+      @include bm(100%, 100%, $bm-tp:0, $bm-lf:0);
+      @include pseudo
+    }
+  }
+}
+
+.side:nth-child(5){
+  @include other(
+          $ot-tsf:rotateX(90deg) translate3d(0, 0, 50px)
+  )
+}
+
+.side:nth-child(6){
+  @include other(
+          $ot-tsf:rotateX(270deg) translate3d(0, 0, 50px)
+  );
+  &:before{
+    background: rgba(0, 0, 0, .75);
+    @include bm(100%, 100%, $bm-tp:0, $bm-lf:0);
+    @include pseudo
+  }
+}

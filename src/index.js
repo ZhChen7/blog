@@ -6,12 +6,12 @@
 import './js/clicklove.js'
 import './js/main_Navigation.js'
 import './js/banner.js'
-import './js/sideBar.js'
+// import './js/sideBar.js'
 import './lib/scrollReveal.js'
 import './js/newpartBtn.js'
+// import './sass/newpartbg.scss'
 
 // 使用 import 语法，导入 CSS样式表
-import './css/preloader/load.css'
 import './css/IndexCanvas/IndexCanvas.css'
 // 注意： webpack 处理第三方文件类型的过程：
 // 1. 发现这个 要处理的文件不是JS文件，然后就去 配置文件中，查找有没有对应的第三方 loader 规则

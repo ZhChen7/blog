@@ -1,0 +1,62 @@
+<div id="ThreeOtherpartboxs">
+    <div class="ThreeOtherpartbox">
+        <div class="Personal_classification Personal_classification_three">
+            <header class=" Personal_classification_header">
+                <h3>个人分类</h3>
+            </header>
+            <div class="Personal_classification_content PersonalSort1">
+                <ul>
+                    {{each publish[publish.length-2]}}
+                    <li>
+                        <a href="/sort/{{$index}}">{{$index}}
+                            <span>{{$value}}篇</span>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="text-center PersonalSortTextCenter1">
+                <a href="javascript:;" class="btn-link-blue PersonalSortbtn1">展开</a>
+            </div>
+        </div>
+
+        <div class="Archiving Personal_classification">
+            <header class="Archiving_header Personal_classification_header">
+                <h3>归档</h3>
+            </header>
+            <div class="Archiving_content1 Personal_classification_content">
+                <ul>
+                    {{each publish[publish.length-1]}}
+                    <li>
+                        <a href="/sort/{{$index}}">{{$index}}
+                            <span>{{$value}}篇</span>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="Archiving_text-center1 text-center">
+                <a href="javascript:;" class="Archiving_btn-link-blue1">展开</a>
+            </div>
+        </div>
+
+        <div class="Personal_classification Popular_articles_three">
+            <header class="Personal_classification_header">
+                <h3>热门文章</h3>
+            </header>
+            <div class="Popular_articles_content">
+                <ul>
+                    <%for(var i=5;i>=0;i--){%>
+                    <li>
+                        <a href="">{{publish[i].publishIntro}}</a>
+                        <p> 阅读数
+                            <span>11</span>
+                        </p>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

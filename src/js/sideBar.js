@@ -195,6 +195,14 @@ let newpart=function () {
         $('.PersonalSortTextCenter').hide(800)
     })
 
+    //three分类
+    $('.PersonalSortbtn1').click(function () {
+        $('.PersonalSort1').css({
+            'max-height':'none'
+        })
+        $('.PersonalSortTextCenter1').hide(800)
+    })
+
     //归档
     $('.Archiving_btn-link-blue').click(function () {
         $('.Archiving_content').css({
@@ -203,13 +211,25 @@ let newpart=function () {
         $('.Archiving_text-center').hide(800)
     })
 
+    //three归档
+    $('.Archiving_btn-link-blue1').click(function () {
+        $('.Archiving_content1').css({
+            'max-height':'none'
+        })
+        $('.Archiving_text-center1').hide(800)
+    })
+
     $('.newpart_btn_box').click(function () {
           $(this).hide(500)
           $('.newpartbox').hide(1000)
           setTimeout(function () {
               $('.wrap').fadeOut(1000)
           },800)
-        $('bg-container').show(500)
+
+        setTimeout(function () {
+            $('#newpartbiggestbox').fadeOut(800)
+
+        },2000)
     })
 
 

@@ -2,189 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dbcfc3d-4204-41af-814d-6464a10cc2d1" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/js/load.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/less/blog.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/less/index.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/less/timeline.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/README-zh.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/dist/canvas-nest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/dist/canvas-nest.umd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/lib/CanvasNest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/lib/iife.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/rollup.config.iife.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/rollup.config.umd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/src/CanvasNest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/src/iife.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/canvas-nest.js/src/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/dist/size-sensor.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/lib/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/lib/debounce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/lib/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/lib/sensorPool.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/lib/sensors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/lib/sensors/object.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/lib/sensors/resizeObserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/lib/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/size-sensor/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/IndexCanvas/IndexCanvas.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/IndexCanvas/IndexCanvas.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/fenye/fenye.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/fenye/fenye.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/iconfont/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/iconfont/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/iconfont/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/iconfont/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/iconfont/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/iconfont/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/iconfont/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/iconfont/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/iconfont/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/iconfont/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/iconfont/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/iconfont/iconfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/markcss/markfs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/markcss/markfs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/preloader/load.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/preloader/load.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/preloader/mainload.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/preloader/mainload.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/AboutMyBlog.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/AboutMyBlog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/AdaptiveSkill.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/AdaptiveSkill.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/DataStructure.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/DataStructure.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/Database.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/Database.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/MarkdownToHTML.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/MarkdownToHTML.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/OperatingSystemCourseDesign.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/OperatingSystemCourseDesign.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/ProcessScheduling.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/ProcessScheduling.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/Promise.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/Promise.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/ReactLearn01.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/ReactLearn01.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/ReactLearn02.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/ReactLearn02.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/ReactLearn03.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/ReactLearn03.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/VueLearn01.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/VueLearn01.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/VueLearn02.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/VueLearn02.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/VueLearn03.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/VueLearn03.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/VueLearn04.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/VueLearn04.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/VueLearn05.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/VueLearn05.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/VueLearn06.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/VueLearn06.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/VueLearn07.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/VueLearn07.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/WeChatUp.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/WeChatUp.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/WeChatUp02.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/WeChatUp02.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/gitLearning.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/gitLearning.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/doc/resolveUTCtime.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/doc/resolveUTCtime.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/feelings/April_plan.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/feelings/April_plan.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/feelings/March_plan.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/feelings/March_plan.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/feelings/SelectFront-endEngineer.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/feelings/SelectFront-endEngineer.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/feelings/SophomoreNormalLife.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/feelings/SophomoreNormalLife.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/feelings/confused.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/feelings/confused.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/feelings/loneliness.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/feelings/loneliness.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/Alipay.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Alipay.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/School_img.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/School_img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/School_logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/School_logo1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/author.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/author.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/banner.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/banner1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/banner2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/banner3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/banner4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/banner5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/banner6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/banner7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banner8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/banner8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/bannera.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bannera.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog_banner1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/blog_banner1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog_banner2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/blog_banner2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog_banner3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/blog_banner3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog_banner4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/blog_banner4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog_banner5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/blog_banner5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blog_banner6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/blog_banner6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/blogbanner2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/blogbanner2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/douyin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/douyin.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/dt.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/dt.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/icon-police.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/icon-police.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/iconblog.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/iconblog.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/login_allbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/login_allbg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/login_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/login_bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/public_footer.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/public_footer.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/sideBar_footer.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/sideBar_footer.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/sideBar_header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/sideBar_header.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/weixin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/weixin.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/awesome-toc.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/awesome-toc.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/banner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/blog_banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/blog_banner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/clicklove.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/clicklove.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/fenye.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/fenye.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/load.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main_Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main_Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/sideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/sideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/timeline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/Message.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/Message.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/Message.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/Message.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/Message.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/Message.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/Rotation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/Rotation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/Rotation.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/Rotation.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/Rotation.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/Rotation.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/The_sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/The_sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/The_sidebar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/The_sidebar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/The_sidebar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/The_sidebar.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/adapter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/adapter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/adapter.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/adapter.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/adapter.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/adapter.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/backTop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/backTop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/backTop.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/backTop.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/backTop.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/backTop.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/banner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/banner.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/banner.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/banner.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/banner.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/blog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/blog.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/blog.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/blog.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/blog_header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/blog_header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/blog_header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/blog_header.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/blog_header.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/blog_header.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/category.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/category.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/category.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/category.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/category.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/category.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/dynamic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/dynamic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/dynamic.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/dynamic.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/dynamic.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/dynamic.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/his.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/his.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/his.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/his.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/his.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/his.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/icon.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/icon.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/icon.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/icon.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/index.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/index_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/index_list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/index_list.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/index_list.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/index_list.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/index_list.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/login.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/login.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/main_Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/main_Navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/main_Navigation.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/main_Navigation.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/main_Navigation.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/main_Navigation.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/mixins.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/mixins.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/mixins.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/mixins.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/mixins.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/nav.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/nav.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/nav.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/nav.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/public_footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/public_footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/public_footer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/public_footer.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/public_footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/public_footer.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/publish.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/publish.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/publish.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/publish.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/publish.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/publish.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/register.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/register.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/register.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/register.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/reset.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/reset.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/search.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/search.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/search.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/search.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/timeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/timeline.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/timeline.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/timeline.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/timeline.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/topBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/topBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/topBar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/topBar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/topBar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/topBar.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/variable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/variable.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/variable.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/variable.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/less/variable.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/variable.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/jqPaginator.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/jqPaginator.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/less/less.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/less/less.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/preloader/jquery.preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/preloader/jquery.preloader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/prism/prism.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/prism/prism.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/prism/prism.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/prism/prism.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/scrollReveal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/scrollReveal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/zepto/zepto.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/zepto/zepto.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/MainBody.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/MainBody.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/newpart/newpart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/newpart/newpart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/sideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/sideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/blog.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/blog.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/reset.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/reset.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/timeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/timeline.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/timeline.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/timeline.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/less/topBar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/less/topBar.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/btn.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/newpartbg.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/layout-blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/layout-blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/parties/The_sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/parties/The_sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/timeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/timeline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parties/NewIndexPart/newpartBtn.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parties/NewIndexPart/newpartone.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/parties/NewIndexPart/newpartone.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -196,32 +64,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5170118">
+    <splitter split-orientation="horizontal" split-proportion="0.539343">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.8077475">
+        <splitter split-orientation="horizontal" split-proportion="0.81960225">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/views/MainBody.html">
+                <entry file="file://$PROJECT_DIR$/views/parties/NewIndexPart/newpartone.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="557">
-                      <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+                    <state>
+                      <caret column="26" selection-start-column="9" selection-end-column="26" />
                       <folding>
-                        <element signature="n#div#1;n#!!top" />
-                        <element signature="n#style#0;n#header#0;n#div#1;n#!!top" expanded="true" />
+                        <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#!!top" expanded="true" />
                       </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/views/parties/NewIndexPart/newpartone.html">
+                <entry file="file://$PROJECT_DIR$/src/css/newpart/newpartbg.html">
+                  <provider selected="true" editor-type-id="text-editor" />
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/sass/newpartbg.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-383">
-                      <caret line="60" column="16" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="16" />
-                      <folding>
-                        <element signature="n#style#0;n#a#0;n#div#2;n#!!top" expanded="true" />
-                      </folding>
+                    <state relative-caret-position="44">
+                      <caret line="2" column="16" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="16" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/views/parties/NewIndexPart/threeOtherofintro.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="395">
+                      <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
                     </state>
                   </provider>
                 </entry>
@@ -229,17 +107,17 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/views/index.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="84">
-                      <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+                    <state relative-caret-position="132">
+                      <caret line="27" selection-start-line="27" selection-end-line="27" />
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/views/layouts/layout-blog.html">
+                <entry file="file://$PROJECT_DIR$/views/layouts/layout.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="168">
-                      <caret line="8" column="65" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="65" />
+                    <state relative-caret-position="198">
+                      <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="30" />
                     </state>
                   </provider>
                 </entry>
@@ -248,43 +126,25 @@
           </split-first>
           <split-second>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/less/Message.less">
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/css/newpart/newpart.css">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1155">
-                      <caret line="55" selection-start-line="54" selection-end-line="55" />
+                    <state relative-caret-position="147">
+                      <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/css/newpart/newpart.css">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="6216">
-                      <caret line="296" lean-forward="true" selection-start-line="296" selection-end-line="296" />
-                    </state>
-                  </provider>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/css/preloader/mainload.css">
+                  <provider selected="true" editor-type-id="text-editor" />
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/less/topBar.less">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="126">
-                      <caret line="6" column="14" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="14" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/js/newpartBtn.js">
-                  <provider selected="true" editor-type-id="text-editor" />
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/sass/btn.scss">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="420">
-                      <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+                    <state relative-caret-position="91">
+                      <caret line="7" selection-start-line="7" selection-end-line="7" />
                     </state>
                   </provider>
                 </entry>
@@ -292,8 +152,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/less/reset.less">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="438">
-                      <caret line="53" selection-start-line="53" selection-end-line="53" />
+                    <state relative-caret-position="374">
+                      <caret line="57" selection-start-line="57" selection-end-line="57" />
                     </state>
                   </provider>
                 </entry>
@@ -307,8 +167,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="506">
-                  <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+                <state relative-caret-position="814">
+                  <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -316,28 +176,29 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/webpack.config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/js/sideBar.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+                <state relative-caret-position="308">
+                  <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/js/sideBar.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="684">
+                  <caret line="220" selection-start-line="220" selection-end-line="220" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                <state relative-caret-position="210">
+                  <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
                   <folding>
                     <element signature="e#111#137#0" expanded="true" />
+                    <element signature="e#223#253#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -351,17 +212,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>INDEX</find>
-      <find>scroll</find>
-      <find>none</find>
-      <find>href</find>
       <find>sidebar-toc-Ik4D</find>
       <find>sideBarId</find>
       <find>width</find>
@@ -388,6 +245,10 @@
       <find>body</find>
       <find>margin</find>
       <find>padding</find>
+      <find>Popular_articles</find>
+      <find>PersonalSort</find>
+      <find>Pers</find>
+      <find>Archiving_content</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -396,12 +257,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/doc/Database.md" />
-        <option value="$PROJECT_DIR$/public/doc/OperatingSystemCourseDesign.md" />
-        <option value="$PROJECT_DIR$/public/js/awesome-toc.min.js" />
-        <option value="$PROJECT_DIR$/views/parties/blog_header.html" />
-        <option value="$PROJECT_DIR$/views/parties/index_header.html" />
-        <option value="$PROJECT_DIR$/public/js/banner.js" />
         <option value="$PROJECT_DIR$/views/parties/Dynamic/dynamic.html" />
         <option value="$PROJECT_DIR$/views/parties/timeline/timelinepart.html" />
         <option value="$PROJECT_DIR$/public/less/category.less" />
@@ -439,13 +294,19 @@
         <option value="$PROJECT_DIR$/src/css/sass/btn.sass" />
         <option value="$PROJECT_DIR$/src/sass/btn.sass" />
         <option value="$PROJECT_DIR$/src/js/newpartBtn.js" />
-        <option value="$PROJECT_DIR$/src/sass/btn.scss" />
         <option value="$PROJECT_DIR$/views/parties/NewIndexPart/newpartBtn.html" />
-        <option value="$PROJECT_DIR$/src/css/newpart/newpart.css" />
+        <option value="$PROJECT_DIR$/views/parties/NewIndexPart/threeboxofintro.html" />
         <option value="$PROJECT_DIR$/views/parties/NewIndexPart/newpartone.html" />
+        <option value="$PROJECT_DIR$/views/parties/load/indexLoad.html" />
+        <option value="$PROJECT_DIR$/src/less/topBar.less" />
         <option value="$PROJECT_DIR$/src/less/reset.less" />
-        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/views/parties/NewIndexPart/threeOtherofintro.html" />
         <option value="$PROJECT_DIR$/src/js/sideBar.js" />
+        <option value="$PROJECT_DIR$/src/sass/btn.scss" />
+        <option value="$PROJECT_DIR$/src/sass/newpartbg.scss" />
+        <option value="$PROJECT_DIR$/src/css/newpart/newpartbg.html" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/css/newpart/newpart.css" />
         <option value="$PROJECT_DIR$/views/index.html" />
       </list>
     </option>
@@ -464,6 +325,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -491,12 +353,6 @@
               <item name="blogM" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogM" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="less" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogM" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -515,13 +371,19 @@
               <item name="blogM" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="parties" type="462c0819:PsiDirectoryNode" />
+              <item name="load" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogM" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="parties" type="462c0819:PsiDirectoryNode" />
               <item name="NewIndexPart" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -830,29 +692,32 @@
       <workItem from="1563693513591" duration="64000" />
       <workItem from="1563693697706" duration="1395000" />
       <workItem from="1563695334314" duration="8926000" />
+      <workItem from="1563758440938" duration="2030000" />
+      <workItem from="1563760793019" duration="444000" />
+      <workItem from="1563761853686" duration="19607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="738242000" />
+    <option name="totallyTimeSpent" value="760323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="61" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06111111" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09097222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32523617" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49427083" weight="0.11066127" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49427083" weight="0.10661268" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.19838056" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.21187584" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50572914" side_tool="true" weight="0.33659065" />
       <window_info anchor="bottom" id="调试" order="11" weight="0.3280899" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -883,65 +748,15 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.html" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/doc/DataStructure.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" selection-start-line="14" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/doc/Database.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="242">
-            <caret line="11" selection-start-line="11" selection-end-line="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/doc/JsBasicKnowledge01.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/doc/OperatingSystemCourseDesign.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="6446">
-            <caret line="293" column="7" selection-start-line="293" selection-start-column="7" selection-end-line="293" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/doc/JsBasicKnowledge02.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="548">
-            <caret line="317" lean-forward="true" selection-start-line="317" selection-end-line="317" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/doc/gitLearning.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/doc/WeChatUp02.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1021,13 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="71" selection-start-line="1" selection-start-column="71" selection-end-line="1" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/load.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -1127,24 +935,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/parties/NewIndexPart/newpartBtn.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/newpartBtn.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/less/Message.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
+        <state relative-caret-position="355">
           <caret line="55" selection-start-line="54" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/MainBody.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1113">
+          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#1;n#!!top" />
+            <element signature="n#style#0;n#header#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        <state relative-caret-position="814">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layouts/layout.html">
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="308">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1155,89 +980,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/btn.scss">
+    <entry file="file://$PROJECT_DIR$/views/layouts/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="198">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/MainBody.html">
+    <entry file="file://$PROJECT_DIR$/src/css/preloader/load.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#1;n#!!top" />
-            <element signature="n#style#0;n#header#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="6" column="18" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/load.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" selection-start-line="6" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/parties/load/indexLoad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/reset.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/newpartBtn.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="374">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/topBar.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="14" />
+        <state relative-caret-position="91">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/parties/NewIndexPart/newpartBtn.html">
+    <entry file="file://$PROJECT_DIR$/src/css/preloader/mainload.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/newpart/newpart.css">
+    <entry file="file://$PROJECT_DIR$/views/parties/NewIndexPart/threeboxofintro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6216">
-          <caret line="296" lean-forward="true" selection-start-line="296" selection-end-line="296" />
+        <state relative-caret-position="231">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/parties/NewIndexPart/newpartone.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="60" column="16" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="16" />
+        <state>
+          <caret column="26" selection-start-column="9" selection-end-column="26" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/views/parties/NewIndexPart/threeOtherofintro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#111#137#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="395">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/sideBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
+        <state relative-caret-position="684">
+          <caret line="220" selection-start-line="220" selection-end-line="220" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/newpartbg.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/newpart/newpartbg.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/newpart/newpart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="e#111#137#0" expanded="true" />
+            <element signature="e#223#253#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        <state relative-caret-position="132">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
