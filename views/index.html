@@ -1,30 +1,28 @@
 {{extend'./layouts/layout.html'}}{{block'title'}}Change World{{/block}}
 
 {{block'style'}}
-<link rel="stylesheet" href="/css/preloader/load.css">
-<link rel="stylesheet" href="/css/newpart/newpart.css">
-{{/block}}
+<link href="/css/preloader/load.css" rel="stylesheet">{{/block}}
 
 {{block'newpart'}}
-{{include './parties/load/indexLoad.html'}}
-{{include'./parties/NewIndexPart/newpartone.html'}}
-{{include'./parties/NewIndexPart/threeOtherofintro.html'}}
+<!--{{include './parties/load/indexLoad.html'}}-->
+<!--{{include './parties/NewIndexPart/newpartone.html'}}-->
+{{include './parties/NewIndexPart/threeOtherofintro.html'}}
 {{/block}}
 
 {{block'body'}}
 <div class="main_Navigation">
     <div class="main_Navigation_nav">
         <div class="Recommend">
-            {{include'./parties/Recommend/banner.html'}}{{include'./parties/Recommend/nav.html'}}{{include'./parties/Recommend/index_list.html'}}
+            {{include
+            './parties/Recommend/banner.html'}}{{include'./parties/Recommend/nav.html'}}{{include'./parties/Recommend/index_list.html'}}
         </div>
-        <div class="Dynamic">{{include'./parties/Dynamic/dynamic.html'}}</div>
-        <div class="School">{{include'./parties/School/Rotation.html'}}</div>
+        <div class="Dynamic">{{include './parties/Dynamic/dynamic.html'}}</div>
+        <div class="School">{{include './parties/School/Rotation.html'}}</div>
     </div>
 </div>
-{{include'./parties/backTop/backTop.html'}}
+{{include './parties/backTop/backTop.html'}}
 
 {{/block}}{{block'script'}}
-<script src="/js/sideBar.js"></script>
 <script>
     document.onreadystatechange = function () {
     if (document.readyState == "complete") {

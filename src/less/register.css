@@ -1,6 +1,7 @@
 @charset "utf-8";
 .register {
-  margin-top: 1.33rem;
+    max-width: 750px;
+    margin: 1.33rem auto 0;
   width: 100%;
   height: 4.7rem;
   background: linear-gradient(45deg, pink 10%, #fe648f 20%, seashell);
@@ -85,5 +86,16 @@
 }
 body {
   background: linear-gradient(-63deg, pink 7%, #fe648f 60%, seashell);
+}
+
+@media screen and (min-width: 750px) {
+    .register {
+        margin-top: 0;
+    }
+
+    .public_footer {
+        margin: 0 auto;
+        max-width: 750px;
+    }
 }
 /*# sourceMappingURL=register.css.map */

@@ -1,6 +1,7 @@
 @import "variable";
 .register{
-  margin-top: @topBar-height;
+  max-width: 750px;
+  margin: @topBar-height auto 0;
   width: 100%;
   height: 470rem/@baseFontSize;
   background: linear-gradient(45deg,pink 10%,#fe648f 20%,seashell);
@@ -89,4 +90,15 @@
 body{
   background: linear-gradient(-63deg,pink 7%,#fe648f 60%,seashell);
 
+}
+
+@media screen and (min-width: 750px) {
+  .register {
+    margin-top: 0;
+  }
+
+  .public_footer {
+    margin: 0 auto;
+    max-width: 750px;
+  }
 }

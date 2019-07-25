@@ -13,13 +13,12 @@
     <script src="/lib/less/less.min.js"></script>
     <title>{{block'title'}}{{/block}}</title></head>
 <body>
+{{block'newpart'}}{{/block}}
 <div class="bg-container">
     {{include'../parties/blog_header.html'}}{{include'../parties/The_sidebar.html'}}{{block'body'}}{{/block}}{{include'../parties/public_footer.html'}}
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="/js/blog_banner.js"></script>
-<script src="/js/sideBar.js"></script>
-<script src="/lib/scrollReveal.js"></script>
+<script src="/main.js"></script>
 <script type="text/javascript">$(document).ready(function () {
     (function ($) {
         'use strict';

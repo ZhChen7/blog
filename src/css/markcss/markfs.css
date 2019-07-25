@@ -3,6 +3,8 @@
     line-height: 1.8em;
     letter-spacing: 0.1em;
     position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 img {

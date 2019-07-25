@@ -49,7 +49,7 @@ router.get('/', function (req, res) {
 
         publish.push(getWordCnt(arr))
         publish.push(getWordCnt(Archivingarr))
-        // console.log(getWordCnt(Archivingarr))
+        console.log(getWordCnt(Archivingarr))
         console.log(publish)
         res.render('index.html', {
             publish: publish,

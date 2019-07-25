@@ -1,7 +1,8 @@
 @charset "utf-8";
 .login-form {
+    max-width: 750px;
   width: 100%;
-  margin-top: 1.33rem;
+    margin: 1.33rem auto 0;
   height: 4.1rem;
   padding-top: 0.35rem;
   background: linear-gradient(153deg, #798D84 -5%, pink, #edeeef 59%);
@@ -57,9 +58,9 @@
   display: inline-block;
   width: 0.8rem;
   height: 0.3rem;
+    color: #fff;
   text-align: center;
   line-height: 0.3rem;
-  color: #fff;
   font-weight: bold;
 }
 .login-form form fieldset .landing {
@@ -93,5 +94,16 @@
 }
 body {
   background: linear-gradient(153deg, #fff -7%, pink, #edeeef 50%);
+}
+
+@media screen and (min-width: 750px) {
+    .login-form {
+        margin-top: 0;
+    }
+
+    .public_footer {
+        margin: 0 auto;
+        max-width: 750px;
+    }
 }
 /*# sourceMappingURL=login.css.map */

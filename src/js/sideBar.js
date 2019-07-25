@@ -219,7 +219,7 @@ let newpart=function () {
         $('.Archiving_text-center1').hide(800)
     })
 
-    $('.newpart_btn_box').click(function () {
+    $('.newpart_btn.type1 ').click(function () {
           $(this).hide(500)
           $('.newpartbox').hide(1000)
           setTimeout(function () {
@@ -232,5 +232,18 @@ let newpart=function () {
         },2000)
     })
 
+    $('.newpart_btn.type1 ').mouseenter(function () {
+        $('.wrap').fadeOut(1000)
+        $('.newpart_btn.type1 ').mouseleave(function () {
+            $('.wrap').fadeIn(300)
+        })
+    })
+
+    $('#newpartbiggestbox').css({
+        'background-size': 'none'
+    })
+
+    let newpartWidth = window.innerWidth
+    console.log(newpartWidth)
 
 }
