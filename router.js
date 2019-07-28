@@ -20,24 +20,31 @@ router.get('/', function (req, res) {
         publish.forEach(function (e) {
             e.UTCtodata = new Date(e.publishDate).toLocaleString()
         })
+
+
         var arr = []
-        var Archivingarr = []
+
+        var GETtimearr = []
+
         publish.forEach(function (e) {
             if (e.publishIdentifying != '') {
                 arr.push(e.publishIdentifying)
-                Archivingarr.push(Geteverydata(e.UTCtodata))
+                GETtimearr.push(e.UTCtodata)
             }
         })
 
-        function Geteverydata(data) {
-            data = data.split(' ')
-            data.pop()
-            data = data.toString()
-            data = data.split('-')
-            data.pop()
-            data[0] = data[0] + '年'
-            data[1] = data[1] + '月'
-            return data[0] + data[1]
+
+
+        function GetData(data) {
+            var Timeobj={}
+            var dataArr=[]
+            dataArr=data.split(' ')
+            dataArr.pop()
+            dataArr=dataArr[0].split('-')
+            Timeobj.year=parseInt(dataArr[0])
+            Timeobj.month=parseInt(dataArr[1])
+            Timeobj.day=parseInt(dataArr[2])
+            return Timeobj
         }
 
         function getWordCnt(arr) {
@@ -47,13 +54,29 @@ router.get('/', function (req, res) {
             }, {});
         }
 
+        let MonthArr=[]
+        // console.log(GETtimearr)
+        GETtimearr.forEach(function (value, index, array) {
+            var variableobj=GetData(value)
+            var year=variableobj.year
+            var month=variableobj.month
+            var str=  '2019年'+year.toString()+'月'
+            MonthArr.push(str)
+        })
+
+        // console.log(MonthArr)
+        var othernewObj=getWordCnt(MonthArr)
+        console.log(othernewObj)
+
+
         publish.push(getWordCnt(arr))
-        publish.push(getWordCnt(Archivingarr))
-        console.log(getWordCnt(Archivingarr))
-        console.log(publish)
+        // console.log(publish)
+
         res.render('index.html', {
+            othernewObj:othernewObj,
             publish: publish,
             user: req.session.user
+
         })
     })
 })

@@ -5,7 +5,7 @@
     top:0;
     left: 0;
     z-index: 9999;
-    background: linear-gradient(44deg, #b0272a, #ebeaee,fuchsia);
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 .cssload-wrap {
     position: absolute;

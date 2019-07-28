@@ -109,7 +109,6 @@ let SideBar_Show = function () {
     $('.Sidebar_Show_img').click(function (e) {
         e.stopPropagation()
         let index = $(this).index()
-        console.log(index)
         if (index === 6) {
             index = 5
         }
@@ -119,7 +118,6 @@ let SideBar_Show = function () {
         if(index == 9){
              index =7
         }
-        console.log($('.Sidebar_Show_imgLogo'))
         $('.Sidebar_Show_imgLogo').eq(index - 3).show(1000).siblings().hide(0)
 
         $('.Show-img').click(function (e) {
@@ -244,6 +242,4 @@ let newpart=function () {
     })
 
     let newpartWidth = window.innerWidth
-    console.log(newpartWidth)
-
 }
