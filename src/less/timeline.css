@@ -50,8 +50,8 @@ textarea {
   background: #fff;
 }
 .wrapper {
-    max-width: 750px;
-    margin: 0 auto;
+  max-width: 750px;
+  margin: 0 auto;
   padding: 1rem 0.1rem 2rem;
   margin-top: -15px;
   background: linear-gradient(to bottom, #a5d1ff, #6041f4, #ff84e6, #2e6b80, yellow, green);

@@ -23,7 +23,7 @@ $(function () {
         /*每页显示数*/
         var len = Math.ceil(pageMain.find("li").length / curNum);
         /*计算总页数*/
-        console.log(len);
+        // console.log(len);
         var pageList = '';
         /*生成页码*/
         var iNum = 0;

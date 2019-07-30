@@ -34,16 +34,15 @@ router.get('/', function (req, res) {
         })
 
 
-
         function GetData(data) {
-            var Timeobj={}
-            var dataArr=[]
-            dataArr=data.split(' ')
+            var Timeobj = {}
+            var dataArr = []
+            dataArr = data.split(' ')
             dataArr.pop()
-            dataArr=dataArr[0].split('-')
-            Timeobj.year=parseInt(dataArr[0])
-            Timeobj.month=parseInt(dataArr[1])
-            Timeobj.day=parseInt(dataArr[2])
+            dataArr = dataArr[0].split('-')
+            Timeobj.year = parseInt(dataArr[0])
+            Timeobj.month = parseInt(dataArr[1])
+            Timeobj.day = parseInt(dataArr[2])
             return Timeobj
         }
 
@@ -54,26 +53,24 @@ router.get('/', function (req, res) {
             }, {});
         }
 
-        let MonthArr=[]
+        let MonthArr = []
         // console.log(GETtimearr)
         GETtimearr.forEach(function (value, index, array) {
-            var variableobj=GetData(value)
-            var year=variableobj.year
-            var month=variableobj.month
-            var str=  '2019年'+year.toString()+'月'
+            var variableobj = GetData(value)
+            var year = variableobj.year
+            var month = variableobj.month
+            var str = '2019年' + year.toString() + '月'
             MonthArr.push(str)
         })
 
         // console.log(MonthArr)
-        var othernewObj=getWordCnt(MonthArr)
-        console.log(othernewObj)
-
-
+        var othernewObj = getWordCnt(MonthArr)
+        // console.log(othernewObj)
         publish.push(getWordCnt(arr))
         // console.log(publish)
 
         res.render('index.html', {
-            othernewObj:othernewObj,
+            othernewObj: othernewObj,
             publish: publish,
             user: req.session.user
 
@@ -347,6 +344,14 @@ router.post('/message', function (req, res, next) {
             })
         })
     }
+})
+
+router.get('/love',function (req, res, next) {
+    res.render('love.html')
+})
+
+router.get('/zclovelcj',function (req, res, next) {
+    res.render('lovelcj.html')
 })
 
 

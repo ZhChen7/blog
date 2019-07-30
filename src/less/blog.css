@@ -120,8 +120,8 @@ textarea {
 }
 .blog-header {
   width: 100%;
-    max-width: 750px;
-    margin: 0 auto;
+  max-width: 750px;
+  margin: 0 auto;
 }
 .blog-header .blog-header-main {
   width: 100%;
@@ -499,7 +499,7 @@ textarea {
   padding: 0 0.15rem;
 }
 .index_list ul li {
-    max-width: 750px;
+  max-width: 750px;
   width: 100%;
   height: 2rem;
   position: relative;

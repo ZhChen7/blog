@@ -14,6 +14,10 @@
         <span class="iconfont">&#xe9b6;</span>
     </a>
 {{@ doc }}
+    <div id="image-cover-modal" class="image-cover-modal">
+        <img id="image-cover-image" class="image-cover-modal-content">
+    </div>
+
 </div>
 <div class="message" id="containet">
     <header class="message-header" style="color: #d25353">精彩评论:</header>
@@ -121,5 +125,32 @@
             }
         })
     })
+</script>
+<script>
+    // Get the DOM
+    var modal = document.getElementById('image-cover-modal');
+    var modalImg = document.getElementById("image-cover-image");
+    var captionText = document.getElementById("image-cover-caption");
+    var span = document.getElementsByClassName("image-cover-close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    modal.onclick = function(e) {
+        e.stopPropagation()
+        this.classList.remove("model-shown");
+    }
+
+    var i;
+    for (i = 0; i < document.images.length; i++) {
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.images[i];
+
+        img.onclick = function(e){
+            e.stopPropagation()
+            modal.classList.add("model-shown");
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
 </script>
 {{/block}}

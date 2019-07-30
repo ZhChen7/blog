@@ -124,11 +124,11 @@ textarea {
   position: fixed;
   top: 0;
   left: 0;
-    margin: 0 auto;
+  margin: 0 auto;
   z-index: 999;
 }
 .topBar .topBar-main {
-    width: 100%;
+  width: 100%;
   max-width: 750px;
   min-width: 320px;
   margin: 0 auto;
@@ -263,8 +263,8 @@ textarea {
   background: -webkit-linear-gradient(#9c27b0 50%, #fff 50%);
   overflow: hidden;
   padding: 0rem 0.07rem;
-    max-width: 750px;
-    margin: 0 auto;
+  max-width: 750px;
+  margin: 0 auto;
 }
 .bg-banner .banner-main {
   width: 100%;
@@ -329,8 +329,8 @@ textarea {
   height: 1.2rem;
   border-bottom: 1px solid #eee;
   background: #fff;
-    max-width: 750px;
-    margin: 0 auto;
+  max-width: 750px;
+  margin: 0 auto;
 }
 .bg-nav ul {
   width: 100%;
@@ -383,7 +383,7 @@ textarea {
   padding: 0 0.15rem;
 }
 .index_list ul li {
-    max-width: 750px;
+  max-width: 750px;
   width: 100%;
   height: 2rem;
   position: relative;
