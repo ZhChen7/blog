@@ -1,4 +1,4 @@
-## Vue第六天学习
+# Vue第六天学习
 
 > file-loader（解决webpack打包图片路径问题，字体路径问题）
 >

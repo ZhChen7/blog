@@ -1,4 +1,4 @@
-## React学习第一天
+# React学习第一天
 
 > ReactJS简介
 >
@@ -16,11 +16,11 @@
 >
 > 把圈子变小 把语言变干净 把成绩往上提 把故事往心里收 现在想要的三年后都会有 ！o(*￣▽￣*)ブ
 
-#### 1、ReactJS简介
+## 1、ReactJS简介
 
 React 起源于 Facebook 的内部项目，因为该公司对市场上所有 JavaScript MVC 框架，都不满意，就决定自己写一套，用来架设 Instagram 的网站。做出来以后，发现这套东西很好用，就在2013年5月开源了。由于 React 的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来 Web 开发的主流工具。
 
-#### 2、ReactJS的背景和原理
+## 2、ReactJS的背景和原理
 
 在Web开发中，我们总需要将变化的数据实时反应到UI上，这时就需要对DOM进行操作。而复杂或频繁的DOM操作通常是性能瓶颈产生的原因（如何进行高性能的复杂DOM操作通常是衡量一个前端开发人员技能的重要指标）。
 
@@ -126,7 +126,9 @@ Angular（ **最早** ）是一款优秀的前端JS框架，已经被用于Googl
 
 # [Vue与React两个框架的区别和优势对比](http://caibaojian.com/vue-vs-react.html)
 
-Vue与React的区别：  [可以参考](https://www.jianshu.com/p/174e8028eabd) 
+> Vue与React的区别：  [可以参考](https://www.jianshu.com/p/174e8028eabd) 
+
+
 
 [如果你喜欢用模板搭建应用（或者有这个想法），请选择Vue]()
 

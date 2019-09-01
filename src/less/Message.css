@@ -3,6 +3,8 @@
   margin-top: 0.2rem;
   width: 100%;
   margin-bottom: 0.3rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .message .message-header {
   font-size: 0.13rem;

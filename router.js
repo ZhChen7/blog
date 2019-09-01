@@ -346,12 +346,42 @@ router.post('/message', function (req, res, next) {
     }
 })
 
-router.get('/love',function (req, res, next) {
+
+router.get('/lovelogin', function (req, res, next) {
+    res.render('lovelogin.html')
+})
+
+router.get('/Secret', function (req, res, next) {
+    res.render('lovelcjlogin.html')
+})
+
+
+router.get('/love', function (req, res, next) {
     res.render('love.html')
 })
 
-router.get('/zclovelcj',function (req, res, next) {
+router.get('/zclovelcj', function (req, res, next) {
     res.render('lovelcj.html')
+})
+
+
+router.post('/lovelogin', function (req, res, next) {
+    var password = req.body.password
+    console.log(password)
+
+    if (password == '12110219') {
+        return res.status(200).json({
+            err_code: 0,
+            message: '成功'
+        })
+    } else {
+        console.log('失败')
+        return res.status(200).json({
+            err_code: 1,
+            message: '失败'
+        })
+    }
+
 })
 
 

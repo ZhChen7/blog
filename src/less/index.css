@@ -675,6 +675,8 @@ textarea {
 }
 .Rotation {
   width: 100%;
+  max-width: 750px;
+  margin: auto;
 }
 .Rotation .School-iframe {
   width: 100%;
@@ -721,6 +723,8 @@ textarea {
 }
 .dynamic {
   width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
 }
 .dynamic .dynamic-header {
   width: 100%;
