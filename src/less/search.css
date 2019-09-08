@@ -8,7 +8,6 @@
 }
 .search-header .search-header-main {
   height: 1rem;
-  background: #9c27b0;
   position: relative;
 }
 .search-header .search-header-main .Back {
@@ -42,8 +41,7 @@
   margin-top: 0.13rem;
   font-size: 0.17rem;
   color: pink;
-  background: #9c27b0;
-  border-bottom: 0.01rem solid #fff;
+  border-bottom: 0.01rem solid #ff2c5a;
   padding-left: 0.06rem;
 }
 .search-header .search-header-main form input::-webkit-input-placeholder {
@@ -51,11 +49,12 @@
 }
 .search-header .search-header-main .search-intro {
   font-size: 0.16rem;
-  color: #fff;
+  color: #c91052;
   letter-spacing: 0.04rem;
   position: absolute;
   top: 0.23rem;
-  left: 2.22rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .index_list {
   margin-top: 1.08rem;

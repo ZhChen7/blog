@@ -384,6 +384,32 @@ router.post('/lovelogin', function (req, res, next) {
 
 })
 
+router.post('/search', function (req, res, next) {
+    console.log(req.body)
+    let searchtext = req.body.search
+    publish.find(function (err, newpublish) {
+        if (err) {
+            return res.status(500).send('Serve Error')
+        }
+
+        let publish = []
+        console.log(newpublish)
+
+        newpublish.forEach(function (e) {
+            if (e.publishTitle.toLowerCase().indexOf(searchtext.toLowerCase()) != -1 ||
+                e.publishIntro.toLowerCase().indexOf(searchtext.toLowerCase()) != -1 ||
+                e.publishIdentifying.toLowerCase().indexOf(searchtext.toLowerCase()) != -1) {
+                publish.push(e)
+            }
+        })
+        // console.log(publish)
+        res.render('search.html', {
+            publish: publish
+        })
+
+    })
+})
+
 
 //导出router
 module.exports = router

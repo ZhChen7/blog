@@ -13,10 +13,10 @@
 <div class="bg-container">
  <header class="search-header">
      <div class="search-header-main">
-         <form>
-             <input type="search" name="search" placeholder="sou..." autofocus autocomplete>
+         <form id="SearchForm" action="/search" method="post">
+             <input type="search" name="search" placeholder="搜点啥呢..." autofocus autocomplete>
          </form>
-         <a href="javascript:;" class="Back">
+         <a href="javascript:;" class="Back" id="SeachBtn">
              <span class="iconfont">&#xe667;</span>
          </a>
          <div class="search-intro">搜索页</div>
@@ -35,5 +35,29 @@
             window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
         })();
     });
+    $(window).scroll(function(e){
+        //执行处理的代码
+        let scrollTop=$(document).scrollTop()
+        if (scrollTop>80){
+           $('.search-header').hide()
+        }else{
+            $('.search-header').show()
+        }
+    })
+
+    $('#SeachBtn').click(function () {
+        // let formDate=$('#SearchForm').serialize()
+        // console.log(formDate)
+        // $.ajax({
+        //     url:'/search',
+        //     type:'post',
+        //     data:formDate,
+        //     dataType:'json',
+        //     success:function (data) {
+        //        console.log(data)
+        //     }
+        // })
+        $('#SearchForm').submit()
+    })
 </script>
 </html>
