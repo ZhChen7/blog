@@ -54,20 +54,18 @@ router.get('/', function (req, res) {
         }
 
         let MonthArr = []
-        // console.log(GETtimearr)
+
         GETtimearr.forEach(function (value, index, array) {
             var variableobj = GetData(value)
             var year = variableobj.year
             var month = variableobj.month
             var str = '2019年' + year.toString() + '月'
+            // var str = year +'年' + month+ '月'
             MonthArr.push(str)
         })
 
-        // console.log(MonthArr)
         var othernewObj = getWordCnt(MonthArr)
-        // console.log(othernewObj)
         publish.push(getWordCnt(arr))
-        // console.log(publish)
 
         res.render('index.html', {
             othernewObj: othernewObj,

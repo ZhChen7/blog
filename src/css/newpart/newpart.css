@@ -474,6 +474,9 @@
         opacity: 1;
         display: none;
     }
+    .container{
+        display: none;
+    }
 }
 
 

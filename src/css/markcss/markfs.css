@@ -142,6 +142,7 @@ li {
     word-break:break-all;
 }
 
+
 ol, p, ul {
     font-size: 12px;
     line-height: 24px
@@ -392,6 +393,7 @@ video{
     background: rgba(255, 255, 255, 0.33);
 }
 
+
 @media only screen and (max-width: 45rem) {
     .image-cover-modal-content {
         max-width: 100%;
@@ -411,8 +413,20 @@ video{
     }
     li{
         line-height: 28px;
+        margin-left: 16px;
     }
     pre[class*="language-"] {
         margin: 1em 0px;
+        background: #fafafa !important;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        margin-left: 0 !important;
+    }
+    ul>li>ul{
+        padding-left: 20px;
+    }
+    .public_footer_main ul li{
+        margin-left: 0 !important;
     }
 }

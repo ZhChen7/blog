@@ -374,9 +374,16 @@ textarea {
   padding-left: 0.15rem;
   padding-top: 0.2rem;
   font-weight: 400;
+  position: relative;
 }
 .index_list h3 span {
   color: black;
+}
+.index_list h3 .pianshu {
+  position: absolute;
+  right: 0.31rem;
+  top: 0.29rem;
+  color: #9f91af;
 }
 .index_list ul {
   width: 100%;

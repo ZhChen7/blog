@@ -1,8 +1,8 @@
 @charset "utf-8";
 .login-form {
-    max-width: 750px;
+  max-width: 750px;
   width: 100%;
-    margin: 1.33rem auto 0;
+  margin: 1.33rem auto 0;
   height: 4.1rem;
   padding-top: 0.35rem;
   background: linear-gradient(153deg, #798D84 -5%, pink, #edeeef 59%);
@@ -52,13 +52,14 @@
   font-size: 0.16rem;
   background: #5d0000;
   box-shadow: 0.02rem 0.01rem 0.09rem 0.1rem #5d0000;
+  outline: none;
 }
 .login-form form fieldset .register a,
 .login-form form fieldset .landing a {
   display: inline-block;
   width: 0.8rem;
   height: 0.3rem;
-    color: #fff;
+  color: #fff;
   text-align: center;
   line-height: 0.3rem;
   font-weight: bold;
@@ -95,15 +96,13 @@
 body {
   background: linear-gradient(153deg, #fff -7%, pink, #edeeef 50%);
 }
-
 @media screen and (min-width: 750px) {
-    .login-form {
-        margin-top: 0;
-    }
-
-    .public_footer {
-        margin: 0 auto;
-        max-width: 750px;
-    }
+  .login-form {
+    margin-top: 0;
+  }
+  .public_footer {
+    margin: 0 auto;
+    max-width: 750px;
+  }
 }
 /*# sourceMappingURL=login.css.map */

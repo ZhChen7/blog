@@ -1,11 +1,15 @@
 {{extend'./layouts/layout.html'}}{{block'title'}}Change World{{/block}}
 
 {{block'style'}}
-<link href="/css/preloader/load.css" rel="stylesheet"><!--<link href="/css/newpart/newpart.css" rel="stylesheet">-->{{/block}}
+<link href="/css/preloader/load.css" rel="stylesheet">
+<!--<link href="/css/newpart/newpart.css" rel="stylesheet">-->
+<link href="/css/qinqin/qinqin.css" rel="stylesheet">
+{{/block}}
 {{block'newpart'}}
 {{include './parties/load/indexLoad.html'}}
 {{include './parties/NewIndexPart/newpartone.html'}}
 {{include './parties/NewIndexPart/threeOtherofintro.html'}}
+
 {{/block}}
 {{block'body'}}
 <div class="main_Navigation">
