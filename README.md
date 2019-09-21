@@ -6,6 +6,7 @@
 
 - 页面：h5+css3+js+jquery 
 - 渲染模板：art-template
+- 打包工具：webpack
 - 后台: node.js express mongoose（连接，操纵mongodb ）
 - 数据库：mongodb 
 - 服务器：阿里云上买的（上线时推荐用宝塔）
