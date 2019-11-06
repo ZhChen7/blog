@@ -27,7 +27,7 @@
     "jquery": "^3.3.1",
     "marked": "^0.6.1",
     "moment": "^2.24.0",
-    "mongoose": "^5.4.19",
+    "mongoose": "^5.7.5",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
