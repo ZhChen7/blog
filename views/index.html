@@ -9,7 +9,6 @@
 {{include './parties/load/indexLoad.html'}}
 {{include './parties/NewIndexPart/newpartone.html'}}
 {{include './parties/NewIndexPart/threeOtherofintro.html'}}
-
 {{/block}}
 {{block'body'}}
 <div class="main_Navigation">
@@ -25,12 +24,18 @@
 
 {{/block}}{{block'script'}}
 <script>
-    document.onreadystatechange = function () {
-    if (document.readyState == "complete") {
+//     document.onreadystatechange = function () {
+//     if (document.readyState == "complete") {
+//         $(".load").fadeOut(500)
+//         $("#newpartbiggestbox").show()
+//     }
+// }
+
+    document.addEventListener('DOMContentLoaded',function(){
         $(".load").fadeOut(500)
         $("#newpartbiggestbox").show()
-    }
-}
+        $('.newpart_btn_box').show(1000)
+    });
 
 </script>
 <script type="text/javascript">$(document).ready(function () {

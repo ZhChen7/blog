@@ -6,6 +6,7 @@ $(function () {
     //     // }
     window.addEventListener('DOMContentLoaded',function () {
         $(".load").fadeOut(600);
+        initColorfulBubble();
     })
 
 })

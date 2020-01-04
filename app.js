@@ -13,13 +13,20 @@ let router=require('./router')
 let bodyParser = require('body-parser')
 let session=require('express-session')
 const path = require('path')
+let compression = require('compression')
 let app=express()
+
+//尽量在其他中间件前使用compression
+app.use(compression())
+
 
 //公开资源
 app.use(express.static('src'))
 app.use(express.static('dist'))
 app.use(express.static('node_modules'))
 app.use(express.static('readmefs'))
+
+
 
 //模板引擎
 app.engine('html',require('express-art-template'))

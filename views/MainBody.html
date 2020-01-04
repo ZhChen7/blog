@@ -1,24 +1,28 @@
 {{extend './layouts/layout-blog.html'}}
 
-{{block 'title'}}New World{{/block}}
+{{block 'description&keywords'}}<meta name="description" content="{{publish.publishIntro}}"/><meta name="keywords" content="{{publish.publishTitle}},{{publish.publishIdentifying}},{{publish.publishIntro}}"/>{{/block}}
+{{block 'title'}}{{publish.publishTitle}}{{/block}}
 {{block 'style'}}<link rel="stylesheet" type="text/less" href="/less/Message.less"><link href="/css/iconfont/iconfont.css" rel="stylesheet"><link rel="stylesheet" href="/css/markcss/markfs.css"><link rel="stylesheet" href="/css/preloader/mainload.css"><link rel="stylesheet" href="/css/fenye/fenye.css"><link rel="stylesheet" type="text/css" href="/lib/prism/prism.css">{{/block}}
 {{block 'body'}}
 {{include './parties/load/load.html'}}
-<div id="markfs">
-    <audio id="music1" controls="controls" autoplay="autoplay" hidden>
-        <source src="http://static.zxinc520.com/M500004CU50m2JjBjr.mp3"
-                type="audio/ogg">
-        Your browser does not support the audio tag.
-    </audio>
-    <a href="javascript:;" class="videobtn audio" id="btn">
-        <span class="iconfont">&#xe9b6;</span>
-    </a>
-{{@ doc }}
-    <div id="image-cover-modal" class="image-cover-modal">
-        <img id="image-cover-image" class="image-cover-modal-content">
-    </div>
+<div id="ClickBox">
+    <div id="markfs">
+        <audio id="music1" controls="controls" autoplay="autoplay" hidden>
+            <source src="http://static.zxinc520.com/395411922.mp3"
+                    type="audio/ogg">
+            Your browser does not support the audio tag.
+        </audio>
+        <a href="javascript:;" class="videobtn audio" id="btn">
+            <span class="iconfont">&#xe9b6;</span>
+        </a>
+        {{@ doc }}
+        <div id="image-cover-modal" class="image-cover-modal">
+            <img id="image-cover-image" class="image-cover-modal-content">
+        </div>
 
+    </div>
 </div>
+
 <div class="message" id="containet">
     <header class="message-header" style="color: #d25353">精彩评论:</header>
     <ul id="pageMain">
@@ -98,13 +102,17 @@
     $.awesome_toc({
         autoDetectHeadings: true,
         enableToTopButton: false,
-        title: "目录结构",
+        title: "目录",
+        overlay:true,
+        displayNow:true,
+        activeFontColor:'red',
         css: {
             fontSize: "14px",
             largeFontSize: "18px",
+            fontColor:"#009a61",
+            backgroundColor:'#fff'
         },
     });
-
 </script>
 <script>
     $('#message_form').on('submit', function (e) {

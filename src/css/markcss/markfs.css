@@ -283,42 +283,28 @@ video{
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 23px;
-    right: 40px;
+    top: -15px;
+    right: 32px;
     text-align: center;
     line-height: 30px;
-    animation: videobtnMove 15s linear infinite;
+    animation: videobtnMove 5s linear infinite;
 }
 
 .videobtn>span{
-    color: #c4f5e1 !important;
+    color: pink !important;
     font-size: 25px !important;
 }
 
 @keyframes videobtnMove {
     from{
-        left: 50%;
-        top: 100px;
-        transform: rotate(180deg);
+        transform: scale(0.6,0.6);
     }
-    40%{
-        left: 80%;
-        transform: scale(1.5,1.5);
-    }
-    55%{
-        top: -100px;
-        left: 50%;
-        transform: scale(1,1);
-        color: red;!important;
-    }
-    70%{
-        left: 20%;
-        transform: scale(1.5,1.5);
-    }
+        40%{
+            transform: scale(1,1);
+         }
+
     to{
-        top: -100px;
-        left: 50%;
-        transform: rotate(-180deg);
+        transform: scale(0.6,0.6);
     }
 }
 
@@ -347,6 +333,9 @@ video{
     #markfs ul{
         margin: 0 0 24px;
         font-size: 16px;
+    }
+    .videobtn{
+        right: 147px;
     }
 }
 
@@ -429,4 +418,15 @@ video{
     .public_footer_main ul li{
         margin-left: 0 !important;
     }
+}
+
+#blog_bgAnimation{
+    position: relative;
+}
+
+
+#color-bubble-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
