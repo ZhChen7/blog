@@ -4,7 +4,7 @@
 >
 > 待更新状态
 >
-> 今天 2019/11/19 ~ 💪
+> 今天 2019/12/23 ~ 💪
 
 
 
@@ -293,6 +293,7 @@ setTimeout(function(){
 })	// 2. 调用 setTimeout 函数，并定义其完成后执行的回调函数
 console.log('script end')	//3. 打印 script start
 // 输出顺序：script start->script end->settimeout
+
 ```
 
 **2、 Promise** 
@@ -313,6 +314,7 @@ setTimeout(function(){
 })
 console.log('script end')
 // 输出顺序: script start->promise1->promise1 end->script end->promise2->settimeout
+
 ```
 
 当JS主线程执行到Promise对象时，
@@ -339,6 +341,7 @@ async1();
 console.log('script end')
 
 // 输出顺序：script start->async1 start->async2->script end->async1 end
+
 ```
 
 async 函数返回一个 Promise 对象，当函数执行的时候，一旦遇到 await 就会先返回，等到触发的异步操作完成，再执行函数体内后面的语句。可以理解为，是让出了线程，跳出了 async 函数体。
@@ -351,6 +354,7 @@ async function func1() {
 }
 
 console.log(func1())
+
 ```
 
 ![mark](http://static.zxinc520.com/blog/20190924/M0YN5oCKtEhr.png?imageslim)
@@ -361,6 +365,7 @@ console.log(func1())
 func1().then(res => {
     console.log(res);  // 30
 }
+
 ```
 
 await的含义为等待，也就是 async 函数需要等待await后的函数执行完成并且有了返回结果（Promise对象）之后，才能继续执行下面的代码。await通过返回一个Promise对象来实现同步的效果。
@@ -399,6 +404,7 @@ const readFile = async ()=>{
   return 'done'；
 }
 const res = readFile();
+
 ```
 
 可以看到，`async function` 代替了 `function*`，`await` 代替了 `yield`，同时也无需自己手写一个自动执行器 `run` 了
@@ -412,6 +418,7 @@ const res = readFile();
 res.then(data => {
   console.log(data); // done
 });
+
 ```
 
 
@@ -455,6 +462,7 @@ console.log('script end');
     promise2
     setTimeout
 */
+
 ```
 
 
@@ -3129,7 +3137,7 @@ for (var i = 1; i <= 10000; i++) {
 >
 > 示例:
 >
-> ```
+> ```js
 > 输入: [0,1,0,3,12]
 > 输出: [1,3,12,0,0]
 > 
@@ -3161,3 +3169,619 @@ function Movezero(arr) {
 
 
 
+
+
+
+
+### [第 83 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/133)  （2019/11/20）
+
+**题目：** var、let 和 const 区别的实现原理是什么
+
+**解析：** 
+
+**区别：**
+
+1. var声明的变量会挂载在window上，而let和const声明的变量不会
+
+2. var声明变量存在变量提升，let和const不存在变量提升
+
+3. let和const声明形成块作用域，而var不存在此作用域
+
+4. 同一作用域下let和const不能声明同名变量，而var可以
+
+5. let、const存在暂存死区
+
+6. const
+
+   1. 一旦声明必须赋值,不能使用null占位。
+   2. 声明后不能再修改
+   3. 如果声明的是复合类型数据，可以修改其属性*
+
+   
+
+**var、let、const实现原理** 
+
+记得JS权威指南中有一句很精辟的描述:　”JavaScript中的函数运行在它们被定义的作用域里,而不是它们被执行的作用域里.”
+
+以下属于推测，在网上没查到确凿的原理机制（若有误望指正）：
+
+原理大概是：在js解析的时候，优先解析const，因为它不能修改的是栈内存在的值和地址。然后解析let 因为没有块作用域可能底层有处理，最后解析var
+
+
+
+
+
+### [第 84 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/134) （2019/11/21）
+
+**题目：** 请实现一个 add 函数，满足以下功能。
+
+**知识点** ：函数柯里化    [题解](https://github.com/chokcoco/cnblogsArticle/issues/15)    <u>运用了函数会自行调用 `valueOf` 方法这个技巧</u> 
+
+> ```js
+> add(1); 			// 1
+> add(1)(2);  	// 3
+> add(1)(2)(3)；// 6
+> add(1)(2, 3); // 6
+> add(1, 2)(3); // 6
+> add(1, 2, 3); // 6
+> 
+> ```
+
+之前参阅 2 篇文章，可以参考一二。
+1、[【进阶 6-1 期】JavaScript 高阶函数浅析](https://github.com/yygmind/blog/issues/36#%E6%80%9D%E8%80%83%E9%A2%98)
+2、[【进阶 6-2 期】深入高阶函数应用之柯里化](https://github.com/yygmind/blog/issues/37)
+
+其中第一篇文章给出了前三个功能的实现，并没有覆盖到后面三种。
+第二篇文章实现了一个通用的柯里化函数，覆盖实现了所有功能。
+
+**解析：** 
+
+**去重**（ <u>数字组数</u>  ） ：使用高阶函数：
+
+```js
+const arr1 = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+const arr2 = arr1.filter( (element, index, self) => {
+    return self.indexOf( element ) === index;
+});
+
+console.log( arr2 );
+// [1, 2, 3, 5, 4]
+console.log( arr1 );
+// [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4]
+
+```
+
+
+
+函数作为返回值输出
+
+```js
+let isType = type => obj => {
+    return Object.prototype.toString.call( obj ) === '[object ' + type + ']';
+}
+isType('String')('123');	// true
+isType('Array')([1, 2, 3]);	// true
+isType('Number')(123);			// true
+
+```
+
+
+
+答案：
+
+```js
+function add () {
+    console.log('进入add');
+    var args = Array.prototype.slice.call(arguments);
+
+    var fn = function () {
+        var arg_fn = Array.prototype.slice.call(arguments);
+        console.log('调用fn');
+        return add.apply(null, args.concat(arg_fn));
+    }
+
+    fn.valueOf = function () {
+        console.log('调用valueOf');
+        return args.reduce(function(a, b) {
+            return a + b;
+        })
+    }
+
+    return fn;
+}
+/*
+    add(1);
+    // 输出如下：
+    // 进入add
+    // 调用valueOf
+    // 1
+
+    add(1)(2);
+    // 输出如下：
+    // 进入add
+    // 调用fn
+    // 进入add
+    // 调用valueOf
+    // 3
+    
+    add(1)(2)(3);
+    // 输出如下：
+    // 进入add
+    // 调用fn
+    // 进入add
+    // 调用fn
+    // 进入add
+    // 调用valueOf
+    // 6
+*/
+
+```
+
+这里有个规律，如果只改写 `valueOf()` 或是 `toString()` 其中一个，会优先调用被改写了的方法，而如果两个同时改写，则会像 String 转换规则一样，优先查询 `valueOf()` 方法，在 `valueOf() `方法返回的是非原始类型的情况下再查询 `toString()` 方法。
+
+
+
+
+
+### [第 85 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/135)  （2019/11/23）
+
+**题目：** react-router 里的 `<Link>` 标签和 `<a>` 标签有什么区别
+
+> 如何禁掉 `<a>` 标签默认事件，禁掉之后如何实现跳转。
+
+**解析：** 
+
+从最终渲染的 DOM 来看，这两者都是链接，都是 `<a>` 标签，区别是：
+`<Link>` 是 react-router 里实现路由跳转的链接，一般配合 `<Route>` 使用，react-router 接管了其默认的链接跳转行为，区别于传统的页面跳转，`<Link>` 的“跳转”行为只会触发相匹配的 `<Route>` 对应的页面内容更新，而不会刷新整个页面。
+而 `<a>` 标签就是普通的超链接了，用于从当前页面跳转到 href 指向的另一个页面（非锚点情况）。
+
+
+
+
+
+### [第 86 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/136)  （2019/11/23）
+
+**题目：** 周一算法题之「两数之和」
+
+> 给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
+>
+> 你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。
+>
+> 示例：
+>
+> ```js
+> 给定 nums = [2, 7, 11, 15], target = 9
+> 
+> 因为 nums[0] + nums[1] = 2 + 7 = 9
+> 所以返回 [0, 1]
+> 
+> ```
+
+**公司** ：京东、快手
+
+```js
+function Getarr(num,target) {
+    var pre=0, cur=num.length-1
+    if(num.length<2){
+        return '至少提供2个数字'
+    }
+    while(pre<cur){
+        result= num[pre] + num[cur]
+        if (result>target){
+            cur--
+        }else if(result<target){
+            pre++
+        }else{
+            return [pre,cur]
+        }
+    }
+}
+
+```
+
+
+
+
+
+### [第 87 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/138) （2019/11/24）
+
+**题目：**在输入框中如何判断输入的是一个正确的网址。
+
+**解析：**    <u>location 可以获取本页面的URL 信息</u> 
+
+> 不上正则，一个简单的玩法
+
+```JS
+function isUrl(url) {
+	const a = document.createElement('a')
+	a.href = url
+	return [
+		/^(http|https):$/.test(a.protocol), // "https:" 协议
+		a.host,  						//  "baidu.com" => 端口（port）
+		a.pathname !== url,				// "/"
+		a.pathname !== `/${url}`,
+	].find(x => !x) === undefined
+}
+
+```
+
+利用 `URL()` 构造函数返回一个新创建的 [`URL`](https://developer.mozilla.org/zh-CN/docs/Web/API/URL) 对象 
+
+```js
+function isUrl(url) {
+       try {
+           new URL(url);
+           return true;
+       }catch(err){
+     return false;
+}}
+
+```
+
+```js
+const isUrl = urlStr => {
+    try {
+        const { href, origin, host, hostname, pathname } = new URL(urlStr)
+        return href && origin && host && hostname && pathname && true
+    } catch (e) {
+        return false
+    }
+}
+
+```
+
+
+
+**正则：** 
+
+```js
+ /^(https?:\/\/)?([a-z0-9]\.|[a-z0-9][-a-z0-9]*[a-z0-9]\.)*([a-z]+)(:\d+)?(\/.*)?$/;
+
+```
+
+
+
+ 
+
+### [第 88 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/139)  （2019/12/04）
+
+以下数据结构中，id 代表部门编号，name 是部门名称，parentId 是父部门编号，为 0 代表一级部门，现在要求实现一个 convert 方法，把原始 list 转换成树形结构，parentId 为多少就挂载在该 id 的属性 children 数组下，结构如下：
+
+```js
+// 原始 list 如下
+let list =[
+    {id:1,name:'部门A',parentId:0},
+    {id:2,name:'部门B',parentId:0},
+    {id:3,name:'部门C',parentId:1},
+    {id:4,name:'部门D',parentId:1},
+    {id:5,name:'部门E',parentId:2},
+    {id:6,name:'部门F',parentId:3},
+    {id:7,name:'部门G',parentId:2},
+    {id:8,name:'部门H',parentId:4}
+];
+const result = convert(list, ...);
+
+// 转换后的结果如下
+let result = [
+    {
+      id: 1,
+      name: '部门A',
+      parentId: 0,
+      children: [
+        {
+          id: 3,
+          name: '部门C',
+          parentId: 1,
+          children: [
+            {
+              id: 6,
+              name: '部门F',
+              parentId: 3
+            }, {
+              id: 16,
+              name: '部门L',
+              parentId: 3
+            }
+          ]
+        },
+        {
+          id: 4,
+          name: '部门D',
+          parentId: 1,
+          children: [
+            {
+              id: 8,
+              name: '部门H',
+              parentId: 4
+            }
+          ]
+        }
+      ]
+    },
+  ···
+];
+
+```
+
+
+
+**解析：** ~~
+
+
+
+
+
+
+
+
+
+### [第 89 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/140)  （2019/12/04）
+
+**题目** ：设计并实现 Promise.race()
+
+**解析：**  代写~
+
+
+
+### [第 90 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/141)  （2019/12/05）
+
+**题目：** 实现模糊搜索结果的关键词高亮显示
+
+![mark](http://static.zxinc520.com/blog/20191205/sF0nw6wEI0qf.png?imageslim)
+
+> 考虑节流、缓存。其实还可以上列表diff+定时清理缓存
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>auto complete</title>
+    <style>
+        bdi {
+            color: rgb(0, 136, 255);
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<input class="inp" type="text">
+<section>
+    <ul class="container"></ul>
+</section>
+</body>
+<script>
+
+    function debounce(fn, timeout = 300) {
+        let t;
+        return (...args) => {
+            if (t) {
+                clearTimeout(t);
+            }
+            t = setTimeout(() => {
+                fn.apply(fn, args);
+        }, timeout);
+        }
+    }
+
+    function memorize(fn) {
+        const cache = new Map();
+        return (name) => {
+            if (!name) {
+                container.innerHTML = '';
+                return;
+            }
+            if (cache.get(name)) {
+                container.innerHTML = cache.get(name);
+                return;
+            }
+            const res = fn.call(fn, name).join('');
+            cache.set(name, res);
+            container.innerHTML = res;
+        }
+    }
+
+    function handleInput(value) {
+        const reg = new RegExp(`\(${value}\)`);
+        const search = data.reduce((res, cur) => {
+            if (reg.test(cur)) {
+            const match = RegExp.$1;
+            res.push(`<li>${cur.replace(match, '<bdi>$&</bdi>')}</li>`);
+        }
+        return res;
+    }, []);
+        return search;
+    }
+
+    const data = ["上海野生动物园", "上饶野生动物园", "北京巷子", "上海中心", "上海黄埔江", "迪士尼上海", "陆家嘴上海中心"]
+
+    const container = document.querySelector('.container');
+
+    const memorizeInput = memorize(handleInput);
+
+    document.querySelector('.inp').addEventListener('input', debounce(e => {
+
+        console.log(e.target.value)
+        memorizeInput(e.target.value)
+    }))
+</script>
+</html>
+
+```
+
+
+
+### [第 91 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/142) （2019/12/05）
+
+**题目：** 介绍下 HTTPS 中间人攻击
+
+**解析：** 
+
+https协议由 http + ssl 协议构成，具体的链接过程可参考[SSL或TLS握手的概述](https://github.com/lvwxx/blog/issues/3)
+
+中间人攻击过程如下：
+
+1. 服务器向客户端发送公钥。
+2. 攻击者截获公钥，保留在自己手上。
+3. 然后攻击者自己生成一个【伪造的】公钥，发给客户端。
+4. 客户端收到伪造的公钥后，生成加密hash值发给服务器。
+5. 攻击者获得加密hash值，用自己的私钥解密获得真秘钥。
+6. 同时生成假的加密hash值，发给服务器。
+7. 服务器用私钥解密获得假秘钥。
+8. 服务器用加秘钥加密传输信息
+
+防范方法：
+
+1. 服务端在发送浏览器的公钥中加入CA证书，浏览器可以验证CA证书的有效性
+
+ 
+
+
+
+### [第 92 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/143) （2019/12/15）
+
+**题目：**已知数据格式，实现一个函数 fn 找出链条中所有的父级 id
+
+```js
+const value = '112'
+const fn = (value) => {
+...
+}
+fn(value) // 输出 [1， 11， 112]
+
+```
+
+**解析：**
+
+```js
+const value = '112'
+const fn = (value) => {
+    let arr=[]
+    for (var i = 0; i < value.length; i++) {
+       arr.push(value.slice(0,i+1))
+    }
+   return arr.map(Number)
+}
+
+```
+
+
+
+### [第 93 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/144)  （2019/12/15）
+
+**题目：** 给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。请找出这两个有序数组的中位数。要求算法的时间复杂度为 O(log(m+n))。
+
+示例 1：
+
+```js
+nums1 = [1, 3]
+nums2 = [2]
+
+```
+
+中位数是 2.0
+
+示例 2：
+
+```js
+nums1 = [1, 2]
+nums2 = [3, 4]
+
+```
+
+中位数是(2 + 3) / 2 = 2.5
+
+
+
+**解析：** 
+
+
+
+### [第 94 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/145)  （2019/12/15）
+
+**题目：** vue 在 v-for 时给每项元素绑定事件需要用事件代理吗？为什么？
+
+**解析:** 
+
+> Well, delegation has two main advantages: one is practical - it saves you from having to add (and remove!!) those listeners individually. But Vue already does that for you.
+>
+> The other one is performance / memory. But since every click listener in a v-vor loop would use the same callback, this is minimal unless you have hundreds or thousands of rows.
+>
+> And finally, you can use delegation pretty easily by adding an @click listener to the <ul> element instead of the children. But then you have to resort to checks on the click target to evaluate which item in your data it might represent. So I would only use that if you truly find any performance problems without delegation.
+
+好，委派有两个主要优点：一个是实用的-它使您不必分别添加（和删除！）这些侦听器。 但是Vue已经为您做到了。
+
+另一个是性能/内存。 但是，由于v-vor循环中的每个单击侦听器都将使用相同的回调，因此除非您有成百上千的行，否则这是最小的。
+
+最后，您可以通过在<*ul* >元素（而不是子元素）中添加@click侦听器来轻松使用委派。 但是随后，您必须求助于点击目标，以评估数据中可能代表的项目。 因此，只有在您真正发现任何性能问题而没有委派的情况下，我才使用它。
+
+
+
+### [第 95 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/148)  （2019/12/23）
+
+**题目：**   模拟实现一个深拷贝，并考虑对象相互引用以及 Symbol 拷贝的情况
+
+**解析：** 
+
+> 一个不考虑其他数据类型的公共方法，基本满足大部分场景
+>
+> ```js
+> function deepCopy(target, cache = new Set()) {
+> if (typeof target !== 'object' || cache.has(target)) {
+>  return target
+> }
+> if (Array.isArray(target)) {
+>  target.map(t => {
+>    cache.add(t)
+>    return t
+>  })
+> } else {
+>  return [...Object.keys(target), ...Object.getOwnPropertySymbols(target)].reduce((res, key) => {
+>    cache.add(target[key])
+>    res[key] = deepCopy(target[key], cache)
+>    return res
+>  }, target.constructor !== Object ? Object.create(target.constructor.prototype) : {})
+> }
+> }
+> 
+> ```
+>
+> 主要问题是
+>
+> 1. symbol作为key，不会被遍历到，所以stringify和parse是不行的
+> 2. 有环引用，stringify和parse也会报错
+>
+> 我们另外用`getOwnPropertySymbols`可以获取symbol key可以解决问题1，用集合记忆曾经遍历过的对象可以解决问题2。当然，还有很多数据类型要独立去拷贝。比如拷贝一个RegExp，lodash是最全的数据类型拷贝了，有空可以研究一下
+>
+> 另外，如果不考虑用symbol做key，还有两种黑科技深拷贝，可以解决环引用的问题，比stringify和parse优雅强一些
+>
+> ```js
+> function deepCopyByHistory(target) {
+> const prev = history.state
+> history.replaceState(target, document.title)
+> const res = history.state
+> history.replaceState(prev, document.title)
+> return res
+> }
+> 
+> async function deepCopyByMessageChannel(target) {
+> return new Promise(resolve => {
+>  const channel = new MessageChannel()
+>  channel.port2.onmessage = ev => resolve(ev.data)
+>  channel.port1.postMessage(target)
+> }).then(data => data)
+> }
+> 
+> ```
+>
+> 无论哪种方法，它们都有一个共性：失去了继承关系，所以剩下的需要我们手动补上去了，故有`Object.create(target.constructor.prototype)`的操作
+
+有两个问题：
+
+1. 如果 `target` 是一个数组，拷贝结果没有返回
+2. 如果 `target` 是一个函数，函数没有被深拷贝

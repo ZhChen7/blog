@@ -32,9 +32,12 @@
 // }
 
     document.addEventListener('DOMContentLoaded',function(){
-        $(".load").fadeOut(500)
-        $("#newpartbiggestbox").show()
-        $('.newpart_btn_box').show(1000)
+       async function f(){
+           await $(".load").fadeOut(500)
+           await $("#newpartbiggestbox").show()
+           $('.newpart_btn_box').show(1000)
+        }
+        f()
     });
 
 </script>

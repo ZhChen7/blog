@@ -2,7 +2,9 @@
 
 > 待更新状态
 >
-> 今天 2019/11/19 ~ ✌
+> 今天 2019/12/24 ~ ✌
+>
+> [网页版标签分类](https://www.kancloud.cn/aya001001/fe-interview/1054361)  
 
 
 
@@ -312,12 +314,14 @@ function GetLaststr(s,target) {
     let index = s.lastIndexOf(target);
     return s.substring(0,index ) + s.substring(index+1,s.length);
 }
+
 ```
 
 ```js
 function delLast(str, target) {
     return str.split('').reverse().join('').replace(target,'').split('').reverse().join('');
 }
+
 ```
 
 
@@ -346,6 +350,7 @@ function delLast(str, target) {
 浏览器如何解析manifest
     1.在线情况:浏览器发现html头部有manifest属性,他会请求manifest文件,如果是第一次访问,那么浏览器会根据manifest文件的内容下载相应的资源并且进行离线存储.如果已经访问过并存储,那么浏览器使用 离线的资源价值,然后对比新的文件,如果没有发生改变就不做任何操作,如果文件改变了,那么就会重新下载文件中的资源并进行离线存储
     2.离线情况:浏览器就直接使用离线存储资源
+
 ```
 
 
@@ -361,6 +366,7 @@ function delLast(str, target) {
     文本属性:text-indent,text-align,line-height,word-spacing,letter-spacing,color,direction,text-transform
     元素可见性:visibility,opacity
     光标属性:cursor
+
 ```
 
 3、【js】 写一个方法把下划线命名转成大驼峰命名
@@ -372,6 +378,7 @@ function delLast(str, target) {
      return a+b.substr(0,1).toUpperCase() + b.substr(1)
    })
 }
+
 ```
 
 
@@ -435,6 +442,7 @@ function caseConvert(str){
         return `${s1.toUpperCase()}${s2.toLowerCase()}`
     })
 }
+
 ```
 
 利用 toUpperCase() ：
@@ -451,6 +459,7 @@ for(let item of str) {
     arr.push(item)
 }
 let newStr = arr.join('')
+
 ```
 
 
@@ -492,6 +501,7 @@ let newStr = arr.join('')
     border-right: 50px solid transparent;
     border-bottom: 50px solid red;
 }
+
 ```
 
 3、【js】写一个去除制表符和换行符的方法
@@ -3957,11 +3967,610 @@ const newObj = JSON.parse(JSON.stringify(oldObj));
 
 
 
+### 第45天 (2019.11.23)
+
+**总览：** 
+
+- [html] [xml与html有什么区别？](https://github.com/haizlin/fe-interview/issues/169)
+- [css] [你知道的等高布局有多少种？写出来](https://github.com/haizlin/fe-interview/issues/170)
+- [js] [写出几种创建对象的方式，并说说他们的区别是什么？](https://github.com/haizlin/fe-interview/issues/171)
+- [软技能] [从你的角度上来讲，你觉得如何管理前端团队？](https://github.com/haizlin/fe-interview/issues/172)
+
+
+
+1、【html】 xml与html有什么区别？
+
+> XML：
+> 必须闭合；元素嵌套正确；标签小写； 必须有根元素
+
+1. html不区分大小写，xml区分大小写
+2. html可以没有闭合标签，xml必须有闭合标签
+3. html可以拥有不带值的属性名，xml中所有的属性必须带值
+4. html是用于显示数据，xml主要用于描述，存放数据
+5. XML 的多个空格不会被合并成一个空格，而 HTML 会。
+
+
+
+2、【css】 你知道的等高布局有多少种？写出来
+
+> [常用的多列等高布局](https://juejin.im/post/5b0fb34151882515662238fd) 
+
+1. 使用负margin-bottom和正padding-bottom对冲实现 
+
+   ```css
+   .Article>li {
+       float: left;
+       margin: 0 10px -9999px 0;
+       padding-bottom: 9999px;
+       background: #4577dc;
+       width: 200px;
+       color: #fff;
+   }
+   
+   ```
+
+2. flex布局 
+
+3. 模仿table布局
+
+4. grid布局
+
+5. js计算 
 
 
 
 
 
+3、【js】 写出几种创建对象的方式，并说说他们的区别是什么？
+
+```js
+const a = new Object() // 创建, 不推荐  ---new 实例化
+const b = {} // 赋值, 性能比a要好  --字面量
+const c = Object.create() // 继承创建, Object.create(null) 很多框架都有用来做性能优化
+
+```
+
+**new Object()**
+
+直接通过构造函数创建一个新对象。
+
+```
+var obj = new Object()
+//等同于 var obj = {}
+
+```
+
+使用字面量的方式更简单，其实他俩是一样的。
+优点是足够简单，缺点是每个对象都是独立的。
+
+**工厂模式** 
+
+```js
+function createObj(name,age){
+    var obj = {};
+    obj.name=name;
+    obj.age=age;
+    return obj
+}
+var Anson = createObj('Anson', 18)
+console.log(Anson)
+//{name: "Anson", age: 18}
+
+```
+
+优点是 可以解决创建多个相似对象的问题，缺点是 无法识别对象的类型。
+
+**构造函数**
+
+```js
+function Person(name,age){
+    this.name =name;
+    this.age=age;
+    this.sayName =function (){ alert(this.name) }
+}
+var person = new Person('小明',13);
+console.log(person);
+//Person {name: "小明", age: 13, sayName: ƒ}
+
+```
+
+优点是 可以创建特定类型的对象，缺点是 多个实例重复创建方法
+
+**（构造函数+原型）组合模式**
+
+```js
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+    Person.prototype.sayName = function (){ alert(this.name) }
+ }
+var person = new Person('小白',18)
+console.log(person);
+//Person {name: "小白", age: 18} __proto__ -> sayName: ƒ ()
+
+```
+
+优点 多个实例引用一个原型上的方法 比较常用
+
+**动态原型**
+
+```js
+function Person(name,age){
+    this.name=name
+    this.age =age
+    if(typeof this.sayName != 'function'){
+        Person.prototype.sayName = function(){ alert(this.name) }
+  }
+}
+var person = new Person('小红',15)
+console.log(person);
+//Person {name: "小红", age: 15} 动态创建sayName: ƒ ()
+
+```
+
+优点 可以判断某个方法是否有效，来决定是否需要初始化原型，if只会在仅在碰到第一个实例调用方法
+时会执行，此后所有实例共享此方法，需要注意的一点是，不能重新原型对象。
+
+**寄生构造函数模式**
+
+```js
+function Person(name,age,job){
+    var o=new Object();
+    o.name=name;
+    o.age=age;
+    o.job=job;
+    o.sayName=function(){
+        console.log(this.name)
+    }
+    return o;
+}
+var friend=new Person("her",18,"Front-end Engineer");
+friend.sayName();
+//her
+
+```
+
+除了使用`new`操作符，其他的和工厂函数一样，可以为对象创建构造函数。
+
+**稳妥模式**
+
+```js
+function Person(name, age){
+    var o={};
+    o.sayName=function(){ alert(name) }
+    return o;
+}
+var person = ('小亮'，24);
+person.sayName();//’小亮‘
+
+```
+
+除了使用`person.sayName()`之外 ，没有办法在访问到name的值，适合在某些安全执行环景下使用。
+
+**Object.create()**
+
+```js
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  }
+};
+
+const me = Object.create(person);
+
+me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // inherited properties can be overwritten
+
+me.printIntroduction();
+// expected output: "My name is Matthew. Am I human? true"
+
+```
+
+传入一个原型对象，创建一个新对象，使用现有的对象来提供新创建的对象的__proto__，实现继承。
+
+**参考：**《JavaScript高级程序设计第三版》、[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
+
+
+### 第46天 (2019.11.24)
+
+**总览：** 
+
+- [html] [页面中怎么嵌入Flash？有哪些方法？写出来](https://github.com/haizlin/fe-interview/issues/173)
+- [css] [说说你对媒体查询的理解](https://github.com/haizlin/fe-interview/issues/174)
+- [js] [写一个使两个整数进行交换的方法（不能使用临时变量）](https://github.com/haizlin/fe-interview/issues/175)
+- [软技能] [说说你对本项目的看法及建议](https://github.com/haizlin/fe-interview/issues/176)
+
+
+
+1、【html】 页面中怎么嵌入Flash？有哪些方法？写出来
+
+> [从对象到iframe - 其他嵌入技术](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/%E5%85%B6%E4%BB%96%E5%B5%8C%E5%85%A5%E6%8A%80%E6%9C%AF) 
+>
+> 看一些能让您在网页中嵌入各种内容类型的元素： [``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe), [``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/embed) 和[``](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/object) 元素。`<iframe>`用于嵌入其他网页，另外两个元素则允许您嵌入PDF，SVG，甚至Flash — 一种正在被淘汰的技术，但您仍然会时不时的看到它。
+>
+> | 预备知识： | 基本的计算机素养，[安装基础软件](https://developer.mozilla.org/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software)，[文件处理](https://developer.mozilla.org/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files) 的基本知识，熟悉HTML基础知识（阅读 [开始学习 HTML](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)）以及本模块中以前的文章。 |
+> | ---------- | ------------------------------------------------------------ |
+> | 学习目标： | 要了解如何使用`<object>、`[``](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)以及[``](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)在网页中嵌入部件，例如Flash电影或其他网页。 |
+>
+> <*embed* >和<*object* >元素
+>
+> <*embed* >和<*object* >元素的功能不同于`<iframe>`—— 这些元素是用来嵌入多种类型的外部内容的通用嵌入工具，其中包括像Java小程序和Flash，PDF（可在浏览器中显示为一个PDF插件）这样的插件技术，甚至像视频，SVG和图像的内容！
+>
+> **注意**：**插件**是一种对浏览器原生无法读取的内容提供访问权限的软件。
+
+
+
+**页面中怎么嵌入Flash？** 
+
+1. object + embed       传统的方法
+2. 单object
+3. 双object
+4. flex提供的标准方法
+5. swfobject
+6. 单embed显示 ie7和ff3下都能正常显示
+
+
+
+2、【css】 说说你对媒体查询的理解？
+
+> 为了适应不同的设备终端
+
+![](https://img-blog.csdnimg.cn/20190522114353452.png)
+
+
+
+3、【js】 写一个使两个整数进行交换的方法（不能使用临时变量）
+
+ **解析：** 
+
+- ES5
+
+```js
+var a = 1,b = 2;
+a = b+a;
+b = a-b;
+a = a-b;
+
+```
+
+- ES6
+
+```js
+let [a,b] = [b,a]  
+
+```
+
+异或取值
+
+```js
+a ^= b;
+b ^= a;
+a ^= b;
+
+```
+
+
+
+
+
+### 第47天  (2019.12.05)
+
+**总览：** 
+
+- [html] [HTML5如何使用音频和视频？](https://github.com/haizlin/fe-interview/issues/177)
+- [css] [你是怎样抽离样式模块的？](https://github.com/haizlin/fe-interview/issues/178)
+- [js] [请说说你对事件冒泡机制的理解？](https://github.com/haizlin/fe-interview/issues/179)
+- [软技能] [如果HR说要做背调，还要你给出近三个月的银行流水，你该怎么办？](https://github.com/haizlin/fe-interview/issues/180)
+
+
+
+1、【html】HTML5如何使用音频和视频？
+
+HTML5 新标签可以直接用video和audio，但是想要自动播放还有些兼容性问题，在手机上各浏览器需要做兼容处理。
+
+
+
+2、【css】你是怎样抽离样式模块的？
+
+样式模块？
+通过组件化思想，用 [BEM ](https://github.com/Tencent/tmt-workflow/wiki/%E2%92%9B-%5B%E8%A7%84%E8%8C%83%5D--CSS-BEM-%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83)方式命名。
+
+
+
+
+
+3、【js】  [请说说你对事件冒泡机制的理解？](https://github.com/haizlin/fe-interview/issues/179) 
+
+按照W3C事件模型，事件流按照次序依次为`捕获阶段`， `目标阶段`，`冒泡阶段`。如果事件绑定时候，禁止了冒泡，则事件流会停止在目标阶段。
+
+先说两个有关DOM事件流的概念`事件冒泡`和`事件捕获`。
+
+- 事件冒泡： 事件沿着DOM树向上通知
+- 事件捕获：和事件冒泡相反，事件沿着DOM数向下通知
+
+开发者可以自己决定事件处理注册到捕获阶段，或者是冒泡阶段。
+`element1.addEventListener('click',doSomething2,true)` 如果最后一个参数为true，则注册到捕获阶段。
+
+**事件委托(事件代理)**
+介绍完上面的，事件委托是时候登场了。事件委托简单说起来就是利用事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。
+
+
+
+
+
+### 第48天  (2019.12.05)
+
+**总览：** 
+
+- [html] [说说你对WEB标准和W3C的理解与认识？](https://github.com/haizlin/fe-interview/issues/181)
+- [css] [你知道全屏滚动的原理是什么吗？它用到了CSS的那些属性？](https://github.com/haizlin/fe-interview/issues/182)
+- [js] [你对事件循环有了解吗？说说看！](https://github.com/haizlin/fe-interview/issues/183)
+- [软技能] [最近996一词很火，谈谈你对996的看法](https://github.com/haizlin/fe-interview/issues/184)
+
+
+
+1、【html】  说说你对WEB标准和W3C的理解与认识？
+
+
+
+**web标准** 
+
+- 什么是web标准：一系列标准的集合，包括结构化标准语言（html等）、表现标准语言（css）、行为标准语言（EMCAScript等）。这些标准大部分由万维网联盟起草和发布 
+- 为什么使用web标准：为了解决因浏览器版本不同、软硬件设备不同导致的需多版本开发的问题 
+
+```js
+html是名词--表现
+css是形容词--结构
+javascript是动词--行为
+
+```
+
+以上这三个东西就形成了一个完整的网页，但是js改变时，可以会造成css和html的混乱，让这三个的界限不是那么清晰。
+
+这个时候，web标准就出来了，web标准一般是将该三部分独立分开，使其更具有模块化。
+
+W3C对web标准提出了规范化的要求，也就是在实际编程中的一些代码规范：包含如下几点
+
+1.对于结构要求：（标签规范可以提高搜索引擎对页面的抓取效率，对SEO很有帮助）
+
+标签字母要小写
+标签要闭合
+标签不允许随意嵌套
+2.对于css和js来说
+
+尽量使用外链css样式表和js脚本。是结构、表现和行为分为三块，符合规范。同时提高页面渲染速度，提高用户的体验。
+样式尽量少用行间样式表，使结构与表现分离，标签的id和class等属性命名要做到见文知义，标签越少，加载越快，用户体验提高，代码维护简单，便于改版
+
+
+
+**W3C**：万维网联盟，是一个web开发的国际性联盟
+
+
+
+2、【css】知道全屏滚动的原理是什么吗？它用到了CSS的哪些属性？
+
+**一、知识点** 
+
+- JS 滚动监听事件
+- JS 移动端touch监听事件
+- 函数节流
+- DOM操作
+
+
+
+**二、代码分析**  
+
+**1.CSS** 
+
+html, body设置 overflow 为 hidden, 让视图中只包括一个分页;设置滑动分页的长宽都是 100%; 外部容器设置 transition 过渡效果, 并设置为相对定位, 滚动是修改外部容器的 Top 值, 实现滚动效果.
+
+```css
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.page-container {
+  position: relative;
+  top: 0;
+  transition: all 1000ms ease;
+  touch-action: none;
+}
+.page-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+}
+
+```
+
+**2.HTML** 
+
+初始三个分页
+
+```html
+<div class="page-container">
+  <div class="page-item">1</div>
+  <div class="page-item">2</div>
+  <div class="page-item">3</div>
+</div>
+
+```
+
+**3.JavaScript** 
+
+1.初始化值
+容器高度设置为窗口高度
+
+```js
+var container = document.querySelector('.page-container')
+// 获取根元素高度, 页面可视高度
+var viewHeight = document.documentElement.clientHeight
+// 获取滚动的页数
+var pageNum = document.querySelectorAll('.page-item').length
+// 初始化当前位置, 距离原始顶部距离
+var currentPosition = 0
+// 设置页面高度
+container.style.height = viewHeight + 'px'
+
+```
+
+2.初始化滚动事件
+向下滚动时, 当 `currentPosition` 比 `-整体分页高度` 大的时候(绝对值相比小的时候), 向下滚动;向上滚动时, 当 `currentPosition` 大于 `0` 的时候, 向上滚动.
+
+```js
+// 向下滚动页面
+function goDown () {
+  if (currentPosition > - viewHeight * (pageNum - 1)) {
+    currentPosition = currentPosition - viewHeight
+    container.style.top = currentPosition + 'px'
+  }
+}
+
+// 向上滚动页面
+function goUp () {
+  if (currentPosition < 0) {
+    currentPosition = currentPosition + viewHeight
+    container.style.top = currentPosition + 'px'
+  }
+}
+
+```
+
+3.节流函数
+即在规定时间内只会触发一次指定方法, 用于滚动时防止多次触发
+
+```
+function throttle (fn, delay) {
+  let baseTime = 0
+  return function () {
+    const currentTime = Date.now()
+    if (baseTime + delay < currentTime) {
+      fn.apply(this, arguments)
+      baseTime = currentTime
+    }
+  }js
+}
+
+```
+
+4.监听鼠标滚动
+滚动事件`firefox`与其他浏览器的事件不同, 所以需要进行判断. `deltaY`大于`0`的时候, 想下滚动; 反之, 向上滚动.
+
+```js
+var handlerWheel = throttle(scrollMove, 1000)
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/mousewheel_event#The_detail_property
+// firefox的页面滚动事件其他浏览器不一样
+if (navigator.userAgent.toLowerCase().indexOf('firefox') === -1) {
+  document.addEventListener('mousewheel', handlerWheel)
+} else {
+  document.addEventListener('DOMMouseScroll', handlerWheel)
+}
+function scrollMove (e) {
+  if (e.deltaY > 0) {
+    goDown()
+  } else {
+    goUp()
+  }
+}
+
+```
+
+5.监听移动端touch操作
+当 touch 的最终位置大于起始位置时, 则页面向上滚动; 反之, 向下滚动.
+
+```js
+var touchStartY = 0
+document.addEventListener('touchstart', event => {
+  touchStartY = event.touches[0].pageY
+})
+var handleTouchEnd = throttle(touchEnd, 500)
+document.addEventListener('touchend', handleTouchEnd)
+function touchEnd (e) {
+  var touchEndY = e.changedTouches[0].pageY
+  if (touchEndY - touchStartY < 0) { // 向上滑动, 页面向下滚动
+    goDown()
+  } else {
+    goUp()
+  }
+}
+
+```
+
+
+
+### 第49天 (2019.12.15)
+
+- [html] [说说你对target="_blank"的理解？有啥安全性问题？如何防范？](https://github.com/haizlin/fe-interview/issues/185)
+- [css] [假如设计稿使用了非标准的字体，你该如何去实现它？](https://github.com/haizlin/fe-interview/issues/186)
+- [js] [写个还剩下多少天过年的倒计时](https://github.com/haizlin/fe-interview/issues/187)
+- [软技能] [你有遇到过字体侵权的事吗？如何解决？](https://github.com/haizlin/fe-interview/issues/188)
+
+
+
+1【html】说说你对target="_blank"的理解？有啥安全性问题？如何防范？
+
+> 通常在网页中使用链接时，你很可能会添加一个简单的 target="_blank" 属性到 a 标签上来让浏览器用一个新的标签页来打开一个 URL 地址。但是这一属性正在成为网络钓鱼者攻击的机会。 [你从未注意的隐藏危险](https://zhuanlan.zhihu.com/p/53132574) 
+
+
+
+2、【css】 假如设计稿使用了非标准的字体，你该如何去实现它？
+
+解析：设计的职责是美观，前端的职责是尽可能还原，设计之所以会使用非标准的字体、甚至侵权的字体是因为不了解技术实现和版权意识。
+所以先 **沟通** ，告知设计实际的情况，然后在综合考量的情况下应该尽可能去实现，通常采用 **载入字体** 和 **图片化** 的方式。
+
+
+
+3、【js】写个还剩下多少天过年的倒计时
+
+```js
+Math.floor((new Date("2019-12-31") - Date.now()) / (10**5 *36*24))
+
+```
+
+
+
+
+
+### 第50天 (2019.12.24)
+
+- [html] [Ajax与Flash的优缺点分别是什么？](https://github.com/haizlin/fe-interview/issues/189)
+- [css] [列举CSS优化、提高性能的方法](https://github.com/haizlin/fe-interview/issues/190)
+- [js] [请写出一个函数求出N的阶乘（即N!）](https://github.com/haizlin/fe-interview/issues/191)
+- [软技能] [说说你对http、https的理解](https://github.com/haizlin/fe-interview/issues/192)
+
+
+
+2、【css】 列举CSS优化、提高性能的方法
+
+ 加载性能
+
+1. 压缩CSS
+2. 通过link方式加载，而不是[@import](https://github.com/import)
+3. 复合属性其实分开写，执行效率更高，因为CSS最终也还是要去解析如 `margin-left: left;`
+
+选择器性能
+
+1. 尽量少的使用嵌套，可以采用BEM的方式来解决命名冲突
+2. 尽量少甚至是不使用标签选择器，这个性能实在是差，同样的还有`*`选择器
+3. 利用继承，减少代码量
+
+渲染性能
+
+1. 慎重使用高性能属性：浮动、定位；
+2. 尽量减少页面重排、重绘；
+3. css雪碧图
+4. 自定义web字体，尽量少用
+5. 尽量减少使用昂贵属性，如box-shadow/border-radius/filter/透明度/:nth-child等
+6. 使用`transform`来变换而不是宽高等会造成重绘的属性
+
+暂且先这样吧，看来想回答好，得好好梳理下了。
 
 
 

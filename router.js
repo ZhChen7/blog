@@ -21,30 +21,14 @@ router.get('/', function (req, res) {
             e.UTCtodata = new Date(e.publishDate).toLocaleString()
         })
 
-
-        var arr = []
-
-        var GETtimearr = []
-
+        let arr = []
+        let GETtimearr = []
         publish.forEach(function (e) {
             if (e.publishIdentifying != '') {
                 arr.push(e.publishIdentifying)
                 GETtimearr.push(e.UTCtodata)
             }
         })
-
-
-        function GetData(data) {
-            var Timeobj = {}
-            var dataArr = []
-            dataArr = data.split(' ')
-            dataArr.pop()
-            dataArr = dataArr[0].split('-')
-            Timeobj.year = parseInt(dataArr[0])
-            Timeobj.month = parseInt(dataArr[1])
-            Timeobj.day = parseInt(dataArr[2])
-            return Timeobj
-        }
 
         function getWordCnt(arr) {
             return arr.reduce(function (prev, next) {
@@ -53,25 +37,34 @@ router.get('/', function (req, res) {
             }, {});
         }
 
-        let MonthArr = []
-
-        GETtimearr.forEach(function (value, index, array) {
-            var variableobj = GetData(value)
-            var year = variableobj.year
-            var month = variableobj.month
-            var str = '2019年' + year.toString() + '月'
-            // var str = year +'年' + month+ '月'
-            MonthArr.push(str)
-        })
-
-        var othernewObj = getWordCnt(MonthArr)
+        function GetData(data) {
+            let arr = data.map(item => {
+                let str = item.split(' ')[0]
+                return str.split('-')[0] + str.split('-')[1]
+            })
+            let map = new Map()
+            for (let item of arr) {
+                if (!map.has(item)) {
+                    map.set(item, 1)
+                } else {
+                    let num = map.get(item)
+                    map.set(item, num + 1)
+                }
+            }
+            return map
+        }
         publish.push(getWordCnt(arr))
-
+        let resultMap = GetData(GETtimearr)
+        let othernewObj = {}
+        for (let item of resultMap.entries()) {
+            let key = item[0].slice(0, 4) + '年' + item[0].slice(4) + '月'
+            let value = item[1]
+            othernewObj[key] = value
+        }
         res.render('index.html', {
             othernewObj: othernewObj,
             publish: publish,
             user: req.session.user
-
         })
     })
 })
