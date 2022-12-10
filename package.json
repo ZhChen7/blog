@@ -22,7 +22,7 @@
     "co": "^4.6.0",
     "compression": "^1.7.4",
     "echarts": "^4.2.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-art-template": "^1.0.1",
     "express-session": "^1.15.6",
     "jquery": "^3.3.1",
